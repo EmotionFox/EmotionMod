@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import emotionfox.emomod.MainRegistry;
 import emotionfox.emomod.entity.EntityBeetle;
+import emotionfox.emomod.entity.EntityChubby;
 import emotionfox.emomod.entity.EntityLightningBug;
 import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.entity.EntityNewBoat;
@@ -26,6 +27,7 @@ public class EmotionEntity
 		registerEntity("lightning_bug", EntityLightningBug.class, "LightningBug", false, new Color(108, 89, 69).getRGB(), new Color(0, 255, 0).getRGB());
 		registerEntity("new_boat", EntityNewBoat.class, "NewBoat", true);
 		registerEntity("mouse", EntityMouse.class, "Mouse", false, new Color(206, 206, 206).getRGB(), new Color(191, 144, 113).getRGB());
+		registerEntity("chubby", EntityChubby.class, "Chubby", false, new Color(235, 235, 235).getRGB(), new Color(45, 223, 137).getRGB());
 	}
 	
 	public static void registerEntity(String registryName, Class<? extends Entity> entityClass, String entityName, boolean sendsVelocityUpdates)
