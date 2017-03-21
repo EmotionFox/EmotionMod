@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "emomod:blocks/log_pine_top",
+        "side": "emomod:blocks/log_pine"
+    }
+}

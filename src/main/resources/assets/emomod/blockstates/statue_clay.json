@@ -1,0 +1,9 @@
+{
+    "variants": 
+    { 
+        "facing=south": { "model": "emomod:statue_clay" },
+        "facing=north": { "model": "emomod:statue_clay", "y": 180 },
+        "facing=east":  { "model": "emomod:statue_clay", "y": 270 },
+        "facing=west":  { "model": "emomod:statue_clay", "y": 90 }
+    }
+}

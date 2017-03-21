@@ -1,0 +1,541 @@
+item.PurpuraShard.name=Éclat de purpura
+item.PurpuraRing.name=Bague de purpura
+item.PurpuraRedBalloon.name=Ballon rouge de purpura
+item.PurpuraGreenBalloon.name=Ballon vert de purpura
+item.PurpuraBlueBalloon.name=Ballon bleu de purpura
+
+item.PurpuraAxe.name=Hache en purpura
+item.PurpuraHoe.name=Houe en purpura
+item.PurpuraPickaxe.name=Pioche en purpura
+item.PurpuraShovel.name=Pelle en purpura
+item.PurpuraSword.name=Épée en purpura
+item.PurpuraBlueSword.name=Épée en purpura et diamant
+item.PurpuraRedSword.name=Épée en purpura et redstone
+
+item.FossilAxe.name=Hache en fossile
+item.FossilHoe.name=Houe en fossile
+item.FossilPickaxe.name=Pioche en fossile
+item.FossilShovel.name=Pelle en fossile
+item.FossilSword.name=Épée en fossile
+
+item.ViridisCristalItem.name=Cristal de viridis
+
+item.ViridisHelmet.name=Casque en viridis
+item.ViridisChestplate.name=Plastron en viridis
+item.ViridisLeggings.name=Jambières en viridis
+item.ViridisBoots.name=Bottes en viridis
+
+item.LumeStone.name=Pierre de lume du Nether
+
+item.Fossil.name=Fossile
+
+item.SporeMagic.name=Spore magique
+item.SporeRed.name=Spore rouge
+item.SporeBrown.name=Spore marron
+
+item.CakeChoco.name=Gâteau au chocolat
+item.CakeFruit.name=Gâteau aux fruits
+item.CakeToffee.name=Gâteau au caramel mou
+item.CakeStrawberry.name=Gâteau crémeux à la fraise
+
+item.BlueStaff.name=§3Bâton en lapis-lazuli
+item.GreenStaff.name=§2Bâton en émeraude
+item.RedStaff.name=§4Bâton en redstone
+item.WhiteStaff.name=§6Bâton en fer
+
+item.DreamStaff.name=Bâton des rêves
+item.DreamStone.name=Pierre des rêves
+
+item.BlueAmulet.name=§3Amulette en lapis-lazuli
+item.BlueAmuletBroken.name=Amulette en lapis-lazuli
+item.GreenAmulet.name=§2Amulette en émeraude
+item.GreenAmuletBroken.name=Amulette en émeraude
+item.RedAmulet.name=§4Amulette en redstone
+item.RedAmuletBroken.name=Amulette en redstone
+item.WhiteAmulet.name=§6Amulette en fer
+item.WhiteAmuletBroken.name=Amulette en fer
+
+item.Knife.name=Couteau
+item.Horn.name=Corne
+item.Bandage.name=Bandage
+
+item.ButterflyNet.name=Filet à papillions
+item.ButterflyGreen.name=Papillion vert
+item.ButterflyPink.name=Papillion rose
+item.ButterflyBlue.name=Papillion bleu
+item.ButterflyFlame.name=Papillion flamme 
+
+item.PearFruit.name=Poire
+item.CherryFruit.name=Cerise
+item.OrangeFruit.name=Orange
+item.TomatoFruit.name=Tomate
+
+item.Blueberry.name=Myrtille
+item.RedCurrant.name=Groseille
+item.BlackCurrant.name=Cassis
+item.Strawberry.name=Fraise
+item.DreamCurrant.name=Baie des rêves
+item.StrawberryChoco.name=Fraise chocolatée
+
+item.AppleSlice.name=Tartine de pomme
+item.BlackCurrantSlice.name=Tartine de cassis
+item.BlueberrySlice.name=Tartine de myrtille
+item.CherrySlice.name=Tartine de cerise
+item.ChocolateSlice.name=Tartine de chocolat
+item.OrangeSlice.name=Tartine d'orange
+item.PearSlice.name=Tartine de poire
+item.RedCurrantSlice.name=Tartine de groseille
+item.StrawberrySlice.name=Tartine de fraise
+item.DreamCurrantSlice.name=Tartine de baie des rêves
+item.BreadSlice.name=Tranche de pain
+
+item.PearBag.name=Sac à poires
+item.CherryBag.name=Sac à cerises
+item.OrangeBag.name=Sac d'oranges
+item.TomatoBag.name=Sac de tomates
+item.AppleBag.name=Sac de pommes
+
+item.FruitSalad.name=Salade de fruit
+item.TomatoSalad.name=Salade de tomate
+item.PumpkinSalad.name=Jus de citrouille
+
+item.PearSeed.name=Graines de poire
+item.CherrySeed.name=Graines de cerise
+item.OrangeSeed.name=Graines d'orange
+item.TomatoSeed.name=Graines de tomate
+item.AppleSeed.name=Graines de pomme
+
+item.Salt.name=Sel
+item.GlassBowl.name=Bol en verre
+item.PearJuice.name=Jus de poire
+item.CherryJuice.name=Jus de cerise
+item.OrangeJuice.name=Jus d'orange
+item.TomatoJuice.name=Jus de tomate
+item.AppleJuice.name=Jus de pomme
+
+item.PearPie.name=Tarte à la poire
+item.CherryPie.name=Clafoutis
+item.OrangePie.name=Tarte à l'orange
+item.ApplePie.name=Tarte à la pomme
+item.MelonPie.name=Tarte au melon
+
+item.MuffinPear.name=Muffin à la poire
+item.MuffinCherry.name=Muffin à la cerise
+item.MuffinOrange.name=Muffin à l'orange
+item.MuffinApple.name=Muffin à la pomme
+item.MuffinBlueberry.name=Muffin à la myrtille
+item.MuffinBlackCurrant.name=Muffin au cassis
+item.MuffinRedCurrant.name=Muffin à la groseille
+item.MuffinStrawberry.name=Muffin à la fraise
+item.MuffinDreamCurrant.name=Muffin au baie des rêves
+
+item.ToffeeCube.name=Cube de caramel mou
+item.ToffeeApple.name=Pomme au caramel mou
+
+item.WildBoarRaw.name=Cuisse de sanglier crue
+item.WildBoarCooked.name=Cuisse de sanglier cuite
+
+item.TroutRaw.name=Truite crue
+item.BassRaw.name=Bar cru
+item.SardineRaw.name=Sardine crue
+item.MackerelRaw.name=Maquereau cru
+item.WhitingRaw.name=Merlan cru
+
+item.TroutCooked.name=Truite cuite
+item.BassCooked.name=Bar cuit
+item.SardineCooked.name=Sardine cuite
+item.MackerelCooked.name=Maquereau cuit
+item.WhitingCooked.name=Merlan cuit
+
+item.FishGolden.name=Poisson d'or
+item.FishDiamond.name=Poisson de diamant
+
+item.PurpuraBag.name=Sac en purpura
+
+item.TerracottaCube.name=Cube de terre cuite
+
+item.CherryBoat.name=Bateau en bois de cerisier
+item.CherryDoor.name=Porte en bois de cerisier
+item.PearBoat.name=Bateau en bois de poirier
+item.PearDoor.name=Porte en bois de poirier
+item.OrangeBoat.name=Bateau en bois d'oranger
+item.OrangeDoor.name=Porte en bois d'oranger
+item.AtlasBoat.name=Bateau en bois d'atlas
+item.AtlasDoor.name=Porte en bois d'atlas
+
+item.PineBoat.name=Bateau en bois de pin
+item.PineDoor.name=Porte en bois de pin
+item.CocoBoat.name=Bateau en bois de cocotier
+item.CocoDoor.name=Porte en bois de cocotier
+item.DreamBoat.name=Bateau en bois des rêves
+item.DreamDoor.name=Porte en bois des rêves
+
+tile.fossil_ore.name=Minerai de fossile
+
+tile.purpura_ore.name=Minerai de purpura
+tile.purpura_block.name=Bloc de purpura
+
+tile.viridis_ore.name=Minerai de viridis
+tile.viridis_cristal.name=Cristal de viridis
+tile.viridis_block.name=Bloc de viridis
+
+tile.lume_ore.name=Minerai de lume du Nether
+tile.lume_ore2.name=Minerai de lume des rêves
+tile.lume_block.name=Bloc de lume
+
+tile.glitch.name=001111001101
+
+tile.brick_red.name=Briques rouge
+tile.brick_green.name=Briques verte
+tile.brick_blue.name=Briques bleu
+
+tile.limestone.name=Calcaire
+tile.brick_limestone.name=Briques de clacaire
+
+tile.buhrstone.name=Pierre meulière
+
+tile.terracotta_simple.name=Terre cuite
+tile.terracotta_tiles.name=Terre cuite tailliée
+tile.terracotta_circle.name=Terre cuite sculptée
+
+tile.bush_blueberry.name=Buisson à myrtille
+tile.bush_blueberry_simple.name=Buisson à myrtille
+tile.bush_redcurrant.name=Buisson à groseille
+tile.bush_redcurrant_simple.name=Buisson à groseille
+tile.bush_blackcurrant.name=Buisson à cassis
+tile.bush_blackcurrant_simple.name=Buisson à cassis
+tile.bush_strawberry.name=Buisson à fraise
+tile.bush_strawberry_simple.name=Buisson à fraise
+tile.bush_dreamcurrant.name=Buisson à baie des rêves
+tile.bush_dreamcurrant_simple.name=Buisson à baie des rêves
+
+tile.pot_apple.name=Confiture de pomme
+tile.pot_blackcurrant.name=Confiture de cassis
+tile.pot_blueberry.name=Confiture de myrtille
+tile.pot_cherry.name=Confiture de cerise
+tile.pot_chocolate.name=Chocolat confit
+tile.pot_orange.name=Confiture d'orange
+tile.pot_pear.name=Confiture de poire
+tile.pot_redcurrant.name=Confiture de groseille
+tile.pot_strawberry.name=Confiture de fraise
+tile.pot_dreamcurrant.name=Confiture au baie des rêves
+tile.pot_glass.name=Pot en verre
+tile.pot_water.name=Pot rempli d'eau
+tile.pot_lava.name=Pot rempli de lave
+tile.pot_milk.name=Pot rempli de lait
+
+tile.box_cookie.name=Boîte en fer
+
+tile.box_window.name=Jardinière
+
+tile.box_window_centus.name=Window Box Centus
+tile.box_window_dely.name=Window Box Dely
+tile.box_window_gnon.name=Window Box Gnon
+tile.box_window_kitty.name=Window Box Kitty
+tile.box_window_nox.name=Window Box Nox
+tile.box_window_thorny.name=Window Box Thorny
+
+tile.box_window_allium.name=Window Box Allium
+tile.box_window_blue_orchid.name=Window Box Blue Orchid
+tile.box_window_dandelion.name=Window Box Dandelion
+tile.box_window_houstonia.name=Window Box Houstonia
+tile.box_window_oxeye_daisy.name=Window Box Oxeye Daisy
+tile.box_window_rose.name=Window Box Poppy
+tile.box_window_tulip_orange.name=Window Box Orange Tulip
+tile.box_window_tulip_pink.name=Window Box Pink Tulip
+tile.box_window_tulip_red.name=Window Box Red Tulip
+tile.box_window_tulip_white.name=Window Box White Tulip
+
+tile.shifting_sand.name=Sable mouvant
+tile.mud.name=Boue
+
+tile.leaves_cherry.name=Feuilles de cerisier
+tile.log_cherry.name=Bois de cerisier
+tile.sapling_cherry.name=Pousse de cerisier
+tile.planks_cherry.name=Planches de cerisier
+tile.cherry_stairs.name=Escaliers en bois de cerisier
+tile.cherry_fence.name=Barrière en bois de cerisier
+tile.cherry_fence_gate.name=Portillion en bois de cerisier
+tile.cherry_door.name=Porte en bois de cerisier
+tile.cherry_trapdoor.name=Trappe en bois de cerisier
+tile.cherry_slab.name=Dalle en bois de cerisier
+
+tile.leaves_pear.name=Feuilles de poirier
+tile.log_pear.name=Bois de poirier
+tile.sapling_pear.name=Pousse de poirier
+tile.planks_pear.name=Planches de poirier
+tile.pear_stairs.name=Escaliers en bois de poirier
+tile.pear_fence.name=Barrière en bois de poirier
+tile.pear_fence_gate.name=Portillion en bois de poirier
+tile.pear_door.name=Porte en bois de poirier
+tile.pear_trapdoor.name=Trappe en bois de poirier
+tile.pear_slab.name=Dalle en bois de poirier
+
+tile.leaves_orange.name=Feuilles d'oranger
+tile.log_orange.name=Bois d'oranger
+tile.sapling_orange.name=Pousse d'oranger
+tile.planks_orange.name=Planches d'oranger
+tile.orange_stairs.name=Escaliers en bois d'oranger
+tile.orange_fence.name=Barrière en bois d'oranger
+tile.orange_fence_gate.name=Portillion en bois d'oranger
+tile.orange_door.name=Porte en bois d'oranger
+tile.orange_trapdoor.name=Trappe en bois d'oranger
+tile.orange_slab.name=Dalle en bois d'oranger
+
+tile.leaves_atlas.name=Feuilles d'atlas
+tile.log_atlas.name=Bois d'atlas
+tile.sapling_atlas.name=Pousse d'atlas
+tile.planks_atlas.name=Planches d'atlas
+tile.atlas_stairs.name=Escaliers en bois d'atlas
+tile.atlas_fence.name=Barrière en bois d'atlas
+tile.atlas_fence_gate.name=Portillion en bois d'atlas
+tile.atlas_door.name=Porte en bois d'atlas
+tile.atlas_trapdoor.name=Trappe en bois d'atlas
+tile.atlas_slab.name=Dalle en bois d'atlas
+
+tile.new_leaves_pine.name=Feuilles de pin
+tile.new_log_pine.name=Bois de pin
+tile.sapling_pine.name=Pousse de pin
+tile.planks_pine.name=Planches de pin
+tile.pine_stairs.name=Escaliers en bois de pin
+tile.pine_fence.name=Barrière en bois de pin
+tile.pine_fence_gate.name=Portillion en bois de pin
+tile.pine_door.name=Porte en bois de pin
+tile.pine_trapdoor.name=Trappe en bois de pin
+tile.pine_slab.name=Dalle en bois de pin
+
+tile.new_leaves_coco.name=Feuilles de cocotier
+tile.new_log_coco.name=Bois de cocotier
+tile.sapling_coco.name=Pousse de cocotier
+tile.planks_coco.name=Planches de cocotier
+tile.coco_stairs.name=Escaliers en bois de cocotier
+tile.coco_fence.name=Barrière en bois de cocotier
+tile.coco_fence_gate.name=Portillion en bois de cocotier
+tile.coco_door.name=Porte en bois de cocotier
+tile.coco_trapdoor.name=Trappe en bois de cocotier
+tile.coco_slab.name=Dalle en bois de cocotier
+
+tile.new_leaves_dream.name=Feuilles d'arbre des rêves
+tile.new_log_dream.name=Bois d'arbre des rêves
+tile.sapling_dream.name=Pousse d'arbre des rêves
+tile.planks_dream.name=Planche d'arbre des rêves
+tile.dream_stairs.name=Escaliers en bois d'arbre des rêves
+tile.dream_fence.name=Barrière en bois d'arbre des rêves
+tile.dream_fence_gate.name=Portillion en bois d'arbre des rêves
+tile.dream_door.name=Porte en bois d'arbre des rêves
+tile.dream_trapdoor.name=Trappe en bois d'arbre des rêves
+tile.dream_slab.name=Dalle en bois d'arbre des rêves
+
+tile.dreamGrass.name=Herbre des rêves
+tile.dreamDirt.name=Terre des rêves
+tile.dreamStone.name=Pierre des rêves
+
+tile.white_clay_stairs.name=Escaliers d'argile durcie blanche
+tile.white_clay_slab.name=Dalle d'argile durcie blanche
+
+tile.orange_clay_stairs.name=Escaliers d'argile durcie orange
+tile.orange_clay_slab.name=Dalle d'argile durcie orange
+
+tile.magenta_clay_stairs.name=Escaliers d'argile durcie magenta
+tile.magenta_clay_slab.name=Dalle d'argile durcie magenta
+
+tile.light_blue_clay_stairs.name=Escaliers d'argile durcie bleu clair
+tile.light_blue_clay_slab.name=Dalle d'argile durcie bleu clair
+
+tile.yellow_clay_stairs.name=Escaliers d'argile durcie jaune
+tile.yellow_clay_slab.name=Dalle d'argile durcie jaune
+
+tile.lime_clay_stairs.name=Escaliers d'argile durcie vert clair
+tile.lime_clay_slab.name=Dalle d'argile durcie vert clair
+
+tile.pink_clay_stairs.name=Escaliers d'argile durcie rose
+tile.pink_clay_slab.name=Dalle d'argile durcie rose
+
+tile.gray_clay_stairs.name=Escaliers d'argile durcie grise
+tile.gray_clay_slab.name=Dalle d'argile durcie grise
+
+tile.silver_clay_stairs.name=Escaliers d'argile durcie grise clair
+tile.silver_clay_slab.name=Dalle d'argile durcie grise clair
+
+tile.cyan_clay_stairs.name=Escaliers d'argile durcie cyan
+tile.cyan_clay_slab.name=Dalle d'argile durcie cyan
+
+tile.purple_clay_stairs.name=Escaliers d'argile durcie violette
+tile.purple_clay_slab.name=Dalle d'argile durcie violette
+
+tile.blue_clay_stairs.name=Escaliers d'argile durcie bleu
+tile.blue_clay_slab.name=Dalle d'argile durcie bleu
+
+tile.brown_clay_stairs.name=Escaliers d'argile durcie marron
+tile.brown_clay_slab.name=Dalle d'argile durcie marron
+
+tile.green_clay_stairs.name=Escaliers d'argile durcie verte
+tile.green_clay_slab.name=Dalle d'argile durcie verte
+
+tile.red_clay_stairs.name=Escaliers d'argile durcie rouge
+tile.red_clay_slab.name=Dalle d'argile durcie rouge
+
+tile.black_clay_stairs.name=Escaliers d'argile durcie noire
+tile.black_clay_slab.name=Dalle d'argile durcie noire
+
+tile.trapdoor.name=Trappe en bois de chêne
+tile.spruce_trapdoor.name=Trappe en bois de sapin
+tile.birch_trapdoor.name=Trappe en bois de bouleau
+tile.jungle_trapdoor.name=Trappe en bois d'acajou
+tile.acacia_trapdoor.name=Trappe en bois d'acacia
+tile.dark_oak_trapdoor.name=Trappe en bois de chêne noir
+
+tile.flower_kitty.name=Kitty Flower
+tile.flower_nox.name=Nox Flower
+tile.flower_dely.name=Dely Flower
+tile.flower_gnon.name=Gnon Flower
+tile.flower_thorny.name=Thorny Bush
+tile.flower_centus.name=Centus Flower
+tile.flower_tallgrass.name=Dream Grass
+tile.flower_nebula.name=Nebula Flower
+tile.flower_narcota.name=Narcota Flower
+
+tile.mushroom_blue.name=Champignon
+tile.mushroom_green.name=Champignon
+
+tile.wood_chair_big_oak.name=Chaise en bois de chêne noir
+tile.wood_table_big_oak.name=Table en bois de chêne noir
+tile.wood_nightstand_big_oak.name=Table de nuit en bois de chêne noir
+
+tile.wood_chair_spruce.name=Chaise en bois de sapin
+tile.wood_table_spruce.name=Table en bois de sapin
+tile.wood_nightstand_spruce.name=Table de nuit en bois de sapin
+
+tile.wood_chair_acacia.name=Chaise en bois d'acacia
+tile.wood_table_acacia.name=Table en bois d'acacia
+tile.wood_nightstand_acacia.name=Table de nuit en bois d'acacia
+
+tile.wood_chair_birch.name=Chaise en bois de bouleau
+tile.wood_table_birch.name=Table en bois de bouleau
+tile.wood_nightstand_birch.name=Table de nuit en bois de bouleau
+
+tile.wood_chair_jungle.name=Chaise en bois d'acajou
+tile.wood_table_jungle.name=Table en bois d'acajou
+tile.wood_nightstand_jungle.name=Table de nuit en bois d'acajou
+
+tile.wood_chair_oak.name=Chaise en bois de chêne
+tile.wood_table_oak.name=Table en bois de chêne
+tile.wood_nightstand_oak.name=Table de nuit en bois de chêne
+
+tile.wood_chair_cherry.name=Chaise en bois de cerisier
+tile.wood_table_cherry.name=Table en bois de cerisier
+tile.wood_nightstand_cherry.name=Table de nuit en bois de cerisier
+
+tile.wood_chair_pear.name=Chaise en bois de poirier
+tile.wood_table_pear.name=Table en bois de poirier
+tile.wood_nightstand_pear.name=Table de nuit en bois de poirier
+
+tile.wood_chair_orange.name=Chaise en bois d'oranger
+tile.wood_table_orange.name=Table en bois d'oranger
+tile.wood_nightstand_orange.name=Table de nuit en bois d'oranger
+
+tile.wood_chair_atlas.name=Chaise en bois d'atlas
+tile.wood_table_atlas.name=Table en bois d'atlas
+tile.wood_nightstand_atlas.name=Table de nuit en bois d'atlas
+
+tile.wood_chair_pine.name=Chaise en bois de pin
+tile.wood_table_pine.name=Table en bois de pin
+tile.wood_nightstand_pine.name=Table de nuit en bois de pin
+
+tile.wood_chair_coco.name=Chaise en bois de cocotier
+tile.wood_table_coco.name=Table en bois de cocotier
+tile.wood_nightstand_coco.name=Table de nuit en bois de cocotier
+
+tile.wood_chair_dream.name=Chaise en bois d'arbre des rêves
+tile.wood_table_dream.name=Table en bois d'arbre des rêves
+tile.wood_nightstand_dream.name=Table de nuit en bois d'arbre des rêves
+
+tile.stone_chair_cobblestone.name=Chaise de pierres
+tile.stone_table_cobblestone.name=Table de pierres
+
+tile.stone_chair_mossy_cobblestone.name=Chaise de pierres moussues
+tile.stone_table_mossy_cobblestone.name=Table de pierres moussues
+
+tile.stone_chair_stonebrick.name=Chaise de pierre tailliée
+tile.stone_table_stonebrick.name=Table de pierre tailliée
+
+tile.stone_chair_mossy_stonebrick.name=Chaise de pierre tailliée moussue
+tile.stone_table_mossy_stonebrick.name=Table de pierre tailliée moussue
+
+tile.stone_chair_cracked_stonebrick.name=Chaise de pierre tailliée craquelée
+tile.stone_table_cracked_stonebrick.name=Table de pierre tailliée craquelée
+
+tile.stone_chair_chiselled_stonebrick.name=Chaise de pierre sculptée
+tile.stone_table_chiselled_stonebrick.name=Table de pierre sculptée
+
+tile.stone_chair_brick.name=Chaise de briques
+tile.stone_table_brick.name=Table de briques
+
+tile.statue_clay.name=Statue en argile
+tile.statue_creeper.name=Statue de creeper en argile
+
+tile.random_meter.name=Compteur aléatoire
+
+entity.Beetle.name=Scarabée
+entity.SmallSpider.name=Petite araignée
+entity.WildBoar.name=Sanglier
+entity.Carp.name=Carpe
+entity.LightningBug.name=Luciole
+entity.Mouse.name=Souris
+entity.Butterfly.name=Papillion
+entity.Cligny.name=Cligny
+entity.Mummy.name=Momie
+entity.Scorpion.name=Scorpion
+entity.Chubby.name=Chubby
+entity.Bird.name=Oiseau
+
+generator.emotion=Emotion
+
+enchantment.bloodSucking=Succion de sang
+enchantment.finalFrost=Grand froid
+
+achievement.fossil=Affaires durables
+achievement.fossil.desc=Utiliser des fossiles pour l'équipement, vraiment ?
+
+achievement.minePurpura=PURPURA *-*
+achievement.minePurpura.desc=Miner un minerai de purpura
+
+achievement.amulet=Le pouvoir
+achievement.amulet.desc=Fabriquez une amulette
+
+achievement.staff=Invoquer les éléments
+achievement.staff.desc=Mais... D'où viennent les blocs ?
+
+achievement.purpura=La dernière amélioration
+achievement.purpura.desc=Connaître le secret
+
+achievement.extendCake=Mieux qu'un gâteau !
+achievement.extendCake.desc=Cuisiner un meilleur gâteau
+
+achievement.extendPie=Mieux qu'une tarte !
+achievement.extendPie.desc=Cuisiner une meilleure tarte
+
+achievement.sweetJuice=Hum, jus délicieux
+achievement.sweetJuice.desc=Préparer un délicieux jus de fruit
+
+achievement.fruitToast=Tartine goutûe au fruit
+achievement.fruitToast.desc=Ça à l'air vraiment bon
+
+achievement.extendFish=Du poisson, et ouais !
+achievement.extendFish.desc=Découvrir un nouveau type de poisson !
+
+achievement.extendCookedFish=Sens comme le poulet
+achievement.extendCookedFish.desc=Cuisiner ce nouveau poisson
+
+achievement.killMummy=Puis-je me récompenser moi-même ?
+achievement.killMummy.desc=Tuer une Momie
+
+achievement.killCligny=Saignant ou à point ?
+achievement.killCligny.desc=Tuer un Cligny
+
+keyBinding.keyR=Une déscription
+category.emotionKey=Le mod d'émotion
+
+entity.wild_boar.ambient=Grommellement de sanglier
+entity.wild_boar.hurt=Sanglier blessé
+entity.wild_boar.death=Sanglier qui meurt

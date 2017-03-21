@@ -1,0 +1,18 @@
+{
+	"variants": 
+	{
+		"variant=acacia" : {"model": "emomod:woodLittleTable_acacia"},
+		"variant=big_oak" : {"model": "emomod:woodLittleTable_big_oak"},
+		"variant=birch" : {"model": "emomod:woodLittleTable_birch"},
+		"variant=jungle" : {"model": "emomod:woodLittleTable_jungle"},
+		"variant=oak" : {"model": "emomod:woodLittleTable_oak"},
+		"variant=spruce" : {"model": "emomod:woodLittleTable_spruce"},
+		"variant=cherry" : {"model": "emomod:woodLittleTable_cherry"},
+		"variant=pear" : {"model": "emomod:woodLittleTable_pear"},
+		"variant=orange" : {"model": "emomod:woodLittleTable_orange"},
+		"variant=atlas" : {"model": "emomod:woodLittleTable_atlas"},
+		"variant=pine" : {"model": "emomod:woodLittleTable_pine"},
+		"variant=coco" : {"model": "emomod:woodLittleTable_coco"},
+		"variant=dream" : {"model": "emomod:woodLittleTable_dream"}
+	}
+}

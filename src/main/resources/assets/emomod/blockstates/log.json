@@ -1,0 +1,21 @@
+{
+    "variants": 
+    {
+        "axis=y,variant=cherry":  { "model": "emomod:log_cherry" },
+        "axis=z,variant=cherry":   { "model": "emomod:log_cherry", "x": 90 },
+        "axis=x,variant=cherry":   { "model": "emomod:log_cherry", "x": 90, "y": 90 },
+        "axis=none,variant=cherry": { "model": "emomod:log_cherry_bark" },
+        "axis=y,variant=pear":  { "model": "emomod:log_pear" },
+        "axis=z,variant=pear":   { "model": "emomod:log_pear", "x": 90 },
+        "axis=x,variant=pear":   { "model": "emomod:log_pear", "x": 90, "y": 90 },
+        "axis=none,variant=pear": { "model": "emomod:log_pear_bark" },
+        "axis=y,variant=orange":  { "model": "emomod:log_orange" },
+        "axis=z,variant=orange":   { "model": "emomod:log_orange", "x": 90 },
+        "axis=x,variant=orange":   { "model": "emomod:log_orange", "x": 90, "y": 90 },
+        "axis=none,variant=orange": { "model": "emomod:log_orange_bark" },
+        "axis=y,variant=atlas":  { "model": "emomod:log_atlas" },
+        "axis=z,variant=atlas":   { "model": "emomod:log_atlas", "x": 90 },
+        "axis=x,variant=atlas":   { "model": "emomod:log_atlas", "x": 90, "y": 90 },
+        "axis=none,variant=atlas": { "model": "emomod:log_atlas_bark" }
+    }
+}

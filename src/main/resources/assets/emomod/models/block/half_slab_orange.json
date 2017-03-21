@@ -1,0 +1,9 @@
+{
+    "parent": "block/half_slab",
+    "textures": 
+    {
+        "bottom": "emomod:blocks/planks_orange",
+        "top": "emomod:blocks/planks_orange",
+        "side": "emomod:blocks/planks_orange"
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "textures": 
+    {
+        "particle" : "emomod:blocks/box_cookie_top",
+        "box_cookie_top": "emomod:blocks/box_cookie_top",
+        "box_cookie_side": "emomod:blocks/box_cookie_side",
+        "box_cookie_bottom": "emomod:blocks/box_cookie_bottom"
+    },
+    "elements": [
+        {
+            "from": [2,5,2],
+            "to": [14,7,14],
+            "faces": {
+                "up": {
+                    "texture": "#box_cookie_top"
+                },
+                "west": {
+                    "texture": "#box_cookie_side"
+                },
+                "east": {
+                    "texture": "#box_cookie_side"
+                },
+                "north": {
+                    "texture": "#box_cookie_side"
+                },
+                "south": {
+                    "texture": "#box_cookie_side"
+                }
+            }
+        },
+        {
+            "from": [1,4,1],
+            "to": [15,5,15],
+            "faces": {
+                "up": {
+                    "texture": "#box_cookie_top"
+                },
+                "down": {
+                    "texture": "#box_cookie_bottom"
+                },
+                "west": {
+                    "texture": "#box_cookie_side"
+                },
+                "east": {
+                    "texture": "#box_cookie_side"
+                },
+                "north": {
+                    "texture": "#box_cookie_side"
+                },
+                "south": {
+                    "texture": "#box_cookie_side"
+                }
+            }
+        },
+        {
+            "from": [2,0,2],
+            "to": [14,4,14],
+            "faces": {
+                "down": {
+                    "texture": "#box_cookie_bottom"
+                },
+                "west": {
+                    "texture": "#box_cookie_side"
+                },
+                "east": {
+                    "texture": "#box_cookie_side"
+                },
+                "north": {
+                    "texture": "#box_cookie_side"
+                },
+                "south": {
+                    "texture": "#box_cookie_side"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+	"variants": 
+	{
+		"wood=acacia" : {"model": "emomod:wood_chair_acacia"},
+		"wood=big_oak" : {"model": "emomod:wood_chair_big_oak"},
+		"wood=birch" : {"model": "emomod:wood_chair_birch"},
+		"wood=jungle" : {"model": "emomod:wood_chair_jungle"},
+		"wood=oak" : {"model": "emomod:wood_chair_oak"},
+		"wood=spruce" : {"model": "emomod:wood_chair_spruce"},
+		"wood=cherry" : {"model": "emomod:wood_chair_cherry"},
+		"wood=pear" : {"model": "emomod:wood_chair_pear"},
+		"wood=orange" : {"model": "emomod:wood_chair_orange"},
+		"wood=atlas" : {"model": "emomod:wood_chair_atlas"},
+		"wood=pine" : {"model": "emomod:wood_chair_pine"},
+		"wood=coco" : {"model": "emomod:wood_chair_coco"},
+		"wood=dream" : {"model": "emomod:wood_chair_dream"}
+	}
+}

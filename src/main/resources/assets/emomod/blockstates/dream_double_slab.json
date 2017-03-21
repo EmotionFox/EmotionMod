@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "half=bottom": { "model": "emomod:planks_dream" },
+        "half=top": { "model": "emomod:planks_dream" }
+    }
+}

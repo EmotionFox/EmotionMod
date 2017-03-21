@@ -1,0 +1,7 @@
+{
+    "parent": "block/fence_gate_open",
+    "textures":
+    {
+        "texture": "emomod:blocks/planks_coco"
+    }
+}

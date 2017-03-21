@@ -1,0 +1,37 @@
+{
+	"parent": "block/block",
+    "textures": {
+    	"particle": "emomod:items/viridis_cristal",
+        "0": "emomod:items/viridis_cristal"
+    },
+    "elements": [
+        {
+            "name": "cristal1",
+            "from": [ 3.0, 3.0, 8.0 ], 
+            "to": [ 13.0, 13.0, 8.0 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 3.0, 3.0, 13.0, 13.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 10.0 ] },
+                "south": { "texture": "#0", "uv": [ 3.0, 3.0, 13.0, 13.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 10.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 10.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 10.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "cristal2",
+            "from": [ 3.0, 3.0, 8.0 ], 
+            "to": [ 13.0, 13.0, 8.0 ], 
+            "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "y", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 3.0, 3.0, 13.0, 13.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 10.0 ] },
+                "south": { "texture": "#0", "uv": [ 3.0, 3.0, 13.0, 13.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 10.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 10.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 10.0, 0.0 ] }
+            }
+        }
+    ]
+}

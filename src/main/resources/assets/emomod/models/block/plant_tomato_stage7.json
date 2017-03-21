@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": 
+    {
+        "crop": "emomod:blocks/plant_tomato_stage_7"
+    }
+}

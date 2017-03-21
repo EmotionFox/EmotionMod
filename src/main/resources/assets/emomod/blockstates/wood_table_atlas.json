@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:wood_table_atlas"},
+		"table=ns" : {"model": "emomod:wood_table_atlas_ns"},
+		"table=ew" : {"model": "emomod:wood_table_atlas_ew"},
+		"table=full" : {"model": "emomod:wood_table_atlas_full"}
+	}
+}

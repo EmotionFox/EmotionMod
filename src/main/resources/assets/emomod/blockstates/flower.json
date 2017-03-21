@@ -1,0 +1,14 @@
+{
+	"variants": 
+	{
+		"variant=kitty" : {"model": "emomod:flower_kitty"},
+		"variant=nox" : {"model": "emomod:flower_nox"},
+		"variant=dely" : {"model": "emomod:flower_dely"},
+		"variant=gnon" : {"model": "emomod:flower_gnon"},
+		"variant=thorny" : {"model": "emomod:flower_thorny"},
+		"variant=centus" : {"model": "emomod:flower_centus"},
+		"variant=tallgrass" : {"model": "emomod:flower_tallgrass"},
+		"variant=nebula" : {"model": "emomod:flower_nebula"},
+		"variant=narcota" : {"model": "emomod:flower_narcota"}
+	}
+}

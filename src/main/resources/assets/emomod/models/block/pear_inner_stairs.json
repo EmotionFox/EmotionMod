@@ -1,0 +1,9 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": 
+    {
+        "bottom": "emomod:blocks/planks_pear",
+        "top": "emomod:blocks/planks_pear",
+        "side": "emomod:blocks/planks_pear"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/wall_gate_closed",
+    "textures":
+    {
+        "texture": "emomod:blocks/planks_dream"
+    }
+}

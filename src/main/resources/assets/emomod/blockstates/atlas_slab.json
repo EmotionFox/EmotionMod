@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "half=bottom": { "model": "emomod:half_slab_atlas" },
+        "half=top": { "model": "emomod:upper_slab_atlas" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "half=bottom": { "model": "hardened_clay_black" },
+        "half=top": { "model": "hardened_clay_black" }
+    }
+}

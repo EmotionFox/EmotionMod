@@ -1,0 +1,12 @@
+{
+	"variants": 
+	{
+		"stone=cobblestone" : {"model": "emomod:stone_chair_cobblestone"},
+		"stone=mossy_cobblestone" : {"model": "emomod:stone_chair_mossy_cobblestone"},
+		"stone=stonebrick" : {"model": "emomod:stone_chair_stonebrick"},
+		"stone=mossy_stonebrick" : {"model": "emomod:stone_chair_mossy_stonebrick"},
+		"stone=cracked_stonebrick" : {"model": "emomod:stone_chair_cracked_stonebrick"},
+		"stone=chiselled_stonebrick" : {"model": "emomod:stone_chair_chiselled_stonebrick"},
+		"stone=brick" : {"model": "emomod:stone_chair_brick"}
+	}
+}

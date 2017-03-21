@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"facing=north" : {"model": "emomod:wood_nightstand_birch_n"},
+		"facing=south" : {"model": "emomod:wood_nightstand_birch_s"},
+		"facing=west" : {"model": "emomod:wood_nightstand_birch_w"},
+		"facing=east" : {"model": "emomod:wood_nightstand_birch_e"}
+	}
+}

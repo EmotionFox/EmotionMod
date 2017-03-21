@@ -1,0 +1,9 @@
+{
+    "parent": "block/upper_slab",
+    "textures": 
+    {
+        "bottom": "emomod:blocks/planks_atlas",
+        "top": "emomod:blocks/planks_atlas",
+        "side": "emomod:blocks/planks_atlas"
+    }
+}

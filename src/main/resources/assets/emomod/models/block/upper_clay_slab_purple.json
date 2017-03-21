@@ -1,0 +1,9 @@
+{
+    "parent": "block/upper_slab",
+    "textures": 
+    {
+        "bottom": "blocks/hardened_clay_stained_purple",
+        "top": "blocks/hardened_clay_stained_purple",
+        "side": "blocks/hardened_clay_stained_purple"
+    }
+}

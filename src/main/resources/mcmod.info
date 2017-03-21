@@ -1,0 +1,16 @@
+[
+{
+  "modid": "emomod",
+  "name": "Emotion's Mod",
+  "description": "A large mod with a lot of classic stuff including new biomes, new ores, new furnitures and new foods.",
+  "version": "0.1",
+  "mcversion": "1.11",
+  "url": "https://www.youtube.com/user/EmotionMolten",
+  "updateUrl": "",
+  "authorList": ["Emotion Fox"],
+  "credits": "Authored by EmotionFox, helped by Diangle and Jglrxavpok.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

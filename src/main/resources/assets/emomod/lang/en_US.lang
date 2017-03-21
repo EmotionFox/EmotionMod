@@ -1,0 +1,542 @@
+item.cheese.name=Cheese
+
+item.PurpuraShard.name=Purpura Lapidem Shard
+item.PurpuraRing.name=Purpura Ring
+item.PurpuraRedBalloon.name=Purpura Red Balloon
+item.PurpuraGreenBalloon.name=Purpura Green Balloon
+item.PurpuraBlueBalloon.name=Purpura Blue Balloon
+
+item.PurpuraAxe.name=Purpura Axe
+item.PurpuraHoe.name=Purpura Hoe
+item.PurpuraPickaxe.name=Purpura Pickaxe
+item.PurpuraShovel.name=Purpura Shovel
+item.PurpuraSword.name=Purpura Sword
+item.PurpuraBlueSword.name=Purpura Diamond Sword
+item.PurpuraRedSword.name=Purpura Redstone Sword
+
+item.FossilAxe.name=Fossil Axe
+item.FossilHoe.name=Fossil Hoe
+item.FossilPickaxe.name=Fossil Pickaxe
+item.FossilShovel.name=Fossil Shovel
+item.FossilSword.name=Fossil Sword
+
+item.ViridisCristalItem.name=Viridis Crystal
+
+item.ViridisHelmet.name=Viridis Helmet
+item.ViridisChestplate.name=Viridis Chestplate
+item.ViridisLeggings.name=Viridis Leggings
+item.ViridisBoots.name=Viridis Boots
+
+item.LumeStone.name=Nether Lume Stone
+
+item.Fossil.name=Fossil
+
+item.SporeMagic.name=Magic Spore
+item.SporeRed.name=Red Spore
+item.SporeBrown.name=Brown Spore
+
+item.CakeChoco.name=Chocolate Cake
+item.CakeFruit.name=Fruit Cake
+item.CakeToffee.name=Toffee Cake
+item.CakeStrawberry.name=Strawberry Cream Cake
+
+item.BlueStaff.name=§3Lapis Lazuli Staff
+item.GreenStaff.name=§2Emerald Staff
+item.RedStaff.name=§4Redstone Staff
+item.WhiteStaff.name=§6Iron Staff
+
+item.DreamStaff.name=Dream Staff
+item.DreamStone.name=Dream Stone
+
+item.BlueAmulet.name=§3Lapis Lazuli Amulet
+item.BlueAmuletBroken.name=Lapis Lazuli Amulet
+item.GreenAmulet.name=§2Emerald Amulet
+item.GreenAmuletBroken.name=Emerald Amulet
+item.RedAmulet.name=§4Redstone Amulet
+item.RedAmuletBroken.name=Redstone Amulet
+item.WhiteAmulet.name=§6Iron Amulet
+item.WhiteAmuletBroken.name=Iron Amulet
+
+item.Knife.name=Knife
+item.Horn.name=Horn
+item.Bandage.name=Bandage
+
+item.ButterflyNet.name=Butterfly Net
+item.ButterflyGreen.name=Green Butterfly
+item.ButterflyPink.name=Pink Butterfly
+item.ButterflyBlue.name=Blue Butterfly
+item.ButterflyFlame.name=Butterfly Flame
+
+item.PearFruit.name=Pear
+item.CherryFruit.name=Cherry
+item.OrangeFruit.name=Orange
+item.TomatoFruit.name=Tomato
+
+item.Blueberry.name=Blueberry
+item.RedCurrant.name=Red Currant
+item.BlackCurrant.name=Black Currant
+item.Strawberry.name=Strawberry
+item.DreamCurrant.name=Dream Currant
+item.StrawberryChoco.name=Chocolate Strawberry
+
+item.AppleSlice.name=Apple Toast
+item.BlackCurrantSlice.name=Black Currant Toast
+item.BlueberrySlice.name=Blueberry Toast
+item.CherrySlice.name=Cherry Toast
+item.ChocolateSlice.name=Chocolate Toast
+item.OrangeSlice.name=Orange Toast
+item.PearSlice.name=Pear Toast
+item.RedCurrantSlice.name=Red Currant Toast
+item.StrawberrySlice.name=Strawberry Toast
+item.DreamCurrantSlice.name=Dream Currant Toast
+item.BreadSlice.name=Bread Slice
+
+item.PearBag.name=Pear Bag
+item.CherryBag.name=Cherry Bag
+item.OrangeBag.name=Orange Bag
+item.TomatoBag.name=Tomato Bag
+item.AppleBag.name=Apple Bag
+
+item.FruitSalad.name=Fruit Salad
+item.TomatoSalad.name=Tomato Salad
+item.PumpkinSalad.name=Pumpkin Juice
+
+item.PearSeed.name=Pear Seeds
+item.CherrySeed.name=Cherry Seeds
+item.OrangeSeed.name=Orange Seeds
+item.TomatoSeed.name=Tomato Seeds
+item.AppleSeed.name=Apple Seeds
+
+item.Salt.name=Salt
+item.GlassBowl.name=Glass Bowl
+item.PearJuice.name=Pear Juice
+item.CherryJuice.name=Cherry Juice
+item.OrangeJuice.name=Orange Juice
+item.TomatoJuice.name=Tomato Juice
+item.AppleJuice.name=Apple Juice
+
+item.PearPie.name=Pear Pie
+item.CherryPie.name=Clafoutis
+item.OrangePie.name=Orange Pie
+item.ApplePie.name=Apple Pie
+item.MelonPie.name=Melon Pie
+
+item.MuffinPear.name=Pear Muffin
+item.MuffinCherry.name=Cherry Muffin
+item.MuffinOrange.name=Orange Muffin
+item.MuffinApple.name=Apple Muffin
+item.MuffinBlueberry.name=Blueberry Muffin
+item.MuffinBlackCurrant.name=Black Currant Muffin
+item.MuffinRedCurrant.name=Red Currant Muffin
+item.MuffinStrawberry.name=Strawberry Muffin
+item.MuffinDreamCurrant.name=Dream Currant Muffin
+
+item.ToffeeCube.name=Toffee Cube
+item.ToffeeApple.name=Toffee Apple
+
+item.WildBoarRaw.name=Wild Boar Raw
+item.WildBoarCooked.name=Wild Boar Cooked
+
+item.TroutRaw.name=Raw Trout
+item.BassRaw.name=Raw Bass
+item.SardineRaw.name=Raw Sardine
+item.MackerelRaw.name=Raw Mackerel
+item.WhitingRaw.name=Raw Whiting
+
+item.TroutCooked.name=Cooked Trout
+item.BassCooked.name=Cooked Bass
+item.SardineCooked.name=Cooked Sardine
+item.MackerelCooked.name=Cooked Mackerel
+item.WhitingCooked.name=Cooked Whiting
+
+item.FishGolden.name=Golden Fish
+item.FishDiamond.name=Diamond Fish
+
+item.PurpuraBag.name=Purpura Bag
+
+item.TerracottaCube.name=Terracotta Cube
+
+item.CherryBoat.name=Cherry Boat
+item.CherryDoor.name=Cherry Door
+item.PearBoat.name=Pear Boat
+item.PearDoor.name=Pear Door
+item.OrangeBoat.name=Orange Boat
+item.OrangeDoor.name=Orange Door
+item.AtlasBoat.name=Atlas Boat
+item.AtlasDoor.name=Atlas Door
+
+item.PineBoat.name=Pine Boat
+item.PineDoor.name=Pine Door
+item.CocoBoat.name=Coconut Palm Boat
+item.CocoDoor.name=Coconut Palm Door
+item.DreamBoat.name=Dream Boat
+item.DreamDoor.name=Dream Door
+
+tile.fossil_ore.name=Fossil Ore
+
+tile.purpura_ore.name=Purpura Lapidem Ore
+tile.purpura_block.name=Purpura Lapidem Block
+
+tile.viridis_ore.name=Viridis Ore
+tile.viridis_cristal.name=Viridis Crystal
+tile.viridis_block.name=Viridis Block
+
+tile.lume_ore.name=Nether Lume Ore
+tile.lume_ore2.name=Dream Lume Ore
+tile.lume_block.name=Lume Block
+
+tile.glitch.name=001111001101
+
+tile.brick_red.name=Red Brick
+tile.brick_green.name=Green Brick
+tile.brick_blue.name=Blue Brick
+
+tile.limestone.name=Limestone
+tile.brick_limestone.name=Limestone Brick
+
+tile.buhrstone.name=Buhrstone
+
+tile.terracotta_simple.name=Terracotta
+tile.terracotta_tiles.name=Terracotta Tiles
+tile.terracotta_circle.name=Terracotta Circle
+
+tile.bush_simple_blueberry.name=Blueberry Bush
+tile.bush_redcurrant.name=Red Currant Bush
+tile.bush_simple_redcurrant.name=Red Currant Bush
+tile.bush_blackcurrant.name=Black Currant Bush
+tile.bush_simple_blackcurrant.name=Black Currant Bush
+tile.bush_strawberry.name=Strawberry Bush
+tile.bush_simple_strawberry.name=Strawberry Bush
+tile.bush_dreamcurrant.name=Dream Bush
+tile.bush_simple_dreamcurrant.name=Dream Bush
+
+tile.pot_apple.name=Apple Jam
+tile.pot_blackcurrant.name=Black Currant Jam
+tile.pot_blueberry.name=Blueberry Jam
+tile.pot_cherry.name=Cherry Jam
+tile.pot_chocolate.name=Chocolate Jam
+tile.pot_orange.name=Orange Jam
+tile.pot_pear.name=Pear Jam
+tile.pot_redcurrant.name=Red Currant Jam
+tile.pot_strawberry.name=Strawberry Jam
+tile.pot_dreamcurrant.name=Dream Currant Jam
+tile.pot_glass.name=Glass Pot
+tile.pot_water.name=Water Pot
+tile.pot_lava.name=Lava Pot
+tile.pot_milk.name=Milk Pot
+
+tile.box_cookie.name=Iron Box
+
+tile.box_window.name=Window Box
+
+tile.box_window_centus.name=Window Box Centus
+tile.box_window_dely.name=Window Box Dely
+tile.box_window_gnon.name=Window Box Gnon
+tile.box_window_kitty.name=Window Box Kitty
+tile.box_window_nox.name=Window Box Nox
+tile.box_window_thorny.name=Window Box Thorny
+
+tile.box_window_allium.name=Window Box Allium
+tile.box_window_blue_orchid.name=Window Box Blue Orchid
+tile.box_window_dandelion.name=Window Box Dandelion
+tile.box_window_houstonia.name=Window Box Houstonia
+tile.box_window_oxeye_daisy.name=Window Box Oxeye Daisy
+tile.box_window_rose.name=Window Box Poppy
+tile.box_window_tulip_orange.name=Window Box Orange Tulip
+tile.box_window_tulip_pink.name=Window Box Pink Tulip
+tile.box_window_tulip_red.name=Window Box Red Tulip
+tile.box_window_tulip_white.name=Window Box White Tulip
+
+tile.shifting_sand.name=Shifting Sands
+tile.mud.name=Mud
+
+tile.leaves_cherry.name=Cherry Leaves
+tile.log_cherry.name=Cherry Wood
+tile.sapling_cherry.name=Cherry Sapling
+tile.planks_cherry.name=Cherry Wood Planks
+tile.cherry_stairs.name=Cherry Wood Stairs
+tile.cherry_fence.name=Cherry Fence
+tile.cherry_fence_gate.name=Cherry Fence Gate
+tile.cherry_door.name=Cherry Door
+tile.cherry_trapdoor.name=Cherry Trapdoor
+tile.cherry_slab.name=Cherry Wood Slab
+
+tile.leaves_pear.name=Pear Leaves
+tile.log_pear.name=Pear Wood
+tile.sapling_pear.name=Pear Sapling
+tile.planks_pear.name=Pear Wood Planks
+tile.pear_stairs.name=Pear Wood Stairs
+tile.pear_fence.name=Pear Fence
+tile.pear_fence_gate.name=Pear Fence Gate
+tile.pear_door.name=Pear Door
+tile.pear_trapdoor.name=Pear Trapdoor
+tile.pear_slab.name=Pear Wood Slab
+
+tile.leaves_orange.name=Orange Leaves
+tile.log_orange.name=Orange Wood
+tile.sapling_orange.name=Orange Sapling
+tile.planks_orange.name=Orange Wood Planks
+tile.orange_stairs.name=Orange Wood Stairs
+tile.orange_fence.name=Orange Fence
+tile.orange_fence_gate.name=Orange Fence Gate
+tile.orange_door.name=Orange Door
+tile.orange_trapdoor.name=Orange Trapdoor
+tile.orange_slab.name=Orange Wood Slab
+
+tile.leaves_atlas.name=Atlas Leaves
+tile.log_atlas.name=Atlas Wood
+tile.sapling_atlas.name=Atlas Sapling
+tile.planks_atlas.name=Atlas Wood Planks
+tile.atlas_stairs.name=Atlas Wood Stairs
+tile.atlas_fence.name=Atlas Fence
+tile.atlas_fence_gate.name=Atlas Fence Gate
+tile.atlas_door.name=Atlas Door
+tile.atlas_trapdoor.name=Atlas Trapdoor
+tile.atlas_slab.name=Atlas Wood Slab
+
+tile.new_leaves_pine.name=Pine Leaves
+tile.new_log_pine.name=Pine Wood
+tile.sapling_pine.name=Pine Sapling
+tile.planks_pine.name=Pine Wood Planks
+tile.pine_stairs.name=Pine Wood Stairs
+tile.pine_fence.name=Pine Fence
+tile.pine_fence_gate.name=Pine Fence Gate
+tile.pine_door.name=Pine Door
+tile.pine_trapdoor.name=Pine Trapdoor
+tile.pine_slab.name=Pine Wood Slab
+
+tile.new_leaves_coco.name=Coconut Palm Leaves
+tile.new_log_coco.name=Coconut Palm Wood
+tile.sapling_coco.name=Coconut Palm Sapling
+tile.planks_coco.name=Coconut Palm Wood Planks
+tile.coco_stairs.name=Coconut Palm Wood Stairs
+tile.coco_fence.name=Coconut Palm Fence
+tile.coco_fence_gate.name=Coconut Palm Fence Gate
+tile.coco_door.name=Coconut Palm Door
+tile.coco_trapdoor.name=Coconut Palm Trapdoor
+tile.coco_slab.name=Coconut Palm Wood Slab
+
+tile.new_leaves_dream.name=Dream Leaves
+tile.new_log_dream.name=Dream Wood
+tile.sapling_dream.name=Dream Sapling
+tile.planks_dream.name=Dream Wood Planks
+tile.dream_stairs.name=Dream Wood Stairs
+tile.dream_fence.name=Dream Fence
+tile.dream_fence_gate.name=Dream Fence Gate
+tile.dream_door.name=Dream Door
+tile.dream_trapdoor.name=Dream Trapdoor
+tile.dream_slab.name=Dream Wood Slab
+
+tile.dreamGrass.name=Dream Grass
+tile.dreamDirt.name=Dream Dirt
+tile.dreamStone.name=Dream Stone
+
+tile.white_clay_stairs.name=White Stained Clay Stairs
+tile.white_clay_slab.name=White Stained Clay Slab
+
+tile.orange_clay_stairs.name=Orange Stained Clay Stairs
+tile.orange_clay_slab.name=Orange Stained Clay Slab
+
+tile.magenta_clay_stairs.name=Magenta Stained Clay Stairs
+tile.magenta_clay_slab.name=Magenta Stained Clay Slab
+
+tile.light_blue_clay_stairs.name=Light Blue Stained Clay Stairs
+tile.light_blue_clay_slab.name=Light Blue Stained Clay Slab
+
+tile.yellow_clay_stairs.name=Yellow Stained Clay Stairs
+tile.yellow_clay_slab.name=Yellow Stained Clay Slab
+
+tile.lime_clay_stairs.name=Lime Stained Clay Stairs
+tile.lime_clay_slab.name=Lime Stained Clay Slab
+
+tile.pink_clay_stairs.name=Pink Stained Clay Stairs
+tile.pink_clay_slab.name=Pink Stained Clay Slab
+
+tile.gray_clay_stairs.name=Gray Stained Clay Stairs
+tile.gray_clay_slab.name=Gray Stained Clay Slab
+
+tile.silver_clay_stairs.name=Light Gray Stained Clay Stairs
+tile.silver_clay_slab.name=Light Gray Stained Clay Slab
+
+tile.cyan_clay_stairs.name=Cyan Stained Clay Stairs
+tile.cyan_clay_slab.name=Cyan Stained Clay Slab
+
+tile.purple_clay_stairs.name=Purple Stained Clay Stairs
+tile.purple_clay_slab.name=Purple Stained Clay Slab
+
+tile.blue_clay_stairs.name=Blue Stained Clay Stairs
+tile.blue_clay_slab.name=Blue Stained Clay Slab
+
+tile.brown_clay_stairs.name=Brown Stained Clay Stairs
+tile.brown_clay_slab.name=Brown Stained Clay Slab
+
+tile.green_clay_stairs.name=Green Stained Clay Stairs
+tile.green_clay_slab.name=Green Stained Clay Slab
+
+tile.red_clay_stairs.name=Red Stained Clay Stairs
+tile.red_clay_slab.name=Red Stained Clay Slab
+
+tile.black_clay_stairs.name=Black Stained Clay Stairs
+tile.black_clay_slab.name=Black Stained Clay Slab
+
+tile.trapdoor.name=Oak Trapdoor
+tile.spruce_trapdoor.name=Spruce Trapdoor
+tile.birch_trapdoor.name=Birch Trapdoor
+tile.jungle_trapdoor.name=Jungle Trapdoor
+tile.acacia_trapdoor.name=Acacia Trapdoor
+tile.dark_oak_trapdoor.name=Dark Oak Trapdoor
+
+tile.flower_kitty.name=Kitty Flower
+tile.flower_nox.name=Nox Flower
+tile.flower_dely.name=Dely Flower
+tile.flower_gnon.name=Gnon Flower
+tile.flower_thorny.name=Thorny Bush
+tile.flower_centus.name=Centus Flower
+tile.flower_tallgrass.name=Dream Grass
+tile.flower_nebula.name=Nebula Flower
+tile.flower_narcota.name=Narcota Flower
+
+tile.mushroom_blue.name=Blue Mushroom
+tile.mushroom_green.name=Green Mushroom
+
+tile.wood_chair_big_oak.name=Dark Oak Chair
+tile.wood_table_big_oak.name=Dark Oak Table
+tile.wood_nightstand_big_oak.name=Dark Oak Nightstand
+
+tile.wood_chair_spruce.name=Spruce Chair
+tile.wood_table_spruce.name=Spruce Table
+tile.wood_nightstand_spruce.name=Spruce Nightstand
+
+tile.wood_chair_acacia.name=Acacia Chair
+tile.wood_table_acacia.name=Acacia Table
+tile.wood_nightstand_acacia.name=Acacia Nightstand
+
+tile.wood_chair_birch.name=Birch Chair
+tile.wood_table_birch.name=Birch Table
+tile.wood_nightstand_birch.name=Birch Nightstand
+
+tile.wood_chair_jungle.name=Jungle Chair
+tile.wood_table_jungle.name=Jungle Table
+tile.wood_nightstand_jungle.name=Jungle Nightstand
+
+tile.wood_chair_oak.name=Oak Chair
+tile.wood_table_oak.name=Oak Table
+tile.wood_nightstand_oak.name=Oak Nightstand
+
+tile.wood_chair_cherry.name=Cherry Chair
+tile.wood_table_cherry.name=Cherry Table
+tile.wood_nightstand_cherry.name=Cherry Nightstand
+
+tile.wood_chair_pear.name=Pear Chair
+tile.wood_table_pear.name=Pear Table
+tile.wood_nightstand_pear.name=Pear Nightstand
+
+tile.wood_chair_orange.name=Orange Chair
+tile.wood_table_orange.name=Orange Table
+tile.wood_nightstand_orange.name=Orange Nightstand
+
+tile.wood_chair_atlas.name=Atlas Chair
+tile.wood_table_atlas.name=Atlas Table
+tile.wood_nightstand_atlas.name=Atlas Nightstand
+
+tile.wood_chair_pine.name=Pine Chair
+tile.wood_table_pine.name=Pine Table
+tile.wood_nightstand_pine.name=Pine Nightstand
+
+tile.wood_chair_coco.name=Coconut Palm Chair
+tile.wood_table_coco.name=Coconut Palm Table
+tile.wood_nightstand_coco.name=Coconut Palm Nightstand
+
+tile.wood_chair_dream.name=Dream Chair
+tile.wood_table_dream.name=Dream Table
+tile.wood_nightstand_dream.name=Dream Nightstand
+
+tile.stone_chair_cobblestone.name=Cobblestone Chair
+tile.stone_table_cobblestone.name=Cobblestone Table
+
+tile.stone_chair_mossy_cobblestone.name=Mossy Cobblestone Chair
+tile.stone_table_mossy_cobblestone.name=Mossy Cobblestone Table
+
+tile.stone_chair_stonebrick.name=Stone Brick Chair
+tile.stone_table_stonebrick.name=Stone Brick Table
+
+tile.stone_chair_mossy_stonebrick.name=Mossy Stone Brick Chair
+tile.stone_table_mossy_stonebrick.name=Mossy Stone Brick Table
+
+tile.stone_chair_cracked_stonebrick.name=Cracked Stone Brick Chair
+tile.stone_table_cracked_stonebrick.name=Cracked Stone Brick Table
+
+tile.stone_chair_chiselled_stonebrick.name=Chiselled Stone Brick Chair
+tile.stone_table_chiselled_stonebrick.name=Chiselled Stone Brick Table
+
+tile.stone_chair_brick.name=Brick Chair
+tile.stone_table_brick.name=Brick Table
+
+tile.statue_clay.name=Clay Statue
+tile.statue_creeper.name=Creeper Statue
+
+tile.random_meter.name=Random Meter
+
+entity.Beetle.name=Beetle
+entity.SmallSpider.name=Small Spider
+entity.WildBoar.name=Wild Boar
+entity.Carp.name=Carp
+entity.LightningBug.name=Lightning Bug
+entity.Mouse.name=Mouse
+entity.Butterfly.name=Butterfly
+entity.Cligny.name=Cligny
+entity.Mummy.name=Mummy
+entity.Scorpion.name=Scorpion
+entity.Chubby.name=Chubby
+entity.Bird.name=Bird
+
+generator.emotion=Emotion
+
+enchantment.bloodSucking=Blood Sucking
+enchantment.finalFrost=Final Frost
+
+achievement.fossil=Durable Stuff
+achievement.fossil.desc=Use Fossil For Tool, Really?
+
+achievement.minePurpura=PURPURA *-*
+achievement.minePurpura.desc=Mine Purpura Lapidem Ore
+
+achievement.amulet=The Power
+achievement.amulet.desc=Craft An Amulet
+
+achievement.staff=Invoke The Elements
+achievement.staff.desc=But... From Where Coming The Blocks?
+
+achievement.purpura=The Final Upgrade
+achievement.purpura.desc=Know The Secret
+
+achievement.extendCake=Better Than Cake!
+achievement.extendCake.desc=Cook A Better Cake
+
+achievement.extendPie=Better Than Pie!
+achievement.extendPie.desc=Cook A Better Pie
+
+achievement.sweetJuice=Hum Sweet Juice
+achievement.sweetJuice.desc=Cook A Delicious Juice Of Fruit
+
+achievement.fruitToast=Tasty Fruit Toast
+achievement.fruitToast.desc=Seem Really Tasty
+
+achievement.extendFish=Fish Yeah!
+achievement.extendFish.desc=Discover New Type Of Fish!
+
+achievement.extendCookedFish=Smell Like Chicken
+achievement.extendCookedFish.desc=Cook This New Fish
+
+achievement.killMummy=Can I Treat Myself?
+achievement.killMummy.desc=Kill A Mummy
+
+achievement.killCligny=Burned Or Not?
+achievement.killCligny.desc=Kill A Cligny
+
+keyBinding.keyR=A Description
+category.emotionKey=Emotion's Mod
+
+entity.wild_boar.ambient=Wild boar grunt
+entity.wild_boar.hurt=Wild boar hurts
+entity.wild_boar.death=Wild boar dies

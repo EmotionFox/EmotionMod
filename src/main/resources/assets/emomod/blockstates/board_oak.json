@@ -1,0 +1,9 @@
+{ 
+    "variants": 
+    { 
+        "facing=south": { "model": "emomod:board_oak" },
+        "facing=north": { "model": "emomod:board_oak", "y": 180 },
+        "facing=east":  { "model": "emomod:board_oak", "y": 270 },
+        "facing=west":  { "model": "emomod:board_oak", "y": 90 }
+    }
+}

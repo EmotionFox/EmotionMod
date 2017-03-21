@@ -1,0 +1,10 @@
+{
+    "variants": 
+    {
+        "berry=blueberry" : {"model": "emomod:bush_simple_blueberry"},
+        "berry=redcurrant" : {"model": "emomod:bush_simple_redcurrant"},
+        "berry=blackcurrant" : {"model": "emomod:bush_simple_blackcurrant"},
+        "berry=strawberry" : {"model": "emomod:bush_simple_strawberry"},
+        "berry=dreamcurrant" : {"model": "emomod:bush_simple_dreamcurrant"}
+    }
+}

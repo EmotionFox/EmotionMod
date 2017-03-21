@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:wood_table_jungle"},
+		"table=ns" : {"model": "emomod:wood_table_jungle_ns"},
+		"table=ew" : {"model": "emomod:wood_table_jungle_ew"},
+		"table=full" : {"model": "emomod:wood_table_jungle_full"}
+	}
+}

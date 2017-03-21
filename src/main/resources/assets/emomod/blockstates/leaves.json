@@ -1,0 +1,9 @@
+{
+    "variants": 
+    {
+        "variant=cherry" : {"model": "emomod:leaves_cherry"},
+        "variant=pear" : {"model": "emomod:leaves_pear"},
+        "variant=orange" : {"model": "emomod:leaves_orange"},
+        "variant=atlas" : {"model": "emomod:leaves_atlas"}
+    }
+}

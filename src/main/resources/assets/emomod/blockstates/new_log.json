@@ -1,0 +1,17 @@
+{
+    "variants": 
+    {
+        "axis=y,variant=pine":  { "model": "emomod:log_pine" },
+        "axis=z,variant=pine":   { "model": "emomod:log_pine", "x": 90 },
+        "axis=x,variant=pine":   { "model": "emomod:log_pine", "x": 90, "y": 90 },
+        "axis=none,variant=pine": { "model": "emomod:log_pine_bark" },
+        "axis=y,variant=coco":  { "model": "emomod:log_coco" },
+        "axis=z,variant=coco":   { "model": "emomod:log_coco", "x": 90 },
+        "axis=x,variant=coco":   { "model": "emomod:log_coco", "x": 90, "y": 90 },
+        "axis=none,variant=coco": { "model": "emomod:log_coco_bark" },
+        "axis=y,variant=dream":  { "model": "emomod:log_dream" },
+        "axis=z,variant=dream":   { "model": "emomod:log_dream", "x": 90 },
+        "axis=x,variant=dream":   { "model": "emomod:log_dream", "x": 90, "y": 90 },
+        "axis=none,variant=dream": { "model": "emomod:log_dream_bark" }
+    }
+}

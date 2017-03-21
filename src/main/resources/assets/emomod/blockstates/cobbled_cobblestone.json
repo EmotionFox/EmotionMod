@@ -1,0 +1,9 @@
+{ 
+    "variants": 
+    { 
+        "facing=south": { "model": "emomod:cobbled_cobblestone" },
+        "facing=north": { "model": "emomod:cobbled_cobblestone", "y": 180 },
+        "facing=east":  { "model": "emomod:cobbled_cobblestone", "y": 270 },
+        "facing=west":  { "model": "emomod:cobbled_cobblestone", "y": 90 }
+    }
+}

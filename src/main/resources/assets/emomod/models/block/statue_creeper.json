@@ -1,0 +1,106 @@
+{
+    "textures": 
+    {
+        "particle": "emomod:blocks/statue_creeper_north",
+        "north": "emomod:blocks/statue_creeper_north",
+        "south": "emomod:blocks/statue_creeper_south",
+        "east": "emomod:blocks/statue_creeper_east",
+        "west": "emomod:blocks/statue_creeper_west",
+        "top": "emomod:blocks/statue_creeper_top",
+        "bottom": "emomod:blocks/statue_creeper_bottom"
+    },
+    "elements": [
+        {
+            "from": [4,8,4],
+            "to": [12,16,12],
+            "faces": {
+                "up": {
+                    "texture": "#top"
+                },
+                "down": {
+                    "texture": "#bottom"
+                },
+                "west": {
+                    "texture": "#west"
+                },
+                "east": {
+                    "texture": "#east"
+                },
+                "north": {
+                    "texture": "#north"
+                },
+                "south": {
+                    "texture": "#south"
+                }
+            }
+        },
+        {
+            "from": [2,3,6],
+            "to": [14,8,10],
+            "faces": {
+                "up": {
+                    "texture": "#bottom"
+                },
+                "down": {
+                    "texture": "#bottom"
+                },
+                "west": {
+                    "texture": "#west"
+                },
+                "east": {
+                    "texture": "#east"
+                },
+                "north": {
+                    "texture": "#north"
+                },
+                "south": {
+                    "texture": "#south"
+                }
+            }
+        },
+        {
+            "from": [4,0,6],
+            "to": [7,3,10],
+            "faces": {
+                "down": {
+                    "texture": "#bottom"
+                },
+                "west": {
+                    "texture": "#west"
+                },
+                "east": {
+                    "texture": "#west"
+                },
+                "north": {
+                    "uv": [9,13,12,16],
+                    "texture": "#north"
+                },
+                "south": {
+                    "texture": "#south"
+                }
+            }
+        },
+        {
+            "from": [9,0,6],
+            "to": [12,3,10],
+            "faces": {
+                "down": {
+                    "texture": "#bottom"
+                },
+                "west": {
+                    "texture": "#east"
+                },
+                "east": {
+                    "texture": "#east"
+                },
+                "north": {
+                    "uv": [4,13,7,16],
+                    "texture": "#north"
+                },
+                "south": {
+                    "texture": "#south"
+                }
+            }
+        }
+    ]
+}

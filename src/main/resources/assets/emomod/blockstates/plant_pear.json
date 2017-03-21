@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "emomod:plant_pear_stage0" },
+        "age=1": { "model": "emomod:plant_pear_stage1" },
+        "age=2": { "model": "emomod:plant_pear_stage2" },
+        "age=3": { "model": "emomod:plant_pear_stage3" },
+        "age=4": { "model": "emomod:plant_pear_stage4" },
+        "age=5": { "model": "emomod:plant_pear_stage5" },
+        "age=6": { "model": "emomod:plant_pear_stage6" },
+        "age=7": { "model": "emomod:plant_pear_stage7" }
+    }
+}

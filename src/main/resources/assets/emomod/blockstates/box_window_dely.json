@@ -1,0 +1,9 @@
+{
+    "variants": 
+    {
+        "facing=south": { "model": "emomod:box_window_dely" },
+        "facing=north": { "model": "emomod:box_window_dely", "y": 180 },
+        "facing=east":  { "model": "emomod:box_window_dely", "y": 270 },
+        "facing=west":  { "model": "emomod:box_window_dely", "y": 90 }
+    }
+}

@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:wood_table_acacia"},
+		"table=ns" : {"model": "emomod:wood_table_acacia_ns"},
+		"table=ew" : {"model": "emomod:wood_table_acacia_ew"},
+		"table=full" : {"model": "emomod:wood_table_acacia_full"}
+	}
+}

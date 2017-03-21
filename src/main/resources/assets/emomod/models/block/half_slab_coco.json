@@ -1,0 +1,9 @@
+{
+    "parent": "block/half_slab",
+    "textures": 
+    {
+        "bottom": "emomod:blocks/planks_coco",
+        "top": "emomod:blocks/planks_coco",
+        "side": "emomod:blocks/planks_coco"
+    }
+}

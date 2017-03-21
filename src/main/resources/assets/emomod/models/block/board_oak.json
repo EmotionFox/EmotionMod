@@ -1,0 +1,81 @@
+{
+    "textures": 
+    {
+        "particle": "blocks/planks_oak",
+        "planks_oak": "blocks/planks_oak"
+    },
+    "elements": [
+        {
+            "from": [0,0,12],
+            "to": [16,1,16],
+            "faces": {
+                "up": {
+                    "texture": "#planks_oak"
+                },
+                "down": {
+                    "texture": "#planks_oak"
+                },
+                "west": {
+                    "texture": "#planks_oak"
+                },
+                "east": {
+                    "texture": "#planks_oak"
+                },
+                "north": {
+                    "texture": "#planks_oak"
+                },
+                "south": {
+                    "texture": "#planks_oak"
+                }
+            }
+        },
+        {
+            "from": [0,0,6],
+            "to": [16,1,10],
+            "faces": {
+                "up": {
+                    "texture": "#planks_oak"
+                },
+                "down": {
+                    "texture": "#planks_oak"
+                },
+                "west": {
+                    "texture": "#planks_oak"
+                },
+                "east": {
+                    "texture": "#planks_oak"
+                },
+                "north": {
+                    "texture": "#planks_oak"
+                },
+                "south": {
+                    "texture": "#planks_oak"
+                }
+            }
+        },
+        {
+            "from": [0,0,0],
+            "to": [16,1,4],
+            "faces": {
+                "up": {
+                    "texture": "#planks_oak"
+                },
+                "down": {
+                    "texture": "#planks_oak"
+                },
+                "west": {
+                    "texture": "#planks_oak"
+                },
+                "east": {
+                    "texture": "#planks_oak"
+                },
+                "north": {
+                    "texture": "#planks_oak"
+                },
+                "south": {
+                    "texture": "#planks_oak"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "textures": 
+    {
+        "particle": "emomod:blocks/cake_fruit_top",
+        "blocks/cake_fruit_top": "emomod:blocks/cake_fruit_top",
+        "blocks/cake_fruit_side": "emomod:blocks/cake_fruit_side",
+        "blocks/cake_fruit_bottom": "emomod:blocks/cake_fruit_bottom",
+        "blocks/cake_fruit_inner": "emomod:blocks/cake_fruit_inner"
+    },
+    "elements": [
+        {
+            "from": [7,0,1],
+            "to": [9,8,7],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_fruit_top"
+                },
+                "down": {
+                    "texture": "#blocks/cake_fruit_bottom"
+                },
+                "north": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "south": {
+                    "texture": "#blocks/cake_fruit_side"
+                }
+            }
+        },
+        {
+            "from": [9,0,1],
+            "to": [15,8,15],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_fruit_top"
+                },
+                "down": {
+                    "texture": "#blocks/cake_fruit_bottom"
+                },
+                "west": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "east": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "north": {
+                    "uv": [1,8,7,16],
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "south": {
+                    "texture": "#blocks/cake_fruit_side"
+                }
+            }
+        },
+        {
+            "from": [7,0,9],
+            "to": [9,8,15],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_fruit_top"
+                },
+                "down": {
+                    "texture": "#blocks/cake_fruit_bottom"
+                },
+                "north": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "south": {
+                    "texture": "#blocks/cake_fruit_side"
+                }
+            }
+        },
+        {
+            "from": [1,0,1],
+            "to": [7,8,15],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_fruit_top"
+                },
+                "down": {
+                    "texture": "#blocks/cake_fruit_bottom"
+                },
+                "west": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "east": {
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "north": {
+                    "uv": [9,8,15,16],
+                    "texture": "#blocks/cake_fruit_side"
+                },
+                "south": {
+                    "texture": "#blocks/cake_fruit_side"
+                }
+            }
+        }
+    ]
+}

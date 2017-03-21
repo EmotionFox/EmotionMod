@@ -1,0 +1,8 @@
+{
+    "variants": 
+    {
+        "variant=pine" : {"model": "emomod:leaves_pine"},
+        "variant=coco" : {"model": "emomod:leaves_coco"},
+        "variant=dream" : {"model": "emomod:leaves_dream"}
+    }
+}

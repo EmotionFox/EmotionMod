@@ -1,0 +1,78 @@
+{
+    "textures": {
+        "blocks/cake_choco_inner": "emomod:blocks/cake_choco_inner",
+        "blocks/cake_choco_bottom": "emomod:blocks/cake_choco_bottom",
+        "blocks/cake_choco_top": "emomod:blocks/cake_choco_top",
+        "particle": "emomod:blocks/cake_choco_top",
+        "blocks/cake_choco_side": "emomod:blocks/cake_choco_side",
+        "blocks/cake_choco_side2": "emomod:blocks/cake_choco_side2"
+    },
+    "elements": [
+        {
+            "from": [9,0,1],
+            "to": [15,6,15],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_choco_top"
+                },
+                "down": {
+                    "texture": "missingtexture"
+                },
+                "west": {
+                    "texture": "#blocks/cake_choco_inner"
+                },
+                "east": {
+                    "texture": "#blocks/cake_choco_side"
+                },
+                "north": {
+                    "texture": "#blocks/cake_choco_side2"
+                },
+                "south": {
+                    "texture": "#blocks/cake_choco_side2"
+                }
+            }
+        },
+        {
+            "from": [9,7,5],
+            "to": [15,8,11],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_choco_top"
+                },
+                "west": {
+                    "texture": "#blocks/cake_choco_inner"
+                },
+                "east": {
+                    "texture": "#blocks/cake_choco_side"
+                },
+                "north": {
+                    "texture": "#blocks/cake_choco_side2"
+                },
+                "south": {
+                    "texture": "#blocks/cake_choco_side2"
+                }
+            }
+        },
+        {
+            "from": [9,6,2],
+            "to": [15,7,14],
+            "faces": {
+                "up": {
+                    "texture": "#blocks/cake_choco_top"
+                },
+                "west": {
+                    "texture": "#blocks/cake_choco_inner"
+                },
+                "east": {
+                    "texture": "#blocks/cake_choco_side"
+                },
+                "north": {
+                    "texture": "#blocks/cake_choco_side2"
+                },
+                "south": {
+                    "texture": "#blocks/cake_choco_side2"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+	"variants": 
+	{
+		"variant=cherry" : {"model": "emomod:planks_cherry"},
+		"variant=pear" : {"model": "emomod:planks_pear"},
+		"variant=orange" : {"model": "emomod:planks_orange"},
+		"variant=atlas" : {"model": "emomod:planks_atlas"},
+		"variant=pine" : {"model": "emomod:planks_pine"},
+		"variant=coco" : {"model": "emomod:planks_coco"},
+		"variant=dream" : {"model": "emomod:planks_dream"}
+	}
+}

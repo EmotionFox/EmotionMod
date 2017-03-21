@@ -1,0 +1,7 @@
+{
+	"variants": 
+	{
+		"variant=blue" : {"model": "emomod:mushroom_blue"},
+		"variant=green" : {"model": "emomod:mushroom_green"}
+	}
+}

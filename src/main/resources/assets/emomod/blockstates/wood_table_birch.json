@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"table=normal" : {"model": "emomod:wood_table_birch"},
+		"table=ns" : {"model": "emomod:wood_table_birch_ns"},
+		"table=ew" : {"model": "emomod:wood_table_birch_ew"},
+		"table=full" : {"model": "emomod:wood_table_birch_full"}
+	}
+}

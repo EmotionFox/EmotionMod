@@ -1,0 +1,40 @@
+{
+	"entity.wild_boar.ambient":
+	{
+		"category": "neutral",
+		"subtitle": "entity.wild_boar.ambient",
+		"sounds":
+		[
+			{
+				"name": "emomod:entity/wild_boar/ambient1",
+				"name": "emomod:entity/wild_boar/ambient2",
+				"name": "emomod:entity/wild_boar/ambient3",
+				"stream": true
+			}
+		]
+	},
+	"entity.wild_boar.hurt":
+	{
+		"category": "neutral",
+		"subtitle": "entity.wild_boar.hurt",
+		"sounds":
+		[
+			{
+				"name": "emomod:entity/wild_boar/hurt",
+				"stream": true
+			}
+		]
+	},
+	"entity.wild_boar.death":
+	{
+		"category": "neutral",
+		"subtitle": "entity.wild_boar.death",
+		"sounds":
+		[
+			{
+				"name": "emomod:entity/wild_boar/death",
+				"stream": true
+			}
+		]
+	}
+}

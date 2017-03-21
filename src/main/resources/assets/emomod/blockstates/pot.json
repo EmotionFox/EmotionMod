@@ -1,0 +1,19 @@
+{
+	"variants": 
+	{
+		"variant=apple" : {"model": "emomod:pot_apple"},
+		"variant=blackcurrant" : {"model": "emomod:pot_blackcurrant"},
+		"variant=blueberry" : {"model": "emomod:pot_blueberry"},
+		"variant=cherry" : {"model": "emomod:pot_cherry"},
+		"variant=chocolate" : {"model": "emomod:pot_chocolate"},
+		"variant=orange" : {"model": "emomod:pot_orange"},
+		"variant=pear" : {"model": "emomod:pot_pear"},
+		"variant=redcurrant" : {"model": "emomod:pot_redcurrant"},
+		"variant=strawberry" : {"model": "emomod:pot_strawberry"},
+		"variant=dreamcurrant" : {"model": "emomod:pot_dreamcurrant"},
+		"variant=glass" : {"model": "emomod:pot_glass"},
+		"variant=water" : {"model": "emomod:pot_water"},
+		"variant=lava" : {"model": "emomod:pot_lava"},
+		"variant=milk" : {"model": "emomod:pot_milk"}
+	}
+}

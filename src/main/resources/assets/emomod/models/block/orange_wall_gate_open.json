@@ -1,0 +1,7 @@
+{
+    "parent": "block/wall_gate_open",
+    "textures":
+    {
+        "texture": "emomod:blocks/planks_orange"
+    }
+}

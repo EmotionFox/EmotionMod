@@ -1,0 +1,7 @@
+{
+    "parent": "emomod:block/crop_cross",
+    "textures": 
+    {
+        "cross": "emomod:blocks/plant_red_stage_2"
+    }
+}

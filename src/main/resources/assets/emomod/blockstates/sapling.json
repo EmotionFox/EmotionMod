@@ -1,0 +1,19 @@
+{
+    "variants": 
+    {
+        "stage=0,type=cherry" : {"model": "emomod:sapling_cherry"},
+        "stage=1,type=cherry" : {"model": "emomod:sapling_cherry"},
+        "stage=0,type=pear" : {"model": "emomod:sapling_pear"},
+        "stage=1,type=pear" : {"model": "emomod:sapling_pear"},
+        "stage=0,type=orange" : {"model": "emomod:sapling_orange"},
+        "stage=1,type=orange" : {"model": "emomod:sapling_orange"},
+        "stage=0,type=atlas" : {"model": "emomod:sapling_atlas"},
+        "stage=1,type=atlas" : {"model": "emomod:sapling_atlas"},
+        "stage=0,type=pine" : {"model": "emomod:sapling_pine"},
+        "stage=1,type=pine" : {"model": "emomod:sapling_pine"},
+        "stage=0,type=coco" : {"model": "emomod:sapling_coco"},
+        "stage=1,type=coco" : {"model": "emomod:sapling_coco"},
+        "stage=0,type=dream" : {"model": "emomod:sapling_dream"},
+        "stage=1,type=dream" : {"model": "emomod:sapling_dream"}
+    }
+}

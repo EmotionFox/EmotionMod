@@ -1,0 +1,33 @@
+{
+    "textures": 
+    {
+        "particle": "emomod:blocks/viridis_cristal",
+        "viridis": "emomod:blocks/viridis_cristal"
+    },
+    "elements": [
+        {
+            "from": [4,4,4],
+            "to": [12,12,12],
+            "faces": {
+                "up": {
+                    "texture": "#viridis"
+                },
+                "down": {
+                    "texture": "#viridis"
+                },
+                "west": {
+                    "texture": "#viridis"
+                },
+                "east": {
+                    "texture": "#viridis"
+                },
+                "north": {
+                    "texture": "#viridis"
+                },
+                "south": {
+                    "texture": "#viridis"
+                }
+            }
+        }
+    ]
+}

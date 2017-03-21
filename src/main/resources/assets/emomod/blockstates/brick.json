@@ -1,0 +1,9 @@
+{
+	"variants": 
+	{
+		"variant=red" : {"model": "emomod:brick_red"},
+		"variant=green" : {"model": "emomod:brick_green"},
+		"variant=blue" : {"model": "emomod:brick_blue"},
+		"variant=limestone" : {"model": "emomod:brick_limestone"}
+	}
+}
