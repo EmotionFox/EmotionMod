@@ -10,3 +10,48 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/bin/
+
+# Not Needed Stuff
+.classpath
+.gradle/
+.project
+.settings/
+EmotionMod_Client.launch
+EmotionMod_Server.launch
+build.gradle
+build/
+eclipse/
+bin/
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+run/
+logs/
+config/
+CREDITS-fml.txt
+FM 1.11_Client.launch
+FM 1.11_Server.launch
+LICENSE-new.txt
+MinecraftForge-Credits.txt
+Paulscode IBXM Library License.txt
+Paulscode SoundSystem CodecIBXM License.txt
+README.txt
+forge-1.11-13.19.1.2189-changelog.txt
+options.txt
+usercache.json
+usernamecache.json
