@@ -10,9 +10,9 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderWildBoar extends RenderLiving<EntityWildBoar>
 {
-	public static ResourceLocation WILD_BOAR_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/wild_boar/wild_boar.png");
-	public static ResourceLocation WILD_BOAR_CHILD_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/wild_boar/wild_boar_child.png");
-	
+	public static ResourceLocation[] WILD_BOAR_TEXTURE = new ResourceLocation[]
+	{ new ResourceLocation(Reference.MOD_ID, "textures/entity/wild_boar/wild_boar.png"), new ResourceLocation(Reference.MOD_ID, "textures/entity/wild_boar/wild_boar_child.png") };
+
 	public RenderWildBoar(RenderManager renderManager)
 	{
 		super(renderManager, new ModelWildBoar(), 0.5F);
@@ -21,6 +21,6 @@ public class RenderWildBoar extends RenderLiving<EntityWildBoar>
 	@Override
 	protected ResourceLocation getEntityTexture(EntityWildBoar entity)
 	{
-		return this.getMainModel().isChild ? WILD_BOAR_CHILD_TEXTURE : WILD_BOAR_TEXTURE;
+		return this.getMainModel().isChild ? WILD_BOAR_TEXTURE[1] : WILD_BOAR_TEXTURE[0];
 	}
 }

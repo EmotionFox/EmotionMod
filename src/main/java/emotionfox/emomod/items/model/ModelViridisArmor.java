@@ -14,9 +14,9 @@ public class ModelViridisArmor extends ModelBiped
     ModelRenderer left2;
     ModelRenderer left3;
     
-    public ModelViridisArmor(float expand)
+    public ModelViridisArmor(float modelSize)
     {
-        super(expand, 0, 64, 64);
+        super(modelSize, 0, 64, 64);
 
         bodytop = new ModelRenderer(this, 28, 32);
         bodytop.addBox(-4F, 0F, -3F, 8, 7, 6);

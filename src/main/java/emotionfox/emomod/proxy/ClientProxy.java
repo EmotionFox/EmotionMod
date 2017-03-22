@@ -12,14 +12,14 @@ import emotionfox.emomod.entity.EntityChubby;
 import emotionfox.emomod.entity.EntityLightningBug;
 import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.entity.EntityNewBoat;
+import emotionfox.emomod.entity.EntityScorpion;
 import emotionfox.emomod.entity.EntitySmallSpider;
 import emotionfox.emomod.entity.EntityWildBoar;
 import emotionfox.emomod.entity.model.ModelBeetle;
 import emotionfox.emomod.entity.model.ModelChubby;
 import emotionfox.emomod.entity.model.ModelLightningBug;
-import emotionfox.emomod.entity.model.ModelMouse;
+import emotionfox.emomod.entity.model.ModelScorpion;
 import emotionfox.emomod.entity.model.ModelSmallSpider;
-import emotionfox.emomod.entity.model.ModelWildBoar;
 import emotionfox.emomod.entity.render.RenderBasic;
 import emotionfox.emomod.entity.render.RenderFactory;
 import emotionfox.emomod.entity.render.RenderMouse;
@@ -45,6 +45,7 @@ public class ClientProxy implements CommonProxy
 	public static final ResourceLocation SMALL_SPIDER_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/small_spider.png");
 	public static final ResourceLocation WILDBOAR_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/wildboar.png");
 	public static final ResourceLocation LIGHTNING_BUG_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/lightning_bug.png");
+	public static final ResourceLocation SCORPION_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/scorpion.png");
 	public static final ResourceLocation CHUBBY_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/chubby.png");
 	
 	public static final Map<Item, ModelBiped> armorModels = new HashMap<Item, ModelBiped>();
@@ -163,6 +164,7 @@ public class ClientProxy implements CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityWildBoar.class, new RenderFactory(RenderWildBoar.class.getName()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityLightningBug.class, new RenderFactory(RenderBasic.class.getName(), new ModelLightningBug(), 0.0F, LIGHTNING_BUG_TEXTURE));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMouse.class, new RenderFactory(RenderMouse.class.getName()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityScorpion.class, new RenderFactory(RenderBasic.class.getName(), new ModelScorpion(), 0.15F, SCORPION_TEXTURE));
 		RenderingRegistry.registerEntityRenderingHandler(EntityChubby.class, new RenderFactory(RenderBasic.class.getName(), new ModelChubby(), 0.0F, CHUBBY_TEXTURE));
 		
 		ModelViridisArmor viridisArmor = new ModelViridisArmor(0.5F);
