@@ -65,7 +65,7 @@ item.ButterflyNet.name=Butterfly Net
 item.ButterflyGreen.name=Green Butterfly
 item.ButterflyPink.name=Pink Butterfly
 item.ButterflyBlue.name=Blue Butterfly
-item.ButterflyFlame.name=Butterfly Flame
+item.ButterflyCitrus.name=Butterfly Citrus
 
 item.PearFruit.name=Pear
 item.CherryFruit.name=Cherry
@@ -527,6 +527,9 @@ achievement.extendFish.desc=Discover New Type Of Fish!
 
 achievement.extendCookedFish=Smell Like Chicken
 achievement.extendCookedFish.desc=Cook This New Fish
+
+achievement.butterfly=Catch them all!
+achievement.butterfly.desc=Catch your very first butterfly
 
 achievement.killMummy=Can I Treat Myself?
 achievement.killMummy.desc=Kill A Mummy

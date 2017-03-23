@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -79,7 +80,7 @@ public class EmotionLifeEvent
 			player.getEntityData().removeTag("posZ");
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onHarvestDrops(HarvestDropsEvent e)
 	{
@@ -89,8 +90,6 @@ public class EmotionLifeEvent
 			ItemStack mainHeld = player.getHeldItemMainhand();
 			World world = e.getWorld();
 			Block block = e.getState().getBlock();
-
-			System.out.println("Harvesting: " + block + " With: " + mainHeld);
 
 			if (block == Blocks.GRASS)
 			{
@@ -118,6 +117,32 @@ public class EmotionLifeEvent
 					{
 						e.getDrops().clear();
 						e.getDrops().add(new ItemStack(Items.STICK, 2));
+					}
+				}
+			}
+			if (block == Blocks.STONE)
+			{
+				if (mainHeld.getItem().getHarvestLevel(mainHeld, "pickaxe", player, e.getState()) == 1)
+				{
+					if (world.rand.nextInt(10) == 0)
+					{
+						e.getDrops().clear();
+					}
+				}
+				else if (mainHeld.getItem().getHarvestLevel(mainHeld, "pickaxe", player, e.getState()) == 2)
+				{
+					if (world.rand.nextInt(20) == 0)
+					{
+						e.getDrops().clear();
+						e.getDrops().add(new ItemStack(Item.getItemFromBlock(Blocks.STONE)));
+					}
+				}
+				else if (mainHeld.getItem().getHarvestLevel(mainHeld, "pickaxe", player, e.getState()) >= 3)
+				{
+					if (world.rand.nextInt(10) == 0)
+					{
+						e.getDrops().clear();
+						e.getDrops().add(new ItemStack(Item.getItemFromBlock(Blocks.STONE)));
 					}
 				}
 			}

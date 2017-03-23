@@ -11,6 +11,7 @@ public class EmotionSoundHandler
 	public static SoundEvent ENTITY_WILD_BOAR_AMBIENT;
 	public static SoundEvent ENTITY_WILD_BOAR_HURT;
 	public static SoundEvent ENTITY_WILD_BOAR_DEATH;
+	public static SoundEvent ITEM_BUTTERFLY_NET_USE;
 	
 	public static void init()
 	{
@@ -19,6 +20,7 @@ public class EmotionSoundHandler
 		ENTITY_WILD_BOAR_AMBIENT = register("entity.wild_boar.ambient");
 		ENTITY_WILD_BOAR_HURT = register("entity.wild_boar.hurt");
 		ENTITY_WILD_BOAR_DEATH = register("entity.wild_boar.death");
+		ITEM_BUTTERFLY_NET_USE = register("item.butterfly_net.use");
 	}
 	
 	public static SoundEvent register(String nameIn)

@@ -6,7 +6,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-// Useful in BlockChair
+// Useful In BlockChair
 public class EntitySittable extends Entity
 {
 	public double blockPosX;

@@ -8,6 +8,7 @@ import emotionfox.emomod.blocks.EmotionNewLeaves;
 import emotionfox.emomod.blocks.base.BaseDoor;
 import emotionfox.emomod.blocks.base.BaseFenceGate;
 import emotionfox.emomod.entity.EntityBeetle;
+import emotionfox.emomod.entity.EntityButterfly;
 import emotionfox.emomod.entity.EntityChubby;
 import emotionfox.emomod.entity.EntityLightningBug;
 import emotionfox.emomod.entity.EntityMouse;
@@ -21,6 +22,7 @@ import emotionfox.emomod.entity.model.ModelLightningBug;
 import emotionfox.emomod.entity.model.ModelScorpion;
 import emotionfox.emomod.entity.model.ModelSmallSpider;
 import emotionfox.emomod.entity.render.RenderBasic;
+import emotionfox.emomod.entity.render.RenderButterfly;
 import emotionfox.emomod.entity.render.RenderFactory;
 import emotionfox.emomod.entity.render.RenderMouse;
 import emotionfox.emomod.entity.render.RenderNewBoat;
@@ -164,6 +166,7 @@ public class ClientProxy implements CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityWildBoar.class, new RenderFactory(RenderWildBoar.class.getName()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityLightningBug.class, new RenderFactory(RenderBasic.class.getName(), new ModelLightningBug(), 0.0F, LIGHTNING_BUG_TEXTURE));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMouse.class, new RenderFactory(RenderMouse.class.getName()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityButterfly.class, new RenderFactory(RenderButterfly.class.getName()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityScorpion.class, new RenderFactory(RenderBasic.class.getName(), new ModelScorpion(), 0.15F, SCORPION_TEXTURE));
 		RenderingRegistry.registerEntityRenderingHandler(EntityChubby.class, new RenderFactory(RenderBasic.class.getName(), new ModelChubby(), 0.0F, CHUBBY_TEXTURE));
 		

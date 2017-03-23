@@ -20,8 +20,6 @@ import emotionfox.emomod.blocks.Glitch;
 import emotionfox.emomod.blocks.StoneTable;
 import emotionfox.emomod.blocks.WoodNightstand;
 import emotionfox.emomod.blocks.WoodTable;
-import emotionfox.emomod.blocks.EmotionMushroom.EnumType;
-import emotionfox.emomod.blocks.EmotionPot.EnumPot;
 import emotionfox.emomod.blocks.base.BaseClayDoubleSlab;
 import emotionfox.emomod.blocks.base.BaseClayHalfSlab;
 import emotionfox.emomod.blocks.base.BaseCristal;

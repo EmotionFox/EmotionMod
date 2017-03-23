@@ -3,7 +3,6 @@ package emotionfox.emomod.entity.render;
 import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.entity.model.ModelMouse;
 import emotionfox.emomod.util.Reference;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;

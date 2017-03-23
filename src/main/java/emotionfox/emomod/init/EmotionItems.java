@@ -1,6 +1,7 @@
 package emotionfox.emomod.init;
 
 import emotionfox.emomod.entity.EntityNewBoat;
+import emotionfox.emomod.items.ButterflyNet;
 import emotionfox.emomod.items.DreamStaff;
 import emotionfox.emomod.items.PurpuraAmulet;
 import emotionfox.emomod.items.PurpuraBag;
@@ -95,11 +96,11 @@ public class EmotionItems
 	public static Item HORN = new BaseItem().setCreativeTab(CreativeTabs.MISC);
 	public static Item BANDAGE = new BaseBandage(4.0f);
 
-	public static Item BUTTERFLY_NET = new BaseItem().setCreativeTab(CreativeTabs.TOOLS);
-	public static Item BUTTERFLY_GREEN = new BaseItem().setCreativeTab(CreativeTabs.MISC);
+	public static Item BUTTERFLY_NET = new ButterflyNet();
 	public static Item BUTTERFLY_PINK = new BaseItem().setCreativeTab(CreativeTabs.MISC);
 	public static Item BUTTERFLY_BLUE = new BaseItem().setCreativeTab(CreativeTabs.MISC);
-	public static Item BUTTERFLY_FLAME = new BaseItem().setCreativeTab(CreativeTabs.MISC);
+	public static Item BUTTERFLY_GREEN = new BaseItem().setCreativeTab(CreativeTabs.MISC);
+	public static Item BUTTERFLY_CITRUS = new BaseItem().setCreativeTab(CreativeTabs.MISC);
 
 	public static Item FRUIT_PEAR = new ItemFood(3, false);
 	public static Item FRUIT_CHERRY = new ItemFood(2, false);
@@ -270,10 +271,10 @@ public class EmotionItems
 		registerItem(BANDAGE, "bandage", "Bandage");
 
 		registerItem(BUTTERFLY_NET, "butterfly_net", "ButterflyNet");
-		registerItem(BUTTERFLY_GREEN, "butterfly_green", "ButterflyGreen");
 		registerItem(BUTTERFLY_PINK, "butterfly_pink", "ButterflyPink");
 		registerItem(BUTTERFLY_BLUE, "butterfly_blue", "ButterflyBlue");
-		registerItem(BUTTERFLY_FLAME, "butterfly_flame", "ButterflyFlame");
+		registerItem(BUTTERFLY_GREEN, "butterfly_green", "ButterflyGreen");
+		registerItem(BUTTERFLY_CITRUS, "butterfly_citrus", "ButterflyCitrus");
 
 		registerItem(FRUIT_PEAR, "fruit_pear", "PearFruit");
 		registerItem(FRUIT_CHERRY, "fruit_cherry", "CherryFruit");
@@ -456,10 +457,10 @@ public class EmotionItems
 		registerRenders(BANDAGE);
 
 		registerRenders(BUTTERFLY_NET);
-		registerRenders(BUTTERFLY_GREEN);
 		registerRenders(BUTTERFLY_PINK);
 		registerRenders(BUTTERFLY_BLUE);
-		registerRenders(BUTTERFLY_FLAME);
+		registerRenders(BUTTERFLY_GREEN);
+		registerRenders(BUTTERFLY_CITRUS);
 
 		registerRenders(FRUIT_PEAR);
 		registerRenders(FRUIT_CHERRY);

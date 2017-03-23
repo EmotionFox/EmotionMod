@@ -5,7 +5,6 @@ import emotionfox.emomod.init.EmotionBlocks;
 import emotionfox.emomod.init.EmotionItems;
 import emotionfox.emomod.items.PurpuraAmulet;
 import emotionfox.emomod.items.PurpuraStaff;
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -86,5 +85,8 @@ public class EmotionAchievementEvent
 		if (item == EmotionItems.FISH_TROUT_RAW || item == EmotionItems.FISH_BASS_RAW || item == EmotionItems.FISH_SARDINE_RAW || item == EmotionItems.FISH_MACKEREL_RAW
 				|| item == EmotionItems.FISH_WHITING_RAW)
 			player.addStat(EmotionAchievement.EXTEND_FISH);
+
+		if (item == EmotionItems.BUTTERFLY_PINK || item == EmotionItems.BUTTERFLY_GREEN || item == EmotionItems.BUTTERFLY_BLUE || item == EmotionItems.BUTTERFLY_CITRUS)
+			player.addStat(EmotionAchievement.BUTTERFLY);
 	}
 }

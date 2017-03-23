@@ -63,7 +63,7 @@ item.ButterflyNet.name=Filet à papillions
 item.ButterflyGreen.name=Papillion vert
 item.ButterflyPink.name=Papillion rose
 item.ButterflyBlue.name=Papillion bleu
-item.ButterflyFlame.name=Papillion flamme 
+item.ButterflyCitrus.name=Papillion citrus
 
 item.PearFruit.name=Poire
 item.CherryFruit.name=Cerise
@@ -526,6 +526,9 @@ achievement.extendFish.desc=Découvrir un nouveau type de poisson !
 
 achievement.extendCookedFish=Sens comme le poulet
 achievement.extendCookedFish.desc=Cuisiner ce nouveau poisson
+
+achievement.butterfly=Attrapez les tous!
+achievement.butterfly.desc=Attraper votre premier papillon
 
 achievement.killMummy=Puis-je me récompenser moi-même ?
 achievement.killMummy.desc=Tuer une Momie

@@ -2,6 +2,6 @@
     "parent": "item/generated", 
     "textures": 
     { 
-        "layer0": "emomod:items/butterfly_flame" 
+        "layer0": "emomod:items/butterfly_citrus" 
     }
 }

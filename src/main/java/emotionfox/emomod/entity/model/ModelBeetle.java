@@ -26,7 +26,7 @@ public class ModelBeetle extends ModelBase
 	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale)
 	{
 		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-		
+
 		this.body.render(scale);
 	}
 }

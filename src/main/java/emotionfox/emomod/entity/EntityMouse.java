@@ -76,7 +76,7 @@ public class EntityMouse extends EntityCreature
 	
 	public static enum Type
 	{
-		WHITE(0, "White"), BROWN(1, "Brown"), GINGER(2, "Ginger"), BLACK(3, "Black");
+		WHITE(0, "white"), BROWN(1, "brown"), GINGER(2, "ginger"), BLACK(3, "black");
 
 		private final String name;
 		private final int metadata;

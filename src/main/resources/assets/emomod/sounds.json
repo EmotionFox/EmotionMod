@@ -36,5 +36,17 @@
 				"stream": true
 			}
 		]
+	},
+	"item.butterfly_net.use":
+	{
+		"category": "neutral",
+		"subtitle": "item.butterfly_net.use",
+		"sounds":
+		[
+			{
+				"name": "emomod:item/butterfly_net/use",
+				"stream": true
+			}
+		]
 	}
 }
