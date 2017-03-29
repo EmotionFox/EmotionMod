@@ -15,14 +15,14 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenAtlas extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.emoSapling;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
 		int height = 8;
-		IBlockState log = EmotionBlocks.emoLog.getDefaultState().withProperty(EmotionLog.VARIANT, EmotionPlanks.EnumType.ATLAS);
-		IBlockState leave = EmotionBlocks.emoLeaves.getDefaultState().withProperty(EmotionLeaves.VARIANT, EmotionPlanks.EnumType.ATLAS);
+		IBlockState log = EmotionBlocks.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, EmotionPlanks.EnumType.ATLAS);
+		IBlockState leave = EmotionBlocks.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, EmotionPlanks.EnumType.ATLAS);
 		IBlockState xLog = log.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.X);
 		IBlockState zLog = log.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z);
 

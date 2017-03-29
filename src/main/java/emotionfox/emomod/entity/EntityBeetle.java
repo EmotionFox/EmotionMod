@@ -1,11 +1,9 @@
 package emotionfox.emomod.entity;
 
-import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIPanic;
 import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.world.World;
 
 public class EntityBeetle extends EntityCreature

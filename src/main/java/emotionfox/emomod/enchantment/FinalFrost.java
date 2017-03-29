@@ -1,6 +1,5 @@
 package emotionfox.emomod.enchantment;
 
-import emotionfox.emomod.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.Entity;

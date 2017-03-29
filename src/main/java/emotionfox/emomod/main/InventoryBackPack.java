@@ -1,6 +1,6 @@
 package emotionfox.emomod.main;
 
-import emotionfox.emomod.items.PurpuraBag;
+import emotionfox.emomod.items.ItemPurpuraBag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -148,7 +148,7 @@ public class InventoryBackPack implements IInventory
     @Override
     public boolean isItemValidForSlot(int index, ItemStack stack)
     {
-        return !(stack.getItem() instanceof PurpuraBag);
+        return !(stack.getItem() instanceof ItemPurpuraBag);
     }
 
     @Override

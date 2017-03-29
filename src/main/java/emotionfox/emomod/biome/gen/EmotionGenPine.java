@@ -14,15 +14,15 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenPine extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.emoSapling;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
 		int height = 6 + rand.nextInt(4);
 
-		IBlockState logs = EmotionBlocks.emoNewLog.getDefaultState().withProperty(EmotionNewLog.VARIANT, EmotionPlanks.EnumType.PINE);
-		IBlockState leaves = EmotionBlocks.emoNewLeaves.getDefaultState().withProperty(EmotionNewLeaves.VARIANT, EmotionPlanks.EnumType.PINE);
+		IBlockState logs = EmotionBlocks.NEW_LOG.getDefaultState().withProperty(EmotionNewLog.VARIANT, EmotionPlanks.EnumType.PINE);
+		IBlockState leaves = EmotionBlocks.NEW_LEAVES.getDefaultState().withProperty(EmotionNewLeaves.VARIANT, EmotionPlanks.EnumType.PINE);
 
 		if (this.sapling.canBlockStay(world, pos, sapling.getDefaultState().withProperty(EmotionSapling.TYPE, EmotionPlanks.EnumType.PINE)) && world.isAirBlock(pos) && pos.getY() < 200
 				&& (pos.getY() > 80 || rand.nextInt(10) == 0))

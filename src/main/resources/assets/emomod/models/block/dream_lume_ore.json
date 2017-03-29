@@ -2,6 +2,6 @@
     "parent": "block/cube_all", 
     "textures": 
     { 
-        "all": "emomod:blocks/lume_ore2" 
+        "all": "emomod:blocks/dream_lume_ore" 
     }
 }

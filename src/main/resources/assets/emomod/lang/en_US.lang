@@ -1,176 +1,176 @@
-item.cheese.name=Cheese
+item.purpura_shard.name=Purpura Lapidem Shard
+item.purpura_ring.name=Purpura Ring
+item.purpura_red_balloon.name=Purpura Red Balloon
+item.purpura_green_balloon.name=Purpura Green Balloon
+item.purpura_blue_balloon.name=Purpura Blue Balloon
 
-item.PurpuraShard.name=Purpura Lapidem Shard
-item.PurpuraRing.name=Purpura Ring
-item.PurpuraRedBalloon.name=Purpura Red Balloon
-item.PurpuraGreenBalloon.name=Purpura Green Balloon
-item.PurpuraBlueBalloon.name=Purpura Blue Balloon
+item.purpura_axe.name=Purpura Axe
+item.purpura_hoe.name=Purpura Hoe
+item.purpura_pickaxe.name=Purpura Pickaxe
+item.purpura_shovel.name=Purpura Shovel
+item.purpura_sword.name=Purpura Sword
+item.purpura_blue_sword.name=Purpura Diamond Sword
+item.purpura_red_sword.name=Purpura Redstone Sword
 
-item.PurpuraAxe.name=Purpura Axe
-item.PurpuraHoe.name=Purpura Hoe
-item.PurpuraPickaxe.name=Purpura Pickaxe
-item.PurpuraShovel.name=Purpura Shovel
-item.PurpuraSword.name=Purpura Sword
-item.PurpuraBlueSword.name=Purpura Diamond Sword
-item.PurpuraRedSword.name=Purpura Redstone Sword
+item.fossil_axe.name=Fossil Axe
+item.fossil_hoe.name=Fossil Hoe
+item.fossil_pickaxe.name=Fossil Pickaxe
+item.fossil_shovel.name=Fossil Shovel
+item.fossil_sword.name=Fossil Sword
 
-item.FossilAxe.name=Fossil Axe
-item.FossilHoe.name=Fossil Hoe
-item.FossilPickaxe.name=Fossil Pickaxe
-item.FossilShovel.name=Fossil Shovel
-item.FossilSword.name=Fossil Sword
+item.viridis_cristal_item.name=Viridis Crystal
 
-item.ViridisCristalItem.name=Viridis Crystal
+item.viridis_helmet.name=Viridis Helmet
+item.viridis_chestplate.name=Viridis Chestplate
+item.viridis_leggings.name=Viridis Leggings
+item.viridis_boots.name=Viridis Boots
 
-item.ViridisHelmet.name=Viridis Helmet
-item.ViridisChestplate.name=Viridis Chestplate
-item.ViridisLeggings.name=Viridis Leggings
-item.ViridisBoots.name=Viridis Boots
+item.lume_stone.name=Nether Lume Stone
 
-item.LumeStone.name=Nether Lume Stone
+item.fossil.name=Fossil
 
-item.Fossil.name=Fossil
+item.spore_magic.name=Magic Spore
+item.spore_red.name=Red Spore
+item.spore_brown.name=Brown Spore
 
-item.SporeMagic.name=Magic Spore
-item.SporeRed.name=Red Spore
-item.SporeBrown.name=Brown Spore
+item.cake_choco.name=Chocolate Cake
+item.cake_fruit.name=Fruit Cake
+item.cake_toffee.name=Toffee Cake
+item.cake_strawberry.name=Strawberry Cream Cake
 
-item.CakeChoco.name=Chocolate Cake
-item.CakeFruit.name=Fruit Cake
-item.CakeToffee.name=Toffee Cake
-item.CakeStrawberry.name=Strawberry Cream Cake
+item.staff_blue.name=§3Lapis Lazuli Staff
+item.staff_green.name=§2Emerald Staff
+item.staff_red.name=§4Redstone Staff
+item.staff_white.name=§6Iron Staff
 
-item.BlueStaff.name=§3Lapis Lazuli Staff
-item.GreenStaff.name=§2Emerald Staff
-item.RedStaff.name=§4Redstone Staff
-item.WhiteStaff.name=§6Iron Staff
+item.dream_staff.name=Dream Staff
+item.dream_stone.name=Dream Stone
 
-item.DreamStaff.name=Dream Staff
-item.DreamStone.name=Dream Stone
+item.amulet_blue.name=§3Lapis Lazuli Amulet
+item.amulet_blue_broken.name=Lapis Lazuli Amulet
+item.amulet_green.name=§2Emerald Amulet
+item.amulet_green_broken.name=Emerald Amulet
+item.amulet_red.name=§4Redstone Amulet
+item.amulet_red_broken.name=Redstone Amulet
+item.amulet_white.name=§6Iron Amulet
+item.amulet_white_broken.name=Iron Amulet
 
-item.BlueAmulet.name=§3Lapis Lazuli Amulet
-item.BlueAmuletBroken.name=Lapis Lazuli Amulet
-item.GreenAmulet.name=§2Emerald Amulet
-item.GreenAmuletBroken.name=Emerald Amulet
-item.RedAmulet.name=§4Redstone Amulet
-item.RedAmuletBroken.name=Redstone Amulet
-item.WhiteAmulet.name=§6Iron Amulet
-item.WhiteAmuletBroken.name=Iron Amulet
+item.knife.name=Knife
+item.horn.name=Horn
+item.bandage.name=Bandage
 
-item.Knife.name=Knife
-item.Horn.name=Horn
-item.Bandage.name=Bandage
+item.butterfly_net.name=Butterfly Net
+item.butterfly_pink.name=Pink Butterfly
+item.butterfly_blue.name=Blue Butterfly
+item.butterfly_green.name=Green Butterfly
+item.butterfly_citrus.name=Butterfly Citrus
 
-item.ButterflyNet.name=Butterfly Net
-item.ButterflyGreen.name=Green Butterfly
-item.ButterflyPink.name=Pink Butterfly
-item.ButterflyBlue.name=Blue Butterfly
-item.ButterflyCitrus.name=Butterfly Citrus
+item.fruit_pear.name=Pear
+item.fruit_cherry.name=Cherry
+item.fruit_orange.name=Orange
+item.fruit_tomato.name=Tomato
 
-item.PearFruit.name=Pear
-item.CherryFruit.name=Cherry
-item.OrangeFruit.name=Orange
-item.TomatoFruit.name=Tomato
+item.berry_blueberry.name=Blueberry
+item.berry_redcurrant.name=Red Currant
+item.berry_blackcurrant.name=Black Currant
+item.berry_strawberry.name=Strawberry
+item.berry_strawberry_choco.name=Chocolate Strawberry
+item.berry_dreamcurrant.name=Dream Currant
 
-item.Blueberry.name=Blueberry
-item.RedCurrant.name=Red Currant
-item.BlackCurrant.name=Black Currant
-item.Strawberry.name=Strawberry
-item.DreamCurrant.name=Dream Currant
-item.StrawberryChoco.name=Chocolate Strawberry
+item.slice_apple.name=Apple Toast
+item.slice_blackcurrant.name=Black Currant Toast
+item.slice_blueberry.name=Blueberry Toast
+item.slice_cherry.name=Cherry Toast
+item.slice_chocolate.name=Chocolate Toast
+item.slice_orange.name=Orange Toast
+item.slice_pear.name=Pear Toast
+item.slice_redcurrant.name=Red Currant Toast
+item.slice_strawberry.name=Strawberry Toast
+item.slice_dreamcurrant.name=Dream Currant Toast
+item.slice_bread.name=Bread Slice
 
-item.AppleSlice.name=Apple Toast
-item.BlackCurrantSlice.name=Black Currant Toast
-item.BlueberrySlice.name=Blueberry Toast
-item.CherrySlice.name=Cherry Toast
-item.ChocolateSlice.name=Chocolate Toast
-item.OrangeSlice.name=Orange Toast
-item.PearSlice.name=Pear Toast
-item.RedCurrantSlice.name=Red Currant Toast
-item.StrawberrySlice.name=Strawberry Toast
-item.DreamCurrantSlice.name=Dream Currant Toast
-item.BreadSlice.name=Bread Slice
+item.bag_pear.name=Pear Bag
+item.bag_cherry.name=Cherry Bag
+item.bag_orange.name=Orange Bag
+item.bag_tomato.name=Tomato Bag
+item.bag_apple.name=Apple Bag
 
-item.PearBag.name=Pear Bag
-item.CherryBag.name=Cherry Bag
-item.OrangeBag.name=Orange Bag
-item.TomatoBag.name=Tomato Bag
-item.AppleBag.name=Apple Bag
+item.salad_fruit.name=Fruit Salad
+item.salad_tomato.name=Tomato Salad
+item.salad_pumpkin.name=Pumpkin Juice
 
-item.FruitSalad.name=Fruit Salad
-item.TomatoSalad.name=Tomato Salad
-item.PumpkinSalad.name=Pumpkin Juice
+item.seed_pear.name=Pear Seeds
+item.seed_cherry.name=Cherry Seeds
+item.seed_orange.name=Orange Seeds
+item.seed_tomato.name=Tomato Seeds
+item.seed_apple.name=Apple Seeds
 
-item.PearSeed.name=Pear Seeds
-item.CherrySeed.name=Cherry Seeds
-item.OrangeSeed.name=Orange Seeds
-item.TomatoSeed.name=Tomato Seeds
-item.AppleSeed.name=Apple Seeds
+item.salt.name=Salt
 
-item.Salt.name=Salt
-item.GlassBowl.name=Glass Bowl
-item.PearJuice.name=Pear Juice
-item.CherryJuice.name=Cherry Juice
-item.OrangeJuice.name=Orange Juice
-item.TomatoJuice.name=Tomato Juice
-item.AppleJuice.name=Apple Juice
+item.bowl_glass.name=Glass Bowl
 
-item.PearPie.name=Pear Pie
-item.CherryPie.name=Clafoutis
-item.OrangePie.name=Orange Pie
-item.ApplePie.name=Apple Pie
-item.MelonPie.name=Melon Pie
+item.juice_pear.name=Pear Juice
+item.juice_cherry.name=Cherry Juice
+item.juice_orange.name=Orange Juice
+item.juice_tomato.name=Tomato Juice
+item.juice_apple.name=Apple Juice
 
-item.MuffinPear.name=Pear Muffin
-item.MuffinCherry.name=Cherry Muffin
-item.MuffinOrange.name=Orange Muffin
-item.MuffinApple.name=Apple Muffin
-item.MuffinBlueberry.name=Blueberry Muffin
-item.MuffinBlackCurrant.name=Black Currant Muffin
-item.MuffinRedCurrant.name=Red Currant Muffin
-item.MuffinStrawberry.name=Strawberry Muffin
-item.MuffinDreamCurrant.name=Dream Currant Muffin
+item.pie_pear.name=Pear Pie
+item.pie_cherry.name=Clafoutis
+item.pie_orange.name=Orange Pie
+item.pie_apple.name=Apple Pie
+item.pie_melon.name=Melon Pie
 
-item.ToffeeCube.name=Toffee Cube
-item.ToffeeApple.name=Toffee Apple
+item.muffin_pear.name=Pear Muffin
+item.muffin_cherry.name=Cherry Muffin
+item.muffin_orange.name=Orange Muffin
+item.muffin_apple.name=Apple Muffin
+item.muffin_blueberry.name=Blueberry Muffin
+item.muffin_redcurrant.name=Red Currant Muffin
+item.muffin_blackcurrant.name=Black Currant Muffin
+item.muffin_strawberry.name=Strawberry Muffin
+item.muffin_dreamcurrant.name=Dream Currant Muffin
 
-item.WildBoarRaw.name=Wild Boar Raw
-item.WildBoarCooked.name=Wild Boar Cooked
+item.toffee_cube.name=Toffee Cube
+item.toffee_apple.name=Toffee Apple
 
-item.TroutRaw.name=Raw Trout
-item.BassRaw.name=Raw Bass
-item.SardineRaw.name=Raw Sardine
-item.MackerelRaw.name=Raw Mackerel
-item.WhitingRaw.name=Raw Whiting
+item.wildboar_raw.name=Wild Boar Raw
+item.wildboar_cooked.name=Wild Boar Cooked
 
-item.TroutCooked.name=Cooked Trout
-item.BassCooked.name=Cooked Bass
-item.SardineCooked.name=Cooked Sardine
-item.MackerelCooked.name=Cooked Mackerel
-item.WhitingCooked.name=Cooked Whiting
+item.fish_trout_raw.name=Raw Trout
+item.fish_bass_raw.name=Raw Bass
+item.fish_sardine_raw.name=Raw Sardine
+item.fish_mackerel_raw.name=Raw Mackerel
+item.fish_whiting_raw.name=Raw Whiting
 
-item.FishGolden.name=Golden Fish
-item.FishDiamond.name=Diamond Fish
+item.fish_trout_cooked.name=Cooked Trout
+item.fish_bass_cooked.name=Cooked Bass
+item.fish_sardine_cooked.name=Cooked Sardine
+item.fish_mackerel_cooked.name=Cooked Mackerel
+item.fish_whiting_cooked.name=Cooked Whiting
 
-item.PurpuraBag.name=Purpura Bag
+item.fish_golden.name=Golden Fish
+item.fish_diamond.name=Diamond Fish
 
-item.TerracottaCube.name=Terracotta Cube
+item.bag_purpura.name=Purpura Bag
 
-item.CherryBoat.name=Cherry Boat
-item.CherryDoor.name=Cherry Door
-item.PearBoat.name=Pear Boat
-item.PearDoor.name=Pear Door
-item.OrangeBoat.name=Orange Boat
-item.OrangeDoor.name=Orange Door
-item.AtlasBoat.name=Atlas Boat
-item.AtlasDoor.name=Atlas Door
+item.terracotta_cube.name=Terracotta Cube
 
-item.PineBoat.name=Pine Boat
-item.PineDoor.name=Pine Door
-item.CocoBoat.name=Coconut Palm Boat
-item.CocoDoor.name=Coconut Palm Door
-item.DreamBoat.name=Dream Boat
-item.DreamDoor.name=Dream Door
+item.cherry_boat.name=Cherry Boat
+item.cherry_door.name=Cherry Door
+item.pear_boat.name=Pear Boat
+item.pear_door.name=Pear Door
+item.orange_boat.name=Orange Boat
+item.orange_door.name=Orange Door
+item.atlas_boat.name=Atlas Boat
+item.atlas_door.name=Atlas Door
+
+item.pine_boat.name=Pine Boat
+item.pine_door.name=Pine Door
+item.coco_boat.name=Coconut Palm Boat
+item.coco_door.name=Coconut Palm Door
+item.dream_boat.name=Dream Boat
+item.dream_door.name=Dream Door
 
 tile.fossil_ore.name=Fossil Ore
 

@@ -3,7 +3,6 @@ package emotionfox.emomod.entity.render;
 import emotionfox.emomod.entity.EntityWildBoar;
 import emotionfox.emomod.entity.model.ModelWildBoar;
 import emotionfox.emomod.util.Reference;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;

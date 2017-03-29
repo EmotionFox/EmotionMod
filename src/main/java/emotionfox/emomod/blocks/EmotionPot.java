@@ -61,7 +61,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 		{
 			if (heldItem == Items.WATER_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.WATER));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.WATER));
 
 				if (!player.capabilities.isCreativeMode)
 				{
@@ -72,7 +72,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 			}
 			else if (heldItem == Items.LAVA_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.LAVA));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.LAVA));
 
 				if (!player.capabilities.isCreativeMode)
 				{
@@ -83,7 +83,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 			}
 			else if (heldItem == Items.MILK_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.MILK));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.MILK));
 
 				if (!player.capabilities.isCreativeMode)
 				{
@@ -97,7 +97,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 		{
 			if (heldItem == Items.BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
 				player.getHeldItem(hand).shrink(1);
 
 				if (!player.capabilities.isCreativeMode)
@@ -120,7 +120,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 		{
 			if (heldItem == Items.BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
 				player.getHeldItem(hand).shrink(1);
 
 				if (!player.capabilities.isCreativeMode)
@@ -143,7 +143,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 		{
 			if (heldItem == Items.BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.basePot.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
+				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
 				player.getHeldItem(hand).shrink(1);
 
 				if (!player.capabilities.isCreativeMode)

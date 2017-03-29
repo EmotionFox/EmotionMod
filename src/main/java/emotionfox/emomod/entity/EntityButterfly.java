@@ -2,23 +2,13 @@ package emotionfox.emomod.entity;
 
 import javax.annotation.Nullable;
 
-import emotionfox.emomod.handler.EmotionSoundHandler;
-import emotionfox.emomod.init.EmotionItems;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityBat;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
@@ -77,7 +67,6 @@ public class EntityButterfly extends EntityBat
 	@Override
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, @Nullable IEntityLivingData livingdata)
 	{
-		System.out.println(EntityButterfly.Type.values().length);
 		this.setButterflyType(EntityButterfly.Type.byId(this.world.rand.nextInt(EntityButterfly.Type.values().length)));
 		return super.onInitialSpawn(difficulty, livingdata);
 	}

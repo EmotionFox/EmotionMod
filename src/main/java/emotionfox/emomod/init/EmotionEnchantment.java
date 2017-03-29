@@ -10,15 +10,15 @@ import net.minecraft.util.ResourceLocation;
 
 public class EmotionEnchantment
 {
-	public static final Enchantment bloodSucking = new BloodSucking(Enchantment.Rarity.RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[]
+	public static final Enchantment BLOOD_SUCKING = new BloodSucking(Enchantment.Rarity.RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[]
 	{ EntityEquipmentSlot.MAINHAND });
-	public static final Enchantment finalFrost = new FinalFrost(Enchantment.Rarity.VERY_RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[]
+	public static final Enchantment FINAL_FROST = new FinalFrost(Enchantment.Rarity.VERY_RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[]
 	{ EntityEquipmentSlot.MAINHAND });
 
 	public static void mainRegister()
 	{
-		registerEnchant(bloodSucking, "blood_sucking");
-		registerEnchant(finalFrost, "final_frost");
+		registerEnchant(BLOOD_SUCKING, "blood_sucking");
+		registerEnchant(FINAL_FROST, "final_frost");
 	}
 
 	public static void registerEnchant(Enchantment enchantment, String name)

@@ -19,11 +19,11 @@ public class EmotionGenPalmTree extends WorldGenerator
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
-		IBlockState logs = EmotionBlocks.emoNewLog.getDefaultState().withProperty(EmotionNewLog.VARIANT, EmotionPlanks.EnumType.COCO);
-		IBlockState leaves = EmotionBlocks.emoNewLeaves.getDefaultState().withProperty(EmotionNewLeaves.VARIANT, EmotionPlanks.EnumType.COCO);
+		IBlockState logs = EmotionBlocks.NEW_LOG.getDefaultState().withProperty(EmotionNewLog.VARIANT, EmotionPlanks.EnumType.COCO);
+		IBlockState leaves = EmotionBlocks.NEW_LEAVES.getDefaultState().withProperty(EmotionNewLeaves.VARIANT, EmotionPlanks.EnumType.COCO);
 		int height = 10 + rand.nextInt(4);
 
-		if ((world.getBlockState(pos.down()).getBlock() == Blocks.SAND || ((EmotionSapling) EmotionBlocks.emoSapling).canBlockStay(world, pos, EmotionBlocks.emoSapling.getDefaultState()))
+		if ((world.getBlockState(pos.down()).getBlock() == Blocks.SAND || ((EmotionSapling) EmotionBlocks.SAPLING).canBlockStay(world, pos, EmotionBlocks.SAPLING.getDefaultState()))
 				&& pos.getY() < 245 && world.isAirBlock(pos))
 		{
 			for (int l = -5; l <= 5; l++)
@@ -92,20 +92,20 @@ public class EmotionGenPalmTree extends WorldGenerator
 					{
 						BlockPos pos1 = pos.add(0, height, 0);
 
-						if (world.getBlockState(pos1.add(x, y, z)).getBlock() != EmotionBlocks.emoNewLog)
+						if (world.getBlockState(pos1.add(x, y, z)).getBlock() != EmotionBlocks.NEW_LOG)
 						{
 							// Don't judge me
-							if (world.getBlockState(pos1.add(x, y, z).up()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).up()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
-							if (world.getBlockState(pos1.add(x, y, z).down()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).down()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
-							if (world.getBlockState(pos1.add(x, y, z).east()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).east()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
-							if (world.getBlockState(pos1.add(x, y, z).west()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).west()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
-							if (world.getBlockState(pos1.add(x, y, z).north()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).north()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
-							if (world.getBlockState(pos1.add(x, y, z).south()).getBlock() == EmotionBlocks.emoNewLog)
+							if (world.getBlockState(pos1.add(x, y, z).south()).getBlock() == EmotionBlocks.NEW_LOG)
 								world.setBlockState(pos1.add(x, y, z), leaves);
 						}
 					}

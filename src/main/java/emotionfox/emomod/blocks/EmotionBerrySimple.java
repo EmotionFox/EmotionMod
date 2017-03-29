@@ -65,7 +65,7 @@ public class EmotionBerrySimple extends EmotionBerryBush implements IMetaBlockNa
 	public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
 	{
 		if (random.nextInt(40) == 0)
-			world.setBlockState(pos, EmotionBlocks.baseBush.getDefaultState().withProperty(EmotionBerryBush.BERRY, state.getValue(EmotionBerryBush.BERRY)));
+			world.setBlockState(pos, EmotionBlocks.BUSH.getDefaultState().withProperty(EmotionBerryBush.BERRY, state.getValue(EmotionBerryBush.BERRY)));
 	}
 
 	@Override

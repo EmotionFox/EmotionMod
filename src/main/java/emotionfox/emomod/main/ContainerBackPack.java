@@ -1,6 +1,6 @@
 package emotionfox.emomod.main;
 
-import emotionfox.emomod.items.PurpuraBag;
+import emotionfox.emomod.items.ItemPurpuraBag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
@@ -68,7 +68,7 @@ public class ContainerBackPack extends Container
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if(itemstack.getItem() instanceof PurpuraBag)
+            if(itemstack.getItem() instanceof ItemPurpuraBag)
                 return null;
 
             if(index < this.invBackpack.getSizeInventory())

@@ -1,6 +1,6 @@
 package emotionfox.emomod.event;
 
-import emotionfox.emomod.items.PurpuraBag;
+import emotionfox.emomod.items.ItemPurpuraBag;
 import emotionfox.emomod.main.ContainerBackPack;
 import emotionfox.emomod.main.GuiBackPack;
 import emotionfox.emomod.main.InventoryBackPack;
@@ -17,7 +17,7 @@ public class EmotionGuiHandler implements IGuiHandler
 		{
 		case 0:
 			System.out.println(player.inventory.getItemStack().getItem());
-			if (player.inventory.getItemStack() == null || !(player.inventory.getItemStack().getItem() instanceof PurpuraBag))
+			if (player.inventory.getItemStack() == null || !(player.inventory.getItemStack().getItem() instanceof ItemPurpuraBag))
 				return null;
 			return new ContainerBackPack(player.inventory, new InventoryBackPack(player.inventory.getItemStack(), 9));
 		}
@@ -31,7 +31,7 @@ public class EmotionGuiHandler implements IGuiHandler
 		{
 		case 0:
 			System.out.println(player.inventory.getItemStack().getItem());
-			if (player.inventory.getItemStack() == null || !(player.inventory.getItemStack().getItem() instanceof PurpuraBag))
+			if (player.inventory.getItemStack() == null || !(player.inventory.getItemStack().getItem() instanceof ItemPurpuraBag))
 				return null;
 			return new GuiBackPack(player.inventory, new InventoryBackPack(player.inventory.getItemStack(), 9));
 		}

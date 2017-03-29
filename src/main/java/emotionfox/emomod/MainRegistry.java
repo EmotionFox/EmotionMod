@@ -1,12 +1,13 @@
 package emotionfox.emomod;
 
-import emotionfox.emomod.achievement.EmotionAchievement;
 import emotionfox.emomod.event.EmotionAchievementEvent;
 import emotionfox.emomod.event.EmotionGuiHandler;
 import emotionfox.emomod.event.EmotionLifeEvent;
 import emotionfox.emomod.event.EmotionOverlayEvent;
+import emotionfox.emomod.handler.EmotionLootTableHandler;
 import emotionfox.emomod.handler.EmotionSoundHandler;
 import emotionfox.emomod.init.CraftingManager;
+import emotionfox.emomod.init.EmotionAchievement;
 import emotionfox.emomod.init.EmotionBiome;
 import emotionfox.emomod.init.EmotionBlocks;
 import emotionfox.emomod.init.EmotionEnchantment;
@@ -47,7 +48,7 @@ public class MainRegistry
 		CraftingManager.mainRegister();
 		EmotionBiome.mainRegister();
 
-		proxy.registerModelBakeryStuff();
+		proxy.registerModelBakeryVariants();
 		proxy.registerEntityRendering();
 		proxy.customStateMapper();
 	}
@@ -56,6 +57,7 @@ public class MainRegistry
 	public void init(FMLInitializationEvent event)
 	{
 		EmotionSoundHandler.init();
+		EmotionLootTableHandler.init();
 		
 		// Register Event Class
 		MinecraftForge.EVENT_BUS.register(new EmotionAchievementEvent());

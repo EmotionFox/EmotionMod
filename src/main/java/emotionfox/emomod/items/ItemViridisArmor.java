@@ -14,9 +14,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ViridisArmor extends ItemArmor
+public class ItemViridisArmor extends ItemArmor
 {
-	public ViridisArmor(int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
+	public ItemViridisArmor(int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
 	{
 		super(EmotionItems.ARMOR_MAT_VIRIDIS, renderIndexIn, equipmentSlotIn);
 	}
@@ -103,6 +103,6 @@ public class ViridisArmor extends ItemArmor
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == Item.getItemFromBlock(EmotionBlocks.viridisCristal) ? true : false;
+		return repair.getItem() == Item.getItemFromBlock(EmotionBlocks.VIRIDIS_CRISTAL) ? true : false;
 	}
 }

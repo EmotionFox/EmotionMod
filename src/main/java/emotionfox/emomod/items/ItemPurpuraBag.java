@@ -10,9 +10,9 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class PurpuraBag extends Item
+public class ItemPurpuraBag extends Item
 {
-	public PurpuraBag()
+	public ItemPurpuraBag()
 	{
 		this.setCreativeTab(CreativeTabs.TOOLS);
 		this.setMaxStackSize(1);

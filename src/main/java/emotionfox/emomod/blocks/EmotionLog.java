@@ -38,7 +38,7 @@ public class EmotionLog extends BlockLog implements IMetaBlockName
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return Item.getItemFromBlock(EmotionBlocks.emoLog);
+		return Item.getItemFromBlock(EmotionBlocks.LOG);
 	}
 
 	@Override

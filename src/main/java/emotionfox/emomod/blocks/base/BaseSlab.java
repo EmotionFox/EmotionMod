@@ -2,7 +2,6 @@ package emotionfox.emomod.blocks.base;
 
 import java.util.Random;
 
-import emotionfox.emomod.init.EmotionBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.MapColor;
@@ -82,7 +81,7 @@ public abstract class BaseSlab extends BlockSlab
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-			return Item.getItemFromBlock(this);
+		return Item.getItemFromBlock(this);
 	}
 
 	@Override

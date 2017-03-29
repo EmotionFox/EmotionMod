@@ -17,21 +17,21 @@ import net.minecraft.world.World;
 
 public class BaseDoor extends BlockDoor
 {
-	protected MapColor mapColor;
+	private MapColor mapColor;
 
 	public BaseDoor(MapColor mapColorIn)
 	{
 		super(Material.WOOD);
+		this.mapColor = mapColorIn;
 		this.setSoundType(SoundType.WOOD);
 		this.setHardness(2.0F);
 		this.setResistance(5.0F);
-		this.mapColor = mapColorIn;
 	}
 
 	@Override
 	public MapColor getMapColor(IBlockState state)
 	{
-		return mapColor;
+		return this.mapColor;
 	}
 
 	@Override
@@ -48,12 +48,12 @@ public class BaseDoor extends BlockDoor
 
 	private Item getCustomItem()
 	{
-		return this == EmotionBlocks.cherryDoor ? EmotionItems.CHERRY_DOOR
-				: (this == EmotionBlocks.pearDoor ? EmotionItems.PEAR_DOOR
-						: (this == EmotionBlocks.orangeDoor ? EmotionItems.ORANGE_DOOR
-								: (this == EmotionBlocks.atlasDoor ? EmotionItems.ATLAS_DOOR
-										: (this == EmotionBlocks.pineDoor ? EmotionItems.PINE_DOOR
-												: (this == EmotionBlocks.cocoDoor ? EmotionItems.COCO_DOOR
-														: (this == EmotionBlocks.dreamDoor ? EmotionItems.DREAM_DOOR : Items.OAK_DOOR))))));
+		return this == EmotionBlocks.CHERRY_DOOR ? EmotionItems.CHERRY_DOOR
+				: (this == EmotionBlocks.PEAR_DOOR ? EmotionItems.PEAR_DOOR
+						: (this == EmotionBlocks.ORANGE_DOOR ? EmotionItems.ORANGE_DOOR
+								: (this == EmotionBlocks.ATLAS_DOOR ? EmotionItems.ATLAS_DOOR
+										: (this == EmotionBlocks.PINE_DOOR ? EmotionItems.PINE_DOOR
+												: (this == EmotionBlocks.COCO_DOOR ? EmotionItems.COCO_DOOR
+														: (this == EmotionBlocks.DREAM_DOOR ? EmotionItems.DREAM_DOOR : Items.OAK_DOOR))))));
 	}
 }

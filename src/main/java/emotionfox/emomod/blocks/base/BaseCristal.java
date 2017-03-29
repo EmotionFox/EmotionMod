@@ -4,17 +4,14 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import emotionfox.emomod.init.EmotionBlocks;
 import emotionfox.emomod.init.EmotionItems;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.monster.EntitySilverfish;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;

@@ -15,16 +15,16 @@ public class EmotionFuelHandler implements IFuelHandler
 
 		if (stack == EmotionItems.LUME_STONE)
 			return 5000;
-		else if (stack == Item.getItemFromBlock(EmotionBlocks.lumeBlock))
+		else if (stack == Item.getItemFromBlock(EmotionBlocks.LUME_BLOCK))
 			return 45000;
-		else if (stack == Item.getItemFromBlock(EmotionBlocks.emoSapling))
+		else if (stack == Item.getItemFromBlock(EmotionBlocks.SAPLING))
 			return 100;
-		else if (stack == Item.getItemFromBlock(EmotionBlocks.emoPlanks) || stack == Item.getItemFromBlock(EmotionBlocks.emoLog) || stack == Item.getItemFromBlock(EmotionBlocks.emoNewLog))
+		else if (stack == Item.getItemFromBlock(EmotionBlocks.PLANKS) || stack == Item.getItemFromBlock(EmotionBlocks.LOG) || stack == Item.getItemFromBlock(EmotionBlocks.NEW_LOG))
 			return 300;
-		else if (stack == Item.getItemFromBlock(EmotionBlocks.cherryStairs) || stack == Item.getItemFromBlock(EmotionBlocks.pearStairs) || stack == Item.getItemFromBlock(EmotionBlocks.orangeStairs)
-				|| stack == Item.getItemFromBlock(EmotionBlocks.atlasStairs))
+		else if (stack == Item.getItemFromBlock(EmotionBlocks.CHERRY_STAIRS) || stack == Item.getItemFromBlock(EmotionBlocks.PEAR_STAIRS) || stack == Item.getItemFromBlock(EmotionBlocks.ORANGE_STAIRS)
+				|| stack == Item.getItemFromBlock(EmotionBlocks.ATLAS_STAIRS))
 			return 300;
-		else if (stack == Item.getItemFromBlock(EmotionBlocks.pineStairs) || stack == Item.getItemFromBlock(EmotionBlocks.cocoStairs))
+		else if (stack == Item.getItemFromBlock(EmotionBlocks.PINE_STAIRS) || stack == Item.getItemFromBlock(EmotionBlocks.COCO_STAIRS))
 			return 300;
 		else if (stack == EmotionItems.KNIFE)
 			return 200;

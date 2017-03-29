@@ -11,7 +11,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenMushroom extends WorldGenerator
 {
-	private EmotionMushroom mushroom = (EmotionMushroom) EmotionBlocks.baseMushroom;
+	private EmotionMushroom mushroom = (EmotionMushroom) EmotionBlocks.MUSHROOM;
 	private IBlockState state;
 
 	public EmotionGenMushroom(EmotionMushroom.EnumType mushroomIn)

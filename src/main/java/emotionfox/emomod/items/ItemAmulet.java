@@ -11,9 +11,9 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class PurpuraAmulet extends Item
+public class ItemAmulet extends Item
 {
-	public PurpuraAmulet()
+	public ItemAmulet()
 	{
 		this.setMaxStackSize(1);
 		this.setMaxDamage(5000);

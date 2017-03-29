@@ -6,8 +6,6 @@ import com.google.common.collect.Sets;
 
 import emotionfox.emomod.init.EmotionItems;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

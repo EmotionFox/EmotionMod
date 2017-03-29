@@ -9,9 +9,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class PurpuraBalloon extends Item
+public class ItemBalloon extends Item
 {
-	public PurpuraBalloon()
+	public ItemBalloon()
 	{
 		this.setCreativeTab(CreativeTabs.TOOLS);
 		this.setMaxStackSize(1);

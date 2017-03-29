@@ -1,13 +1,12 @@
 package emotionfox.emomod.main;
 
+import org.lwjgl.opengl.GL11;
+
+import emotionfox.emomod.util.Reference;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import emotionfox.emomod.util.Reference;
 
 public class GuiBackPack extends GuiContainer
 {

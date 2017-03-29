@@ -8,7 +8,7 @@ public class Reference {
 	public static final String ACCEPTED_VERSIONS = "[1.11]";
 	
 	public static final String CLIENT_PROXY_CLASS = "emotionfox.emomod.proxy.ClientProxy";
-	public static final String SERVER_PROXY_CLASS = "emotionfox.emomod.proxy.ServerProxy";
+	public static final String SERVER_PROXY_CLASS = "emotionfox.emomod.proxy.CommonProxy";
 	
 	public static final float PIXEL = 0.0625F; // One pixel
 }

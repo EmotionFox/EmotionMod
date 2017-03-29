@@ -12,22 +12,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModelButterfly extends ModelBase
 {
 	public ModelRenderer body;
-    public ModelRenderer rWing;
     public ModelRenderer lWing;
+    public ModelRenderer rWing;
 
     public ModelButterfly() {
-        this.textureWidth = 16;
+        this.textureWidth = 18;
         this.textureHeight = 17;
         this.body = new ModelRenderer(this, 0, 0);
-        this.body.setRotationPoint(-1.0F, 16.0F, -1.0F);
-        this.body.addBox(0.0F, 0.0F, 0.0F, 2, 7, 2, 0.0F);
-        this.rWing = new ModelRenderer(this, 0, 9);
-        this.rWing.setRotationPoint(-1.0F, 20.0F, 0.0F);
-        this.rWing.addBox(-7.0F, -4.0F, 0.0F, 7, 8, 0, 0.0F);
-        this.lWing = new ModelRenderer(this, 0, 9);
+        this.body.setRotationPoint(0.0F, 21.0F, -4.0F);
+        this.body.addBox(-1.0F, -1.0F, 0.0F, 2, 2, 7, 0.0F);
+        this.rWing = new ModelRenderer(this, -8, 9);
+        this.rWing.setRotationPoint(-1.0F, 21.0F, 0.0F);
+        this.rWing.addBox(-7.0F, 0.0F, -4.0F, 7, 0, 8, 0.0F);
+        this.lWing = new ModelRenderer(this, -8, 9);
         this.lWing.mirror = true;
-        this.lWing.setRotationPoint(1.0F, 20.0F, 0.0F);
-        this.lWing.addBox(0.0F, -4.0F, 0.0F, 7, 8, 0, 0.0F);
+        this.lWing.setRotationPoint(1.0F, 21.0F, 0.0F);
+        this.lWing.addBox(0.0F, 0.0F, -4.0F, 7, 0, 8, 0.0F);
     }
     
     @Override
@@ -56,7 +56,7 @@ public class ModelButterfly extends ModelBase
     {
     	super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entityIn);
         float f6 = (180F / (float)Math.PI);
-        this.lWing.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-        this.rWing.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        this.lWing.rotateAngleZ = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.rWing.rotateAngleZ = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
     }
 }

@@ -15,7 +15,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenTree extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.emoSapling;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
 	private EmotionPlanks.EnumType type;
 	private IBlockState state;
 
@@ -30,8 +30,8 @@ public class EmotionGenTree extends WorldGenerator
 	{
 		int height = 5 + rand.nextInt(2);
 
-		IBlockState log = EmotionBlocks.emoLog.getDefaultState().withProperty(EmotionLog.VARIANT, type);
-		IBlockState leave = EmotionBlocks.emoLeaves.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
+		IBlockState log = EmotionBlocks.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, type);
+		IBlockState leave = EmotionBlocks.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
 
 		if (worldIn.isAirBlock(position) && position.getY() < 240 && this.sapling.canBlockStay(worldIn, position, this.state))
 		{
@@ -60,7 +60,7 @@ public class EmotionGenTree extends WorldGenerator
 			{
 				for (int z = -1; z <= 1; z++)
 				{
-					if (worldIn.getBlockState(position.add(x, height - 2, z)).getBlock() == EmotionBlocks.emoLeaves)
+					if (worldIn.getBlockState(position.add(x, height - 2, z)).getBlock() == EmotionBlocks.LEAVES)
 						worldIn.setBlockState(position.add(x, height - 2, z), Blocks.AIR.getDefaultState());
 				}
 			}

@@ -28,7 +28,7 @@ public class BiomeRock extends Biome
 		this.theBiomeDecorator.treesPerChunk = -999;
 		this.theBiomeDecorator.grassPerChunk = 10;
 		this.theBiomeDecorator.flowersPerChunk = 2;
-		
+
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBeetle.class, 8, 3, 5));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntitySmallSpider.class, 50, 4, 4));
 	}
@@ -53,14 +53,14 @@ public class BiomeRock extends Biome
 			(new EmotionGenBush(EnumBerry.REDCURRANT)).generate(worldIn, rand, blockpos1);
 		}
 
-		for(int i = 0; i < 4; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			x = rand.nextInt(16) + 8;
 			z = rand.nextInt(16) + 8;
-			
+
 			(new EmotionGenLittleTree()).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
 		}
-		
+
 		for (int i = 0; i < 8; i++)
 		{
 			x = rand.nextInt(16) + 8;
@@ -127,7 +127,7 @@ public class BiomeRock extends Biome
 				net.minecraft.block.state.IBlockState state = worldIn.getBlockState(blockpos);
 				if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, net.minecraft.block.state.pattern.BlockMatcher.forBlock(Blocks.STONE)))
 				{
-					worldIn.setBlockState(blockpos, EmotionBlocks.viridisOre.getDefaultState(), 2);
+					worldIn.setBlockState(blockpos, EmotionBlocks.VIRIDIS_ORE.getDefaultState(), 2);
 				}
 			}
 			return true;

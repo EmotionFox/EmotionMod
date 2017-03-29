@@ -25,17 +25,29 @@ public class CraftingManager
 		ItemStack lapisStack = new ItemStack(Items.DYE, 1, 4);
 
 		// Foods +
-		ItemStack applePot = new ItemStack(EmotionBlocks.basePot, 1, 0);
-		ItemStack blackCurrantPot = new ItemStack(EmotionBlocks.basePot, 1, 1);
-		ItemStack blueberryPot = new ItemStack(EmotionBlocks.basePot, 1, 2);
-		ItemStack cherryPot = new ItemStack(EmotionBlocks.basePot, 1, 3);
-		ItemStack chocolatePot = new ItemStack(EmotionBlocks.basePot, 1, 4);
-		ItemStack orangePot = new ItemStack(EmotionBlocks.basePot, 1, 5);
-		ItemStack pearPot = new ItemStack(EmotionBlocks.basePot, 1, 6);
-		ItemStack redCurrantPot = new ItemStack(EmotionBlocks.basePot, 1, 7);
-		ItemStack strawberryPot = new ItemStack(EmotionBlocks.basePot, 1, 8);
-		ItemStack dreamCurrantPot = new ItemStack(EmotionBlocks.basePot, 1, 9);
-		ItemStack glassPot = new ItemStack(EmotionBlocks.basePot, 1, 10);
+		ItemStack applePot = new ItemStack(EmotionBlocks.POT, 1, 0);
+		ItemStack blackCurrantPot = new ItemStack(EmotionBlocks.POT, 1, 1);
+		ItemStack blueberryPot = new ItemStack(EmotionBlocks.POT, 1, 2);
+		ItemStack cherryPot = new ItemStack(EmotionBlocks.POT, 1, 3);
+		ItemStack chocolatePot = new ItemStack(EmotionBlocks.POT, 1, 4);
+		ItemStack orangePot = new ItemStack(EmotionBlocks.POT, 1, 5);
+		ItemStack pearPot = new ItemStack(EmotionBlocks.POT, 1, 6);
+		ItemStack redCurrantPot = new ItemStack(EmotionBlocks.POT, 1, 7);
+		ItemStack strawberryPot = new ItemStack(EmotionBlocks.POT, 1, 8);
+		ItemStack dreamCurrantPot = new ItemStack(EmotionBlocks.POT, 1, 9);
+		ItemStack glassPot = new ItemStack(EmotionBlocks.POT, 1, 10);
+
+		ItemStack slicePear = new ItemStack(EmotionItems.SLICE, 1, 0);
+		ItemStack sliceCherry = new ItemStack(EmotionItems.SLICE, 1, 1);
+		ItemStack sliceOrange = new ItemStack(EmotionItems.SLICE, 1, 2);
+		ItemStack sliceApple = new ItemStack(EmotionItems.SLICE, 1, 3);
+		ItemStack sliceBlueberry = new ItemStack(EmotionItems.SLICE, 1, 4);
+		ItemStack sliceRedcurrant = new ItemStack(EmotionItems.SLICE, 1, 5);
+		ItemStack sliceBlackcurrant = new ItemStack(EmotionItems.SLICE, 1, 6);
+		ItemStack sliceStrawberry = new ItemStack(EmotionItems.SLICE, 1, 7);
+		ItemStack sliceDreamcurrant = new ItemStack(EmotionItems.SLICE, 1, 8);
+		ItemStack sliceChocolate = new ItemStack(EmotionItems.SLICE, 1, 9);
+		ItemStack sliceBread = new ItemStack(EmotionItems.SLICE, 1, 10);
 
 		// Ores +
 		ItemStack bluePurpura = new ItemStack(EmotionItems.PURPURA_BLUE_SWORD, 1, 0);
@@ -43,27 +55,27 @@ public class CraftingManager
 		bluePurpura.addEnchantment(Enchantment.getEnchantmentByID(21), 1);
 
 		ItemStack redPurpura = new ItemStack(EmotionItems.PURPURA_RED_SWORD, 1, 0);
-		redPurpura.addEnchantment(EmotionEnchantment.bloodSucking, 2);
+		redPurpura.addEnchantment(EmotionEnchantment.BLOOD_SUCKING, 2);
 		redPurpura.addEnchantment(Enchantment.getEnchantmentByID(21), 1);
 
 		// Flowers+
-		ItemStack kittyStack = new ItemStack(EmotionBlocks.baseFlower, 1, 0);
-		ItemStack noxStack = new ItemStack(EmotionBlocks.baseFlower, 1, 1);
-		ItemStack delyStack = new ItemStack(EmotionBlocks.baseFlower, 1, 2);
-		ItemStack gnonStack = new ItemStack(EmotionBlocks.baseFlower, 1, 3);
-		ItemStack centusStack = new ItemStack(EmotionBlocks.baseFlower, 1, 5);
-		ItemStack thornyStack = new ItemStack(EmotionBlocks.baseFlower, 1, 4);
+		ItemStack kittyStack = new ItemStack(EmotionBlocks.FLOWER, 1, 0);
+		ItemStack noxStack = new ItemStack(EmotionBlocks.FLOWER, 1, 1);
+		ItemStack delyStack = new ItemStack(EmotionBlocks.FLOWER, 1, 2);
+		ItemStack gnonStack = new ItemStack(EmotionBlocks.FLOWER, 1, 3);
+		ItemStack centusStack = new ItemStack(EmotionBlocks.FLOWER, 1, 5);
+		ItemStack thornyStack = new ItemStack(EmotionBlocks.FLOWER, 1, 4);
 
 		// Biomes +
-		ItemStack redBrick = new ItemStack(EmotionBlocks.baseBrick, 1, 0);
-		ItemStack greenBrick = new ItemStack(EmotionBlocks.baseBrick, 1, 1);
-		ItemStack blueBrick = new ItemStack(EmotionBlocks.baseBrick, 1, 2);
+		ItemStack redBrick = new ItemStack(EmotionBlocks.BRICK, 1, 0);
+		ItemStack greenBrick = new ItemStack(EmotionBlocks.BRICK, 1, 1);
+		ItemStack blueBrick = new ItemStack(EmotionBlocks.BRICK, 1, 2);
 
 		// Ores +
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.purpuraBlock, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PURPURA_BLOCK, 1), new Object[]
 		{ "YYY", "YYY", "YYY", 'Y', EmotionItems.PURPURA_SHARD });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.PURPURA_SHARD, 9), new Object[]
-		{ EmotionBlocks.purpuraBlock });
+		{ EmotionBlocks.PURPURA_BLOCK });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.PURPURA_AXE, 1), new Object[]
 		{ "YY ", "YX ", " X ", 'Y', EmotionItems.PURPURA_SHARD, 'X', Items.IRON_INGOT });
@@ -95,10 +107,10 @@ public class CraftingManager
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.FOSSIL_SWORD, 1), new Object[]
 		{ " Y ", " Y ", " X ", 'Y', EmotionItems.FOSSIL, 'X', Items.STICK });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.viridisBlock, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.VIRIDIS_BLOCK, 1), new Object[]
 		{ "YYY", "YYY", "YYY", 'Y', EmotionItems.VIRIDIS_CRISTAL });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.VIRIDIS_CRISTAL, 9), new Object[]
-		{ EmotionBlocks.viridisBlock });
+		{ EmotionBlocks.VIRIDIS_BLOCK });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.VIRIDIS_HELMET, 1), new Object[]
 		{ "YZY", "Z Z", 'Y', Items.IRON_INGOT, 'Z', EmotionItems.VIRIDIS_CRISTAL });
@@ -109,24 +121,24 @@ public class CraftingManager
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.VIRIDIS_BOOTS, 1), new Object[]
 		{ "Z Z", "Y Y", 'Y', Items.IRON_INGOT, 'Z', EmotionItems.VIRIDIS_CRISTAL });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.lumeBlock, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.LUME_BLOCK, 1), new Object[]
 		{ "YYY", "YYY", "YYY", 'Y', EmotionItems.LUME_STONE });
 		GameRegistry.addRecipe(new ItemStack(Item.getItemFromBlock(Blocks.TORCH), 8), new Object[]
 		{ " Y ", " X ", 'Y', EmotionItems.LUME_STONE, 'X', Items.STICK });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.LUME_STONE, 9), new Object[]
-		{ EmotionBlocks.lumeBlock });
+		{ EmotionBlocks.LUME_BLOCK });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.STAFF_BLUE, 1), new Object[]
 		{ "XYZ", " W ", " W ", 'X', Items.ENDER_EYE, 'Y', EmotionItems.PURPURA_SHARD, 'Z', lapisStack, 'W', Items.IRON_INGOT });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_BLUE), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_BLUE, 1), new Object[]
 		{ EmotionItems.STAFF_WHITE, lapisStack });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.STAFF_GREEN, 1), new Object[]
 		{ "XYZ", " W ", " W ", 'X', Items.ENDER_EYE, 'Y', EmotionItems.PURPURA_SHARD, 'Z', Items.EMERALD, 'W', Items.IRON_INGOT });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_GREEN), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_GREEN, 1), new Object[]
 		{ EmotionItems.STAFF_WHITE, Items.EMERALD });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.STAFF_RED, 1), new Object[]
 		{ "XYZ", " W ", " W ", 'X', Items.ENDER_EYE, 'Y', EmotionItems.PURPURA_SHARD, 'Z', Items.REDSTONE, 'W', Items.IRON_INGOT });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_RED), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.STAFF_RED, 1), new Object[]
 		{ EmotionItems.STAFF_WHITE, Items.REDSTONE });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.STAFF_WHITE, 1), new Object[]
 		{ "XYW", " W ", " W ", 'X', Items.ENDER_EYE, 'Y', EmotionItems.PURPURA_SHARD, 'W', Items.IRON_INGOT });
@@ -211,52 +223,52 @@ public class CraftingManager
 		GameRegistry.addRecipe(glassPot, new Object[]
 		{ "YXY", "Y Y", "YYY", 'X', Blocks.PLANKS, 'Y', Blocks.GLASS });
 		GameRegistry.addRecipe(glassPot, new Object[]
-		{ "YXY", "Y Y", "YYY", 'X', EmotionBlocks.emoPlanks, 'Y', Blocks.GLASS });
+		{ "YXY", "Y Y", "YYY", 'X', EmotionBlocks.PLANKS, 'Y', Blocks.GLASS });
 
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_APPLE, 4), new Object[]
-		{ applePot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_BLACKCURRANT, 4), new Object[]
-		{ blackCurrantPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_BLUEBERRY, 4), new Object[]
-		{ blueberryPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_CHERRY, 4), new Object[]
-		{ cherryPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_CHOCOLATE, 4), new Object[]
-		{ chocolatePot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_ORANGE, 4), new Object[]
-		{ orangePot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_PEAR, 4), new Object[]
-		{ pearPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_REDCURRANT, 4), new Object[]
-		{ redCurrantPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_STRAWBERRY, 4), new Object[]
-		{ strawberryPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_DREAMCURRANT, 4), new Object[]
-		{ dreamCurrantPot, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD, EmotionItems.SLICE_BREAD });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE_BREAD, 4), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 0), new Object[]
+		{ pearPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 1), new Object[]
+		{ cherryPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 2), new Object[]
+		{ orangePot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 3), new Object[]
+		{ applePot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 4), new Object[]
+		{ blueberryPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 5), new Object[]
+		{ redCurrantPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 6), new Object[]
+		{ blackCurrantPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 7), new Object[]
+		{ strawberryPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 8), new Object[]
+		{ dreamCurrantPot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 9), new Object[]
+		{ chocolatePot, sliceBread, sliceBread, sliceBread, sliceBread });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SLICE, 4, 10), new Object[]
 		{ Items.BREAD });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG_PEAR, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG, 1, 0), new Object[]
 		{ "YY", "YY", 'Y', EmotionItems.FRUIT_PEAR });
-		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG_CHERRY, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG, 1, 1), new Object[]
 		{ "YY", "YY", 'Y', EmotionItems.FRUIT_CHERRY });
-		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG_ORANGE, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG, 1, 2), new Object[]
 		{ "YY", "YY", 'Y', EmotionItems.FRUIT_ORANGE });
-		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG_TOMATO, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG, 1, 3), new Object[]
 		{ "YY", "YY", 'Y', EmotionItems.FRUIT_TOMATO });
-		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG_APPLE, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionItems.BAG, 1, 4), new Object[]
 		{ "YY", "YY", 'Y', Items.APPLE });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.FRUIT_PEAR, 4), new Object[]
-		{ EmotionItems.BAG_PEAR });
+		{ new ItemStack(EmotionItems.BAG, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.FRUIT_CHERRY, 4), new Object[]
-		{ EmotionItems.BAG_CHERRY });
+		{ new ItemStack(EmotionItems.BAG, 1, 1) });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.FRUIT_ORANGE, 4), new Object[]
-		{ EmotionItems.BAG_ORANGE });
+		{ new ItemStack(EmotionItems.BAG, 1, 2) });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.FRUIT_TOMATO, 4), new Object[]
-		{ EmotionItems.BAG_TOMATO });
+		{ new ItemStack(EmotionItems.BAG, 1, 3) });
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.APPLE, 4), new Object[]
-		{ EmotionItems.BAG_APPLE });
+		{ new ItemStack(EmotionItems.BAG, 1, 4) });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.BERRY_STRAWBERRY_CHOCO, 1), new Object[]
 		{ EmotionItems.BERRY_STRAWBERRY, cocoaStack });
@@ -268,13 +280,13 @@ public class CraftingManager
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SALAD_PUMPKIN, 1), new Object[]
 		{ Blocks.PUMPKIN, Items.BOWL });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cakeChoco, 1, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CAKE_CHOCO, 1, 0), new Object[]
 		{ "WYW", "XZX", "VVV", 'Y', Items.MILK_BUCKET, 'X', Items.SUGAR, 'Z', Items.EGG, 'W', cocoaStack, 'V', Items.WHEAT });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cakeToffee, 1, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CAKE_TOFFEE, 1, 0), new Object[]
 		{ "WYW", "XZX", "VVV", 'Y', Items.MILK_BUCKET, 'X', Items.SUGAR, 'Z', Items.EGG, 'W', EmotionItems.TOFFEE_CUBE, 'V', Items.WHEAT });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cakeStrawberry, 1, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CAKE_STRAWBERRY, 1, 0), new Object[]
 		{ "WYW", "XZX", "VVV", 'Y', Items.MILK_BUCKET, 'X', Items.SUGAR, 'Z', Items.EGG, 'W', EmotionItems.BERRY_STRAWBERRY, 'V', Items.WHEAT });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cakeFruit, 1, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CAKE_FRUIT, 1, 0), new Object[]
 		{ "WYU", "VZX", "TTT", 'W', EmotionItems.FRUIT_PEAR, 'Y', Items.SUGAR, 'U', EmotionItems.FRUIT_ORANGE, 'V', EmotionItems.FRUIT_CHERRY, 'Z', Items.EGG, 'X', Items.APPLE, 'T', Items.WHEAT });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.BOWL_GLASS, 4), new Object[]
@@ -342,7 +354,7 @@ public class CraftingManager
 		// Object[] {"Y Y", "YYY", 'Y', EmotionItems.terracottaCube});
 
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SPORE_MAGIC, 2), new Object[]
-		{ EmotionBlocks.baseMushroom });
+		{ EmotionBlocks.MUSHROOM });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SPORE_RED, 2), new Object[]
 		{ Blocks.RED_MUSHROOM });
 		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SPORE_BROWN, 2), new Object[]
@@ -351,103 +363,103 @@ public class CraftingManager
 		// Furnitures +
 		for (int i = 0; i <= 12; ++i)
 		{
-			ItemStack emoPlanks = new ItemStack(EmotionBlocks.emoPlanks, 1, i);
+			ItemStack emoPlanks = new ItemStack(EmotionBlocks.PLANKS, 1, i);
 			ItemStack planks = new ItemStack(Blocks.PLANKS, 1, i - 7);
 
 			if (i <= 6)
-				GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodChair, 2, i), new Object[]
+				GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_CHAIR, 2, i), new Object[]
 				{ "YYY", "X X", "X X", 'X', Items.STICK, 'Y', emoPlanks });
 			if (i >= 7)
-				GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodChair, 2, i), new Object[]
+				GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_CHAIR, 2, i), new Object[]
 				{ "YYY", "X X", "X X", 'X', Items.STICK, 'Y', planks });
 		}
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandCherry, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandPear, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandOrange, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandAtlas, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandPine, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandCoco, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandDream, 2, 2), new Object[]
-		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_CHERRY, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_PEAR, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_ORANGE, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_ATLAS, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_PINE, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_COCO, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_DREAM, 2, 2), new Object[]
+		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandOak, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_OAK, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandSpruce, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_SPRUCE, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandBirch, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_BIRCH, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandJungle, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_JUNGLE, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandAcacia, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_ACACIA, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodNightstandBigOak, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_NIGHTSTAND_BIG_OAK, 2, 2), new Object[]
 		{ "YYY", "XYX", "X X", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 5) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableCherry, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTablePear, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableOrange, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableAtlas, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTablePine, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableCoco, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableDream, 2, 0), new Object[]
-		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_CHERRY, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_PEAR, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_ORANGE, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_ATLAS, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_PINE, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_COCO, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_DREAM, 2, 0), new Object[]
+		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableOak, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_OAK, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableSpruce, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_SPRUCE, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableBirch, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_BIRCH, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableJungle, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_JUNGLE, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableAcacia, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_ACACIA, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.woodTableBigOak, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WOOD_TABLE_BIG_OAK, 2, 0), new Object[]
 		{ "YYY", " Y ", "XYX", 'X', Items.STICK, 'Y', new ItemStack(Blocks.PLANKS, 1, 5) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableCobblestone, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_COBBLESTONE, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', Blocks.COBBLESTONE });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableMossyCobblestone, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_MOSSY_COBBLESTONE, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', Blocks.MOSSY_COBBLESTONE });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableStoneBrick, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_STONE_BRICK, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableMossyStoneBrick, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_MOSSY_STONE_BRICK, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableCrackedStoneBrick, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_CRACKED_STONE_BRICK, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableChiselledStoneBrick, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_CHISELLED_STONE_BRICK, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 3) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneTableBrick, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_TABLE_BRICK, 2, 0), new Object[]
 		{ "YYY", " Y ", "YYY", 'Y', Blocks.BRICK_BLOCK });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 0), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 0), new Object[]
 		{ " YY", " YY", 'Y', Blocks.COBBLESTONE });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 1), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 1), new Object[]
 		{ " YY", " YY", 'Y', Blocks.MOSSY_COBBLESTONE });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 2), new Object[]
 		{ " YY", " YY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 3), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 3), new Object[]
 		{ " YY", " YY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 4), new Object[]
 		{ " YY", " YY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 5), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 5), new Object[]
 		{ " YY", " YY", 'Y', new ItemStack(Blocks.STONEBRICK, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.stoneChair, 2, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.STONE_CHAIR, 2, 6), new Object[]
 		{ " YY", " YY", 'Y', Blocks.BRICK_BLOCK });
 
 		// GameRegistry.addRecipe(new ItemStack(EmotionBlocks.clayStatue, 1, 0),
@@ -473,285 +485,285 @@ public class CraftingManager
 		// EmotionItems.terracottaCube, EmotionItems.terracottaCube,
 		// EmotionBlocks.terracotta});
 
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.baseBrick, 4, 3), new Object[]
-		{ EmotionBlocks.limestone, EmotionBlocks.limestone, EmotionBlocks.limestone, EmotionBlocks.limestone });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.BRICK, 4, 3), new Object[]
+		{ EmotionBlocks.LIMESTONE, EmotionBlocks.LIMESTONE, EmotionBlocks.LIMESTONE, EmotionBlocks.LIMESTONE });
 
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 0), new Object[]
-		{ EmotionBlocks.cherryStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 1), new Object[]
-		{ EmotionBlocks.pearStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 2), new Object[]
-		{ EmotionBlocks.orangeStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 3), new Object[]
-		{ EmotionBlocks.atlasStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 4), new Object[]
-		{ EmotionBlocks.pineStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 5), new Object[]
-		{ EmotionBlocks.cocoStairs });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 6), new Object[]
-		{ EmotionBlocks.dreamStairs });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 0), new Object[]
+		{ EmotionBlocks.CHERRY_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 1), new Object[]
+		{ EmotionBlocks.PEAR_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 2), new Object[]
+		{ EmotionBlocks.ORANGE_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 3), new Object[]
+		{ EmotionBlocks.ATLAS_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 4), new Object[]
+		{ EmotionBlocks.PINE_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 5), new Object[]
+		{ EmotionBlocks.COCO_STAIRS });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 6), new Object[]
+		{ EmotionBlocks.DREAM_STAIRS });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), new Object[]
-		{ EmotionBlocks.whiteClayStairs });
+		{ EmotionBlocks.WHITE_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1), new Object[]
-		{ EmotionBlocks.orangeClayStairs });
+		{ EmotionBlocks.ORANGE_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2), new Object[]
-		{ EmotionBlocks.magentaClayStairs });
+		{ EmotionBlocks.MANGENTA_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3), new Object[]
-		{ EmotionBlocks.lightBlueClayStairs });
+		{ EmotionBlocks.LIGHT_BLUE_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4), new Object[]
-		{ EmotionBlocks.yellowClayStairs });
+		{ EmotionBlocks.YELLOW_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5), new Object[]
-		{ EmotionBlocks.limeClayStairs });
+		{ EmotionBlocks.LIME_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6), new Object[]
-		{ EmotionBlocks.pinkClayStairs });
+		{ EmotionBlocks.PINK_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7), new Object[]
-		{ EmotionBlocks.grayClayStairs });
+		{ EmotionBlocks.GRAY_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8), new Object[]
-		{ EmotionBlocks.silverClayStairs });
+		{ EmotionBlocks.SILVER_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9), new Object[]
-		{ EmotionBlocks.cyanClayStairs });
+		{ EmotionBlocks.CYAN_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10), new Object[]
-		{ EmotionBlocks.purpleClayStairs });
+		{ EmotionBlocks.PURPLE_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11), new Object[]
-		{ EmotionBlocks.blueClayStairs });
+		{ EmotionBlocks.BLUE_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12), new Object[]
-		{ EmotionBlocks.brownClayStairs });
+		{ EmotionBlocks.BROWN_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13), new Object[]
-		{ EmotionBlocks.greenClayStairs });
+		{ EmotionBlocks.GREEN_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), new Object[]
-		{ EmotionBlocks.redClayStairs });
+		{ EmotionBlocks.RED_CLAY_STAIRS });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), new Object[]
-		{ EmotionBlocks.blackClayStairs });
+		{ EmotionBlocks.BLACK_CLAY_STAIRS });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cherryStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pearStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.atlasStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pineStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cocoStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.dreamStairs, 4), new Object[]
-		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CHERRY_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PEAR_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ATLAS_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINE_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.COCO_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DREAM_STAIRS, 4), new Object[]
+		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.whiteClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WHITE_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.magentaClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.MANGENTA_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.lightBlueClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.LIGHT_BLUE_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.yellowClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.YELLOW_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.limeClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.LIME_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pinkClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINK_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.grayClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.GRAY_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.silverClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.SILVER_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cyanClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CYAN_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.purpleClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PURPLE_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.blueClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BLUE_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.brownClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BROWN_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.greenClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.GREEN_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.redClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.RED_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.blackClayStairs, 4), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BLACK_CLAY_STAIRS, 4), new Object[]
 		{ "Y  ", "YY ", "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cherryFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pearFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.atlasFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pineFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cocoFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.dreamFence, 3), new Object[]
-		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CHERRY_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PEAR_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ATLAS_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINE_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.COCO_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DREAM_FENCE, 3), new Object[]
+		{ "YXY", "YXY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6), 'X', Items.STICK });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cherryFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pearFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.atlasFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pineFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cocoFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5), 'X', Items.STICK });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.dreamFenceGate, 1), new Object[]
-		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CHERRY_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PEAR_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ATLAS_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINE_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.COCO_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5), 'X', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DREAM_FENCE_GATE, 1), new Object[]
+		{ "XYX", "XYX", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6), 'X', Items.STICK });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.CHERRY_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.PEAR_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.ORANGE_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.ATLAS_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.PINE_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.COCO_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.DREAM_BOAT, 1), new Object[]
-		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		{ "Y Y", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.CHERRY_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.PEAR_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.ORANGE_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.ATLAS_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.PINE_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.COCO_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
 		GameRegistry.addRecipe(new ItemStack(EmotionItems.DREAM_DOOR, 3), new Object[]
-		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		{ " YY", " YY", " YY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cherryTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pearTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.atlasTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pineTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cocoTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.dreamTrapdoor, 2), new Object[]
-		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CHERRY_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PEAR_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ATLAS_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINE_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.COCO_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DREAM_TRAPDOOR, 2), new Object[]
+		{ "YYY", "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.spruceTrapdoor, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.SPRUCE_TRAPDOOR, 2), new Object[]
 		{ "YYY", "YYY", 'Y', new ItemStack(Blocks.PLANKS, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.birchTrapdoor, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BIRCH_TRAPDOOR, 2), new Object[]
 		{ "YYY", "YYY", 'Y', new ItemStack(Blocks.PLANKS, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.jungleTrapdoor, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.JUNGLE_TRAPDOOR, 2), new Object[]
 		{ "YYY", "YYY", 'Y', new ItemStack(Blocks.PLANKS, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.acaciaTrapdoor, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ACACIA_TRAPDOOR, 2), new Object[]
 		{ "YYY", "YYY", 'Y', new ItemStack(Blocks.PLANKS, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.darkOakTrapdoor, 2), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DARK_OAK_TRAPDOOR, 2), new Object[]
 		{ "YYY", "YYY", 'Y', new ItemStack(Blocks.PLANKS, 1, 5) });
 
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 0), new Object[]
-		{ EmotionBlocks.cherrySlab, EmotionBlocks.cherrySlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 1), new Object[]
-		{ EmotionBlocks.pearSlab, EmotionBlocks.pearSlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 2), new Object[]
-		{ EmotionBlocks.orangeSlab, EmotionBlocks.orangeSlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 3), new Object[]
-		{ EmotionBlocks.atlasSlab, EmotionBlocks.atlasSlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 4), new Object[]
-		{ EmotionBlocks.pineSlab, EmotionBlocks.pineSlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 5), new Object[]
-		{ EmotionBlocks.cocoSlab, EmotionBlocks.cocoSlab });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 1, 6), new Object[]
-		{ EmotionBlocks.dreamSlab, EmotionBlocks.dreamSlab });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 0), new Object[]
+		{ EmotionBlocks.CHERRY_SLAB, EmotionBlocks.CHERRY_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 1), new Object[]
+		{ EmotionBlocks.PEAR_SLAB, EmotionBlocks.PEAR_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 2), new Object[]
+		{ EmotionBlocks.ORANGE_SLAB, EmotionBlocks.ORANGE_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 3), new Object[]
+		{ EmotionBlocks.ATLAS_SLAB, EmotionBlocks.ATLAS_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 4), new Object[]
+		{ EmotionBlocks.PINE_SLAB, EmotionBlocks.PINE_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 5), new Object[]
+		{ EmotionBlocks.COCO_SLAB, EmotionBlocks.COCO_SLAB });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 1, 6), new Object[]
+		{ EmotionBlocks.DREAM_SLAB, EmotionBlocks.DREAM_SLAB });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0), new Object[]
-		{ EmotionBlocks.whiteClaySlab, EmotionBlocks.whiteClaySlab });
+		{ EmotionBlocks.WHITE_CLAY_SLAB, EmotionBlocks.WHITE_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1), new Object[]
-		{ EmotionBlocks.orangeClaySlab, EmotionBlocks.orangeClaySlab });
+		{ EmotionBlocks.ORANGE_CLAY_SLAB, EmotionBlocks.ORANGE_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2), new Object[]
-		{ EmotionBlocks.magentaClaySlab, EmotionBlocks.magentaClaySlab });
+		{ EmotionBlocks.MANGENTA_CLAY_SLAB, EmotionBlocks.MANGENTA_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3), new Object[]
-		{ EmotionBlocks.lightBlueClaySlab, EmotionBlocks.lightBlueClaySlab });
+		{ EmotionBlocks.LIGHT_BLUE_CLAY_SLAB, EmotionBlocks.LIGHT_BLUE_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4), new Object[]
-		{ EmotionBlocks.yellowClaySlab, EmotionBlocks.yellowClaySlab });
+		{ EmotionBlocks.YELLOW_CLAY_SLAB, EmotionBlocks.YELLOW_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5), new Object[]
-		{ EmotionBlocks.limeClaySlab, EmotionBlocks.limeClaySlab });
+		{ EmotionBlocks.LIME_CLAY_SLAB, EmotionBlocks.LIME_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6), new Object[]
-		{ EmotionBlocks.pinkClaySlab, EmotionBlocks.pinkClaySlab });
+		{ EmotionBlocks.PINK_CLAY_SLAB, EmotionBlocks.PINK_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7), new Object[]
-		{ EmotionBlocks.grayClaySlab, EmotionBlocks.grayClaySlab });
+		{ EmotionBlocks.GRAY_CLAY_SLAB, EmotionBlocks.GRAY_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8), new Object[]
-		{ EmotionBlocks.silverClaySlab, EmotionBlocks.silverClaySlab });
+		{ EmotionBlocks.SILVER_CLAY_SLAB, EmotionBlocks.SILVER_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9), new Object[]
-		{ EmotionBlocks.cyanClaySlab, EmotionBlocks.cyanClaySlab });
+		{ EmotionBlocks.CYAN_CLAY_SLAB, EmotionBlocks.CYAN_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10), new Object[]
-		{ EmotionBlocks.purpleClaySlab, EmotionBlocks.purpleClaySlab });
+		{ EmotionBlocks.PURPLE_CLAY_SLAB, EmotionBlocks.PURPLE_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11), new Object[]
-		{ EmotionBlocks.blueClaySlab, EmotionBlocks.blueClaySlab });
+		{ EmotionBlocks.BLUE_CLAY_SLAB, EmotionBlocks.BLUE_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12), new Object[]
-		{ EmotionBlocks.brownClaySlab, EmotionBlocks.brownClaySlab });
+		{ EmotionBlocks.BROWN_CLAY_SLAB, EmotionBlocks.BROWN_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13), new Object[]
-		{ EmotionBlocks.greenClaySlab, EmotionBlocks.greenClaySlab });
+		{ EmotionBlocks.GREEN_CLAY_SLAB, EmotionBlocks.GREEN_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14), new Object[]
-		{ EmotionBlocks.redClaySlab, EmotionBlocks.redClaySlab });
+		{ EmotionBlocks.RED_CLAY_SLAB, EmotionBlocks.RED_CLAY_SLAB });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), new Object[]
-		{ EmotionBlocks.blackClaySlab, EmotionBlocks.blackClaySlab });
+		{ EmotionBlocks.BLACK_CLAY_SLAB, EmotionBlocks.BLACK_CLAY_SLAB });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cherrySlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pearSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.atlasSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pineSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cocoSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.dreamSlab, 6), new Object[]
-		{ "YYY", 'Y', new ItemStack(EmotionBlocks.emoPlanks, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CHERRY_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PEAR_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ATLAS_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINE_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.COCO_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.DREAM_SLAB, 6), new Object[]
+		{ "YYY", 'Y', new ItemStack(EmotionBlocks.PLANKS, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.whiteClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.WHITE_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.orangeClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.ORANGE_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.magentaClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.MANGENTA_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 2) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.lightBlueClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.LIGHT_BLUE_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 3) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.yellowClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.YELLOW_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.limeClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.LIME_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 5) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.pinkClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PINK_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 6) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.grayClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.GRAY_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 7) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.silverClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.SILVER_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 8) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.cyanClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.CYAN_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 9) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.purpleClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.PURPLE_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 10) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.blueClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BLUE_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 11) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.brownClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BROWN_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 12) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.greenClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.GREEN_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 13) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.redClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.RED_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 14) });
-		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.blackClaySlab, 6), new Object[]
+		GameRegistry.addRecipe(new ItemStack(EmotionBlocks.BLACK_CLAY_SLAB, 6), new Object[]
 		{ "YYY", 'Y', new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15) });
 
 		normalCraft();
@@ -771,72 +783,72 @@ public class CraftingManager
 		GameRegistry.addSmelting(EmotionItems.FISH_GOLDEN, new ItemStack(Items.GOLD_INGOT, 4), 0.8F);
 		GameRegistry.addSmelting(EmotionItems.FISH_DIAMOND, new ItemStack(Items.DIAMOND, 2), 0.8F);
 
-		GameRegistry.addSmelting(EmotionBlocks.emoLog, new ItemStack(Items.COAL, 1, 1), 0.2F);
-		GameRegistry.addSmelting(EmotionBlocks.emoNewLog, new ItemStack(Items.COAL, 1, 1), 0.2F);
-		GameRegistry.addSmelting(EmotionBlocks.shiftingSand, new ItemStack(Item.getItemFromBlock(Blocks.SAND)), 0.2F);
+		GameRegistry.addSmelting(EmotionBlocks.LOG, new ItemStack(Items.COAL, 1, 1), 0.2F);
+		GameRegistry.addSmelting(EmotionBlocks.NEW_LOG, new ItemStack(Items.COAL, 1, 1), 0.2F);
+		GameRegistry.addSmelting(EmotionBlocks.SHIFTING_SAND, new ItemStack(Item.getItemFromBlock(Blocks.SAND)), 0.2F);
 
 		GameRegistry.registerFuelHandler(new EmotionFuelHandler());
 	}
 
 	public static void normalCraft()
 	{
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 0), new Object[]
-		{ new ItemStack(EmotionBlocks.emoLog, 1, 0) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 1), new Object[]
-		{ new ItemStack(EmotionBlocks.emoLog, 1, 1) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 2), new Object[]
-		{ new ItemStack(EmotionBlocks.emoLog, 1, 2) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 3), new Object[]
-		{ new ItemStack(EmotionBlocks.emoLog, 1, 3) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 4), new Object[]
-		{ new ItemStack(EmotionBlocks.emoNewLog, 1, 0) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 5), new Object[]
-		{ new ItemStack(EmotionBlocks.emoNewLog, 1, 1) });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.emoPlanks, 4, 6), new Object[]
-		{ new ItemStack(EmotionBlocks.emoNewLog, 1, 2) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 0), new Object[]
+		{ new ItemStack(EmotionBlocks.LOG, 1, 0) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 1), new Object[]
+		{ new ItemStack(EmotionBlocks.LOG, 1, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 2), new Object[]
+		{ new ItemStack(EmotionBlocks.LOG, 1, 2) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 3), new Object[]
+		{ new ItemStack(EmotionBlocks.LOG, 1, 3) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 4), new Object[]
+		{ new ItemStack(EmotionBlocks.NEW_LOG, 1, 0) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 5), new Object[]
+		{ new ItemStack(EmotionBlocks.NEW_LOG, 1, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionBlocks.PLANKS, 4, 6), new Object[]
+		{ new ItemStack(EmotionBlocks.NEW_LOG, 1, 2) });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.WOODEN_BUTTON, 1), new Object[]
-		{ EmotionBlocks.emoPlanks });
+		{ EmotionBlocks.PLANKS });
 
 		GameRegistry.addRecipe(new ItemStack(Blocks.CRAFTING_TABLE, 1), new Object[]
-		{ " YY", " YY", 'Y', EmotionBlocks.emoPlanks });
+		{ " YY", " YY", 'Y', EmotionBlocks.PLANKS });
 		GameRegistry.addRecipe(new ItemStack(Items.STICK, 4), new Object[]
-		{ "Y", "Y", 'Y', EmotionBlocks.emoPlanks });
+		{ "Y", "Y", 'Y', EmotionBlocks.PLANKS });
 
 		GameRegistry.addRecipe(new ItemStack(Items.WOODEN_AXE, 1), new Object[]
-		{ "YY ", "YX ", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ "YY ", "YX ", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(Items.WOODEN_HOE, 1), new Object[]
-		{ "YY ", " X ", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ "YY ", " X ", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(Items.WOODEN_PICKAXE, 1), new Object[]
-		{ "YYY", " X ", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ "YYY", " X ", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(Items.WOODEN_SHOVEL, 1), new Object[]
-		{ " Y ", " X ", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ " Y ", " X ", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(Items.WOODEN_SWORD, 1), new Object[]
-		{ " Y ", " Y ", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ " Y ", " Y ", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 
 		GameRegistry.addRecipe(new ItemStack(Blocks.CHEST, 1), new Object[]
-		{ "YYY", "Y Y", "YYY", 'Y', EmotionBlocks.emoPlanks });
+		{ "YYY", "Y Y", "YYY", 'Y', EmotionBlocks.PLANKS });
 		GameRegistry.addRecipe(new ItemStack(Blocks.WOODEN_PRESSURE_PLATE, 1), new Object[]
-		{ " YY", 'Y', EmotionBlocks.emoPlanks });
+		{ " YY", 'Y', EmotionBlocks.PLANKS });
 		GameRegistry.addRecipe(new ItemStack(Blocks.BOOKSHELF, 1), new Object[]
-		{ "YYY", "XXX", "YYY", 'Y', EmotionBlocks.emoPlanks, 'X', Items.BOOK });
+		{ "YYY", "XXX", "YYY", 'Y', EmotionBlocks.PLANKS, 'X', Items.BOOK });
 		GameRegistry.addRecipe(new ItemStack(Blocks.JUKEBOX, 1), new Object[]
-		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.emoPlanks, 'X', Items.DIAMOND });
+		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.PLANKS, 'X', Items.DIAMOND });
 		GameRegistry.addRecipe(new ItemStack(Blocks.NOTEBLOCK, 1), new Object[]
-		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.emoPlanks, 'X', Items.REDSTONE });
+		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.PLANKS, 'X', Items.REDSTONE });
 		GameRegistry.addRecipe(new ItemStack(Blocks.TRIPWIRE_HOOK, 1), new Object[]
-		{ " Z ", " X ", " Y ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK, 'Z', Items.IRON_INGOT });
+		{ " Z ", " X ", " Y ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK, 'Z', Items.IRON_INGOT });
 		GameRegistry.addRecipe(new ItemStack(Blocks.PISTON, 1), new Object[]
-		{ "YYY", "ZXZ", "ZWZ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.IRON_INGOT, 'Z', Blocks.COBBLESTONE, 'W', Items.REDSTONE });
+		{ "YYY", "ZXZ", "ZWZ", 'Y', EmotionBlocks.PLANKS, 'X', Items.IRON_INGOT, 'Z', Blocks.COBBLESTONE, 'W', Items.REDSTONE });
 
 		GameRegistry.addRecipe(new ItemStack(Items.SIGN, 3), new Object[]
-		{ "YYY", "YYY", " X ", 'Y', EmotionBlocks.emoPlanks, 'X', Items.STICK });
+		{ "YYY", "YYY", " X ", 'Y', EmotionBlocks.PLANKS, 'X', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(Items.PAINTING, 1), new Object[]
-		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.emoPlanks, 'X', Blocks.WOOL });
+		{ "YYY", "YXY", "YYY", 'Y', EmotionBlocks.PLANKS, 'X', Blocks.WOOL });
 		GameRegistry.addRecipe(new ItemStack(Items.BED, 1), new Object[]
-		{ "XXX", "YYY", 'Y', EmotionBlocks.emoPlanks, 'X', Blocks.WOOL });
+		{ "XXX", "YYY", 'Y', EmotionBlocks.PLANKS, 'X', Blocks.WOOL });
 		GameRegistry.addRecipe(new ItemStack(Items.BOWL, 1), new Object[]
-		{ "Y Y", " Y ", 'Y', EmotionBlocks.emoPlanks });
+		{ "Y Y", " Y ", 'Y', EmotionBlocks.PLANKS });
 	}
 
 	public static void extraCraft()

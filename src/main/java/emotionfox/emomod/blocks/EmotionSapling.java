@@ -10,7 +10,6 @@ import emotionfox.emomod.biome.gen.EmotionGenTree;
 import emotionfox.emomod.blocks.base.BaseBush;
 import emotionfox.emomod.blocks.item.IMetaBlockName;
 import net.minecraft.block.IGrowable;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
@@ -37,8 +36,6 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	public EmotionSapling()
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EmotionPlanks.EnumType.CHERRY).withProperty(STAGE, Integer.valueOf(0)));
-		this.setHardness(0.0F);
-		this.setSoundType(SoundType.PLANT);
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
 	}
 
@@ -80,51 +77,42 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 		if (!TerrainGen.saplingGrowTree(worldIn, rand, pos))
 			return;
 
-		Object object = new EmotionGenTree(EmotionPlanks.EnumType.CHERRY);
+		Object gen = new EmotionGenTree(EmotionPlanks.EnumType.CHERRY);
 
-		if (state.getValue(TYPE) == EmotionPlanks.EnumType.CHERRY)
+		switch ((EmotionPlanks.EnumType) state.getValue(TYPE))
 		{
+		case CHERRY:
 			if (rand.nextInt(15) == 0)
-				object = new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY);
+				gen = new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY);
 			else
-				object = new EmotionGenTree(EmotionPlanks.EnumType.CHERRY);
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.PEAR)
-		{
+				gen = new EmotionGenTree(EmotionPlanks.EnumType.CHERRY);
+			break;
+		case PEAR:
 			if (rand.nextInt(15) == 0)
-				object = new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR);
+				gen = new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR);
 			else
-				object = new EmotionGenTree(EmotionPlanks.EnumType.PEAR);
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.ORANGE)
-		{
+				gen = new EmotionGenTree(EmotionPlanks.EnumType.PEAR);
+		case ORANGE:
 			if (rand.nextInt(15) == 0)
-				object = new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE);
+				gen = new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE);
 			else
-				object = new EmotionGenTree(EmotionPlanks.EnumType.ORANGE);
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.ATLAS)
-		{
-			object = new EmotionGenAtlas();
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.PINE)
-		{
-			object = new EmotionGenPine();
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.COCO)
-		{
-			object = new EmotionGenPalmTree();
-		}
-		else if (state.getValue(TYPE) == EmotionPlanks.EnumType.DREAM)
-		{
+				gen = new EmotionGenTree(EmotionPlanks.EnumType.ORANGE);
+			break;
+		case ATLAS:
+			gen = new EmotionGenAtlas();
+			break;
+		case PINE:
+			gen = new EmotionGenPine();
+			break;
+		case COCO:
+			gen = new EmotionGenPalmTree();
+			break;
+		case DREAM:
 			if (rand.nextInt(15) != 0)
-			{
-				object = new EmotionGenPine();
-			}
+				gen = new EmotionGenPine();
 			else
-			{
-				object = new EmotionGenPine();
-			}
+				gen = new EmotionGenPine();
+			break;
 		}
 
 		int i = 0;
@@ -145,7 +133,7 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 			worldIn.setBlockState(pos, iblockstate1, 4);
 		}
 
-		if (!((WorldGenerator) object).generate(worldIn, rand, pos.add(i, 0, j)))
+		if (!((WorldGenerator) gen).generate(worldIn, rand, pos.add(i, 0, j)))
 		{
 			if (flag)
 			{
@@ -168,6 +156,12 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	}
 
 	@Override
+	public int damageDropped(IBlockState state)
+	{
+		return ((EmotionPlanks.EnumType) state.getValue(TYPE)).getMetadata();
+	}
+
+	@Override
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
 	{
 		for (int i = 0; i < EmotionPlanks.EnumType.values().length; i++)
@@ -177,9 +171,21 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	}
 
 	@Override
+	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
+	{
+		return true;
+	}
+
+	@Override
+	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state)
+	{
+		return (double) worldIn.rand.nextFloat() < 0.45D;
+	}
+
+	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(TYPE, EmotionPlanks.EnumType.values()[meta & 7]).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
+		return this.getDefaultState().withProperty(TYPE, EmotionPlanks.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
 	}
 
 	public int getMetaFromState(IBlockState state)
@@ -195,24 +201,6 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	{
 		return new BlockStateContainer(this, new IProperty[]
 		{ TYPE, STAGE });
-	}
-
-	@Override
-	public int damageDropped(IBlockState state)
-	{
-		return getMetaFromState(state);
-	}
-
-	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
-	{
-		return true;
-	}
-
-	@Override
-	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state)
-	{
-		return (double) worldIn.rand.nextFloat() < 0.45D;
 	}
 
 	@Override

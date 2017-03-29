@@ -23,9 +23,9 @@ import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class PurpuraStaff extends Item
+public class ItemStaff extends Item
 {
-	public PurpuraStaff()
+	public ItemStaff()
 	{
 		this.setMaxStackSize(1);
 		this.setMaxDamage(200);
@@ -37,14 +37,14 @@ public class PurpuraStaff extends Item
 	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
 	{
 		tooltip.add("Invoke The Elements");
-
-		if (this == EmotionItems.STAFF_BLUE)
+		
+		if (this == EmotionItems.STAFF_BLUE)	
 			tooltip.add("\u00a7b" + "Water");
-		else if (this == EmotionItems.STAFF_GREEN)
+		if (this == EmotionItems.STAFF_GREEN)
 			tooltip.add("\u00a7a" + "Earth");
-		else if (this == EmotionItems.STAFF_RED)
+		if (this == EmotionItems.STAFF_RED)
 			tooltip.add("\u00a7c" + "Fire");
-		else if (this == EmotionItems.STAFF_WHITE)
+		if (this == EmotionItems.STAFF_WHITE)
 			tooltip.add("\u00a7e" + "Wind");
 	}
 
@@ -173,9 +173,11 @@ public class PurpuraStaff extends Item
 		double d0 = world.rand.nextGaussian() * 0.02D;
 		double d1 = world.rand.nextGaussian() * 0.02D;
 		double d2 = world.rand.nextGaussian() * 0.02D;
+
 		world.spawnParticle(EnumParticleTypes.PORTAL, (double) ((float) pos.getX() + world.rand.nextFloat()), (double) pos.getY() + (double) world.rand.nextFloat() * 1.0f,
 				(double) ((float) pos.getZ() + world.rand.nextFloat()), d0, d1, d2, new int[0]);
 		world.playSound(player, new BlockPos(pos.getX(), pos.getY(), pos.getZ()), SoundEvents.ENTITY_FIREWORK_BLAST, SoundCategory.AMBIENT, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+
 		return EnumActionResult.SUCCESS;
 	}
 }

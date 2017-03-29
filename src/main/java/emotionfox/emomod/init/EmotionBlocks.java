@@ -1,5 +1,7 @@
 package emotionfox.emomod.init;
 
+import java.util.HashSet;
+
 import emotionfox.emomod.blocks.EmotionBerry;
 import emotionfox.emomod.blocks.EmotionBerrySimple;
 import emotionfox.emomod.blocks.EmotionBrick;
@@ -59,467 +61,473 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class EmotionBlocks
 {
+	private static final HashSet<Block> emotionBlocks = new HashSet<Block>();
+
 	// Ore & Block
-	public static Block fossilOre = new FossilOre().setHardness(0.5F);
+	public static final Block FOSSIL_ORE = new FossilOre().setHardness(0.5F);
 
-	public static Block purpuraOre = new BaseOre(3).setHardness(9F).setResistance(10F).setLightLevel(5);
-	public static Block purpuraBlock = new BaseOreBlock();
+	public static final Block PURPURA_ORE = new BaseOre(3).setHardness(9F).setResistance(10F).setLightLevel(5);
+	public static final Block PURPURA_BLOCK = new BaseOreBlock();
 
-	public static Block viridisOre = new BaseOre(2).setHardness(5F).setResistance(6F);
-	public static Block viridisCristal = new BaseCristal();
-	public static Block viridisBlock = new BaseOreBlock();
+	public static final Block VIRIDIS_ORE = new BaseOre(2).setHardness(5F).setResistance(6F);
+	public static final Block VIRIDIS_CRISTAL = new BaseCristal();
+	public static final Block VIRIDIS_BLOCK = new BaseOreBlock();
 
-	public static Block lumeOre = new BaseOre(2).setHardness(4F).setResistance(4F);
-	public static Block lumeOre2 = new BaseOre(4).setHardness(4F).setResistance(4F);
-	public static Block lumeBlock = new BaseOreBlock();
+	public static final Block LUME_ORE = new BaseOre(2).setHardness(4F).setResistance(4F);
+	public static final Block DREAM_LUME_ORE = new BaseOre(4).setHardness(4F).setResistance(4F);
+	public static final Block LUME_BLOCK = new BaseOreBlock();
 
 	// Special
-	public static Block glitch = new Glitch().setHardness(4F).setResistance(4F);
-	// public static Block dreamPortal;
+	public static final Block GLITCH = new Glitch().setHardness(4F).setResistance(4F);
+	// public static final Block dreamPortal;
 
 	// Plantation
-	public static Block pearPlant = new BasePlant(EmotionItems.SEED_PEAR, EmotionItems.FRUIT_PEAR);
-	public static Block cherryPlant = new BasePlant(EmotionItems.SEED_CHERRY, EmotionItems.FRUIT_CHERRY);
-	public static Block orangePlant = new BasePlant(EmotionItems.SEED_ORANGE, EmotionItems.FRUIT_ORANGE);
-	public static Block tomatoPlant = new BasePlant(EmotionItems.SEED_TOMATO, EmotionItems.FRUIT_TOMATO);
-	public static Block applePlant = new BasePlant(EmotionItems.SEED_APPLE, Items.APPLE);
+	public static final Block PEAR_PLANT = new BasePlant(EmotionItems.SEED_PEAR, EmotionItems.FRUIT_PEAR);
+	public static final Block CHERRY_PLANT = new BasePlant(EmotionItems.SEED_CHERRY, EmotionItems.FRUIT_CHERRY);
+	public static final Block ORANGE_PLANT = new BasePlant(EmotionItems.SEED_ORANGE, EmotionItems.FRUIT_ORANGE);
+	public static final Block TOMATO_PLANT = new BasePlant(EmotionItems.SEED_TOMATO, EmotionItems.FRUIT_TOMATO);
+	public static final Block APPLE_PLANT = new BasePlant(EmotionItems.SEED_APPLE, Items.APPLE);
 
 	// Mushroom
-	public static Block bluePlant = new BasePlant(EmotionItems.SPORE_MAGIC, Item.getItemFromBlock(EmotionBlocks.baseMushroom));
-	public static Block redPlant = new BasePlant(EmotionItems.SPORE_RED, Item.getItemFromBlock(Blocks.RED_MUSHROOM));
-	public static Block brownPlant = new BasePlant(EmotionItems.SPORE_BROWN, Item.getItemFromBlock(Blocks.BROWN_MUSHROOM));
+	public static final Block BLUE_PLANT = new BasePlant(EmotionItems.SPORE_MAGIC, Item.getItemFromBlock(EmotionBlocks.MUSHROOM));
+	public static final Block RED_PLANT = new BasePlant(EmotionItems.SPORE_RED, Item.getItemFromBlock(Blocks.RED_MUSHROOM));
+	public static final Block BROWN_PLANT = new BasePlant(EmotionItems.SPORE_BROWN, Item.getItemFromBlock(Blocks.BROWN_MUSHROOM));
 
 	// Pot
-	public static Block basePot = new EmotionPot();
+	public static final Block POT = new EmotionPot();
 
 	// Cake
-	public static Block cakeChoco = new EmotionCake();
-	public static Block cakeFruit = new EmotionCake();
-	public static Block cakeToffee = new EmotionCake();
-	public static Block cakeStrawberry = new EmotionCake();
+	public static final Block CAKE_CHOCO = new EmotionCake();
+	public static final Block CAKE_FRUIT = new EmotionCake();
+	public static final Block CAKE_TOFFEE = new EmotionCake();
+	public static final Block CAKE_STRAWBERRY = new EmotionCake();
 
-	public static Block baseBush = new EmotionBerry();
-	public static Block baseBushSimple = new EmotionBerrySimple();
+	public static final Block BUSH = new EmotionBerry();
+	public static final Block BUSH_SIMPLE = new EmotionBerrySimple();
 
-	public static Block baseBrick = new EmotionBrick();
+	public static final Block BRICK = new EmotionBrick();
 
-	public static Block limestone = new BaseRock();
-	public static Block buhrstone = new BaseRock();
+	public static final Block LIMESTONE = new BaseRock();
+	public static final Block BUHRSTONE = new BaseRock();
 
 	// Bush
-	public static Block baseFlower = new EmotionFlower();
-	public static Block baseMushroom = new EmotionMushroom();
+	public static final Block FLOWER = new EmotionFlower();
+	public static final Block MUSHROOM = new EmotionMushroom();
 
 	// Furnitures
-	public static Block woodTableCherry = new WoodTable();
-	public static Block woodTablePear = new WoodTable();
-	public static Block woodTableOrange = new WoodTable();
-	public static Block woodTableAtlas = new WoodTable();
-	public static Block woodTablePine = new WoodTable();
-	public static Block woodTableCoco = new WoodTable();
-	public static Block woodTableDream = new WoodTable();
+	public static final Block WOOD_TABLE_CHERRY = new WoodTable();
+	public static final Block WOOD_TABLE_PEAR = new WoodTable();
+	public static final Block WOOD_TABLE_ORANGE = new WoodTable();
+	public static final Block WOOD_TABLE_ATLAS = new WoodTable();
+	public static final Block WOOD_TABLE_PINE = new WoodTable();
+	public static final Block WOOD_TABLE_COCO = new WoodTable();
+	public static final Block WOOD_TABLE_DREAM = new WoodTable();
 
-	public static Block woodTableOak = new WoodTable();
-	public static Block woodTableSpruce = new WoodTable();
-	public static Block woodTableBirch = new WoodTable();
-	public static Block woodTableJungle = new WoodTable();
-	public static Block woodTableAcacia = new WoodTable();
-	public static Block woodTableBigOak = new WoodTable();
+	public static final Block WOOD_TABLE_OAK = new WoodTable();
+	public static final Block WOOD_TABLE_SPRUCE = new WoodTable();
+	public static final Block WOOD_TABLE_BIRCH = new WoodTable();
+	public static final Block WOOD_TABLE_JUNGLE = new WoodTable();
+	public static final Block WOOD_TABLE_ACACIA = new WoodTable();
+	public static final Block WOOD_TABLE_BIG_OAK = new WoodTable();
 
-	public static Block woodNightstandCherry = new WoodNightstand();
-	public static Block woodNightstandPear = new WoodNightstand();
-	public static Block woodNightstandOrange = new WoodNightstand();
-	public static Block woodNightstandAtlas = new WoodNightstand();
-	public static Block woodNightstandPine = new WoodNightstand();
-	public static Block woodNightstandCoco = new WoodNightstand();
-	public static Block woodNightstandDream = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_CHERRY = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_PEAR = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_ORANGE = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_ATLAS = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_PINE = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_COCO = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_DREAM = new WoodNightstand();
 
-	public static Block woodNightstandOak = new WoodNightstand();
-	public static Block woodNightstandSpruce = new WoodNightstand();
-	public static Block woodNightstandBirch = new WoodNightstand();
-	public static Block woodNightstandJungle = new WoodNightstand();
-	public static Block woodNightstandAcacia = new WoodNightstand();
-	public static Block woodNightstandBigOak = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_OAK = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_SPRUCE = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_BIRCH = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_JUNGLE = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_ACACIA = new WoodNightstand();
+	public static final Block WOOD_NIGHTSTAND_BIG_OAK = new WoodNightstand();
 
-	public static Block woodChair = new EmotionWoodChair();
+	public static final Block WOOD_CHAIR = new EmotionWoodChair();
 
-	public static Block stoneTableCobblestone = new StoneTable();
-	public static Block stoneTableMossyCobblestone = new StoneTable();
-	public static Block stoneTableStoneBrick = new StoneTable();
-	public static Block stoneTableMossyStoneBrick = new StoneTable();
-	public static Block stoneTableCrackedStoneBrick = new StoneTable();
-	public static Block stoneTableChiselledStoneBrick = new StoneTable();
-	public static Block stoneTableBrick = new StoneTable();
+	public static final Block STONE_TABLE_COBBLESTONE = new StoneTable();
+	public static final Block STONE_TABLE_MOSSY_COBBLESTONE = new StoneTable();
+	public static final Block STONE_TABLE_STONE_BRICK = new StoneTable();
+	public static final Block STONE_TABLE_MOSSY_STONE_BRICK = new StoneTable();
+	public static final Block STONE_TABLE_CRACKED_STONE_BRICK = new StoneTable();
+	public static final Block STONE_TABLE_CHISELLED_STONE_BRICK = new StoneTable();
+	public static final Block STONE_TABLE_BRICK = new StoneTable();
 
-	public static Block stoneChair = new EmotionStoneChair();
+	public static final Block STONE_CHAIR = new EmotionStoneChair();
 
 	// Emotion Leaves/Log/Sapling/Planks
-	public static Block emoLeaves = new EmotionLeaves();
-	public static Block emoNewLeaves = new EmotionNewLeaves();
-	public static Block emoLog = new EmotionLog();
-	public static Block emoNewLog = new EmotionNewLog();
-	public static Block emoSapling = new EmotionSapling();
-	public static Block emoPlanks = new EmotionPlanks();
+	public static final Block LEAVES = new EmotionLeaves();
+	public static final Block NEW_LEAVES = new EmotionNewLeaves();
+	public static final Block LOG = new EmotionLog();
+	public static final Block NEW_LOG = new EmotionNewLog();
+	public static final Block SAPLING = new EmotionSapling();
+	public static final Block PLANKS = new EmotionPlanks();
 
 	// Emotion Grass / Dirt
-	public static Block dreamGrass;
-	public static Block dreamDirt;
-	public static Block dreamStone;
+	// public static final Block DREAM_GRASS;
+	// public static final Block DREAM_DIRT;
+	// public static final Block DREAM_STONE;
 
 	// Emotion Stairs
-	public static Block cherryStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.CHERRY));
-	public static Block pearStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.PEAR));
-	public static Block orangeStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.ORANGE));
-	public static Block atlasStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.ATLAS));
-	public static Block pineStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.PINE));
-	public static Block cocoStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.COCO));
-	public static Block dreamStairs = new BaseStairs(EmotionBlocks.emoPlanks.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.DREAM));
+	public static final Block CHERRY_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.CHERRY));
+	public static final Block PEAR_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.PEAR));
+	public static final Block ORANGE_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.ORANGE));
+	public static final Block ATLAS_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.ATLAS));
+	public static final Block PINE_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.PINE));
+	public static final Block COCO_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.COCO));
+	public static final Block DREAM_STAIRS = new BaseStairs(EmotionBlocks.PLANKS.getDefaultState().withProperty(EmotionPlanks.VARIANT, EmotionPlanks.EnumType.DREAM));
 
 	// Stained Hardened Clay Stairs
-	public static Block whiteClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.WHITE));
-	public static Block orangeClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.ORANGE));
-	public static Block magentaClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.MAGENTA));
-	public static Block lightBlueClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIGHT_BLUE));
-	public static Block yellowClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.YELLOW));
-	public static Block limeClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIME));
-	public static Block pinkClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PINK));
-	public static Block grayClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GRAY));
-	public static Block silverClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.SILVER));
-	public static Block cyanClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.CYAN));
-	public static Block purpleClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PURPLE));
-	public static Block blueClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLUE));
-	public static Block brownClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BROWN));
-	public static Block greenClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GREEN));
-	public static Block redClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.RED));
-	public static Block blackClayStairs = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLACK));
+	public static final Block WHITE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.WHITE));
+	public static final Block ORANGE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.ORANGE));
+	public static final Block MANGENTA_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.MAGENTA));
+	public static final Block LIGHT_BLUE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIGHT_BLUE));
+	public static final Block YELLOW_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.YELLOW));
+	public static final Block LIME_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIME));
+	public static final Block PINK_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PINK));
+	public static final Block GRAY_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GRAY));
+	public static final Block SILVER_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.SILVER));
+	public static final Block CYAN_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.CYAN));
+	public static final Block PURPLE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.PURPLE));
+	public static final Block BLUE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLUE));
+	public static final Block BROWN_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BROWN));
+	public static final Block GREEN_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GREEN));
+	public static final Block RED_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.RED));
+	public static final Block BLACK_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLACK));
 
 	// Emotion Fence & Gate
-	public static Block cherryFence = new BaseFence(MapColor.RED);
-	public static Block cherryFenceGate = new BaseFenceGate(MapColor.RED);
-	public static Block pearFence = new BaseFence(MapColor.WOOD);
-	public static Block pearFenceGate = new BaseFenceGate(MapColor.WOOD);
-	public static Block orangeFence = new BaseFence(MapColor.ADOBE);
-	public static Block orangeFenceGate = new BaseFenceGate(MapColor.ADOBE);
-	public static Block atlasFence = new BaseFence(MapColor.BLUE);
-	public static Block atlasFenceGate = new BaseFenceGate(MapColor.BLUE);
+	public static final Block CHERRY_FENCE = new BaseFence(MapColor.RED);
+	public static final Block CHERRY_FENCE_GATE = new BaseFenceGate(MapColor.RED);
+	public static final Block PEAR_FENCE = new BaseFence(MapColor.WOOD);
+	public static final Block PEAR_FENCE_GATE = new BaseFenceGate(MapColor.WOOD);
+	public static final Block ORANGE_FENCE = new BaseFence(MapColor.ADOBE);
+	public static final Block ORANGE_FENCE_GATE = new BaseFenceGate(MapColor.ADOBE);
+	public static final Block ATLAS_FENCE = new BaseFence(MapColor.BLUE);
+	public static final Block ATLAS_FENCE_GATE = new BaseFenceGate(MapColor.BLUE);
 
 	// New Emotion Fence & Gate
-	public static Block pineFence = new BaseFence(MapColor.BLACK);
-	public static Block pineFenceGate = new BaseFenceGate(MapColor.BLACK);
-	public static Block cocoFence = new BaseFence(MapColor.YELLOW);
-	public static Block cocoFenceGate = new BaseFenceGate(MapColor.YELLOW);
-	public static Block dreamFence = new BaseFence(MapColor.GREEN);
-	public static Block dreamFenceGate = new BaseFenceGate(MapColor.GREEN);
+	public static final Block PINE_FENCE = new BaseFence(MapColor.BLACK);
+	public static final Block PINE_FENCE_GATE = new BaseFenceGate(MapColor.BLACK);
+	public static final Block COCO_FENCE = new BaseFence(MapColor.YELLOW);
+	public static final Block COCO_FENCE_GATE = new BaseFenceGate(MapColor.YELLOW);
+	public static final Block DREAM_FENCE = new BaseFence(MapColor.GREEN);
+	public static final Block DREAM_FENCE_GATE = new BaseFenceGate(MapColor.GREEN);
 
 	// Emotion Door & Trapdoor
-	public static Block cherryDoor = new BaseDoor(MapColor.RED);
-	public static Block cherryTrapdoor = new BaseTrapDoor(MapColor.RED);
-	public static Block pearDoor = new BaseDoor(MapColor.WOOD);
-	public static Block pearTrapdoor = new BaseTrapDoor(MapColor.WOOD);
-	public static Block orangeDoor = new BaseDoor(MapColor.ADOBE);
-	public static Block orangeTrapdoor = new BaseTrapDoor(MapColor.ADOBE);
-	public static Block atlasDoor = new BaseDoor(MapColor.BLUE);
-	public static Block atlasTrapdoor = new BaseTrapDoor(MapColor.BLUE);
+	public static final Block CHERRY_DOOR = new BaseDoor(MapColor.RED);
+	public static final Block CHERRY_TRAPDOOR = new BaseTrapDoor(MapColor.RED);
+	public static final Block PEAR_DOOR = new BaseDoor(MapColor.WOOD);
+	public static final Block PEAR_TRAPDOOR = new BaseTrapDoor(MapColor.WOOD);
+	public static final Block ORANGE_DOOR = new BaseDoor(MapColor.ADOBE);
+	public static final Block ORANGE_TRAPDOOR = new BaseTrapDoor(MapColor.ADOBE);
+	public static final Block ATLAS_DOOR = new BaseDoor(MapColor.BLUE);
+	public static final Block ATLAS_TRAPDOOR = new BaseTrapDoor(MapColor.BLUE);
 
 	// New Emotion Door & Trapdoor
-	public static Block pineDoor = new BaseDoor(MapColor.BLACK);
-	public static Block pineTrapdoor = new BaseTrapDoor(MapColor.BLACK);
-	public static Block cocoDoor = new BaseDoor(MapColor.YELLOW);
-	public static Block cocoTrapdoor = new BaseTrapDoor(MapColor.YELLOW);
-	public static Block dreamDoor = new BaseDoor(MapColor.GREEN);
-	public static Block dreamTrapdoor = new BaseTrapDoor(MapColor.GREEN);
+	public static final Block PINE_DOOR = new BaseDoor(MapColor.BLACK);
+	public static final Block PINE_TRAPDOOR = new BaseTrapDoor(MapColor.BLACK);
+	public static final Block COCO_DOOR = new BaseDoor(MapColor.YELLOW);
+	public static final Block COCO_TRAPDOOR = new BaseTrapDoor(MapColor.YELLOW);
+	public static final Block DREAM_DOOR = new BaseDoor(MapColor.GREEN);
+	public static final Block DREAM_TRAPDOOR = new BaseTrapDoor(MapColor.GREEN);
 
 	// Base Trapdoor
-	public static Block spruceTrapdoor = new BaseTrapDoor(BlockPlanks.EnumType.SPRUCE.getMapColor());
-	public static Block birchTrapdoor = new BaseTrapDoor(BlockPlanks.EnumType.BIRCH.getMapColor());
-	public static Block jungleTrapdoor = new BaseTrapDoor(BlockPlanks.EnumType.JUNGLE.getMapColor());
-	public static Block acaciaTrapdoor = new BaseTrapDoor(BlockPlanks.EnumType.ACACIA.getMapColor());
-	public static Block darkOakTrapdoor = new BaseTrapDoor(BlockPlanks.EnumType.DARK_OAK.getMapColor());
+	public static final Block SPRUCE_TRAPDOOR = new BaseTrapDoor(BlockPlanks.EnumType.SPRUCE.getMapColor());
+	public static final Block BIRCH_TRAPDOOR = new BaseTrapDoor(BlockPlanks.EnumType.BIRCH.getMapColor());
+	public static final Block JUNGLE_TRAPDOOR = new BaseTrapDoor(BlockPlanks.EnumType.JUNGLE.getMapColor());
+	public static final Block ACACIA_TRAPDOOR = new BaseTrapDoor(BlockPlanks.EnumType.ACACIA.getMapColor());
+	public static final Block DARK_OAK_TRAPDOOR = new BaseTrapDoor(BlockPlanks.EnumType.DARK_OAK.getMapColor());
 
 	// Emotion Slab
-	public static BaseWoodHalfSlab cherrySlab = new BaseWoodHalfSlab(MapColor.RED);
-	public static BaseWoodDoubleSlab cherryDoubleSlab = new BaseWoodDoubleSlab(MapColor.RED, EmotionBlocks.cherrySlab);
-	public static BaseWoodHalfSlab pearSlab = new BaseWoodHalfSlab(MapColor.WOOD);
-	public static BaseWoodDoubleSlab pearDoubleSlab = new BaseWoodDoubleSlab(MapColor.WOOD, EmotionBlocks.pearSlab);
-	public static BaseWoodHalfSlab orangeSlab = new BaseWoodHalfSlab(MapColor.ADOBE);
-	public static BaseWoodDoubleSlab orangeDoubleSlab = new BaseWoodDoubleSlab(MapColor.ADOBE, EmotionBlocks.orangeSlab);
-	public static BaseWoodHalfSlab atlasSlab = new BaseWoodHalfSlab(MapColor.BLUE);
-	public static BaseWoodDoubleSlab atlasDoubleSlab = new BaseWoodDoubleSlab(MapColor.BLUE, EmotionBlocks.atlasSlab);
+	public static final BaseWoodHalfSlab CHERRY_SLAB = new BaseWoodHalfSlab(MapColor.RED);
+	public static final BaseWoodDoubleSlab CHERRY_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.RED, EmotionBlocks.CHERRY_SLAB);
+	public static final BaseWoodHalfSlab PEAR_SLAB = new BaseWoodHalfSlab(MapColor.WOOD);
+	public static final BaseWoodDoubleSlab PEAR_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.WOOD, EmotionBlocks.PEAR_SLAB);
+	public static final BaseWoodHalfSlab ORANGE_SLAB = new BaseWoodHalfSlab(MapColor.ADOBE);
+	public static final BaseWoodDoubleSlab ORANGE_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.ADOBE, EmotionBlocks.ORANGE_SLAB);
+	public static final BaseWoodHalfSlab ATLAS_SLAB = new BaseWoodHalfSlab(MapColor.BLUE);
+	public static final BaseWoodDoubleSlab ATLAS_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.BLUE, EmotionBlocks.ATLAS_SLAB);
 
 	// New Emotion Slab
-	public static BaseWoodHalfSlab pineSlab = new BaseWoodHalfSlab(MapColor.BLACK);
-	public static BaseWoodDoubleSlab pineDoubleSlab = new BaseWoodDoubleSlab(MapColor.BLACK, EmotionBlocks.pineSlab);
-	public static BaseWoodHalfSlab cocoSlab = new BaseWoodHalfSlab(MapColor.YELLOW);
-	public static BaseWoodDoubleSlab cocoDoubleSlab = new BaseWoodDoubleSlab(MapColor.YELLOW, EmotionBlocks.cocoSlab);
-	public static BaseWoodHalfSlab dreamSlab = new BaseWoodHalfSlab(MapColor.GREEN);
-	public static BaseWoodDoubleSlab dreamDoubleSlab = new BaseWoodDoubleSlab(MapColor.GREEN, EmotionBlocks.dreamSlab);
+	public static final BaseWoodHalfSlab PINE_SLAB = new BaseWoodHalfSlab(MapColor.BLACK);
+	public static final BaseWoodDoubleSlab PINE_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.BLACK, EmotionBlocks.PINE_SLAB);
+	public static final BaseWoodHalfSlab COCO_SLAB = new BaseWoodHalfSlab(MapColor.YELLOW);
+	public static final BaseWoodDoubleSlab COCO_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.YELLOW, EmotionBlocks.COCO_SLAB);
+	public static final BaseWoodHalfSlab DREAM_SLAB = new BaseWoodHalfSlab(MapColor.GREEN);
+	public static final BaseWoodDoubleSlab DREAM_DOUBLE_SLAB = new BaseWoodDoubleSlab(MapColor.GREEN, EmotionBlocks.DREAM_SLAB);
 
 	// Stained Hardened Clay Slab
-	public static BaseClayHalfSlab whiteClaySlab = new BaseClayHalfSlab(MapColor.SNOW);
-	public static BaseClayDoubleSlab whiteClayDoubleSlab = new BaseClayDoubleSlab(MapColor.SNOW, EmotionBlocks.whiteClaySlab);
-	public static BaseClayHalfSlab orangeClaySlab = new BaseClayHalfSlab(MapColor.ADOBE);
-	public static BaseClayDoubleSlab orangeClayDoubleSlab = new BaseClayDoubleSlab(MapColor.ADOBE, EmotionBlocks.orangeClaySlab);
-	public static BaseClayHalfSlab magentaClaySlab = new BaseClayHalfSlab(MapColor.MAGENTA);
-	public static BaseClayDoubleSlab magentaClayDoubleSlab = new BaseClayDoubleSlab(MapColor.MAGENTA, EmotionBlocks.magentaClaySlab);
-	public static BaseClayHalfSlab lightBlueClaySlab = new BaseClayHalfSlab(MapColor.LIGHT_BLUE);
-	public static BaseClayDoubleSlab lightBlueClayDoubleSlab = new BaseClayDoubleSlab(MapColor.LIGHT_BLUE, EmotionBlocks.lightBlueClaySlab);
-	public static BaseClayHalfSlab yellowClaySlab = new BaseClayHalfSlab(MapColor.YELLOW);
-	public static BaseClayDoubleSlab yellowClayDoubleSlab = new BaseClayDoubleSlab(MapColor.YELLOW, EmotionBlocks.yellowClaySlab);
-	public static BaseClayHalfSlab limeClaySlab = new BaseClayHalfSlab(MapColor.LIME);
-	public static BaseClayDoubleSlab limeClayDoubleSlab = new BaseClayDoubleSlab(MapColor.LIME, EmotionBlocks.limeClaySlab);
-	public static BaseClayHalfSlab pinkClaySlab = new BaseClayHalfSlab(MapColor.PINK);
-	public static BaseClayDoubleSlab pinkClayDoubleSlab = new BaseClayDoubleSlab(MapColor.PINK, EmotionBlocks.pinkClaySlab);
-	public static BaseClayHalfSlab grayClaySlab = new BaseClayHalfSlab(MapColor.GRAY);
-	public static BaseClayDoubleSlab grayClayDoubleSlab = new BaseClayDoubleSlab(MapColor.GRAY, EmotionBlocks.grayClaySlab);
-	public static BaseClayHalfSlab silverClaySlab = new BaseClayHalfSlab(MapColor.SILVER);
-	public static BaseClayDoubleSlab silverClayDoubleSlab = new BaseClayDoubleSlab(MapColor.SILVER, EmotionBlocks.silverClaySlab);
-	public static BaseClayHalfSlab cyanClaySlab = new BaseClayHalfSlab(MapColor.CYAN);
-	public static BaseClayDoubleSlab cyanClayDoubleSlab = new BaseClayDoubleSlab(MapColor.CYAN, EmotionBlocks.cyanClaySlab);
-	public static BaseClayHalfSlab purpleClaySlab = new BaseClayHalfSlab(MapColor.PURPLE);
-	public static BaseClayDoubleSlab purpleClayDoubleSlab = new BaseClayDoubleSlab(MapColor.PURPLE, EmotionBlocks.purpleClaySlab);
-	public static BaseClayHalfSlab blueClaySlab = new BaseClayHalfSlab(MapColor.BLUE);
-	public static BaseClayDoubleSlab blueClayDoubleSlab = new BaseClayDoubleSlab(MapColor.BLUE, EmotionBlocks.blueClaySlab);
-	public static BaseClayHalfSlab brownClaySlab = new BaseClayHalfSlab(MapColor.BROWN);
-	public static BaseClayDoubleSlab brownClayDoubleSlab = new BaseClayDoubleSlab(MapColor.BROWN, EmotionBlocks.brownClaySlab);
-	public static BaseClayHalfSlab greenClaySlab = new BaseClayHalfSlab(MapColor.GREEN);
-	public static BaseClayDoubleSlab greenClayDoubleSlab = new BaseClayDoubleSlab(MapColor.GREEN, EmotionBlocks.greenClaySlab);
-	public static BaseClayHalfSlab redClaySlab = new BaseClayHalfSlab(MapColor.RED);
-	public static BaseClayDoubleSlab redClayDoubleSlab = new BaseClayDoubleSlab(MapColor.RED, EmotionBlocks.redClaySlab);
-	public static BaseClayHalfSlab blackClaySlab = new BaseClayHalfSlab(MapColor.BLACK);
-	public static BaseClayDoubleSlab blackClayDoubleSlab = new BaseClayDoubleSlab(MapColor.BLACK, EmotionBlocks.blackClaySlab);
+	public static final BaseClayHalfSlab WHITE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.SNOW);
+	public static final BaseClayDoubleSlab WHITE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.SNOW, EmotionBlocks.WHITE_CLAY_SLAB);
+	public static final BaseClayHalfSlab ORANGE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.ADOBE);
+	public static final BaseClayDoubleSlab ORANGE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.ADOBE, EmotionBlocks.ORANGE_CLAY_SLAB);
+	public static final BaseClayHalfSlab MANGENTA_CLAY_SLAB = new BaseClayHalfSlab(MapColor.MAGENTA);
+	public static final BaseClayDoubleSlab MANGENTA_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.MAGENTA, EmotionBlocks.MANGENTA_CLAY_SLAB);
+	public static final BaseClayHalfSlab LIGHT_BLUE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.LIGHT_BLUE);
+	public static final BaseClayDoubleSlab LIGHT_BLUE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.LIGHT_BLUE, EmotionBlocks.LIGHT_BLUE_CLAY_SLAB);
+	public static final BaseClayHalfSlab YELLOW_CLAY_SLAB = new BaseClayHalfSlab(MapColor.YELLOW);
+	public static final BaseClayDoubleSlab YELLOW_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.YELLOW, EmotionBlocks.YELLOW_CLAY_SLAB);
+	public static final BaseClayHalfSlab LIME_CLAY_SLAB = new BaseClayHalfSlab(MapColor.LIME);
+	public static final BaseClayDoubleSlab LIME_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.LIME, EmotionBlocks.LIME_CLAY_SLAB);
+	public static final BaseClayHalfSlab PINK_CLAY_SLAB = new BaseClayHalfSlab(MapColor.PINK);
+	public static final BaseClayDoubleSlab PINK_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.PINK, EmotionBlocks.PINK_CLAY_SLAB);
+	public static final BaseClayHalfSlab GRAY_CLAY_SLAB = new BaseClayHalfSlab(MapColor.GRAY);
+	public static final BaseClayDoubleSlab GRAY_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.GRAY, EmotionBlocks.GRAY_CLAY_SLAB);
+	public static final BaseClayHalfSlab SILVER_CLAY_SLAB = new BaseClayHalfSlab(MapColor.SILVER);
+	public static final BaseClayDoubleSlab SILVER_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.SILVER, EmotionBlocks.SILVER_CLAY_SLAB);
+	public static final BaseClayHalfSlab CYAN_CLAY_SLAB = new BaseClayHalfSlab(MapColor.CYAN);
+	public static final BaseClayDoubleSlab CYAN_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.CYAN, EmotionBlocks.CYAN_CLAY_SLAB);
+	public static final BaseClayHalfSlab PURPLE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.PURPLE);
+	public static final BaseClayDoubleSlab PURPLE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.PURPLE, EmotionBlocks.PURPLE_CLAY_SLAB);
+	public static final BaseClayHalfSlab BLUE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.BLUE);
+	public static final BaseClayDoubleSlab BLUE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.BLUE, EmotionBlocks.BLUE_CLAY_SLAB);
+	public static final BaseClayHalfSlab BROWN_CLAY_SLAB = new BaseClayHalfSlab(MapColor.BROWN);
+	public static final BaseClayDoubleSlab BROWN_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.BROWN, EmotionBlocks.BROWN_CLAY_SLAB);
+	public static final BaseClayHalfSlab GREEN_CLAY_SLAB = new BaseClayHalfSlab(MapColor.GREEN);
+	public static final BaseClayDoubleSlab GREEN_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.GREEN, EmotionBlocks.GREEN_CLAY_SLAB);
+	public static final BaseClayHalfSlab RED_CLAY_SLAB = new BaseClayHalfSlab(MapColor.RED);
+	public static final BaseClayDoubleSlab RED_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.RED, EmotionBlocks.RED_CLAY_SLAB);
+	public static final BaseClayHalfSlab BLACK_CLAY_SLAB = new BaseClayHalfSlab(MapColor.BLACK);
+	public static final BaseClayDoubleSlab BLACK_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.BLACK, EmotionBlocks.BLACK_CLAY_SLAB);
 
 	// Viscous Block
-	public static Block shiftingSand = new BaseViscous(Material.SAND, SoundType.SAND);
-	public static Block mud = new BaseViscous(Material.GROUND, SoundType.GROUND);
+	public static final Block SHIFTING_SAND = new BaseViscous(Material.SAND, SoundType.SAND);
+	public static final Block MUD = new BaseViscous(Material.GROUND, SoundType.GROUND);
 
 	// Random Meter Block
-	public static Block randomMeter;
+	// public static final Block RANDOM_METER;
 
 	public static void mainRegister()
 	{
-		registerBlock(fossilOre, "fossil_ore");
+		registerBlock(FOSSIL_ORE, "fossil_ore");
 
-		registerBlock(purpuraOre, "purpura_ore");
-		registerBlock(purpuraBlock, "purpura_block");
+		registerBlock(PURPURA_ORE, "purpura_ore");
+		registerBlock(PURPURA_BLOCK, "purpura_block");
 
-		registerBlock(viridisOre, "viridis_ore");
-		registerBlock(viridisCristal, "viridis_cristal");
-		registerBlock(viridisBlock, "viridis_block");
+		registerBlock(VIRIDIS_ORE, "viridis_ore");
+		registerBlock(VIRIDIS_CRISTAL, "viridis_cristal");
+		registerBlock(VIRIDIS_BLOCK, "viridis_block");
 
-		registerBlock(lumeOre, "lume_ore");
-		registerBlock(lumeOre2, "lume_ore2");
-		registerBlock(lumeBlock, "lume_block");
+		registerBlock(LUME_ORE, "lume_ore");
+		registerBlock(DREAM_LUME_ORE, "dream_lume_ore");
+		registerBlock(LUME_BLOCK, "lume_block");
 
-		registerBlock(glitch, "glitch");
+		registerBlock(GLITCH, "glitch");
 
-		registerBlockNoItem(pearPlant, "plant_pear");
-		registerBlockNoItem(cherryPlant, "plant_cherry");
-		registerBlockNoItem(orangePlant, "plant_orange");
-		registerBlockNoItem(tomatoPlant, "plant_tomato");
-		registerBlockNoItem(applePlant, "plant_apple");
+		registerBlockNoItem(PEAR_PLANT, "plant_pear");
+		registerBlockNoItem(CHERRY_PLANT, "plant_cherry");
+		registerBlockNoItem(ORANGE_PLANT, "plant_orange");
+		registerBlockNoItem(TOMATO_PLANT, "plant_tomato");
+		registerBlockNoItem(APPLE_PLANT, "plant_apple");
 
-		registerBlockNoItem(bluePlant, "plant_blue");
-		registerBlockNoItem(redPlant, "plant_red");
-		registerBlockNoItem(brownPlant, "plant_brown");
+		registerBlockNoItem(BLUE_PLANT, "plant_blue");
+		registerBlockNoItem(RED_PLANT, "plant_red");
+		registerBlockNoItem(BROWN_PLANT, "plant_brown");
 
-		registerBlock(basePot, new ItemBaseBlock(basePot), "pot");
+		registerBlock(POT, new ItemBaseBlock(POT), "pot");
 
-		registerBlockNoItem(cakeChoco, "cake_choco");
-		registerBlockNoItem(cakeFruit, "cake_fruit");
-		registerBlockNoItem(cakeToffee, "cake_toffee");
-		registerBlockNoItem(cakeStrawberry, "cake_strawberry");
+		registerBlockNoItem(CAKE_CHOCO, "cake_choco");
+		registerBlockNoItem(CAKE_FRUIT, "cake_fruit");
+		registerBlockNoItem(CAKE_TOFFEE, "cake_toffee");
+		registerBlockNoItem(CAKE_STRAWBERRY, "cake_strawberry");
 
-		registerBlockNoItem(baseBush, "bush");
-		registerBlock(baseBushSimple, new ItemBaseBlock(baseBushSimple), "bush_simple");
+		registerBlockNoItem(BUSH, "bush");
+		registerBlock(BUSH_SIMPLE, new ItemBaseBlock(BUSH_SIMPLE), "bush_simple");
 
-		registerBlock(baseBrick, new ItemBaseBlock(baseBrick), "brick");
+		registerBlock(BRICK, new ItemBaseBlock(BRICK), "brick");
 
-		registerBlock(baseFlower, new ItemBaseBlock(baseFlower), "flower");
+		registerBlock(FLOWER, new ItemBaseBlock(FLOWER), "flower");
 
-		registerBlock(baseMushroom, new ItemBaseBlock(baseMushroom), "mushroom");
+		registerBlock(MUSHROOM, new ItemBaseBlock(MUSHROOM), "mushroom");
 
-		registerBlock(woodTableCherry, "wood_table_cherry");
-		registerBlock(woodTablePear, "wood_table_pear");
-		registerBlock(woodTableOrange, "wood_table_orange");
-		registerBlock(woodTableAtlas, "wood_table_atlas");
-		registerBlock(woodTablePine, "wood_table_pine");
-		registerBlock(woodTableCoco, "wood_table_coco");
-		registerBlock(woodTableDream, "wood_table_dream");
+		registerBlock(WOOD_TABLE_CHERRY, "wood_table_cherry");
+		registerBlock(WOOD_TABLE_PEAR, "wood_table_pear");
+		registerBlock(WOOD_TABLE_ORANGE, "wood_table_orange");
+		registerBlock(WOOD_TABLE_ATLAS, "wood_table_atlas");
+		registerBlock(WOOD_TABLE_PINE, "wood_table_pine");
+		registerBlock(WOOD_TABLE_COCO, "wood_table_coco");
+		registerBlock(WOOD_TABLE_DREAM, "wood_table_dream");
 
-		registerBlock(woodTableOak, "wood_table_oak");
-		registerBlock(woodTableSpruce, "wood_table_spruce");
-		registerBlock(woodTableBirch, "wood_table_birch");
-		registerBlock(woodTableJungle, "wood_table_jungle");
-		registerBlock(woodTableAcacia, "wood_table_acacia");
-		registerBlock(woodTableBigOak, "wood_table_big_oak");
+		registerBlock(WOOD_TABLE_OAK, "wood_table_oak");
+		registerBlock(WOOD_TABLE_SPRUCE, "wood_table_spruce");
+		registerBlock(WOOD_TABLE_BIRCH, "wood_table_birch");
+		registerBlock(WOOD_TABLE_JUNGLE, "wood_table_jungle");
+		registerBlock(WOOD_TABLE_ACACIA, "wood_table_acacia");
+		registerBlock(WOOD_TABLE_BIG_OAK, "wood_table_big_oak");
 
-		registerBlock(woodNightstandCherry, "wood_nightstand_cherry");
-		registerBlock(woodNightstandPear, "wood_nightstand_pear");
-		registerBlock(woodNightstandOrange, "wood_nightstand_orange");
-		registerBlock(woodNightstandAtlas, "wood_nightstand_atlas");
-		registerBlock(woodNightstandPine, "wood_nightstand_pine");
-		registerBlock(woodNightstandCoco, "wood_nightstand_coco");
-		registerBlock(woodNightstandDream, "wood_nightstand_dream");
+		registerBlock(WOOD_NIGHTSTAND_CHERRY, "wood_nightstand_cherry");
+		registerBlock(WOOD_NIGHTSTAND_PEAR, "wood_nightstand_pear");
+		registerBlock(WOOD_NIGHTSTAND_ORANGE, "wood_nightstand_orange");
+		registerBlock(WOOD_NIGHTSTAND_ATLAS, "wood_nightstand_atlas");
+		registerBlock(WOOD_NIGHTSTAND_PINE, "wood_nightstand_pine");
+		registerBlock(WOOD_NIGHTSTAND_COCO, "wood_nightstand_coco");
+		registerBlock(WOOD_NIGHTSTAND_DREAM, "wood_nightstand_dream");
 
-		registerBlock(woodNightstandOak, "wood_nightstand_oak");
-		registerBlock(woodNightstandSpruce, "wood_nightstand_spruce");
-		registerBlock(woodNightstandBirch, "wood_nightstand_birch");
-		registerBlock(woodNightstandJungle, "wood_nightstand_jungle");
-		registerBlock(woodNightstandAcacia, "wood_nightstand_acacia");
-		registerBlock(woodNightstandBigOak, "wood_nightstand_big_oak");
+		registerBlock(WOOD_NIGHTSTAND_OAK, "wood_nightstand_oak");
+		registerBlock(WOOD_NIGHTSTAND_SPRUCE, "wood_nightstand_spruce");
+		registerBlock(WOOD_NIGHTSTAND_BIRCH, "wood_nightstand_birch");
+		registerBlock(WOOD_NIGHTSTAND_JUNGLE, "wood_nightstand_jungle");
+		registerBlock(WOOD_NIGHTSTAND_ACACIA, "wood_nightstand_acacia");
+		registerBlock(WOOD_NIGHTSTAND_BIG_OAK, "wood_nightstand_big_oak");
 
-		registerBlock(woodChair, new ItemBaseBlock(woodChair), "wood_chair");
+		registerBlock(WOOD_CHAIR, new ItemBaseBlock(WOOD_CHAIR), "wood_chair");
 
-		registerBlock(stoneTableCobblestone, "stone_table_cobblestone");
-		registerBlock(stoneTableMossyCobblestone, "stone_table_mossy_cobblestone");
-		registerBlock(stoneTableStoneBrick, "stone_table_stonebrick");
-		registerBlock(stoneTableMossyStoneBrick, "stone_table_mossy_stonebrick");
-		registerBlock(stoneTableCrackedStoneBrick, "stone_table_cracked_stonebrick");
-		registerBlock(stoneTableChiselledStoneBrick, "stone_table_chiselled_stonebrick");
-		registerBlock(stoneTableBrick, "stone_table_brick");
+		registerBlock(STONE_TABLE_COBBLESTONE, "stone_table_cobblestone");
+		registerBlock(STONE_TABLE_MOSSY_COBBLESTONE, "stone_table_mossy_cobblestone");
+		registerBlock(STONE_TABLE_STONE_BRICK, "stone_table_stonebrick");
+		registerBlock(STONE_TABLE_MOSSY_STONE_BRICK, "stone_table_mossy_stonebrick");
+		registerBlock(STONE_TABLE_CRACKED_STONE_BRICK, "stone_table_cracked_stonebrick");
+		registerBlock(STONE_TABLE_CHISELLED_STONE_BRICK, "stone_table_chiselled_stonebrick");
+		registerBlock(STONE_TABLE_BRICK, "stone_table_brick");
 
-		registerBlock(stoneChair, new ItemBaseBlock(stoneChair), "stone_chair");
+		registerBlock(STONE_CHAIR, new ItemBaseBlock(STONE_CHAIR), "stone_chair");
 
-		registerBlock(emoLeaves, new ItemBaseBlock(emoLeaves), "leaves");
-		registerBlock(emoNewLeaves, new ItemBaseBlock(emoNewLeaves), "new_leaves");
-		registerBlock(emoLog, new ItemBaseBlock(emoLog), "log");
-		registerBlock(emoNewLog, new ItemBaseBlock(emoNewLog), "new_log");
-		registerBlock(emoSapling, new ItemBaseBlock(emoSapling), "sapling");
-		registerBlock(emoPlanks, new ItemBaseBlock(emoPlanks), "planks");
+		registerBlock(LEAVES, new ItemBaseBlock(LEAVES), "leaves");
+		registerBlock(NEW_LEAVES, new ItemBaseBlock(NEW_LEAVES), "new_leaves");
+		registerBlock(LOG, new ItemBaseBlock(LOG), "log");
+		registerBlock(NEW_LOG, new ItemBaseBlock(NEW_LOG), "new_log");
+		registerBlock(SAPLING, new ItemBaseBlock(SAPLING), "sapling");
+		registerBlock(PLANKS, new ItemBaseBlock(PLANKS), "planks");
 
-		registerBlock(cherryStairs, "cherry_stairs");
-		registerBlock(pearStairs, "pear_stairs");
-		registerBlock(orangeStairs, "orange_stairs");
-		registerBlock(atlasStairs, "atlas_stairs");
-		registerBlock(pineStairs, "pine_stairs");
-		registerBlock(cocoStairs, "coco_stairs");
-		registerBlock(dreamStairs, "dream_stairs");
+		registerBlock(CHERRY_STAIRS, "cherry_stairs");
+		registerBlock(PEAR_STAIRS, "pear_stairs");
+		registerBlock(ORANGE_STAIRS, "orange_stairs");
+		registerBlock(ATLAS_STAIRS, "atlas_stairs");
+		registerBlock(PINE_STAIRS, "pine_stairs");
+		registerBlock(COCO_STAIRS, "coco_stairs");
+		registerBlock(DREAM_STAIRS, "dream_stairs");
 
-		registerBlock(whiteClayStairs, "white_clay_stairs");
-		registerBlock(orangeClayStairs, "orange_clay_stairs");
-		registerBlock(magentaClayStairs, "magenta_clay_stairs");
-		registerBlock(lightBlueClayStairs, "light_blue_clay_stairs");
-		registerBlock(yellowClayStairs, "yellow_clay_stairs");
-		registerBlock(limeClayStairs, "lime_clay_stairs");
-		registerBlock(pinkClayStairs, "pink_clay_stairs");
-		registerBlock(grayClayStairs, "gray_clay_stairs");
-		registerBlock(silverClayStairs, "silver_clay_stairs");
-		registerBlock(cyanClayStairs, "cyan_clay_stairs");
-		registerBlock(purpleClayStairs, "purple_clay_stairs");
-		registerBlock(blueClayStairs, "blue_clay_stairs");
-		registerBlock(brownClayStairs, "brown_clay_stairs");
-		registerBlock(greenClayStairs, "green_clay_stairs");
-		registerBlock(redClayStairs, "red_clay_stairs");
-		registerBlock(blackClayStairs, "black_clay_stairs");
+		registerBlock(WHITE_CLAY_STAIRS, "white_clay_stairs");
+		registerBlock(ORANGE_CLAY_STAIRS, "orange_clay_stairs");
+		registerBlock(MANGENTA_CLAY_STAIRS, "magenta_clay_stairs");
+		registerBlock(LIGHT_BLUE_CLAY_STAIRS, "light_blue_clay_stairs");
+		registerBlock(YELLOW_CLAY_STAIRS, "yellow_clay_stairs");
+		registerBlock(LIME_CLAY_STAIRS, "lime_clay_stairs");
+		registerBlock(PINK_CLAY_STAIRS, "pink_clay_stairs");
+		registerBlock(GRAY_CLAY_STAIRS, "gray_clay_stairs");
+		registerBlock(SILVER_CLAY_STAIRS, "silver_clay_stairs");
+		registerBlock(CYAN_CLAY_STAIRS, "cyan_clay_stairs");
+		registerBlock(PURPLE_CLAY_STAIRS, "purple_clay_stairs");
+		registerBlock(BLUE_CLAY_STAIRS, "blue_clay_stairs");
+		registerBlock(BROWN_CLAY_STAIRS, "brown_clay_stairs");
+		registerBlock(GREEN_CLAY_STAIRS, "green_clay_stairs");
+		registerBlock(RED_CLAY_STAIRS, "red_clay_stairs");
+		registerBlock(BLACK_CLAY_STAIRS, "black_clay_stairs");
 
-		registerBlock(cherryFence, "cherry_fence");
-		registerBlock(cherryFenceGate, "cherry_fence_gate");
-		registerBlock(pearFence, "pear_fence");
-		registerBlock(pearFenceGate, "pear_fence_gate");
-		registerBlock(orangeFence, "orange_fence");
-		registerBlock(orangeFenceGate, "orange_fence_gate");
-		registerBlock(atlasFence, "atlas_fence");
-		registerBlock(atlasFenceGate, "atlas_fence_gate");
+		registerBlock(CHERRY_FENCE, "cherry_fence");
+		registerBlock(CHERRY_FENCE_GATE, "cherry_fence_gate");
+		registerBlock(PEAR_FENCE, "pear_fence");
+		registerBlock(PEAR_FENCE_GATE, "pear_fence_gate");
+		registerBlock(ORANGE_FENCE, "orange_fence");
+		registerBlock(ORANGE_FENCE_GATE, "orange_fence_gate");
+		registerBlock(ATLAS_FENCE, "atlas_fence");
+		registerBlock(ATLAS_FENCE_GATE, "atlas_fence_gate");
 
-		registerBlock(pineFence, "pine_fence");
-		registerBlock(pineFenceGate, "pine_fence_gate");
-		registerBlock(cocoFence, "coco_fence");
-		registerBlock(cocoFenceGate, "coco_fence_gate");
-		registerBlock(dreamFence, "dream_fence");
-		registerBlock(dreamFenceGate, "dream_fence_gate");
+		registerBlock(PINE_FENCE, "pine_fence");
+		registerBlock(PINE_FENCE_GATE, "pine_fence_gate");
+		registerBlock(COCO_FENCE, "coco_fence");
+		registerBlock(COCO_FENCE_GATE, "coco_fence_gate");
+		registerBlock(DREAM_FENCE, "dream_fence");
+		registerBlock(DREAM_FENCE_GATE, "dream_fence_gate");
 
-		registerBlockNoItem(cherryDoor, "cherry_door");
-		registerBlock(cherryTrapdoor, "cherry_trapdoor");
-		registerBlockNoItem(pearDoor, "pear_door");
-		registerBlock(pearTrapdoor, "pear_trapdoor");
-		registerBlockNoItem(orangeDoor, "orange_door");
-		registerBlock(orangeTrapdoor, "orange_trapdoor");
-		registerBlockNoItem(atlasDoor, "atlas_door");
-		registerBlock(atlasTrapdoor, "atlas_trapdoor");
+		registerBlockNoItem(CHERRY_DOOR, "cherry_door");
+		registerBlock(CHERRY_TRAPDOOR, "cherry_trapdoor");
+		registerBlockNoItem(PEAR_DOOR, "pear_door");
+		registerBlock(PEAR_TRAPDOOR, "pear_trapdoor");
+		registerBlockNoItem(ORANGE_DOOR, "orange_door");
+		registerBlock(ORANGE_TRAPDOOR, "orange_trapdoor");
+		registerBlockNoItem(ATLAS_DOOR, "atlas_door");
+		registerBlock(ATLAS_TRAPDOOR, "atlas_trapdoor");
 
-		registerBlockNoItem(pineDoor, "pine_door");
-		registerBlock(pineTrapdoor, "pine_trapdoor");
-		registerBlockNoItem(cocoDoor, "coco_door");
-		registerBlock(cocoTrapdoor, "coco_trapdoor");
-		registerBlockNoItem(dreamDoor, "dream_door");
-		registerBlock(dreamTrapdoor, "dream_trapdoor");
+		registerBlockNoItem(PINE_DOOR, "pine_door");
+		registerBlock(PINE_TRAPDOOR, "pine_trapdoor");
+		registerBlockNoItem(COCO_DOOR, "coco_door");
+		registerBlock(COCO_TRAPDOOR, "coco_trapdoor");
+		registerBlockNoItem(DREAM_DOOR, "dream_door");
+		registerBlock(DREAM_TRAPDOOR, "dream_trapdoor");
 
-		registerBlock(spruceTrapdoor, "spruce_trapdoor");
-		registerBlock(birchTrapdoor, "birch_trapdoor");
-		registerBlock(jungleTrapdoor, "jungle_trapdoor");
-		registerBlock(acaciaTrapdoor, "acacia_trapdoor");
-		registerBlock(darkOakTrapdoor, "dark_oak_trapdoor");
+		registerBlock(SPRUCE_TRAPDOOR, "spruce_trapdoor");
+		registerBlock(BIRCH_TRAPDOOR, "birch_trapdoor");
+		registerBlock(JUNGLE_TRAPDOOR, "jungle_trapdoor");
+		registerBlock(ACACIA_TRAPDOOR, "acacia_trapdoor");
+		registerBlock(DARK_OAK_TRAPDOOR, "dark_oak_trapdoor");
 
-		registerBlock(cherrySlab, new ItemSlab(cherrySlab, cherrySlab, cherryDoubleSlab), "cherry_slab");
-		registerBlockNoItem(cherryDoubleSlab, "cherry_double_slab");
-		registerBlock(pearSlab, new ItemSlab(pearSlab, pearSlab, pearDoubleSlab), "pear_slab");
-		registerBlockNoItem(pearDoubleSlab, "pear_double_slab");
-		registerBlock(orangeSlab, new ItemSlab(orangeSlab, orangeSlab, orangeDoubleSlab), "orange_slab");
-		registerBlockNoItem(orangeDoubleSlab, "orange_double_slab");
-		registerBlock(atlasSlab, new ItemSlab(atlasSlab, atlasSlab, atlasDoubleSlab), "atlas_slab");
-		registerBlockNoItem(atlasDoubleSlab, "atlas_double_slab");
+		registerBlock(CHERRY_SLAB, new ItemSlab(CHERRY_SLAB, CHERRY_SLAB, CHERRY_DOUBLE_SLAB), "cherry_slab");
+		registerBlockNoItem(CHERRY_DOUBLE_SLAB, "cherry_double_slab");
+		registerBlock(PEAR_SLAB, new ItemSlab(PEAR_SLAB, PEAR_SLAB, PEAR_DOUBLE_SLAB), "pear_slab");
+		registerBlockNoItem(PEAR_DOUBLE_SLAB, "pear_double_slab");
+		registerBlock(ORANGE_SLAB, new ItemSlab(ORANGE_SLAB, ORANGE_SLAB, ORANGE_DOUBLE_SLAB), "orange_slab");
+		registerBlockNoItem(ORANGE_DOUBLE_SLAB, "orange_double_slab");
+		registerBlock(ATLAS_SLAB, new ItemSlab(ATLAS_SLAB, ATLAS_SLAB, ATLAS_DOUBLE_SLAB), "atlas_slab");
+		registerBlockNoItem(ATLAS_DOUBLE_SLAB, "atlas_double_slab");
 
-		registerBlock(pineSlab, new ItemSlab(pineSlab, pineSlab, pineDoubleSlab), "pine_slab");
-		registerBlockNoItem(pineDoubleSlab, "pine_double_slab");
-		registerBlock(cocoSlab, new ItemSlab(cocoSlab, cocoSlab, cocoDoubleSlab), "coco_slab");
-		registerBlockNoItem(cocoDoubleSlab, "coco_double_slab");
-		registerBlock(dreamSlab, new ItemSlab(dreamSlab, dreamSlab, dreamDoubleSlab), "dream_slab");
-		registerBlockNoItem(dreamDoubleSlab, "dream_double_slab");
+		registerBlock(PINE_SLAB, new ItemSlab(PINE_SLAB, PINE_SLAB, PINE_DOUBLE_SLAB), "pine_slab");
+		registerBlockNoItem(PINE_DOUBLE_SLAB, "pine_double_slab");
+		registerBlock(COCO_SLAB, new ItemSlab(COCO_SLAB, COCO_SLAB, COCO_DOUBLE_SLAB), "coco_slab");
+		registerBlockNoItem(COCO_DOUBLE_SLAB, "coco_double_slab");
+		registerBlock(DREAM_SLAB, new ItemSlab(DREAM_SLAB, DREAM_SLAB, DREAM_DOUBLE_SLAB), "dream_slab");
+		registerBlockNoItem(DREAM_DOUBLE_SLAB, "dream_double_slab");
 
-		registerBlock(whiteClaySlab, new ItemSlab(whiteClaySlab, whiteClaySlab, whiteClayDoubleSlab), "white_clay_slab");
-		registerBlockNoItem(whiteClayDoubleSlab, "white_clay_double_slab");
-		registerBlock(orangeClaySlab, new ItemSlab(orangeClaySlab, orangeClaySlab, orangeClayDoubleSlab), "orange_clay_slab");
-		registerBlockNoItem(orangeClayDoubleSlab, "orange_clay_double_slab");
-		registerBlock(magentaClaySlab, new ItemSlab(magentaClaySlab, magentaClaySlab, magentaClayDoubleSlab), "magenta_clay_slab");
-		registerBlockNoItem(magentaClayDoubleSlab, "magenta_clay_double_slab");
-		registerBlock(lightBlueClaySlab, new ItemSlab(lightBlueClaySlab, lightBlueClaySlab, lightBlueClayDoubleSlab), "light_blue_clay_slab");
-		registerBlockNoItem(lightBlueClayDoubleSlab, "light_blue_clay_double_slab");
-		registerBlock(yellowClaySlab, new ItemSlab(yellowClaySlab, yellowClaySlab, yellowClayDoubleSlab), "yellow_clay_slab");
-		registerBlockNoItem(yellowClayDoubleSlab, "yellow_clay_double_slab");
-		registerBlock(limeClaySlab, new ItemSlab(limeClaySlab, limeClaySlab, limeClayDoubleSlab), "lime_clay_slab");
-		registerBlockNoItem(limeClayDoubleSlab, "lime_clay_double_slab");
-		registerBlock(pinkClaySlab, new ItemSlab(pinkClaySlab, pinkClaySlab, pinkClayDoubleSlab), "pink_clay_slab");
-		registerBlockNoItem(pinkClayDoubleSlab, "pink_clay_double_slab");
-		registerBlock(grayClaySlab, new ItemSlab(grayClaySlab, grayClaySlab, grayClaySlab), "gray_clay_slab");
-		registerBlockNoItem(grayClayDoubleSlab, "gray_clay_double_slab");
-		registerBlock(silverClaySlab, new ItemSlab(silverClaySlab, silverClaySlab, silverClayDoubleSlab), "silver_clay_slab");
-		registerBlockNoItem(silverClayDoubleSlab, "silver_clay_double_slab");
-		registerBlock(cyanClaySlab, new ItemSlab(cyanClaySlab, cyanClaySlab, cyanClayDoubleSlab), "cyan_clay_slab");
-		registerBlockNoItem(cyanClayDoubleSlab, "cyan_clay_double_slab");
-		registerBlock(purpleClaySlab, new ItemSlab(purpleClaySlab, purpleClaySlab, purpleClayDoubleSlab), "purple_clay_slab");
-		registerBlockNoItem(purpleClayDoubleSlab, "purple_clay_double_slab");
-		registerBlock(blueClaySlab, new ItemSlab(blueClaySlab, blueClaySlab, blueClayDoubleSlab), "blue_clay_slab");
-		registerBlockNoItem(blueClayDoubleSlab, "blue_clay_double_slab");
-		registerBlock(brownClaySlab, new ItemSlab(brownClaySlab, brownClaySlab, brownClayDoubleSlab), "brown_clay_slab");
-		registerBlockNoItem(brownClayDoubleSlab, "brown_clay_double_slab");
-		registerBlock(greenClaySlab, new ItemSlab(greenClaySlab, greenClaySlab, greenClayDoubleSlab), "green_clay_slab");
-		registerBlockNoItem(greenClayDoubleSlab, "green_clay_double_slab");
-		registerBlock(redClaySlab, new ItemSlab(redClaySlab, redClaySlab, redClayDoubleSlab), "red_clay_slab");
-		registerBlockNoItem(redClayDoubleSlab, "red_clay_double_slab");
-		registerBlock(blackClaySlab, new ItemSlab(blackClaySlab, blackClaySlab, blackClayDoubleSlab), "black_clay_slab");
-		registerBlockNoItem(blackClayDoubleSlab, "black_clay_double_slab");
+		registerBlock(WHITE_CLAY_SLAB, new ItemSlab(WHITE_CLAY_SLAB, WHITE_CLAY_SLAB, WHITE_CLAY_DOUBLE_SLAB), "white_clay_slab");
+		registerBlockNoItem(WHITE_CLAY_DOUBLE_SLAB, "white_clay_double_slab");
+		registerBlock(ORANGE_CLAY_SLAB, new ItemSlab(ORANGE_CLAY_SLAB, ORANGE_CLAY_SLAB, ORANGE_CLAY_DOUBLE_SLAB), "orange_clay_slab");
+		registerBlockNoItem(ORANGE_CLAY_DOUBLE_SLAB, "orange_clay_double_slab");
+		registerBlock(MANGENTA_CLAY_SLAB, new ItemSlab(MANGENTA_CLAY_SLAB, MANGENTA_CLAY_SLAB, MANGENTA_CLAY_DOUBLE_SLAB), "magenta_clay_slab");
+		registerBlockNoItem(MANGENTA_CLAY_DOUBLE_SLAB, "magenta_clay_double_slab");
+		registerBlock(LIGHT_BLUE_CLAY_SLAB, new ItemSlab(LIGHT_BLUE_CLAY_SLAB, LIGHT_BLUE_CLAY_SLAB, LIGHT_BLUE_CLAY_DOUBLE_SLAB), "light_blue_clay_slab");
+		registerBlockNoItem(LIGHT_BLUE_CLAY_DOUBLE_SLAB, "light_blue_clay_double_slab");
+		registerBlock(YELLOW_CLAY_SLAB, new ItemSlab(YELLOW_CLAY_SLAB, YELLOW_CLAY_SLAB, YELLOW_CLAY_DOUBLE_SLAB), "yellow_clay_slab");
+		registerBlockNoItem(YELLOW_CLAY_DOUBLE_SLAB, "yellow_clay_double_slab");
+		registerBlock(LIME_CLAY_SLAB, new ItemSlab(LIME_CLAY_SLAB, LIME_CLAY_SLAB, LIME_CLAY_DOUBLE_SLAB), "lime_clay_slab");
+		registerBlockNoItem(LIME_CLAY_DOUBLE_SLAB, "lime_clay_double_slab");
+		registerBlock(PINK_CLAY_SLAB, new ItemSlab(PINK_CLAY_SLAB, PINK_CLAY_SLAB, PINK_CLAY_DOUBLE_SLAB), "pink_clay_slab");
+		registerBlockNoItem(PINK_CLAY_DOUBLE_SLAB, "pink_clay_double_slab");
+		registerBlock(GRAY_CLAY_SLAB, new ItemSlab(GRAY_CLAY_SLAB, GRAY_CLAY_SLAB, GRAY_CLAY_SLAB), "gray_clay_slab");
+		registerBlockNoItem(GRAY_CLAY_DOUBLE_SLAB, "gray_clay_double_slab");
+		registerBlock(SILVER_CLAY_SLAB, new ItemSlab(SILVER_CLAY_SLAB, SILVER_CLAY_SLAB, SILVER_CLAY_DOUBLE_SLAB), "silver_clay_slab");
+		registerBlockNoItem(SILVER_CLAY_DOUBLE_SLAB, "silver_clay_double_slab");
+		registerBlock(CYAN_CLAY_SLAB, new ItemSlab(CYAN_CLAY_SLAB, CYAN_CLAY_SLAB, CYAN_CLAY_DOUBLE_SLAB), "cyan_clay_slab");
+		registerBlockNoItem(CYAN_CLAY_DOUBLE_SLAB, "cyan_clay_double_slab");
+		registerBlock(PURPLE_CLAY_SLAB, new ItemSlab(PURPLE_CLAY_SLAB, PURPLE_CLAY_SLAB, PURPLE_CLAY_DOUBLE_SLAB), "purple_clay_slab");
+		registerBlockNoItem(PURPLE_CLAY_DOUBLE_SLAB, "purple_clay_double_slab");
+		registerBlock(BLUE_CLAY_SLAB, new ItemSlab(BLUE_CLAY_SLAB, BLUE_CLAY_SLAB, BLUE_CLAY_DOUBLE_SLAB), "blue_clay_slab");
+		registerBlockNoItem(BLUE_CLAY_DOUBLE_SLAB, "blue_clay_double_slab");
+		registerBlock(BROWN_CLAY_SLAB, new ItemSlab(BROWN_CLAY_SLAB, BROWN_CLAY_SLAB, BROWN_CLAY_DOUBLE_SLAB), "brown_clay_slab");
+		registerBlockNoItem(BROWN_CLAY_DOUBLE_SLAB, "brown_clay_double_slab");
+		registerBlock(GREEN_CLAY_SLAB, new ItemSlab(GREEN_CLAY_SLAB, GREEN_CLAY_SLAB, GREEN_CLAY_DOUBLE_SLAB), "green_clay_slab");
+		registerBlockNoItem(GREEN_CLAY_DOUBLE_SLAB, "green_clay_double_slab");
+		registerBlock(RED_CLAY_SLAB, new ItemSlab(RED_CLAY_SLAB, RED_CLAY_SLAB, RED_CLAY_DOUBLE_SLAB), "red_clay_slab");
+		registerBlockNoItem(RED_CLAY_DOUBLE_SLAB, "red_clay_double_slab");
+		registerBlock(BLACK_CLAY_SLAB, new ItemSlab(BLACK_CLAY_SLAB, BLACK_CLAY_SLAB, BLACK_CLAY_DOUBLE_SLAB), "black_clay_slab");
+		registerBlockNoItem(BLACK_CLAY_DOUBLE_SLAB, "black_clay_double_slab");
 
-		registerBlock(shiftingSand, "shifting_sand");
-		registerBlock(mud, "mud");
+		registerBlock(SHIFTING_SAND, "shifting_sand");
+		registerBlock(MUD, "mud");
 	}
 
-	public static void registerBlockNoItem(Block block, String name)
+	private static void registerBlockNoItem(Block block, String name)
 	{
 		block.setUnlocalizedName(name);
 		block.setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
 		GameRegistry.register(block);
 	}
 
-	public static void registerBlock(Block block, String name)
+	private static void registerBlock(Block block, String name)
 	{
+		emotionBlocks.add(block);
+		
 		block.setUnlocalizedName(name);
 		block.setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
 		GameRegistry.register(block);
 		GameRegistry.register(new ItemBlock(block).setRegistryName(name));
 	}
 
-	public static void registerBlock(Block block, ItemBlock itemBlock, String name)
+	private static void registerBlock(Block block, ItemBlock itemBlock, String name)
 	{
+		emotionBlocks.add(block);
+		
 		block.setUnlocalizedName(name);
 		block.setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
 		GameRegistry.register(block);
@@ -528,197 +536,76 @@ public class EmotionBlocks
 
 	public static void registerRenders()
 	{
-		registerRender(fossilOre);
-
-		registerRender(purpuraOre);
-		registerRender(purpuraBlock);
-
-		registerRender(viridisOre);
-		registerRender(viridisCristal);
-		registerRender(viridisBlock);
-
-		registerRender(lumeOre);
-		registerRender(lumeOre2);
-		registerRender(lumeBlock);
-
-		registerRender(glitch);
-
-		registerRender(woodTableCherry);
-		registerRender(woodTablePear);
-		registerRender(woodTableOrange);
-		registerRender(woodTableAtlas);
-		registerRender(woodTablePine);
-		registerRender(woodTableCoco);
-		registerRender(woodTableDream);
-
-		registerRender(woodTableOak);
-		registerRender(woodTableSpruce);
-		registerRender(woodTableBirch);
-		registerRender(woodTableJungle);
-		registerRender(woodTableAcacia);
-		registerRender(woodTableBigOak);
-
-		registerRender(woodNightstandCherry);
-		registerRender(woodNightstandPear);
-		registerRender(woodNightstandOrange);
-		registerRender(woodNightstandAtlas);
-		registerRender(woodNightstandPine);
-		registerRender(woodNightstandCoco);
-		registerRender(woodNightstandDream);
-
-		registerRender(woodNightstandOak);
-		registerRender(woodNightstandSpruce);
-		registerRender(woodNightstandBirch);
-		registerRender(woodNightstandJungle);
-		registerRender(woodNightstandAcacia);
-		registerRender(woodNightstandBigOak);
-
-		registerRender(stoneTableCobblestone);
-		registerRender(stoneTableMossyCobblestone);
-		registerRender(stoneTableStoneBrick);
-		registerRender(stoneTableMossyStoneBrick);
-		registerRender(stoneTableCrackedStoneBrick);
-		registerRender(stoneTableChiselledStoneBrick);
-		registerRender(stoneTableBrick);
-
-		registerRender(cherryStairs);
-		registerRender(pearStairs);
-		registerRender(orangeStairs);
-		registerRender(atlasStairs);
-		registerRender(pineStairs);
-		registerRender(cocoStairs);
-		registerRender(dreamStairs);
-
-		registerRender(whiteClayStairs);
-		registerRender(orangeClayStairs);
-		registerRender(magentaClayStairs);
-		registerRender(lightBlueClayStairs);
-		registerRender(yellowClayStairs);
-		registerRender(limeClayStairs);
-		registerRender(pinkClayStairs);
-		registerRender(grayClayStairs);
-		registerRender(silverClayStairs);
-		registerRender(cyanClayStairs);
-		registerRender(purpleClayStairs);
-		registerRender(blueClayStairs);
-		registerRender(brownClayStairs);
-		registerRender(greenClayStairs);
-		registerRender(redClayStairs);
-		registerRender(blackClayStairs);
-
-		registerRender(cherryFence);
-		registerRender(cherryFenceGate);
-		registerRender(pearFence);
-		registerRender(pearFenceGate);
-		registerRender(orangeFence);
-		registerRender(orangeFenceGate);
-		registerRender(atlasFence);
-		registerRender(atlasFenceGate);
-
-		registerRender(pineFence);
-		registerRender(pineFenceGate);
-		registerRender(cocoFence);
-		registerRender(cocoFenceGate);
-		registerRender(dreamFence);
-		registerRender(dreamFenceGate);
-
-		registerRender(cherryTrapdoor);
-		registerRender(pearTrapdoor);
-		registerRender(orangeTrapdoor);
-		registerRender(atlasTrapdoor);
-
-		registerRender(pineTrapdoor);
-		registerRender(cocoTrapdoor);
-		registerRender(dreamTrapdoor);
-
-		registerRender(spruceTrapdoor);
-		registerRender(birchTrapdoor);
-		registerRender(jungleTrapdoor);
-		registerRender(acaciaTrapdoor);
-		registerRender(darkOakTrapdoor);
-
-		registerRender(cherrySlab);
-		registerRender(pearSlab);
-		registerRender(orangeSlab);
-		registerRender(atlasSlab);
-
-		registerRender(pineSlab);
-		registerRender(cocoSlab);
-		registerRender(dreamSlab);
-
-		registerRender(whiteClaySlab);
-		registerRender(orangeClaySlab);
-		registerRender(magentaClaySlab);
-		registerRender(lightBlueClaySlab);
-		registerRender(yellowClaySlab);
-		registerRender(limeClaySlab);
-		registerRender(pinkClaySlab);
-		registerRender(grayClaySlab);
-		registerRender(silverClaySlab);
-		registerRender(cyanClaySlab);
-		registerRender(purpleClaySlab);
-		registerRender(blueClaySlab);
-		registerRender(brownClaySlab);
-		registerRender(greenClaySlab);
-		registerRender(redClaySlab);
-		registerRender(blackClaySlab);
-
-		registerRender(shiftingSand);
-		registerRender(mud);
+		for (Block block : emotionBlocks)
+		{
+			registerRender(block);
+		}
 
 		// Loop On Max Meta (16)
 		for (int i = 0; i < 16; i++)
 		{
 			if (i < EmotionPot.EnumPot.values().length)
-				registerRender(basePot, i, "pot_" + EmotionPot.EnumPot.values()[i].getName());
+			{
+				registerRender(POT, i, "pot_" + EmotionPot.EnumPot.values()[i].getName());
+			}
 
 			if (i < EnumBerry.values().length)
-				registerRender(baseBushSimple, i, "bush_simple_" + EnumBerry.values()[i].getName());
+			{
+				registerRender(BUSH_SIMPLE, i, "bush_simple_" + EnumBerry.values()[i].getName());
+			}
 
 			if (i < EmotionBrick.EnumType.values().length)
-				registerRender(baseBrick, i, "brick_" + EmotionBrick.EnumType.values()[i].getName());
+			{
+				registerRender(BRICK, i, "brick_" + EmotionBrick.EnumType.values()[i].getName());
+			}
 
 			if (i < EmotionFlower.EnumType.values().length)
-				registerRender(baseFlower, i, "flower_" + EmotionFlower.EnumType.values()[i].getName());
+			{
+				registerRender(FLOWER, i, "flower_" + EmotionFlower.EnumType.values()[i].getName());
+			}
 
 			if (i < EmotionMushroom.EnumType.values().length)
-				registerRender(baseMushroom, i, "mushroom_" + EmotionMushroom.EnumType.values()[i].getName());
+			{
+				registerRender(MUSHROOM, i, "mushroom_" + EmotionMushroom.EnumType.values()[i].getName());
+			}
 
 			if (i < EnumWoodFurniture.values().length)
-				registerRender(woodChair, i, "wood_chair_" + EnumWoodFurniture.values()[i].getName());
+			{
+				registerRender(WOOD_CHAIR, i, "wood_chair_" + EnumWoodFurniture.values()[i].getName());
+			}
 
 			if (i < EnumStoneFurniture.values().length)
-				registerRender(stoneChair, i, "stone_chair_" + EnumStoneFurniture.values()[i].getName());
+			{
+				registerRender(STONE_CHAIR, i, "stone_chair_" + EnumStoneFurniture.values()[i].getName());
+			}
 
 			if (i < 4)
 			{
-				registerRender(emoLeaves, i, "leaves_" + EmotionPlanks.EnumType.values()[i].getName());
-				registerRender(emoLog, i, "log_" + EmotionPlanks.EnumType.values()[i].getName());
+				registerRender(LEAVES, i, "leaves_" + EmotionPlanks.EnumType.values()[i].getName());
+				registerRender(LOG, i, "log_" + EmotionPlanks.EnumType.values()[i].getName());
 			}
 
 			if (i < 3)
 			{
-				registerRender(emoNewLeaves, i, "leaves_" + EmotionPlanks.EnumType.values()[i + 4].getName());
-				registerRender(emoNewLog, i, "log_" + EmotionPlanks.EnumType.values()[i + 4].getName());
+				registerRender(NEW_LEAVES, i, "leaves_" + EmotionPlanks.EnumType.values()[i + 4].getName());
+				registerRender(NEW_LOG, i, "log_" + EmotionPlanks.EnumType.values()[i + 4].getName());
 			}
 
 			if (i < EmotionPlanks.EnumType.values().length)
 			{
-				registerRender(emoSapling, i, "sapling_" + EmotionPlanks.EnumType.values()[i].getName());
-				registerRender(emoPlanks, i, "planks_" + EmotionPlanks.EnumType.values()[i].getName());
+				registerRender(SAPLING, i, "sapling_" + EmotionPlanks.EnumType.values()[i].getName());
+				registerRender(PLANKS, i, "planks_" + EmotionPlanks.EnumType.values()[i].getName());
 			}
 		}
 	}
 
-	// Function Without Meta
-	public static void registerRender(Block block)
+	private static void registerRender(Block block)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0,
 				new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, block.getUnlocalizedName().substring(5)), "inventory"));
 	}
 
-	// Function With Meta
-	public static void registerRender(Block block, int meta, String fileName)
+	private static void registerRender(Block block, int meta, String fileName)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta,
 				new ModelResourceLocation(new ResourceLocation(Reference.MOD_ID, fileName), "inventory"));

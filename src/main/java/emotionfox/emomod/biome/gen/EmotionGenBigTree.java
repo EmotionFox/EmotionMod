@@ -15,7 +15,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenBigTree extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.emoSapling;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
 	private EmotionPlanks.EnumType type;
 	private IBlockState state;
 
@@ -29,8 +29,8 @@ public class EmotionGenBigTree extends WorldGenerator
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
 		int height = rand.nextInt(6) + 8;
-		IBlockState log = EmotionBlocks.emoLog.getDefaultState().withProperty(EmotionLog.VARIANT, type);
-		IBlockState leave = EmotionBlocks.emoLeaves.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
+		IBlockState log = EmotionBlocks.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, type);
+		IBlockState leave = EmotionBlocks.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
 
 		if (pos.getY() < 245 && world.isAirBlock(pos) && this.sapling.canBlockStay(world, pos, state))
 		{
@@ -38,9 +38,9 @@ public class EmotionGenBigTree extends WorldGenerator
 			{
 				if (l <= 3 && l >= -3)
 				{
-					if (world.getBlockState(pos.add(l, height + 1, 0)).getBlock() != EmotionBlocks.emoLog)
+					if (world.getBlockState(pos.add(l, height + 1, 0)).getBlock() != EmotionBlocks.LOG)
 						world.setBlockState(pos.add(l, height + 1, 0), leave);
-					if (world.getBlockState(pos.add(0, height + 1, l)).getBlock() != EmotionBlocks.emoLog)
+					if (world.getBlockState(pos.add(0, height + 1, l)).getBlock() != EmotionBlocks.LOG)
 						world.setBlockState(pos.add(0, height + 1, l), leave);
 				}
 				for (int x = -2; x <= 2; x++)
@@ -54,9 +54,9 @@ public class EmotionGenBigTree extends WorldGenerator
 								BlockPos pos1 = pos.add(l, height - 1, 0);
 								BlockPos pos2 = pos.add(0, height - 1, l);
 
-								if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+								if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 									world.setBlockState(pos1.add(x, 0, z), leave);
-								if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+								if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 									world.setBlockState(pos2.add(x, 0, z), leave);
 
 								if (x == 2 && (z == -2 || z == 2) || x == -2 && (z == -2 || z == 2))
@@ -70,9 +70,9 @@ public class EmotionGenBigTree extends WorldGenerator
 								BlockPos pos1 = pos.add(l, height - 2, 0);
 								BlockPos pos2 = pos.add(0, height - 2, l);
 
-								if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+								if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 									world.setBlockState(pos1.add(x, 0, z), leave);
-								if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+								if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 									world.setBlockState(pos2.add(x, 0, z), leave);
 
 								if (x == 2 && (z == -2 || z == 2) || x == -2 && (z == -2 || z == 2))
@@ -82,7 +82,7 @@ public class EmotionGenBigTree extends WorldGenerator
 								}
 							}
 
-							if (world.getBlockState(pos.add(x, y, z)).getBlock() != EmotionBlocks.emoLog)
+							if (world.getBlockState(pos.add(x, y, z)).getBlock() != EmotionBlocks.LOG)
 								world.setBlockState(pos.add(x, y, z), leave);
 						}
 					}
@@ -91,7 +91,7 @@ public class EmotionGenBigTree extends WorldGenerator
 				{
 					for (int z = -1; z <= 1; z++)
 					{
-						if (world.getBlockState(pos.add(x, height + 1, z)).getBlock() != EmotionBlocks.emoLog)
+						if (world.getBlockState(pos.add(x, height + 1, z)).getBlock() != EmotionBlocks.LOG)
 							world.setBlockState(pos.add(x, height + 1, z), leave);
 
 						if (l == 3 || l == -3)
@@ -99,9 +99,9 @@ public class EmotionGenBigTree extends WorldGenerator
 							BlockPos pos1 = pos.add(l, height, 0);
 							BlockPos pos2 = pos.add(0, height, l);
 
-							if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+							if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 								world.setBlockState(pos1.add(x, 0, z), leave);
-							if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+							if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 								world.setBlockState(pos2.add(x, 0, z), leave);
 						}
 						if (l == 4 || l == -4)
@@ -109,9 +109,9 @@ public class EmotionGenBigTree extends WorldGenerator
 							BlockPos pos1 = pos.add(l, height - 3, 0);
 							BlockPos pos2 = pos.add(0, height - 3, l);
 
-							if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+							if (world.getBlockState(pos1.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 								world.setBlockState(pos1.add(x, 0, z), leave);
-							if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.emoLog)
+							if (world.getBlockState(pos2.add(x, 0, z)).getBlock() != EmotionBlocks.LOG)
 								world.setBlockState(pos2.add(x, 0, z), leave);
 						}
 					}

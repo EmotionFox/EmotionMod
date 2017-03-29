@@ -19,7 +19,7 @@ public class EmotionBerry extends EmotionBerryBush
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
 	{
-		world.setBlockState(pos, EmotionBlocks.baseBushSimple.getDefaultState().withProperty(BERRY, state.getValue(BERRY)));
+		world.setBlockState(pos, EmotionBlocks.BUSH_SIMPLE.getDefaultState().withProperty(BERRY, state.getValue(BERRY)));
 		dropBerry(world, pos, state, false);
 		return true;
 	}
@@ -40,7 +40,7 @@ public class EmotionBerry extends EmotionBerryBush
 			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_DREAMCURRANT, 1 + RANDOM.nextInt(3)));
 
 		if (destroy)
-			spawnAsEntity(world, pos, new ItemStack(Item.getItemFromBlock(EmotionBlocks.baseBushSimple), 1, this.getMetaFromState(state)));
+			spawnAsEntity(world, pos, new ItemStack(Item.getItemFromBlock(EmotionBlocks.BUSH_SIMPLE), 1, this.getMetaFromState(state)));
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class EmotionBerry extends EmotionBerryBush
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
 	{
-		return new ItemStack(Item.getItemFromBlock(EmotionBlocks.baseBushSimple), 1, getMetaFromState(world.getBlockState(pos)));
+		return new ItemStack(Item.getItemFromBlock(EmotionBlocks.BUSH_SIMPLE), 1, getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override

@@ -2,7 +2,6 @@ package emotionfox.emomod.biome.gen;
 
 import java.util.Random;
 
-import emotionfox.emomod.blocks.base.BaseBush;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;

@@ -70,7 +70,7 @@ public class EntityMouse extends EntityCreature
 	@Override
     public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, @Nullable IEntityLivingData livingdata)
     {
-        this.setMouseType(EntityMouse.Type.byId(this.world.rand.nextInt(4)));
+        this.setMouseType(EntityMouse.Type.byId(this.world.rand.nextInt(EntityMouse.Type.values().length)));
         return super.onInitialSpawn(difficulty, livingdata);
     }
 	

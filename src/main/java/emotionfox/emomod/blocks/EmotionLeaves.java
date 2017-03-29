@@ -47,7 +47,7 @@ public class EmotionLeaves extends BlockLeaves implements IMetaBlockName
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return Item.getItemFromBlock(EmotionBlocks.emoSapling);
+		return Item.getItemFromBlock(EmotionBlocks.SAPLING);
 	}
 
 	@Override

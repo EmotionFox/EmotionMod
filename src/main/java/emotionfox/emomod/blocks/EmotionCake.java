@@ -5,13 +5,8 @@ import emotionfox.emomod.init.EmotionItems;
 import net.minecraft.block.BlockCake;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -25,13 +20,13 @@ public class EmotionCake extends BlockCake
 
 	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
 	{
-		if (this == EmotionBlocks.cakeChoco)
+		if (this == EmotionBlocks.CAKE_CHOCO)
 			return new ItemStack(EmotionItems.CAKE_CHOCO);
-		else if (this == EmotionBlocks.cakeFruit)
+		else if (this == EmotionBlocks.CAKE_FRUIT)
 			return new ItemStack(EmotionItems.CAKE_FRUIT);
-		else if (this == EmotionBlocks.cakeToffee)
+		else if (this == EmotionBlocks.CAKE_TOFFEE)
 			return new ItemStack(EmotionItems.CAKE_TOFFEE);
-		else if (this == EmotionBlocks.cakeStrawberry)
+		else if (this == EmotionBlocks.CAKE_STRAWBERRY)
 			return new ItemStack(EmotionItems.CAKE_STRAWBERRY);
 		return new ItemStack(Items.CAKE); // Don't mind that
 	}

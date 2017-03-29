@@ -5,29 +5,26 @@ import java.util.Random;
 import emotionfox.emomod.biome.gen.EmotionGenBigTree;
 import emotionfox.emomod.biome.gen.EmotionGenBush;
 import emotionfox.emomod.biome.gen.EmotionGenFlower;
+import emotionfox.emomod.biome.gen.EmotionGenTest;
 import emotionfox.emomod.biome.gen.EmotionGenTree;
 import emotionfox.emomod.blocks.EmotionFlower;
 import emotionfox.emomod.blocks.EmotionPlanks;
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
-import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.entity.EntitySmallSpider;
 import emotionfox.emomod.init.EmotionBlocks;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.WeightedRandom;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BiomeOrchard extends Biome
 {
-	private static final BiomeProperties properties = new BiomeProperties("Orchard").setTemperature(3F).setRainfall(0.5F).setBaseHeight(0F).setHeightVariation(0.01F).setWaterColor(0xff37e0);
-	
+	private static final BiomeProperties properties = new BiomeProperties("Orchard").setTemperature(3F).setRainfall(0.5F).setBaseHeight(0F).setHeightVariation(0.05F).setWaterColor(0xff37e0);
+
 	public BiomeOrchard()
 	{
 		super(properties);
@@ -36,16 +33,16 @@ public class BiomeOrchard extends Biome
 		this.theBiomeDecorator.flowersPerChunk = -999;
 
 		this.flowers.clear();
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.DELY), 15);
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.GNON), 3);
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.KITTY), 20);
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.DELY), 15);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.GNON), 3);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.KITTY), 20);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
 
 		this.topBlock = Blocks.GRASS.getDefaultState();
 		this.fillerBlock = Blocks.STONE.getDefaultState();
-		
+
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBeetle.class, 10, 1, 3));
-		
+
 		this.spawnableMonsterList.clear();
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntitySmallSpider.class, 100, 4, 4));
@@ -61,11 +58,59 @@ public class BiomeOrchard extends Biome
 
 		BlockPos blockpos1 = worldIn.getHeight(pos.add(x, 0, z));
 
+		for (int xPos = 0; xPos <= 16; xPos++)
+		{
+			for (int zPos = 0; zPos <= 16; zPos++)
+			{
+				if (xPos % 8 == 0 && zPos % 8 == 0)
+				{
+					BlockPos height = worldIn.getHeight(pos.add(xPos, 0, zPos));
+
+					if (rand.nextInt(10) == 0)
+					{
+						int random = rand.nextInt(10);
+
+						if (random > 5)
+						{
+							(new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
+						}
+						else if (random > 0)
+						{
+							(new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
+						}
+						else
+						{
+							(new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
+						}
+					}
+					else
+					{
+						int random = rand.nextInt(10);
+						
+						if (random > 5)
+						{
+							(new EmotionGenTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
+						}
+						else if (random > 0)
+						{
+							(new EmotionGenTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
+						}
+						else
+						{
+							(new EmotionGenTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
+						}
+					}
+				}
+			}
+		}
+
 		// Generate Flower
 		(new EmotionGenFlower(EmotionFlower.EnumType.DELY)).generate(worldIn, rand, blockpos1);
 		(new EmotionGenFlower(EmotionFlower.EnumType.GNON)).generate(worldIn, rand, blockpos1);
 		(new EmotionGenFlower(EmotionFlower.EnumType.KITTY)).generate(worldIn, rand, blockpos1);
 		(new EmotionGenFlower(EmotionFlower.EnumType.NOX)).generate(worldIn, rand, blockpos1);
+
+		(new EmotionGenTest()).generate(worldIn, rand, blockpos1);
 
 		// Generate Bush
 		if (rand.nextInt(3) == 0)
@@ -73,25 +118,6 @@ public class BiomeOrchard extends Biome
 			(new EmotionGenBush(EnumBerry.BLACKCURRANT)).generate(worldIn, rand, blockpos1);
 			(new EmotionGenBush(EnumBerry.STRAWBERRY)).generate(worldIn, rand, blockpos1);
 		}
-
-		// Generate Big Tree
-		if (rand.nextInt(4) == 0)
-		{
-			if (rand.nextInt(3) == 0)
-				(new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-			else if (rand.nextInt(2) == 0)
-				(new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-			else
-				(new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-		}
-
-		// Generate Tree
-		if (rand.nextInt(3) == 0)
-			(new EmotionGenTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-		else if (rand.nextInt(2) == 0)
-			(new EmotionGenTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-		else
-			(new EmotionGenTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
 	}
 
 	@Override

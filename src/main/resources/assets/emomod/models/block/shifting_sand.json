@@ -2,6 +2,6 @@
     "parent": "block/cube_all", 
     "textures": 
     { 
-        "all": "emomod:blocks/shifting_sand" 
+        "all": "blocks/sand" 
     }
 }

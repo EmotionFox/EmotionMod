@@ -11,7 +11,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenFlower extends WorldGenerator
 {
-	private EmotionFlower flower = (EmotionFlower)EmotionBlocks.baseFlower;
+	private EmotionFlower flower = (EmotionFlower)EmotionBlocks.FLOWER;
 	private IBlockState state;
 
 	public EmotionGenFlower(EmotionFlower.EnumType typeIn)

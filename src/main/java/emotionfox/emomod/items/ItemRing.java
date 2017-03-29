@@ -2,15 +2,14 @@ package emotionfox.emomod.items;
 
 import java.util.List;
 
-import emotionfox.emomod.util.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 
-public class PurpuraRing extends Item
+public class ItemRing extends Item
 {
-	public PurpuraRing()
+	public ItemRing()
 	{
 		this.setMaxStackSize(1);
 	}

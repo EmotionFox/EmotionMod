@@ -36,11 +36,11 @@ public class BaseOre extends Block
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 
-	@Override
 	@Nullable
+	@Override
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
 	{
-		if (this == EmotionBlocks.lumeOre)
+		if (this == EmotionBlocks.LUME_ORE)
 			return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.875D, 1.0D);
 		else
 			return Block.FULL_BLOCK_AABB;
@@ -51,23 +51,23 @@ public class BaseOre extends Block
 	{
 		super.harvestBlock(world, player, pos, state, te, stack);
 
-		if (this == EmotionBlocks.viridisOre)
+		if (this == EmotionBlocks.VIRIDIS_ORE)
 		{
-			world.setBlockState(pos, EmotionBlocks.viridisCristal.getDefaultState());
+			world.setBlockState(pos, EmotionBlocks.VIRIDIS_CRISTAL.getDefaultState());
 		}
 	}
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return this == EmotionBlocks.purpuraOre ? EmotionItems.PURPURA_SHARD
-				: (this == EmotionBlocks.lumeOre ? EmotionItems.LUME_STONE : (this == EmotionBlocks.lumeOre2 ? EmotionItems.LUME_STONE : null));
+		return this == EmotionBlocks.PURPURA_ORE ? EmotionItems.PURPURA_SHARD
+				: (this == EmotionBlocks.LUME_ORE ? EmotionItems.LUME_STONE : (this == EmotionBlocks.DREAM_LUME_ORE ? EmotionItems.LUME_STONE : null));
 	}
 
 	@Override
 	public int quantityDropped(Random random)
 	{
-		return this == EmotionBlocks.purpuraOre ? 1 : 1 + random.nextInt(5);
+		return this == EmotionBlocks.PURPURA_ORE ? 1 : 1 + random.nextInt(5);
 	}
 
 	@Override
@@ -105,7 +105,7 @@ public class BaseOre extends Block
 		{
 			int j = 0;
 
-			if (this == EmotionBlocks.purpuraOre)
+			if (this == EmotionBlocks.PURPURA_ORE)
 				j = MathHelper.getInt(rand, 3, 7);
 			else
 				j = MathHelper.getInt(rand, 2, 5);
@@ -123,7 +123,7 @@ public class BaseOre extends Block
 		{
 			EntityPlayer player = (EntityPlayer) entity;
 
-			if (this == EmotionBlocks.lumeOre && !player.isBurning())
+			if (this == EmotionBlocks.LUME_ORE && !player.isBurning())
 			{
 				player.setFire(5);
 			}
@@ -138,7 +138,7 @@ public class BaseOre extends Block
 		double d1 = (double) pos.getY();
 		double d2 = (double) pos.getZ();
 
-		if (this == EmotionBlocks.lumeOre)
+		if (this == EmotionBlocks.LUME_ORE)
 		{
 			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + (double) rand.nextFloat(), d1 + 1D, d2 + (double) rand.nextFloat(), 0.0D, 0.0D, 0.0D, new int[0]);
 			worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + (double) rand.nextFloat(), d1 + 1D, d2 + (double) rand.nextFloat(), 0.0D, 0.0D, 0.0D, new int[0]);

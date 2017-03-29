@@ -13,7 +13,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenBush extends WorldGenerator
 {
-	private EmotionBerry bush = (EmotionBerry)EmotionBlocks.baseBush;
+	private EmotionBerry bush = (EmotionBerry)EmotionBlocks.BUSH;
 	private IBlockState state;
 
 	public EmotionGenBush(EnumBerry berryIn)

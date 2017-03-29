@@ -35,6 +35,8 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -53,8 +55,35 @@ public class ClientProxy implements CommonProxy
 	public static final Map<Item, ModelBiped> armorModels = new HashMap<Item, ModelBiped>();
 	
 	@Override
-	public void registerModelBakeryStuff() {
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.basePot),
+	public void registerModelBakeryVariants()
+	{
+		// Item
+		ModelBakery.registerItemVariants(EmotionItems.BUTTERFLY,
+				new ResourceLocation(Reference.MOD_ID, "butterfly_pink"),
+				new ResourceLocation(Reference.MOD_ID, "butterfly_blue"),
+				new ResourceLocation(Reference.MOD_ID, "butterfly_green"),
+				new ResourceLocation(Reference.MOD_ID, "butterfly_citrus"));
+		ModelBakery.registerItemVariants(EmotionItems.SLICE,
+				new ResourceLocation(Reference.MOD_ID, "slice_pear"),
+				new ResourceLocation(Reference.MOD_ID, "slice_cherry"),
+				new ResourceLocation(Reference.MOD_ID, "slice_orange"),
+				new ResourceLocation(Reference.MOD_ID, "slice_apple"),
+				new ResourceLocation(Reference.MOD_ID, "slice_blueberry"),
+				new ResourceLocation(Reference.MOD_ID, "slice_redcurrant"),
+				new ResourceLocation(Reference.MOD_ID, "slice_blackcurrant"),
+				new ResourceLocation(Reference.MOD_ID, "slice_strawberry"),
+				new ResourceLocation(Reference.MOD_ID, "slice_dreamcurrant"),
+				new ResourceLocation(Reference.MOD_ID, "slice_chocolate"),
+				new ResourceLocation(Reference.MOD_ID, "slice_bread"));
+		ModelBakery.registerItemVariants(EmotionItems.BAG,
+				new ResourceLocation(Reference.MOD_ID, "bag_pear"),
+				new ResourceLocation(Reference.MOD_ID, "bag_cherry"),
+				new ResourceLocation(Reference.MOD_ID, "bag_orange"),
+				new ResourceLocation(Reference.MOD_ID, "bag_tomato"),
+				new ResourceLocation(Reference.MOD_ID, "bag_apple"));
+		
+		// Block Item
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.POT),
 				new ResourceLocation(Reference.MOD_ID, "pot_apple"),
 				new ResourceLocation(Reference.MOD_ID, "pot_blackcurrant"),
 				new ResourceLocation(Reference.MOD_ID, "pot_blueberry"),
@@ -69,24 +98,24 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "pot_water"), 
 				new ResourceLocation(Reference.MOD_ID, "pot_lava"),
 				new ResourceLocation(Reference.MOD_ID, "pot_milk"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.baseBush),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.BUSH),
 				new ResourceLocation(Reference.MOD_ID, "bush_blueberry"),
 				new ResourceLocation(Reference.MOD_ID, "bush_redcurrant"),
 				new ResourceLocation(Reference.MOD_ID, "bush_blackcurrant"),
 				new ResourceLocation(Reference.MOD_ID, "bush_strawberry"),
 				new ResourceLocation(Reference.MOD_ID, "bush_dreamcurrant"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.baseBushSimple),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.BUSH_SIMPLE),
 				new ResourceLocation(Reference.MOD_ID, "bush_simple_blueberry"),
 				new ResourceLocation(Reference.MOD_ID, "bush_simple_redcurrant"),
 				new ResourceLocation(Reference.MOD_ID, "bush_simple_blackcurrant"),
 				new ResourceLocation(Reference.MOD_ID, "bush_simple_strawberry"),
 				new ResourceLocation(Reference.MOD_ID, "bush_simple_dreamcurrant"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.baseBrick),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.BRICK),
 				new ResourceLocation(Reference.MOD_ID, "brick_red"),
 				new ResourceLocation(Reference.MOD_ID, "brick_green"),
 				new ResourceLocation(Reference.MOD_ID, "brick_blue"),
 				new ResourceLocation(Reference.MOD_ID, "brick_limestone"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.baseFlower),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.FLOWER),
 				new ResourceLocation(Reference.MOD_ID, "flower_kitty"),
 				new ResourceLocation(Reference.MOD_ID, "flower_nox"),
 				new ResourceLocation(Reference.MOD_ID, "flower_dely"),
@@ -96,10 +125,10 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "flower_tallgrass"),
 				new ResourceLocation(Reference.MOD_ID, "flower_nebula"),
 				new ResourceLocation(Reference.MOD_ID, "flower_narcota"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.baseMushroom),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.MUSHROOM),
 				new ResourceLocation(Reference.MOD_ID, "mushroom_blue"),
 				new ResourceLocation(Reference.MOD_ID, "mushroom_green"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.woodChair),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.WOOD_CHAIR),
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_cherry"),
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_pear"),
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_orange"),
@@ -113,7 +142,7 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_jungle"),
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_acacia"),
 				new ResourceLocation(Reference.MOD_ID, "wood_chair_big_oak"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.stoneChair),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.STONE_CHAIR),
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_cobblestone"),
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_mossy_cobblestone"),
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_stonebrick"),
@@ -121,25 +150,25 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_cracked_stonebrick"),
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_chiselled_stonebrick"),
 				new ResourceLocation(Reference.MOD_ID, "stone_chair_brick"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoLeaves),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.LEAVES),
 				new ResourceLocation(Reference.MOD_ID, "leaves_cherry"),
 				new ResourceLocation(Reference.MOD_ID, "leaves_pear"),
 				new ResourceLocation(Reference.MOD_ID, "leaves_orange"),
 				new ResourceLocation(Reference.MOD_ID, "leaves_atlas"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoNewLeaves),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.NEW_LEAVES),
 				new ResourceLocation(Reference.MOD_ID, "leaves_pine"),
 				new ResourceLocation(Reference.MOD_ID, "leaves_coco"),
 				new ResourceLocation(Reference.MOD_ID, "leaves_dream"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoLog),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.LOG),
 				new ResourceLocation(Reference.MOD_ID, "log_cherry"),
 				new ResourceLocation(Reference.MOD_ID, "log_pear"),
 				new ResourceLocation(Reference.MOD_ID, "log_orange"),
 				new ResourceLocation(Reference.MOD_ID, "log_atlas"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoNewLog),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.NEW_LOG),
 				new ResourceLocation(Reference.MOD_ID, "log_pine"),
 				new ResourceLocation(Reference.MOD_ID, "log_coco"),
 				new ResourceLocation(Reference.MOD_ID, "log_dream"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoSapling),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.SAPLING),
 				new ResourceLocation(Reference.MOD_ID, "sapling_cherry"),
 				new ResourceLocation(Reference.MOD_ID, "sapling_pear"),
 				new ResourceLocation(Reference.MOD_ID, "sapling_orange"),
@@ -147,7 +176,7 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "sapling_pine"),
 				new ResourceLocation(Reference.MOD_ID, "sapling_coco"),
 				new ResourceLocation(Reference.MOD_ID, "sapling_dream"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.emoPlanks),
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(EmotionBlocks.PLANKS),
 				new ResourceLocation(Reference.MOD_ID, "planks_cherry"),
 				new ResourceLocation(Reference.MOD_ID, "planks_pear"),
 				new ResourceLocation(Reference.MOD_ID, "planks_orange"),
@@ -181,49 +210,50 @@ public class ClientProxy implements CommonProxy
 	public void customStateMapper()
 	{
 		// Ignore Properties
-		ModelLoader.setCustomStateMapper(EmotionBlocks.emoLeaves, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
 		{ EmotionLeaves.CHECK_DECAY, EmotionLeaves.DECAYABLE }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.emoNewLeaves, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.NEW_LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
 		{ EmotionNewLeaves.CHECK_DECAY, EmotionNewLeaves.DECAYABLE }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.cherryFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.CHERRY_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.cherryDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.CHERRY_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.pearFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.PEAR_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.pearDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.PEAR_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.orangeFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.ORANGE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.orangeDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.ORANGE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.atlasFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.ATLAS_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.atlasDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.ATLAS_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.pineFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.PINE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.pineDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.PINE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.cocoFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.COCO_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.cocoDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.COCO_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 
-		ModelLoader.setCustomStateMapper(EmotionBlocks.dreamFenceGate, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.DREAM_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseFenceGate.POWERED }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlocks.dreamDoor, (new StateMap.Builder()).ignore(new IProperty[]
+		ModelLoader.setCustomStateMapper(EmotionBlocks.DREAM_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
 		{ BaseDoor.POWERED }).build());
 	}
 	
 	@Override
-	public void registerRenders() {
+	public void registerRenders()
+	{
 		EmotionBlocks.registerRenders();
 		EmotionItems.registerRenders();
 	}

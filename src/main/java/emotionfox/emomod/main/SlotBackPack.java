@@ -1,6 +1,6 @@
 package emotionfox.emomod.main;
 
-import emotionfox.emomod.items.PurpuraBag;
+import emotionfox.emomod.items.ItemPurpuraBag;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
@@ -15,6 +15,6 @@ public class SlotBackPack extends Slot
     @Override
     public boolean isItemValid(ItemStack stack)
     {
-        return !(stack.getItem() instanceof PurpuraBag);
+        return !(stack.getItem() instanceof ItemPurpuraBag);
     }
 }

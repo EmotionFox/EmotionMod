@@ -12,11 +12,9 @@ import emotionfox.emomod.blocks.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.init.EmotionBlocks;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -32,9 +30,9 @@ public class BiomeMagic extends Biome
 		this.theBiomeDecorator.flowersPerChunk = -999;
 
 		this.flowers.clear();
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.CENTUS), 20);
-		this.addFlower(EmotionBlocks.baseFlower.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.THORNY), 15);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.CENTUS), 20);
+		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.THORNY), 15);
 		
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBeetle.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityMouse.class, 10, 1, 4));

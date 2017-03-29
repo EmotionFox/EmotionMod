@@ -1,10 +1,12 @@
 package emotionfox.emomod.event;
 
-import emotionfox.emomod.achievement.EmotionAchievement;
+import emotionfox.emomod.init.EmotionAchievement;
 import emotionfox.emomod.init.EmotionBlocks;
 import emotionfox.emomod.init.EmotionItems;
-import emotionfox.emomod.items.PurpuraAmulet;
-import emotionfox.emomod.items.PurpuraStaff;
+import emotionfox.emomod.items.ItemButterfly;
+import emotionfox.emomod.items.ItemSlice;
+import emotionfox.emomod.items.ItemAmulet;
+import emotionfox.emomod.items.ItemStaff;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -22,35 +24,36 @@ public class EmotionAchievementEvent
 	public void whenCraft(ItemCraftedEvent e)
 	{
 		Item item = e.crafting.getItem();
+		ItemStack stack = e.crafting;
 
-		if (item == Item.getItemFromBlock(EmotionBlocks.cakeChoco) || item == Item.getItemFromBlock(EmotionBlocks.cakeFruit) || item == Item.getItemFromBlock(EmotionBlocks.cakeToffee)
-				|| item == Item.getItemFromBlock(EmotionBlocks.cakeStrawberry))
+		if (item == Item.getItemFromBlock(EmotionBlocks.CAKE_CHOCO) || item == Item.getItemFromBlock(EmotionBlocks.CAKE_FRUIT) || item == Item.getItemFromBlock(EmotionBlocks.CAKE_TOFFEE)
+				|| item == Item.getItemFromBlock(EmotionBlocks.CAKE_STRAWBERRY))
 			e.player.addStat(EmotionAchievement.EXTEND_CAKE, 1);
 
-		if (item instanceof PurpuraAmulet)
-			e.player.addStat(EmotionAchievement.AMULET, 2);
+		if (item instanceof ItemAmulet)
+			e.player.addStat(EmotionAchievement.AMULET, 1);
 
-		if (item instanceof PurpuraStaff)
-			e.player.addStat(EmotionAchievement.STAFF, 3);
+		if (item instanceof ItemStaff)
+			e.player.addStat(EmotionAchievement.STAFF, 1);
 
 		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterial() == EmotionItems.TOOL_MAT_FOSSIL || item == EmotionItems.FOSSIL_HOE)
-			e.player.addStat(EmotionAchievement.FOSSIL, 4);
+			e.player.addStat(EmotionAchievement.FOSSIL, 1);
 
 		if (item instanceof ItemTool && ((ItemTool) item).getToolMaterial() == EmotionItems.TOOL_MAT_PURPURA || item == EmotionItems.PURPURA_HOE)
-			e.player.addStat(EmotionAchievement.PURPURA, 5);
+			e.player.addStat(EmotionAchievement.PURPURA, 1);
 
 		if (item == EmotionItems.PIE_PEAR || item == EmotionItems.PIE_CHERRY || item == EmotionItems.PIE_ORANGE || item == EmotionItems.PIE_APPLE || item == EmotionItems.PIE_MELON)
-			e.player.addStat(EmotionAchievement.EXTEND_PIE, 6);
+			e.player.addStat(EmotionAchievement.EXTEND_PIE, 1);
 
 		if (item.getUnlocalizedName().contains("Juice"))
-			e.player.addStat(EmotionAchievement.SWEET_JUICE, 7);
+			e.player.addStat(EmotionAchievement.SWEET_JUICE, 1);
 
-		if (item != EmotionItems.SLICE_BREAD && item.getUnlocalizedName().contains("Slice"))
+		if (item instanceof ItemSlice && stack.getItemDamage() != 10)
 		{
-			e.player.addStat(EmotionAchievement.FRUIT_TOAST, 8);
+			e.player.addStat(EmotionAchievement.FRUIT_TOAST, 1);
 
 			if (!e.player.world.isRemote)
-				e.player.dropItem(new ItemStack(Item.getItemFromBlock(EmotionBlocks.basePot), 1, 10), false);
+				e.player.dropItem(new ItemStack(Item.getItemFromBlock(EmotionBlocks.POT), 1, 10), false);
 		}
 	}
 
@@ -75,18 +78,18 @@ public class EmotionAchievementEvent
 		if (item == EmotionItems.PURPURA_SHARD)
 			player.addStat(EmotionAchievement.MINE_PURPURA);
 
-		if (stack == new ItemStack(EmotionBlocks.emoLog, 1, 0) || stack == new ItemStack(EmotionBlocks.emoLog, 1, 1) || stack == new ItemStack(EmotionBlocks.emoLog, 1, 2)
-				|| stack == new ItemStack(EmotionBlocks.emoLog, 1, 3) || stack == new ItemStack(EmotionBlocks.emoLog, 1, 4))
+		if (stack == new ItemStack(EmotionBlocks.LOG, 1, 0) || stack == new ItemStack(EmotionBlocks.LOG, 1, 1) || stack == new ItemStack(EmotionBlocks.LOG, 1, 2)
+				|| stack == new ItemStack(EmotionBlocks.LOG, 1, 3) || stack == new ItemStack(EmotionBlocks.LOG, 1, 4))
 			player.addStat(AchievementList.MINE_WOOD);
 
-		if (stack == new ItemStack(EmotionBlocks.emoNewLog, 1, 0) || stack == new ItemStack(EmotionBlocks.emoNewLog, 1, 1) || stack == new ItemStack(EmotionBlocks.emoNewLog, 1, 2))
+		if (stack == new ItemStack(EmotionBlocks.NEW_LOG, 1, 0) || stack == new ItemStack(EmotionBlocks.NEW_LOG, 1, 1) || stack == new ItemStack(EmotionBlocks.NEW_LOG, 1, 2))
 			player.addStat(AchievementList.MINE_WOOD);
 
 		if (item == EmotionItems.FISH_TROUT_RAW || item == EmotionItems.FISH_BASS_RAW || item == EmotionItems.FISH_SARDINE_RAW || item == EmotionItems.FISH_MACKEREL_RAW
 				|| item == EmotionItems.FISH_WHITING_RAW)
 			player.addStat(EmotionAchievement.EXTEND_FISH);
 
-		if (item == EmotionItems.BUTTERFLY_PINK || item == EmotionItems.BUTTERFLY_GREEN || item == EmotionItems.BUTTERFLY_BLUE || item == EmotionItems.BUTTERFLY_CITRUS)
+		if (item instanceof ItemButterfly)
 			player.addStat(EmotionAchievement.BUTTERFLY);
 	}
 }

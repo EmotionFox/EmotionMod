@@ -30,7 +30,7 @@ public class EmotionEntity
 		registerEntity("lightning_bug", EntityLightningBug.class, "LightningBug", false, new Color(108, 89, 69).getRGB(), new Color(0, 255, 0).getRGB());
 		registerEntity("new_boat", EntityNewBoat.class, "NewBoat", true);
 		registerEntity("mouse", EntityMouse.class, "Mouse", false, new Color(206, 206, 206).getRGB(), new Color(191, 144, 113).getRGB());
-		registerEntity("butterfly", EntityButterfly.class, "Butterfly", false, new Color(94, 76, 59).getRGB(), new Color(60, 57, 54).getRGB());
+		registerEntity("butterfly", EntityButterfly.class, "Butterfly", false);
 		registerEntity("scorpion", EntityScorpion.class, "Scorpion", false, new Color(184, 137, 91).getRGB(), new Color(40, 27, 15).getRGB());
 		registerEntity("chubby", EntityChubby.class, "Chubby", false, new Color(235, 235, 235).getRGB(), new Color(45, 223, 137).getRGB());
 		registerEntity("sittable", EntitySittable.class, "Sittable", false);
