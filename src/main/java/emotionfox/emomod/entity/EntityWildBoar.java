@@ -119,6 +119,6 @@ public class EntityWildBoar extends EntityAnimal
 	@Override
 	public float getEyeHeight()
     {
-        return this.isChild() ? this.height : 1.2F;
+        return this.isChild() ? this.height : 1.1F;
     }
 }

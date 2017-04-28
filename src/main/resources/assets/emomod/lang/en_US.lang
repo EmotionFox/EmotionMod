@@ -60,10 +60,10 @@ item.horn.name=Horn
 item.bandage.name=Bandage
 
 item.butterfly_net.name=Butterfly Net
-item.butterfly_pink.name=Pink Butterfly
-item.butterfly_blue.name=Blue Butterfly
-item.butterfly_green.name=Green Butterfly
-item.butterfly_citrus.name=Butterfly Citrus
+item.butterfly_pink.name=Butterfly Common Pink
+item.butterfly_blue.name=Butterfly Common Blue
+item.butterfly_green.name=Butterfly Common Green
+item.butterfly_brimstone.name=Butterfly Brimstone
 
 item.fruit_pear.name=Pear
 item.fruit_cherry.name=Cherry
@@ -476,6 +476,8 @@ tile.statue_clay.name=Clay Statue
 tile.statue_creeper.name=Creeper Statue
 
 tile.random_meter.name=Random Meter
+
+tile.box.name=Box Block
 
 entity.Beetle.name=Beetle
 entity.SmallSpider.name=Small Spider

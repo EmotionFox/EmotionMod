@@ -42,7 +42,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
-public class ClientProxy implements CommonProxy 
+public class ClientProxy extends CommonProxy 
 {
 	// Textures
 	public static final ResourceLocation BEETLE_TEXTURE = new ResourceLocation(Reference.MOD_ID, "textures/entity/beetle.png");
@@ -62,7 +62,7 @@ public class ClientProxy implements CommonProxy
 				new ResourceLocation(Reference.MOD_ID, "butterfly_pink"),
 				new ResourceLocation(Reference.MOD_ID, "butterfly_blue"),
 				new ResourceLocation(Reference.MOD_ID, "butterfly_green"),
-				new ResourceLocation(Reference.MOD_ID, "butterfly_citrus"));
+				new ResourceLocation(Reference.MOD_ID, "butterfly_brimstone"));
 		ModelBakery.registerItemVariants(EmotionItems.SLICE,
 				new ResourceLocation(Reference.MOD_ID, "slice_pear"),
 				new ResourceLocation(Reference.MOD_ID, "slice_cherry"),

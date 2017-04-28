@@ -48,7 +48,7 @@ public class BiomeRock extends Biome
 		BlockPos blockpos1 = worldIn.getHeight(pos.add(x, 0, z));
 
 		// Generate Bush
-		if (rand.nextInt(3) == 0)
+		if (rand.nextInt(5) == 0)
 		{
 			(new EmotionGenBush(EnumBerry.REDCURRANT)).generate(worldIn, rand, blockpos1);
 		}
@@ -119,7 +119,8 @@ public class BiomeRock extends Biome
 		@Override
 		public boolean generate(World worldIn, Random rand, BlockPos pos)
 		{
-			int count = 3 + rand.nextInt(6);
+			int count = 6 + rand.nextInt(8);
+			
 			for (int i = 0; i < count; i++)
 			{
 				BlockPos blockpos = pos.add(rand.nextInt(16), rand.nextInt(28) + 4, rand.nextInt(16));

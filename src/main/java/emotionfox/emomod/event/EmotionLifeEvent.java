@@ -1,6 +1,5 @@
 package emotionfox.emomod.event;
 
-import emotionfox.emomod.handler.EmotionLootTableHandler;
 import emotionfox.emomod.init.EmotionItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
@@ -14,13 +13,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.loot.LootEntry;
-import net.minecraft.world.storage.loot.LootEntryTable;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.LootTableList;
-import net.minecraft.world.storage.loot.RandomValueRange;
-import net.minecraft.world.storage.loot.conditions.LootCondition;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
@@ -50,29 +42,6 @@ public class EmotionLifeEvent
 		}
 	}
 
-	@SubscribeEvent
-	public void onLootTable(LootTableLoadEvent e)
-	{
-		if(e.getName().equals(LootTableList.GAMEPLAY_FISHING_FISH))
-		{
-			final String name = EmotionLootTableHandler.LOOT_TABLE_FISH.toString();
-			final LootEntry entry = new LootEntryTable(EmotionLootTableHandler.LOOT_TABLE_FISH, 1, 0, new LootCondition[0], name);
-			final RandomValueRange rolls = new RandomValueRange(0, 1);
-			final LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[0], rolls, rolls, name);
-
-			e.getTable().addPool(pool);
-		}
-		if(e.getName().equals(LootTableList.GAMEPLAY_FISHING_TREASURE))
-		{
-			final String name = EmotionLootTableHandler.LOOT_TABLE_TREASURE.toString();
-			final LootEntry entry = new LootEntryTable(EmotionLootTableHandler.LOOT_TABLE_TREASURE, 1, 0, new LootCondition[1], name);
-			final RandomValueRange rolls = new RandomValueRange(0, 1);
-			final LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[1], rolls, rolls, name);
-
-			e.getTable().addPool(pool);
-		}
-	}
-	
 	@SubscribeEvent
 	public void onPlayerSpawn(PlayerEvent.Clone e)
 	{

@@ -16,7 +16,7 @@ public class RenderButterfly extends RenderLiving<EntityButterfly>
 			new ResourceLocation(Reference.MOD_ID, "textures/entity/butterfly/butterfly_pink.png"), 
 			new ResourceLocation(Reference.MOD_ID, "textures/entity/butterfly/butterfly_blue.png"),
 			new ResourceLocation(Reference.MOD_ID, "textures/entity/butterfly/butterfly_green.png"),
-			new ResourceLocation(Reference.MOD_ID, "textures/entity/butterfly/butterfly_citrus.png") };
+			new ResourceLocation(Reference.MOD_ID, "textures/entity/butterfly/butterfly_brimstone.png") };
 	
 	public RenderButterfly(RenderManager rendermanagerIn)
 	{

@@ -11,26 +11,26 @@ public class EntitySmallSpider extends EntitySpider
 	public EntitySmallSpider(World worldIn)
 	{
 		super(worldIn);
-		this.setSize(0.5F, 0.4F);
+		this.setSize(0.45F, 0.32F);
 		this.height = 0.3F;
 	}
-	
+
 	public static void registerFixesSpider(DataFixer fixer)
-    {
-        EntityLiving.registerFixesMob(fixer, EntitySmallSpider.class);
-    }
-	
+	{
+		EntityLiving.registerFixesMob(fixer, EntitySmallSpider.class);
+	}
+
 	@Override
-    public void applyEntityAttributes()
-    {
-        super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(10.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.6D);
-    }
-	
+	public void applyEntityAttributes()
+	{
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(10.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.6D);
+	}
+
 	@Override
-    public float getEyeHeight()
-    {
-        return this.height;
-    }
+	public float getEyeHeight()
+	{
+		return this.height;
+	}
 }

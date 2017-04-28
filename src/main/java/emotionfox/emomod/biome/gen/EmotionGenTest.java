@@ -13,26 +13,17 @@ public class EmotionGenTest extends WorldGenerator
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position)
 	{
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-
-		BlockPos pos1 = new BlockPos(x - 2, y - 1, z + 2);
-		BlockPos pos2 = new BlockPos(x + 2, y - 1, z - 2);
-		BlockPos pos3 = new BlockPos(x - 2, y - 1, z - 2);
-		BlockPos pos4 = new BlockPos(x + 2, y - 1, z + 2);
-
-		if (worldIn.getBlockState(position.add(0, -1, 0)) == Blocks.GRASS.getDefaultState() && checkBlock(worldIn, Blocks.GRASS, position, 2, 2))
+		if (worldIn.getBlockState(position.add(0, -1, 0)) == Blocks.GRASS.getDefaultState() && checkBlocks(worldIn, Blocks.GRASS, position, 2, 2))
 		{
-			worldIn.setBlockState(position, Blocks.BEDROCK.getDefaultState());
-			worldIn.setBlockState(position.add(0, 1, 0), Blocks.GLOWSTONE.getDefaultState());
+			worldIn.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
+			worldIn.setBlockState(position.add(0, 1, 0), Blocks.REDSTONE_BLOCK.getDefaultState());
 
 			return true;
 		}
 		return false;
 	}
 
-	public boolean checkBlock(World worldIn, Block blockIn, BlockPos position, int xRadius, int zRadius)
+	public boolean checkBlocks(World worldIn, Block blockIn, BlockPos position, int xRadius, int zRadius)
 	{
 		for (int x = -xRadius; x <= xRadius; x++)
 		{

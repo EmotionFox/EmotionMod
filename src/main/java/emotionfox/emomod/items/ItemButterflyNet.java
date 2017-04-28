@@ -27,21 +27,44 @@ public class ItemButterflyNet extends Item
 			{
 				EntityButterfly butterfly = (EntityButterfly) entity;
 
+				ItemButterfly item = (ItemButterfly) EmotionItems.BUTTERFLY;
+
 				switch (butterfly.getButterflyType())
 				{
 				case PINK:
-					butterfly.entityDropItem(new ItemStack(EmotionItems.BUTTERFLY, 1, 0),  0.0F);
+					ItemStack butterflyPink = new ItemStack(item, 1, 0);
+
+					if (butterfly.hasCustomName())
+						item.setCustomName(butterfly.getCustomNameTag(), butterflyPink);
+
+					butterfly.entityDropItem(butterflyPink, 0.0F);
 					break;
 				case BLUE:
-					butterfly.entityDropItem(new ItemStack(EmotionItems.BUTTERFLY, 1, 1),  0.0F);
+					ItemStack butterflyBlue = new ItemStack(item, 1, 1);
+
+					if (butterfly.hasCustomName())
+						item.setCustomName(butterfly.getCustomNameTag(), butterflyBlue);
+
+					butterfly.entityDropItem(new ItemStack(item, 1, 1), 0.0F);
 					break;
 				case GREEN:
-					butterfly.entityDropItem(new ItemStack(EmotionItems.BUTTERFLY, 1, 2),  0.0F);
+					ItemStack butterflyGreen = new ItemStack(item, 1, 2);
+
+					if (butterfly.hasCustomName())
+						item.setCustomName(butterfly.getCustomNameTag(), butterflyGreen);
+
+					butterfly.entityDropItem(new ItemStack(item, 1, 2), 0.0F);
 					break;
 				case CITRUS:
-					butterfly.entityDropItem(new ItemStack(EmotionItems.BUTTERFLY, 1, 3),  0.0F);
+					ItemStack butterflyCitrus = new ItemStack(item, 1, 3);
+
+					if (butterfly.hasCustomName())
+						item.setCustomName(butterfly.getCustomNameTag(), butterflyCitrus);
+
+					butterfly.entityDropItem(new ItemStack(item, 1, 3), 0.0F);
 					break;
 				}
+
 				player.playSound(EmotionSoundHandler.ITEM_BUTTERFLY_NET_USE, 1.0F, 1.0F);
 				butterfly.setDead();
 				stack.damageItem(1, player);

@@ -5,6 +5,7 @@ import java.util.List;
 import emotionfox.emomod.blocks.enumeration.EnumWoodFurniture;
 import emotionfox.emomod.blocks.item.IMetaBlockName;
 import emotionfox.emomod.entity.EntitySittable;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -28,7 +29,7 @@ public class EmotionWoodChair extends Block implements IMetaBlockName
 {
 	public static final PropertyEnum<EnumWoodFurniture> WOOD = PropertyEnum.<EnumWoodFurniture>create("wood", EnumWoodFurniture.class);
 
-	public static final float f = 0.0625F; // One pixel
+	public static final float f = Reference.PIXEL;
 	public static final AxisAlignedBB WOOD_CHAIR_AABB = new AxisAlignedBB(0.0F + f * 3, 0.0F, 0.0F + f * 3, 1.0F - f * 3, 1.0F - f * 4, 1.0F - f * 3);
 
 	public EmotionWoodChair()

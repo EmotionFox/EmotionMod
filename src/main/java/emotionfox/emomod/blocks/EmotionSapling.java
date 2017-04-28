@@ -10,6 +10,7 @@ import emotionfox.emomod.biome.gen.EmotionGenTree;
 import emotionfox.emomod.blocks.base.BaseBush;
 import emotionfox.emomod.blocks.item.IMetaBlockName;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
@@ -37,6 +38,7 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EmotionPlanks.EnumType.CHERRY).withProperty(STAGE, Integer.valueOf(0)));
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
+		this.setSoundType(SoundType.PLANT);
 	}
 
 	@Override

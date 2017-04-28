@@ -19,7 +19,7 @@ public class EmotionBiome
 
 	public static void mainRegister()
 	{
-		registerBiome(ORCHARD, "orchard", BiomeType.WARM, Type.LUSH, 100); // 8
+		registerBiome(ORCHARD, "orchard", BiomeType.WARM, Type.LUSH, 10);
 		registerBiome(MAGIC_PLAINS, "magic_plains", BiomeType.COOL, Type.MAGICAL, 7);
 		registerBiome(ROCKY_LAND, "rocky_land", BiomeType.WARM, Type.CONIFEROUS, 10);
 	}

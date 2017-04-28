@@ -189,15 +189,15 @@ public class CraftingManager
 		{ "YYY", "YWY", " W ", 'Y', Items.STRING, 'W', Items.STICK });
 
 		// Foods +
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_PEAR, 1), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_PEAR, 2), new Object[]
 		{ EmotionItems.FRUIT_PEAR });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_CHERRY, 1), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_CHERRY, 2), new Object[]
 		{ EmotionItems.FRUIT_CHERRY });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_ORANGE, 1), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_ORANGE, 2), new Object[]
 		{ EmotionItems.FRUIT_ORANGE });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_TOMATO, 1), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_TOMATO, 2), new Object[]
 		{ EmotionItems.FRUIT_TOMATO });
-		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_APPLE, 1), new Object[]
+		GameRegistry.addShapelessRecipe(new ItemStack(EmotionItems.SEED_APPLE, 2), new Object[]
 		{ Items.APPLE });
 
 		GameRegistry.addShapelessRecipe(applePot, new Object[]

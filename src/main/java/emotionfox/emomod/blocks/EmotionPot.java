@@ -57,110 +57,65 @@ public class EmotionPot extends Block implements IMetaBlockName
 		Comparable type = state.getValue(TYPE);
 		Item heldItem = player.getHeldItem(hand).getItem();
 
+		ItemStack stack = null;
+		boolean isLava = false;
+
 		if (type == EnumPot.GLASS)
 		{
 			if (heldItem == Items.WATER_BUCKET)
 			{
 				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.WATER));
-
-				if (!player.capabilities.isCreativeMode)
-				{
-					player.playSound(SoundEvents.ITEM_BUCKET_EMPTY, 1.0F, 1.0F);
-					player.setHeldItem(hand, new ItemStack(Items.BUCKET));
-				}
-				return true;
+				stack = new ItemStack(Items.BUCKET);
 			}
 			else if (heldItem == Items.LAVA_BUCKET)
 			{
 				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.LAVA));
-
-				if (!player.capabilities.isCreativeMode)
-				{
-					player.playSound(SoundEvents.ITEM_BUCKET_EMPTY_LAVA, 1.0F, 1.0F);
-					player.setHeldItem(hand, new ItemStack(Items.BUCKET));
-				}
-				return true;
+				stack = new ItemStack(Items.BUCKET);
+				isLava = true;
 			}
 			else if (heldItem == Items.MILK_BUCKET)
 			{
 				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.MILK));
+				stack = new ItemStack(Items.BUCKET);
+			}
 
-				if (!player.capabilities.isCreativeMode)
-				{
+			if (stack != null)
+			{
+				if (isLava)
+					player.playSound(SoundEvents.ITEM_BUCKET_EMPTY_LAVA, 1.0F, 1.0F);
+				else
 					player.playSound(SoundEvents.ITEM_BUCKET_EMPTY, 1.0F, 1.0F);
-					player.setHeldItem(hand, new ItemStack(Items.BUCKET));
-				}
-				return true;
 			}
 		}
-		else if (type == EnumPot.WATER)
+		else if (heldItem == Items.BUCKET)
 		{
-			if (heldItem == Items.BUCKET)
+			if (type == EnumPot.WATER)
+				stack = new ItemStack(Items.WATER_BUCKET);
+			else if (type == EnumPot.LAVA)
 			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
-				player.getHeldItem(hand).shrink(1);
-
-				if (!player.capabilities.isCreativeMode)
-				{
-					player.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0F, 1.0F);
-
-					if (!player.inventory.addItemStackToInventory(new ItemStack(Items.WATER_BUCKET)))
-					{
-						player.dropItem(new ItemStack(Items.WATER_BUCKET), false);
-					}
-					else
-					{
-						player.inventory.addItemStackToInventory(new ItemStack(Items.WATER_BUCKET));
-					}
-				}
-				return true;
+				isLava = true;
+				stack = new ItemStack(Items.LAVA_BUCKET);
 			}
-		}
-		else if (type == EnumPot.LAVA)
-		{
-			if (heldItem == Items.BUCKET)
+			else if (type == EnumPot.MILK)
+				stack = new ItemStack(Items.MILK_BUCKET);
+
+			if (stack != null)
 			{
 				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
-				player.getHeldItem(hand).shrink(1);
 
-				if (!player.capabilities.isCreativeMode)
-				{
+				if (isLava)
 					player.playSound(SoundEvents.ITEM_BUCKET_FILL_LAVA, 1.0F, 1.0F);
-
-					if (!player.inventory.addItemStackToInventory(new ItemStack(Items.LAVA_BUCKET)))
-					{
-						player.dropItem(new ItemStack(Items.LAVA_BUCKET), false);
-					}
-					else
-					{
-						player.inventory.addItemStackToInventory(new ItemStack(Items.LAVA_BUCKET));
-					}
-				}
-				return true;
+				else
+					player.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0F, 1.0F);
 			}
 		}
-		else if (type == EnumPot.MILK)
+
+		if (stack != null)
 		{
-			if (heldItem == Items.BUCKET)
-			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
-				player.getHeldItem(hand).shrink(1);
+			if (!player.capabilities.isCreativeMode)
+				player.setHeldItem(hand, stack);
 
-				if (!player.capabilities.isCreativeMode)
-				{
-					player.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0F, 1.0F);
-
-					if (!player.inventory.addItemStackToInventory(new ItemStack(Items.MILK_BUCKET)))
-					{
-						player.dropItem(new ItemStack(Items.MILK_BUCKET), false);
-					}
-					else
-					{
-						player.inventory.addItemStackToInventory(new ItemStack(Items.MILK_BUCKET));
-					}
-				}
-				return true;
-			}
+			return true;
 		}
 		return false;
 	}

@@ -16,9 +16,11 @@ import emotionfox.emomod.blocks.EmotionPlanks;
 import emotionfox.emomod.blocks.EmotionPot;
 import emotionfox.emomod.blocks.EmotionSapling;
 import emotionfox.emomod.blocks.EmotionStoneChair;
+import emotionfox.emomod.blocks.EmotionTest;
 import emotionfox.emomod.blocks.EmotionWoodChair;
 import emotionfox.emomod.blocks.FossilOre;
 import emotionfox.emomod.blocks.Glitch;
+import emotionfox.emomod.blocks.RandomMeter;
 import emotionfox.emomod.blocks.StoneTable;
 import emotionfox.emomod.blocks.WoodNightstand;
 import emotionfox.emomod.blocks.WoodTable;
@@ -297,8 +299,10 @@ public class EmotionBlocks
 	public static final Block MUD = new BaseViscous(Material.GROUND, SoundType.GROUND);
 
 	// Random Meter Block
-	// public static final Block RANDOM_METER;
+	public static final Block RANDOM_METER = new RandomMeter();
 
+	public static final Block BOX = new EmotionTest();
+	
 	public static void mainRegister()
 	{
 		registerBlock(FOSSIL_ORE, "fossil_ore");
@@ -338,6 +342,9 @@ public class EmotionBlocks
 
 		registerBlock(BRICK, new ItemBaseBlock(BRICK), "brick");
 
+		registerBlock(LIMESTONE, "limestone");
+		registerBlock(BUHRSTONE, "buhrstone");
+		
 		registerBlock(FLOWER, new ItemBaseBlock(FLOWER), "flower");
 
 		registerBlock(MUSHROOM, new ItemBaseBlock(MUSHROOM), "mushroom");
@@ -505,6 +512,10 @@ public class EmotionBlocks
 
 		registerBlock(SHIFTING_SAND, "shifting_sand");
 		registerBlock(MUD, "mud");
+		
+		registerBlock(RANDOM_METER, "random_meter");
+		
+		registerBlock(BOX, "box");
 	}
 
 	private static void registerBlockNoItem(Block block, String name)

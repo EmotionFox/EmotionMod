@@ -40,7 +40,7 @@ public class BaseTable extends Block
 
 		return false;
 	}
-
+	
 	private boolean canTableConnectTo(IBlockAccess world, BlockPos pos, EnumFacing facing)
 	{
 		Block block = world.getBlockState(pos.offset(facing)).getBlock();
@@ -119,6 +119,12 @@ public class BaseTable extends Block
 			return name;
 		}
 	}
+	
+	@Override
+	public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
+	{
+		return true;
+	}
 
 	@Override
 	public boolean isOpaqueCube(IBlockState state)
@@ -129,6 +135,6 @@ public class BaseTable extends Block
 	@Override
 	public boolean isFullCube(IBlockState state)
 	{
-		return true;
+		return false;
 	}
 }

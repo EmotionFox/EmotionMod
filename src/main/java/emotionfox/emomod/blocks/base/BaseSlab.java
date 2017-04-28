@@ -29,6 +29,7 @@ public abstract class BaseSlab extends BlockSlab
 
 		this.setDefaultState(state);
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
+		this.useNeighborBrightness = true;
 	}
 
 	@SideOnly(Side.CLIENT)
