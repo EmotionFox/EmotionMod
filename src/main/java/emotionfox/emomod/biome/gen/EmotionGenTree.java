@@ -6,7 +6,7 @@ import emotionfox.emomod.blocks.EmotionLeaves;
 import emotionfox.emomod.blocks.EmotionLog;
 import emotionfox.emomod.blocks.EmotionPlanks;
 import emotionfox.emomod.blocks.EmotionSapling;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -15,7 +15,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenTree extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlock.SAPLING;
 	private EmotionPlanks.EnumType type;
 	private IBlockState state;
 
@@ -30,8 +30,8 @@ public class EmotionGenTree extends WorldGenerator
 	{
 		int height = 5 + rand.nextInt(2);
 
-		IBlockState log = EmotionBlocks.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, type);
-		IBlockState leave = EmotionBlocks.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
+		IBlockState log = EmotionBlock.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, type);
+		IBlockState leave = EmotionBlock.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, type);
 
 		if (worldIn.isAirBlock(position) && position.getY() < 240 && this.sapling.canBlockStay(worldIn, position, this.state))
 		{
@@ -60,7 +60,7 @@ public class EmotionGenTree extends WorldGenerator
 			{
 				for (int z = -1; z <= 1; z++)
 				{
-					if (worldIn.getBlockState(position.add(x, height - 2, z)).getBlock() == EmotionBlocks.LEAVES)
+					if (worldIn.getBlockState(position.add(x, height - 2, z)).getBlock() == EmotionBlock.LEAVES)
 						worldIn.setBlockState(position.add(x, height - 2, z), Blocks.AIR.getDefaultState());
 				}
 			}

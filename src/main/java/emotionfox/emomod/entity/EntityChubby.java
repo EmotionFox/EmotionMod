@@ -132,7 +132,7 @@ public class EntityChubby extends EntityLiving
 	}
 
 	@Override
-	protected SoundEvent getHurtSound()
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn)
 	{
 		return SoundEvents.ENTITY_SMALL_SLIME_HURT;
 	}

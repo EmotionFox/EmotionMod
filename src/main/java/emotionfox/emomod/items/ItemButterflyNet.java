@@ -2,7 +2,7 @@ package emotionfox.emomod.items;
 
 import emotionfox.emomod.entity.EntityButterfly;
 import emotionfox.emomod.handler.EmotionSoundHandler;
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +27,7 @@ public class ItemButterflyNet extends Item
 			{
 				EntityButterfly butterfly = (EntityButterfly) entity;
 
-				ItemButterfly item = (ItemButterfly) EmotionItems.BUTTERFLY;
+				ItemButterfly item = (ItemButterfly) EmotionItem.BUTTERFLY;
 
 				switch (butterfly.getButterflyType())
 				{
@@ -55,7 +55,7 @@ public class ItemButterflyNet extends Item
 
 					butterfly.entityDropItem(new ItemStack(item, 1, 2), 0.0F);
 					break;
-				case CITRUS:
+				case BRIMSTONE:
 					ItemStack butterflyCitrus = new ItemStack(item, 1, 3);
 
 					if (butterfly.hasCustomName())

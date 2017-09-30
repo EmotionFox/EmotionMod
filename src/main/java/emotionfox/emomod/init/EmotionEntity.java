@@ -16,6 +16,7 @@ import emotionfox.emomod.entity.EntityWildBoar;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class EmotionEntity

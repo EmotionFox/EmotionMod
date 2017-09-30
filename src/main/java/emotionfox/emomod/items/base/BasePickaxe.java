@@ -1,6 +1,6 @@
 package emotionfox.emomod.items.base;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,7 +26,7 @@ public class BasePickaxe extends ItemPickaxe
 			EntityPlayer player = (EntityPlayer) entity;
 			ItemStack equipped = player.getActiveItemStack();
 
-			if (this == EmotionItems.PURPURA_PICKAXE)
+			if (this == EmotionItem.PURPURA_PICKAXE)
 			{
 				if (equipped == stack)
 					player.addPotionEffect(new PotionEffect(Potion.getPotionById(3), 10, 0, false, false));
@@ -37,14 +37,14 @@ public class BasePickaxe extends ItemPickaxe
 	@Override
 	public boolean getIsRepairable(ItemStack input, ItemStack repair)
 	{
-		if (this == EmotionItems.PURPURA_PICKAXE)
+		if (this == EmotionItem.PURPURA_PICKAXE)
 		{
-			if (repair.getItem() == EmotionItems.PURPURA_SHARD)
+			if (repair.getItem() == EmotionItem.PURPURA_SHARD)
 				return true;
 		}
-		else if (this == EmotionItems.FOSSIL_PICKAXE)
+		else if (this == EmotionItem.FOSSIL_PICKAXE)
 		{
-			if (repair.getItem() == EmotionItems.FOSSIL)
+			if (repair.getItem() == EmotionItem.FOSSIL)
 				return true;
 		}
 		return false;

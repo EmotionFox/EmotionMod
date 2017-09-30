@@ -11,7 +11,7 @@ import emotionfox.emomod.blocks.EmotionMushroom;
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityMouse;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -21,19 +21,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BiomeMagic extends Biome
 {
 	private static final BiomeProperties properties = new BiomeProperties("Magic Plains").setTemperature(1F).setRainDisabled().setBaseHeight(0.1F).setHeightVariation(0.1F).setWaterColor(0x00ff82);
-	
+
 	public BiomeMagic()
 	{
 		super(properties);
-		this.theBiomeDecorator.treesPerChunk = 1;
-		this.theBiomeDecorator.grassPerChunk = 15;
-		this.theBiomeDecorator.flowersPerChunk = -999;
+		this.decorator.treesPerChunk = 1;
+		this.decorator.grassPerChunk = 15;
+		this.decorator.flowersPerChunk = -999;
 
 		this.flowers.clear();
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.CENTUS), 20);
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.THORNY), 15);
-		
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.CENTUS), 20);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.THORNY), 15);
+
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBeetle.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityMouse.class, 10, 1, 4));
 	}

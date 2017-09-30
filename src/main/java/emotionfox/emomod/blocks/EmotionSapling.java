@@ -1,5 +1,6 @@
 package emotionfox.emomod.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import emotionfox.emomod.biome.gen.EmotionGenAtlas;
@@ -8,7 +9,8 @@ import emotionfox.emomod.biome.gen.EmotionGenPalmTree;
 import emotionfox.emomod.biome.gen.EmotionGenPine;
 import emotionfox.emomod.biome.gen.EmotionGenTree;
 import emotionfox.emomod.blocks.base.BaseBush;
-import emotionfox.emomod.blocks.item.IMetaBlockName;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
@@ -18,7 +20,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -28,8 +29,10 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
 
-public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockName
+public class EmotionSapling extends BaseBush implements IGrowable, MetaBlockInterface
 {
+	private static final ArrayList<String> variantList = new ArrayList<String>();
+
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", EmotionPlanks.EnumType.class);
 	public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
 	public static final AxisAlignedBB SAPLING_AABB = new AxisAlignedBB(0.09999999403953552D, 0.0D, 0.09999999403953552D, 0.8999999761581421D, 0.800000011920929D, 0.8999999761581421D);
@@ -39,6 +42,9 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EmotionPlanks.EnumType.CHERRY).withProperty(STAGE, Integer.valueOf(0)));
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
 		this.setSoundType(SoundType.PLANT);
+
+		for (int i = 0; i < EmotionPlanks.EnumType.values().length; i++)
+			this.variantList.add(EmotionPlanks.EnumType.values()[i].getName());
 	}
 
 	@Override
@@ -164,11 +170,11 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	}
 
 	@Override
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EmotionPlanks.EnumType.values().length; i++)
 		{
-			list.add(new ItemStack(itemIn, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -206,8 +212,21 @@ public class EmotionSapling extends BaseBush implements IGrowable, IMetaBlockNam
 	}
 
 	@Override
-	public String getSpecialName(ItemStack stack)
+	public String getVariant(int meta)
 	{
-		return EmotionPlanks.EnumType.values()[stack.getItemDamage()].getName();
+		return this.variantList.get(meta);
+	}
+
+	@Override
+	public String getVariantName(int meta)
+	{
+		String name = Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5);
+		return meta > getMaxMeta() ? name + "_" + this.variantList.get(0) : name + "_" + this.variantList.get(meta);
+	}
+
+	@Override
+	public int getMaxMeta()
+	{
+		return this.variantList.size() - 1;
 	}
 }

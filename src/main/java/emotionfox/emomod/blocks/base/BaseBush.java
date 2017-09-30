@@ -2,7 +2,7 @@ package emotionfox.emomod.blocks.base;
 
 import emotionfox.emomod.blocks.EmotionPlanks;
 import emotionfox.emomod.blocks.EmotionSapling;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -19,15 +19,15 @@ public class BaseBush extends BlockBush
 	@Override
 	public net.minecraftforge.common.EnumPlantType getPlantType(net.minecraft.world.IBlockAccess world, BlockPos pos)
 	{
-		if (this == EmotionBlocks.MUSHROOM)
+		if (this == EmotionBlock.MUSHROOM)
 			return net.minecraftforge.common.EnumPlantType.Cave;
-		if (this == EmotionBlocks.BUSH)
+		if (this == EmotionBlock.BUSH)
 			return net.minecraftforge.common.EnumPlantType.Plains;
-		if (this == EmotionBlocks.BUSH_SIMPLE)
+		if (this == EmotionBlock.BUSH_SIMPLE)
 			return net.minecraftforge.common.EnumPlantType.Plains;
-		if (this == EmotionBlocks.SAPLING.getDefaultState().withProperty(EmotionSapling.TYPE, EmotionPlanks.EnumType.COCO))
+		if (this == EmotionBlock.SAPLING.getDefaultState().withProperty(EmotionSapling.TYPE, EmotionPlanks.EnumType.COCO))
 			return net.minecraftforge.common.EnumPlantType.Desert;
-		else if (this == EmotionBlocks.SAPLING)
+		else if (this == EmotionBlock.SAPLING)
 			return net.minecraftforge.common.EnumPlantType.Plains;
 
 		return super.getPlantType(world, pos);

@@ -1,7 +1,7 @@
 package emotionfox.emomod.entity;
 
 import emotionfox.emomod.blocks.EmotionPlanks;
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -39,19 +39,19 @@ public class EntityNewBoat extends EntityBoat
         {
         case CHERRY:
         default:
-            return EmotionItems.CHERRY_BOAT;
+            return EmotionItem.CHERRY_BOAT;
         case PEAR:
-            return EmotionItems.PEAR_BOAT;
+            return EmotionItem.PEAR_BOAT;
         case ORANGE:
-            return EmotionItems.ORANGE_BOAT;
+            return EmotionItem.ORANGE_BOAT;
         case ATLAS:
-            return EmotionItems.ATLAS_BOAT;
+            return EmotionItem.ATLAS_BOAT;
         case PINE:
-            return EmotionItems.PINE_BOAT;
+            return EmotionItem.PINE_BOAT;
         case COCO:
-            return EmotionItems.COCO_BOAT;
+            return EmotionItem.COCO_BOAT;
         case DREAM:
-        	return EmotionItems.DREAM_BOAT;
+        	return EmotionItem.DREAM_BOAT;
         }
     }
 	

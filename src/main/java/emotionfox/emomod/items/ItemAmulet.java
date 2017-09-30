@@ -2,7 +2,8 @@ package emotionfox.emomod.items;
 
 import java.util.List;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -23,23 +24,23 @@ public class ItemAmulet extends Item
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		tooltip.add("Pray The Elements");
 
-		if (this == EmotionItems.AMULET_BLUE)
+		if (this == EmotionItem.AMULET_BLUE)
 		{
 			tooltip.add("\u00a7b" + "Water");
 		}
-		else if (this == EmotionItems.AMULET_GREEN)
+		else if (this == EmotionItem.AMULET_GREEN)
 		{
 			tooltip.add("\u00a7a" + "Earth");
 		}
-		else if (this == EmotionItems.AMULET_RED)
+		else if (this == EmotionItem.AMULET_RED)
 		{
 			tooltip.add("\u00a7c" + "Fire");
 		}
-		else if (this == EmotionItems.AMULET_WHITE)
+		else if (this == EmotionItem.AMULET_WHITE)
 		{
 			tooltip.add("\u00a7e" + "Wind");
 		}
@@ -50,11 +51,12 @@ public class ItemAmulet extends Item
 	{
 		super.onUpdate(stack, worldIn, entity, itemSlot, isSelected);
 		EntityPlayer player = (EntityPlayer) entity;
-		ItemStack equipped = player.inventory.getCurrentItem();
+		ItemStack mainHand = player.getHeldItemMainhand();
+		ItemStack offHand = player.getHeldItemOffhand();
 
-		if (equipped == stack)
+		if (mainHand == stack || offHand == stack)
 		{
-			if (this == EmotionItems.AMULET_BLUE)
+			if (this == EmotionItem.AMULET_BLUE)
 			{
 				if (stack.getItemDamage() != getMaxDamage(stack))
 				{
@@ -64,10 +66,10 @@ public class ItemAmulet extends Item
 				else
 				{
 					if (!player.capabilities.isCreativeMode)
-						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItems.AMULET_BLUE_BROKEN, 1, 0));
+						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItem.AMULET_BLUE_BROKEN, 1, 0));
 				}
 			}
-			else if (this == EmotionItems.AMULET_GREEN)
+			else if (this == EmotionItem.AMULET_GREEN)
 			{
 				if (stack.getItemDamage() != getMaxDamage(stack))
 				{
@@ -77,10 +79,10 @@ public class ItemAmulet extends Item
 				else
 				{
 					if (!player.capabilities.isCreativeMode)
-						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItems.AMULET_GREEN_BROKEN, 1, 0));
+						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItem.AMULET_GREEN_BROKEN, 1, 0));
 				}
 			}
-			else if (this == EmotionItems.AMULET_RED)
+			else if (this == EmotionItem.AMULET_RED)
 			{
 				if (stack.getItemDamage() != getMaxDamage(stack))
 				{
@@ -90,10 +92,10 @@ public class ItemAmulet extends Item
 				else
 				{
 					if (!player.capabilities.isCreativeMode)
-						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItems.AMULET_RED_BROKEN, 1, 0));
+						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItem.AMULET_RED_BROKEN, 1, 0));
 				}
 			}
-			else if (this == EmotionItems.AMULET_WHITE)
+			else if (this == EmotionItem.AMULET_WHITE)
 			{
 				if (stack.getItemDamage() != getMaxDamage(stack))
 				{
@@ -103,7 +105,7 @@ public class ItemAmulet extends Item
 				else
 				{
 					if (!player.capabilities.isCreativeMode)
-						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItems.AMULET_WHITE_BROKEN, 1, 0));
+						player.inventory.setInventorySlotContents(player.inventory.currentItem, (ItemStack) new ItemStack(EmotionItem.AMULET_WHITE_BROKEN, 1, 0));
 				}
 			}
 		}

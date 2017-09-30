@@ -1,6 +1,6 @@
 package emotionfox.emomod.items;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +27,7 @@ public class ItemBalloon extends Item
 
 			if (!player.capabilities.isCreativeMode)
 			{
-				if (this == EmotionItems.PURPURA_RED_BALLOON && isSelected)
+				if (this == EmotionItem.PURPURA_RED_BALLOON && isSelected)
 				{
 					if (player.isSneaking())
 					{
@@ -42,7 +42,7 @@ public class ItemBalloon extends Item
 						player.motionY *= 0.5D;
 					}
 				}
-				else if (!player.isInWater() && !player.isInLava() && this == EmotionItems.PURPURA_GREEN_BALLOON && isSelected)
+				else if (!player.isInWater() && !player.isInLava() && this == EmotionItem.PURPURA_GREEN_BALLOON && isSelected)
 				{
 					if (player.isSneaking())
 					{
@@ -53,7 +53,7 @@ public class ItemBalloon extends Item
 						player.motionY += 0.084D;
 					}
 				}
-				else if (!player.isInWater() && !player.isInLava() && this == EmotionItems.PURPURA_BLUE_BALLOON && isSelected)
+				else if (!player.isInWater() && !player.isInLava() && this == EmotionItem.PURPURA_BLUE_BALLOON && isSelected)
 				{
 					player.motionY += 0.07D;
 				}

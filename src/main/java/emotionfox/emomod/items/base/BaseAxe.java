@@ -4,7 +4,7 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -25,7 +25,7 @@ public class BaseAxe extends ItemTool
 	public BaseAxe(ToolMaterial material)
 	{
 		super(material, EFFECTIVE_ON);
-		this.damageVsEntity = 8.5F;
+		this.attackDamage = 8.5F;
 		this.attackSpeed = -3.0F;
 		this.setCreativeTab(CreativeTabs.TOOLS);
 	}
@@ -38,7 +38,7 @@ public class BaseAxe extends ItemTool
 			EntityPlayer player = (EntityPlayer) entity;
 			ItemStack equipped = player.getActiveItemStack();
 
-			if (this == EmotionItems.PURPURA_AXE)
+			if (this == EmotionItem.PURPURA_AXE)
 			{
 				if (equipped == stack)
 					player.addPotionEffect(new PotionEffect(Potion.getPotionById(3), 10, 0, false, false));
@@ -49,14 +49,14 @@ public class BaseAxe extends ItemTool
 	@Override
 	public boolean getIsRepairable(ItemStack input, ItemStack repair)
 	{
-		if (this == EmotionItems.PURPURA_AXE)
+		if (this == EmotionItem.PURPURA_AXE)
 		{
-			if (repair.getItem() == EmotionItems.PURPURA_SHARD)
+			if (repair.getItem() == EmotionItem.PURPURA_SHARD)
 				return true;
 		}
-		else if (this == EmotionItems.FOSSIL_AXE)
+		else if (this == EmotionItem.FOSSIL_AXE)
 		{
-			if (repair.getItem() == EmotionItems.FOSSIL)
+			if (repair.getItem() == EmotionItem.FOSSIL)
 				return true;
 		}
 		return false;

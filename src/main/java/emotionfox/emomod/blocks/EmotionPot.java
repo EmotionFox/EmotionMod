@@ -1,9 +1,8 @@
 package emotionfox.emomod.blocks;
 
-import emotionfox.emomod.blocks.item.IMetaBlockName;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.blocks.meta.MetaBlock;
+import emotionfox.emomod.init.EmotionBlock;
 import emotionfox.emomod.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -29,7 +28,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EmotionPot extends Block implements IMetaBlockName
+public class EmotionPot extends MetaBlock
 {
 	public static final PropertyEnum<EnumPot> TYPE = PropertyEnum.<EnumPot>create("variant", EnumPot.class);
 
@@ -42,6 +41,9 @@ public class EmotionPot extends Block implements IMetaBlockName
 		this.setSoundType(SoundType.GLASS);
 		this.setCreativeTab(CreativeTabs.FOOD);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, EnumPot.APPLE));
+
+		for (int i = 0; i < EnumPot.values().length; i++)
+			variantList.add(EnumPot.values()[i].getName());
 	}
 
 	@Override
@@ -64,18 +66,18 @@ public class EmotionPot extends Block implements IMetaBlockName
 		{
 			if (heldItem == Items.WATER_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.WATER));
+				world.setBlockState(pos, EmotionBlock.POT.getDefaultState().withProperty(TYPE, EnumPot.WATER));
 				stack = new ItemStack(Items.BUCKET);
 			}
 			else if (heldItem == Items.LAVA_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.LAVA));
+				world.setBlockState(pos, EmotionBlock.POT.getDefaultState().withProperty(TYPE, EnumPot.LAVA));
 				stack = new ItemStack(Items.BUCKET);
 				isLava = true;
 			}
 			else if (heldItem == Items.MILK_BUCKET)
 			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.MILK));
+				world.setBlockState(pos, EmotionBlock.POT.getDefaultState().withProperty(TYPE, EnumPot.MILK));
 				stack = new ItemStack(Items.BUCKET);
 			}
 
@@ -101,7 +103,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 
 			if (stack != null)
 			{
-				world.setBlockState(pos, EmotionBlocks.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
+				world.setBlockState(pos, EmotionBlock.POT.getDefaultState().withProperty(TYPE, EnumPot.GLASS));
 
 				if (isLava)
 					player.playSound(SoundEvents.ITEM_BUCKET_FILL_LAVA, 1.0F, 1.0F);
@@ -128,11 +130,11 @@ public class EmotionPot extends Block implements IMetaBlockName
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EnumPot.values().length; i++)
 		{
-			list.add(new ItemStack(item, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -153,7 +155,7 @@ public class EmotionPot extends Block implements IMetaBlockName
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(TYPE, EnumPot.values()[meta]);
+		return meta > EnumPot.values().length ? this.getDefaultState().withProperty(TYPE, EnumPot.values()[0]) : this.getDefaultState().withProperty(TYPE, EnumPot.values()[meta]);
 	}
 
 	@Override
@@ -210,11 +212,5 @@ public class EmotionPot extends Block implements IMetaBlockName
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
 	{
 		return new ItemStack(Item.getItemFromBlock(this), 1, getMetaFromState(world.getBlockState(pos)));
-	}
-
-	@Override
-	public String getSpecialName(ItemStack stack)
-	{
-		return EnumPot.values()[stack.getItemDamage()].getName();
 	}
 }

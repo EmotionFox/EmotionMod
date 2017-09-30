@@ -3,8 +3,9 @@ package emotionfox.emomod.items;
 import java.util.List;
 import java.util.Random;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,17 +35,17 @@ public class ItemStaff extends Item
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		tooltip.add("Invoke The Elements");
-		
-		if (this == EmotionItems.STAFF_BLUE)	
+
+		if (this == EmotionItem.STAFF_BLUE)
 			tooltip.add("\u00a7b" + "Water");
-		if (this == EmotionItems.STAFF_GREEN)
+		if (this == EmotionItem.STAFF_GREEN)
 			tooltip.add("\u00a7a" + "Earth");
-		if (this == EmotionItems.STAFF_RED)
+		if (this == EmotionItem.STAFF_RED)
 			tooltip.add("\u00a7c" + "Fire");
-		if (this == EmotionItems.STAFF_WHITE)
+		if (this == EmotionItem.STAFF_WHITE)
 			tooltip.add("\u00a7e" + "Wind");
 	}
 
@@ -60,7 +61,7 @@ public class ItemStaff extends Item
 
 		if (dimension == 0 || dimension == 1)
 		{
-			if (this == EmotionItems.STAFF_BLUE)
+			if (this == EmotionItem.STAFF_BLUE)
 			{
 				block = Blocks.FLOWING_WATER.getDefaultState();
 
@@ -91,7 +92,7 @@ public class ItemStaff extends Item
 				}
 			}
 
-			else if (this == EmotionItems.STAFF_WHITE)
+			else if (this == EmotionItem.STAFF_WHITE)
 			{
 				if (time >= 13000 || time <= 1000)
 					world.setWorldTime(1001);
@@ -108,7 +109,7 @@ public class ItemStaff extends Item
 			}
 		}
 
-		if (this == EmotionItems.STAFF_GREEN)
+		if (this == EmotionItem.STAFF_GREEN)
 		{
 			block = Blocks.GRASS.getDefaultState();
 
@@ -139,7 +140,7 @@ public class ItemStaff extends Item
 			}
 		}
 
-		else if (this == EmotionItems.STAFF_RED)
+		else if (this == EmotionItem.STAFF_RED)
 		{
 			block = Blocks.FLOWING_LAVA.getDefaultState();
 

@@ -5,7 +5,6 @@ import java.util.Random;
 import emotionfox.emomod.biome.gen.EmotionGenBigTree;
 import emotionfox.emomod.biome.gen.EmotionGenBush;
 import emotionfox.emomod.biome.gen.EmotionGenFlower;
-import emotionfox.emomod.biome.gen.EmotionGenTest;
 import emotionfox.emomod.biome.gen.EmotionGenTree;
 import emotionfox.emomod.blocks.EmotionFlower;
 import emotionfox.emomod.blocks.EmotionPlanks;
@@ -13,7 +12,7 @@ import emotionfox.emomod.blocks.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityButterfly;
 import emotionfox.emomod.entity.EntitySmallSpider;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
@@ -32,14 +31,14 @@ public class BiomeOrchard extends Biome
 	public BiomeOrchard()
 	{
 		super(properties);
-		this.theBiomeDecorator.treesPerChunk = -999;
-		this.theBiomeDecorator.flowersPerChunk = -999;
+		this.decorator.treesPerChunk = -999;
+		this.decorator.flowersPerChunk = -999;
 
 		this.flowers.clear();
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.DELY), 15);
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.GNON), 3);
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.KITTY), 20);
-		this.addFlower(EmotionBlocks.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.DELY), 15);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.GNON), 3);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.KITTY), 20);
+		this.addFlower(EmotionBlock.FLOWER.getDefaultState().withProperty(EmotionFlower.VARIANT, EmotionFlower.EnumType.NOX), 20);
 
 		this.topBlock = Blocks.GRASS.getDefaultState();
 		this.fillerBlock = Blocks.STONE.getDefaultState();
@@ -122,12 +121,12 @@ public class BiomeOrchard extends Biome
 		if (noiseVal > -1.0D && noiseVal <= 1D)
 		{
 			genOrchard = false;
-			this.theBiomeDecorator.grassPerChunk = 3;
+			this.decorator.grassPerChunk = 3;
 		}
 		else
 		{
 			genOrchard = true;
-			this.theBiomeDecorator.grassPerChunk = 1;
+			this.decorator.grassPerChunk = 1;
 		}
 
 		super.genTerrainBlocks(worldIn, rand, chunkPrimerIn, x, z, noiseVal);

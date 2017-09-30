@@ -32,7 +32,7 @@ public class WoodNightstand extends Block
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
 	}
-	
+
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
 	{
@@ -48,7 +48,7 @@ public class WoodNightstand extends Block
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+		return meta > EnumFacing.HORIZONTALS.length ? this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(0)) : this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
 	}
 
 	@Override

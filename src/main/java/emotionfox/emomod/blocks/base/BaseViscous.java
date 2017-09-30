@@ -1,6 +1,6 @@
 package emotionfox.emomod.blocks.base;
 
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -33,13 +33,13 @@ public class BaseViscous extends Block
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-		return this == EmotionBlocks.SHIFTING_SAND ? Block.NULL_AABB : (this == EmotionBlocks.MUD ? MUD_AABB : Block.FULL_BLOCK_AABB);
+		return this == EmotionBlock.SHIFTING_SAND ? Block.NULL_AABB : (this == EmotionBlock.MUD ? MUD_AABB : Block.FULL_BLOCK_AABB);
     }
 	
 	@Override
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-		if(this == EmotionBlocks.SHIFTING_SAND)
+		if(this == EmotionBlock.SHIFTING_SAND)
 		{
 			entityIn.motionX *= 0.02D;
 	        entityIn.motionY *= 0.02D;

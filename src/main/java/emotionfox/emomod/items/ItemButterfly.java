@@ -3,29 +3,34 @@ package emotionfox.emomod.items;
 import java.util.List;
 
 import emotionfox.emomod.entity.EntityButterfly;
+import emotionfox.emomod.items.meta.MetaItem;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 
-public class ItemButterfly extends Item
+public class ItemButterfly extends MetaItem
 {
+	public static final String[] variantList = new String[EntityButterfly.Type.values().length];
+
+	public static final String[] variants =
+	{ "pink", "blue", "green", "brimstone" };
+
 	public ItemButterfly()
 	{
+		super(CreativeTabs.MISC);
 		this.setMaxStackSize(1);
-		this.setCreativeTab(CreativeTabs.MISC);
-		this.setHasSubtypes(true);
+		this.addVariants(variants);
 	}
-	
+
 	public void setCustomName(String nameIn, ItemStack stack)
 	{
-		if(!stack.hasTagCompound())
+		if (!stack.hasTagCompound())
 		{
 			stack.setTagCompound(new NBTTagCompound());
 			stack.getTagCompound().setString("customName", nameIn);
@@ -37,30 +42,10 @@ public class ItemButterfly extends Item
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("customName"))
 			tooltip.add("\u00A7n" + "Name" + "\u00A7r" + ": " + stack.getTagCompound().getString("customName"));
-	}
-
-	@Override
-	public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems)
-	{
-		for (int i = 0; i < EntityButterfly.Type.values().length; i++)
-			subItems.add(new ItemStack(itemIn, 1, i));
-	}
-
-	@Override
-	public String getUnlocalizedName(ItemStack stack)
-	{
-		for (int i = 0; i < EntityButterfly.Type.values().length; i++)
-		{
-			if (stack.getItemDamage() == i)
-				return this.getUnlocalizedName() + "_" + EntityButterfly.Type.values()[i].getName();
-			else
-				continue;
-		}
-		return this.getUnlocalizedName() + "_" + EntityButterfly.Type.values()[0].getName();
 	}
 
 	@Override

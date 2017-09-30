@@ -1,6 +1,6 @@
 package emotionfox.emomod.items.base;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemSoup;
 import net.minecraft.item.ItemStack;
@@ -18,11 +18,11 @@ public class BaseSoup extends ItemSoup
 	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
 	{
-		if (this == EmotionItems.SALAD_TOMATO)
+		if (this == EmotionItem.SALAD_TOMATO)
 		{
 			entityLiving.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 500, 0));
 		}
-		else if (this == EmotionItems.SALAD_FRUIT)
+		else if (this == EmotionItem.SALAD_FRUIT)
 		{
 			entityLiving.addPotionEffect(new PotionEffect(Potion.getPotionById(1), 1000, 0));
 		}

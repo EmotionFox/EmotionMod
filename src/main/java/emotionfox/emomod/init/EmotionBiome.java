@@ -9,7 +9,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager.BiomeEntry;
 import net.minecraftforge.common.BiomeManager.BiomeType;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
+@ObjectHolder(Reference.MOD_ID)
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class EmotionBiome
 {
 	public static final Biome ORCHARD = new BiomeOrchard();
@@ -19,16 +25,28 @@ public class EmotionBiome
 
 	public static void mainRegister()
 	{
-		registerBiome(ORCHARD, "orchard", BiomeType.WARM, Type.LUSH, 10);
-		registerBiome(MAGIC_PLAINS, "magic_plains", BiomeType.COOL, Type.MAGICAL, 7);
-		registerBiome(ROCKY_LAND, "rocky_land", BiomeType.WARM, Type.CONIFEROUS, 10);
+		ORCHARD.setRegistryName(new ResourceLocation(Reference.MOD_ID, "orchard"));
+		MAGIC_PLAINS.setRegistryName(new ResourceLocation(Reference.MOD_ID, "magic_plains"));
+		ROCKY_LAND.setRegistryName(new ResourceLocation(Reference.MOD_ID, "rocky_land"));
 	}
 
-	public static void registerBiome(Biome biome, String name, net.minecraftforge.common.BiomeManager.BiomeType type, net.minecraftforge.common.BiomeDictionary.Type gender, int weight)
+	@SubscribeEvent
+	public static void registerBiome(RegistryEvent.Register<Biome> event)
 	{
-		net.minecraftforge.fml.common.registry.GameRegistry.register(biome, new ResourceLocation(Reference.MOD_ID, name));
-		net.minecraftforge.common.BiomeManager.addBiome(type, new BiomeEntry(biome, weight));
-		net.minecraftforge.common.BiomeDictionary.addTypes(biome, gender);
-		net.minecraftforge.common.BiomeManager.addSpawnBiome(biome);
+		final Biome[] emotionBiomes =
+		{ ORCHARD, MAGIC_PLAINS, ROCKY_LAND };
+		event.getRegistry().registerAll(emotionBiomes);
+
+		net.minecraftforge.common.BiomeManager.addBiome(BiomeType.WARM, new BiomeEntry(ORCHARD, 10));
+		net.minecraftforge.common.BiomeManager.addBiome(BiomeType.COOL, new BiomeEntry(MAGIC_PLAINS, 7));
+		net.minecraftforge.common.BiomeManager.addBiome(BiomeType.WARM, new BiomeEntry(ROCKY_LAND, 10));
+
+		net.minecraftforge.common.BiomeDictionary.addTypes(ORCHARD, Type.LUSH);
+		net.minecraftforge.common.BiomeDictionary.addTypes(MAGIC_PLAINS, Type.MAGICAL);
+		net.minecraftforge.common.BiomeDictionary.addTypes(ROCKY_LAND, Type.CONIFEROUS);
+
+		net.minecraftforge.common.BiomeManager.addSpawnBiome(ORCHARD);
+		net.minecraftforge.common.BiomeManager.addSpawnBiome(MAGIC_PLAINS);
+		net.minecraftforge.common.BiomeManager.addSpawnBiome(ROCKY_LAND);
 	}
 }

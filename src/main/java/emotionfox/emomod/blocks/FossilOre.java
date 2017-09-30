@@ -2,7 +2,7 @@ package emotionfox.emomod.blocks;
 
 import java.util.List;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -35,7 +35,7 @@ public class FossilOre extends Block
 
 		List<ItemStack> list = new java.util.ArrayList<ItemStack>();
 
-		list.add(new ItemStack(EmotionItems.FOSSIL, 1).setStackDisplayName(randType + " Of " + randName1 + randName2));
+		list.add(new ItemStack(EmotionItem.FOSSIL, 1).setStackDisplayName(randType + " Of " + randName1 + randName2));
 
 		return list;
 	}

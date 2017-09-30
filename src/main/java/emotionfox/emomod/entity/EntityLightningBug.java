@@ -4,6 +4,7 @@ import javax.annotation.Nullable;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.passive.EntityBat;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
@@ -25,16 +26,16 @@ public class EntityLightningBug extends EntityBat
 	
 	@Nullable
 	@Override
-    protected SoundEvent getAmbientSound()
+    public SoundEvent getAmbientSound()
     {
         return null;
     }
 
 	@Override
-    protected SoundEvent getHurtSound()
-    {
-        return null;
-    }
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn)
+	{
+		return null;
+	}
 
 	@Override
     protected SoundEvent getDeathSound()

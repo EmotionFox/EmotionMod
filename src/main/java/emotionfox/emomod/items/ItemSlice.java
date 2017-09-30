@@ -1,13 +1,19 @@
 package emotionfox.emomod.items;
 
+import java.util.ArrayList;
+
+import emotionfox.emomod.items.meta.MetaItemInterface;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
-public class ItemSlice extends ItemFood
+public class ItemSlice extends ItemFood implements MetaItemInterface
 {
+	private static final ArrayList<String> variantList = new ArrayList<String>();
+
 	public static final String[] variants = new String[]
 	{ "pear", "cherry", "orange", "apple", "blueberry", "redcurrant", "blackcurrant", "strawberry", "dreamcurrant", "chocolate", "bread" };
 
@@ -15,6 +21,8 @@ public class ItemSlice extends ItemFood
 	{
 		super(0, false);
 		this.setHasSubtypes(true);
+		this.setMaxDamage(0);
+		this.addVariants(variants);
 	}
 
 	@Override
@@ -25,24 +33,43 @@ public class ItemSlice extends ItemFood
 	}
 
 	@Override
-	public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems)
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items)
 	{
-		for (int i = 0; i < variants.length; i++)
+		if (this.isInCreativeTab(tab))
 		{
-			subItems.add(new ItemStack(itemIn, 1, i));
+			for (int i = 0; i < this.variantList.size(); i++)
+			{
+				items.add(new ItemStack(this, 1, i));
+			}
 		}
 	}
 
 	@Override
 	public String getUnlocalizedName(ItemStack stack)
 	{
+		return super.getUnlocalizedName(stack) + "_" + this.variantList.get(stack.getMetadata());
+	}
+
+	@Override
+	public void addVariants(String[] variants)
+	{
 		for (int i = 0; i < variants.length; i++)
 		{
-			if (stack.getItemDamage() == i)
-				return this.getUnlocalizedName() + "_" + variants[i];
-			else
-				continue;
+			this.variantList.add(variants[i]);
 		}
-		return this.getUnlocalizedName() + "_" + variants[0];
+	}
+
+	@Override
+	public String getVariantName(int meta)
+	{
+		String name = Reference.MOD_ID + ":" + ((Item) this).getUnlocalizedName().substring(5);
+		return meta > getMaxMeta() ? name + "_" + this.variantList.get(0) : name + "_" + this.variantList.get(meta);
+	}
+
+	@Override
+	public int getMaxMeta()
+	{
+		// -1 because size return the number of elements but meta start at 0.
+		return this.variantList.size() - 1;
 	}
 }

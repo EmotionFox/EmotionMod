@@ -8,14 +8,15 @@ import emotionfox.emomod.handler.EmotionSoundHandler;
 import emotionfox.emomod.init.CraftingManager;
 import emotionfox.emomod.init.EmotionAchievement;
 import emotionfox.emomod.init.EmotionBiome;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import emotionfox.emomod.init.EmotionEnchantment;
 import emotionfox.emomod.init.EmotionEntity;
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import emotionfox.emomod.proxy.CommonProxy;
 import emotionfox.emomod.util.Reference;
 import emotionfox.emomod.world.EmotionWorld;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -38,33 +39,31 @@ public class MainRegistry
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		// Load All Other Class By Type
-		EmotionItems.mainRegister();
-		EmotionBlocks.mainRegister();
+		EmotionItem.mainRegister();
+		EmotionBlock.mainRegister();
 		EmotionWorld.mainRegister();
 		EmotionEntity.mainRegister();
-		EmotionAchievement.mainRegister();
+//		EmotionAchievement.mainRegister();
 		EmotionEnchantment.mainRegister();
-		CraftingManager.mainRegister();
+//		CraftingManager.mainRegister();
 		EmotionBiome.mainRegister();
+//		EmotionSoundHandler.init();
 
 		proxy.registerTileEntities();
-		proxy.registerModelBakeryVariants();
 		proxy.registerEntityRendering();
-		proxy.customStateMapper();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		EmotionSoundHandler.init();
-
 		// Register Event Class
-		MinecraftForge.EVENT_BUS.register(new EmotionAchievementEvent());
+//		MinecraftForge.EVENT_BUS.register(new EmotionAchievementEvent());
 		MinecraftForge.EVENT_BUS.register(new EmotionLifeEvent());
 		MinecraftForge.EVENT_BUS.register(new EmotionOverlayEvent());
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new EmotionGuiHandler());
 
+		proxy.customStateMapper();
 		proxy.registerRenders();
 	}
 

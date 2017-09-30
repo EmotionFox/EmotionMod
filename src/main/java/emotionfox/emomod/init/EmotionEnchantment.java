@@ -7,7 +7,13 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
+@ObjectHolder(Reference.MOD_ID)
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class EmotionEnchantment
 {
 	public static final Enchantment BLOOD_SUCKING = new BloodSucking(Enchantment.Rarity.RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[]
@@ -17,12 +23,15 @@ public class EmotionEnchantment
 
 	public static void mainRegister()
 	{
-		registerEnchant(BLOOD_SUCKING, "blood_sucking");
-		registerEnchant(FINAL_FROST, "final_frost");
+		BLOOD_SUCKING.setRegistryName(new ResourceLocation(Reference.MOD_ID, "blood_sucking"));
+		FINAL_FROST.setRegistryName(new ResourceLocation(Reference.MOD_ID, "final_frost"));
 	}
 
-	public static void registerEnchant(Enchantment enchantment, String name)
+	@SubscribeEvent
+	public static void registerEnchantment(RegistryEvent.Register<Enchantment> event)
 	{
-		net.minecraftforge.fml.common.registry.GameRegistry.register(enchantment, new ResourceLocation(Reference.MOD_ID, name));
+		final Enchantment[] emotionEnchantments =
+		{ BLOOD_SUCKING, FINAL_FROST };
+		event.getRegistry().registerAll(emotionEnchantments);
 	}
 }

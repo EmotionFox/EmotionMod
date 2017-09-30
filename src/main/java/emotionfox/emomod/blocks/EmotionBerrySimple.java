@@ -3,8 +3,7 @@ package emotionfox.emomod.blocks;
 import java.util.Random;
 
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
-import emotionfox.emomod.blocks.item.IMetaBlockName;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,14 +17,14 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class EmotionBerrySimple extends EmotionBerryBush implements IMetaBlockName
+public class EmotionBerrySimple extends EmotionBerryBush
 {
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EnumBerry.values().length; i++)
 		{
-			list.add(new ItemStack(item, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -65,12 +64,6 @@ public class EmotionBerrySimple extends EmotionBerryBush implements IMetaBlockNa
 	public void randomTick(World world, BlockPos pos, IBlockState state, Random random)
 	{
 		if (random.nextInt(40) == 0)
-			world.setBlockState(pos, EmotionBlocks.BUSH.getDefaultState().withProperty(EmotionBerryBush.BERRY, state.getValue(EmotionBerryBush.BERRY)));
-	}
-
-	@Override
-	public String getSpecialName(ItemStack stack)
-	{
-		return EnumBerry.values()[stack.getItemDamage()].getName();
+			world.setBlockState(pos, EmotionBlock.BUSH.getDefaultState().withProperty(EmotionBerryBush.BERRY, state.getValue(EmotionBerryBush.BERRY)));
 	}
 }

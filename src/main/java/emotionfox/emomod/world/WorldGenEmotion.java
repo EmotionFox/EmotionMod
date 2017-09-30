@@ -4,14 +4,13 @@ import java.util.Random;
 
 import emotionfox.emomod.biome.gen.EmotionGenPalmTree;
 import emotionfox.emomod.init.EmotionBiome;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -19,7 +18,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class WorldGenEmotion implements IWorldGenerator
 {
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+	public void generate(Random random, int chunkX, int chunkZ, World world, net.minecraft.world.gen.IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
 		switch (world.provider.getDimension())
 		{
@@ -39,7 +38,8 @@ public class WorldGenEmotion implements IWorldGenerator
 
 		for (int i = 0; i < 15; i++)
 		{
-			(new WorldGenMinable(EmotionBlocks.LUME_ORE.getDefaultState(), 7, BlockMatcher.forBlock(Blocks.NETHERRACK))).generate(world, rand, new BlockPos(randPosX, randPos(rand, 40, 120), randPosZ));
+			(new WorldGenMinable(EmotionBlock.LUME_ORE.getDefaultState(), 7, BlockMatcher.forBlock(Blocks.NETHERRACK))).generate(world, rand,
+					new BlockPos(randPosX, randPos(rand, 40, 120), randPosZ));
 		}
 	}
 
@@ -51,7 +51,7 @@ public class WorldGenEmotion implements IWorldGenerator
 
 		for (int i = 0; i < 3; i++)
 		{
-			(new WorldGenMinable(EmotionBlocks.PURPURA_ORE.getDefaultState(), 3)).generate(world, rand, new BlockPos(randPosX, randPos(rand, 0, 10), randPosZ));
+			(new WorldGenMinable(EmotionBlock.PURPURA_ORE.getDefaultState(), 3)).generate(world, rand, new BlockPos(randPosX, randPos(rand, 0, 10), randPosZ));
 		}
 
 		for (int i = 0; i < 1; i++)
@@ -66,26 +66,27 @@ public class WorldGenEmotion implements IWorldGenerator
 			}
 		}
 
-		for(int i = 0; i < 10; i++)
-        {
-            randPosY = randPos(rand, 60, 100);
-            int randPosY2 = randPos(rand, 70, 100);
-            
-            if(world.getBiome(new BlockPos(randPosX, randPosY, randPosZ)) == EmotionBiome.ROCKY_LAND)
-            {
-                (new WorldGenMinable(EmotionBlocks.MUD.getDefaultState(), 15, BlockMatcher.forBlock(Blocks.GRASS))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
-            }
-            if(world.getBiome(new BlockPos(randPosX, randPosY2, randPosZ)) == EmotionBiome.ROCKY_LAND)
-            {
-            	(new WorldGenMinable(Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.COARSE_DIRT), 30, BlockMatcher.forBlock(Blocks.GRASS_PATH))).generate(world, rand, new BlockPos(randPosX, randPosY2, randPosZ));
-            }
-        }
-		
+		for (int i = 0; i < 10; i++)
+		{
+			randPosY = randPos(rand, 60, 100);
+			int randPosY2 = randPos(rand, 70, 100);
+
+			if (world.getBiome(new BlockPos(randPosX, randPosY, randPosZ)) == EmotionBiome.ROCKY_LAND)
+			{
+				(new WorldGenMinable(EmotionBlock.MUD.getDefaultState(), 15, BlockMatcher.forBlock(Blocks.GRASS))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
+			}
+			if (world.getBiome(new BlockPos(randPosX, randPosY2, randPosZ)) == EmotionBiome.ROCKY_LAND)
+			{
+				(new WorldGenMinable(Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.COARSE_DIRT), 30, BlockMatcher.forBlock(Blocks.GRASS_PATH))).generate(world, rand,
+						new BlockPos(randPosX, randPosY2, randPosZ));
+			}
+		}
+
 		for (int i = 0; i < 80; i++)
 		{
 			randPosY = randPos(rand, 30, 125);
-			
-			(new WorldGenMinable(EmotionBlocks.FOSSIL_ORE.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.DIRT))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
+
+			(new WorldGenMinable(EmotionBlock.FOSSIL_ORE.getDefaultState(), 4, BlockMatcher.forBlock(Blocks.DIRT))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
 		}
 
 		for (int i = 0; i < 80; i++)
@@ -94,7 +95,7 @@ public class WorldGenEmotion implements IWorldGenerator
 
 			if (world.getBiome(new BlockPos(randPosX, randPosY, randPosZ)) == EmotionBiome.ORCHARD)
 			{
-				(new WorldGenMinable(EmotionBlocks.LIMESTONE.getDefaultState(), 8)).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
+				(new WorldGenMinable(EmotionBlock.LIMESTONE.getDefaultState(), 8)).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
 			}
 		}
 
@@ -104,7 +105,7 @@ public class WorldGenEmotion implements IWorldGenerator
 
 			if (world.getBiome(new BlockPos(randPosX, randPosY, randPosZ)) == Biome.getBiome(16) || world.getBiome(new BlockPos(randPosX, randPos(rand, 64, 74), randPosZ)) == Biome.getBiome(7))
 			{
-				(new WorldGenMinable(EmotionBlocks.SHIFTING_SAND.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.SAND))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
+				(new WorldGenMinable(EmotionBlock.SHIFTING_SAND.getDefaultState(), 8, BlockMatcher.forBlock(Blocks.SAND))).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
 			}
 		}
 

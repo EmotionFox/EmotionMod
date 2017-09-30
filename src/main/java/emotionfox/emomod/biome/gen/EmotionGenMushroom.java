@@ -3,7 +3,7 @@ package emotionfox.emomod.biome.gen;
 import java.util.Random;
 
 import emotionfox.emomod.blocks.EmotionMushroom;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -11,7 +11,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenMushroom extends WorldGenerator
 {
-	private EmotionMushroom mushroom = (EmotionMushroom) EmotionBlocks.MUSHROOM;
+	private EmotionMushroom mushroom = (EmotionMushroom) EmotionBlock.MUSHROOM;
 	private IBlockState state;
 
 	public EmotionGenMushroom(EmotionMushroom.EnumType mushroomIn)
@@ -24,7 +24,7 @@ public class EmotionGenMushroom extends WorldGenerator
 	{
 		BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 
-		if (world.isAirBlock(blockpos) && (!world.provider.hasNoSky() || blockpos.getY() < 255) && this.mushroom.canBlockStay(world, blockpos, this.state))
+		if (world.isAirBlock(blockpos) && (world.provider.hasSkyLight() || blockpos.getY() < 255) && this.mushroom.canBlockStay(world, blockpos, this.state))
 		{
 			world.setBlockState(blockpos, this.state);
 			return true;

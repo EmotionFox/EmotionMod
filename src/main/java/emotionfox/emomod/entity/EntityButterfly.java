@@ -10,6 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -104,15 +105,16 @@ public class EntityButterfly extends EntityBat
 		return super.onInitialSpawn(difficulty, livingdata);
 	}
 
+	
 	@Nullable
 	@Override
-	protected SoundEvent getAmbientSound()
+	public SoundEvent getAmbientSound()
 	{
 		return null;
 	}
 
 	@Override
-	protected SoundEvent getHurtSound()
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn)
 	{
 		return null;
 	}

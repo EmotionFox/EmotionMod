@@ -8,7 +8,7 @@ import emotionfox.emomod.biome.gen.EmotionGenPine;
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntitySmallSpider;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -25,9 +25,9 @@ public class BiomeRock extends Biome
 	public BiomeRock()
 	{
 		super(properties);
-		this.theBiomeDecorator.treesPerChunk = -999;
-		this.theBiomeDecorator.grassPerChunk = 10;
-		this.theBiomeDecorator.flowersPerChunk = 2;
+		this.decorator.treesPerChunk = -999;
+		this.decorator.grassPerChunk = 10;
+		this.decorator.flowersPerChunk = 2;
 
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBeetle.class, 8, 3, 5));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntitySmallSpider.class, 50, 4, 4));
@@ -120,7 +120,7 @@ public class BiomeRock extends Biome
 		public boolean generate(World worldIn, Random rand, BlockPos pos)
 		{
 			int count = 6 + rand.nextInt(8);
-			
+
 			for (int i = 0; i < count; i++)
 			{
 				BlockPos blockpos = pos.add(rand.nextInt(16), rand.nextInt(28) + 4, rand.nextInt(16));
@@ -128,7 +128,7 @@ public class BiomeRock extends Biome
 				net.minecraft.block.state.IBlockState state = worldIn.getBlockState(blockpos);
 				if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, net.minecraft.block.state.pattern.BlockMatcher.forBlock(Blocks.STONE)))
 				{
-					worldIn.setBlockState(blockpos, EmotionBlocks.VIRIDIS_ORE.getDefaultState(), 2);
+					worldIn.setBlockState(blockpos, EmotionBlock.VIRIDIS_ORE.getDefaultState(), 2);
 				}
 			}
 			return true;

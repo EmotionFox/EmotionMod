@@ -1,6 +1,6 @@
 package emotionfox.emomod.items.base;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemSoup;
 import net.minecraft.item.ItemStack;
@@ -17,6 +17,6 @@ public class BaseJuice extends ItemSoup
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
 	{
 		super.onItemUseFinish(stack, worldIn, entityLiving);
-		return new ItemStack(EmotionItems.BOWL_GLASS);
+		return new ItemStack(EmotionItem.BOWL_GLASS);
 	}
 }

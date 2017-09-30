@@ -13,9 +13,6 @@ public class CommonProxy
 		GameRegistry.registerTileEntity(TileEntityRandom.class, Reference.MOD_ID + ":TileEntityRandom");
 	}
 
-	public void registerModelBakeryVariants()
-	{}
-
 	public void registerEntityRendering()
 	{}
 

@@ -1,7 +1,7 @@
 package emotionfox.emomod.entity;
 
 import emotionfox.emomod.handler.EmotionSoundHandler;
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -18,6 +18,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -36,7 +38,7 @@ public class EntityWildBoar extends EntityAnimal
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIPanic(this, 0.8D));
         this.tasks.addTask(2, new EntityAIMate(this, 0.7D));
-        this.tasks.addTask(3, new EntityAITempt(this, 0.6D, EmotionItems.BERRY_STRAWBERRY, false));
+        this.tasks.addTask(3, new EntityAITempt(this, 0.6D, EmotionItem.BERRY_STRAWBERRY, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 0.6D));
         this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
@@ -54,7 +56,7 @@ public class EntityWildBoar extends EntityAnimal
 	@Override
 	protected Item getDropItem()
 	{
-		return EmotionItems.WILDBOAR_RAW;
+		return EmotionItem.WILDBOAR_RAW;
 	}
 	
 	@Override
@@ -64,20 +66,20 @@ public class EntityWildBoar extends EntityAnimal
 		
 		if(wasRecentlyHit && (this.rand.nextInt(20) == 0 || this.rand.nextInt(1 + lootingModifier) > 0))
         {
-            this.dropItem(EmotionItems.FRUIT_TOMATO, 1);
-            this.dropItem(EmotionItems.WILDBOAR_RAW, 1);
+            this.dropItem(EmotionItem.FRUIT_TOMATO, 1);
+            this.dropItem(EmotionItem.WILDBOAR_RAW, 1);
         }
         else if(wasRecentlyHit && (this.rand.nextInt(15) == 0 || this.rand.nextInt(1 + lootingModifier) > 0))
         {
-            this.dropItem(EmotionItems.HORN, 1);
-            this.dropItem(EmotionItems.WILDBOAR_RAW, 1);
+            this.dropItem(EmotionItem.HORN, 1);
+            this.dropItem(EmotionItem.WILDBOAR_RAW, 1);
         }
 	}
 	
 	@Override
 	public boolean isBreedingItem(ItemStack stack)
     {
-		return stack.getItem() == EmotionItems.BERRY_STRAWBERRY;
+		return stack.getItem() == EmotionItem.BERRY_STRAWBERRY;
     }
 	
     @Override
@@ -87,9 +89,9 @@ public class EntityWildBoar extends EntityAnimal
     }
 
     @Override
-    protected net.minecraft.util.SoundEvent getHurtSound()
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return EmotionSoundHandler.ENTITY_WILD_BOAR_HURT;
+    	return EmotionSoundHandler.ENTITY_WILD_BOAR_HURT;
     }
 
     @Override

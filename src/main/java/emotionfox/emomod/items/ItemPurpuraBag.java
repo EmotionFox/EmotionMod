@@ -17,7 +17,7 @@ public class ItemPurpuraBag extends Item
 		this.setCreativeTab(CreativeTabs.TOOLS);
 		this.setMaxStackSize(1);
 	}
-	
+
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
 	{

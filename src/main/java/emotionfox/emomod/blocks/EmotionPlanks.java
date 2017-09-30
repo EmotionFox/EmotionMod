@@ -1,7 +1,6 @@
 package emotionfox.emomod.blocks;
 
-import emotionfox.emomod.blocks.item.IMetaBlockName;
-import net.minecraft.block.Block;
+import emotionfox.emomod.blocks.meta.MetaBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -16,7 +15,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EmotionPlanks extends Block implements IMetaBlockName
+public class EmotionPlanks extends MetaBlock
 {
 	public static final PropertyEnum<EmotionPlanks.EnumType> VARIANT = PropertyEnum.<EmotionPlanks.EnumType>create("variant", EmotionPlanks.EnumType.class);
 
@@ -28,14 +27,17 @@ public class EmotionPlanks extends Block implements IMetaBlockName
 		this.setResistance(5.0F);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EmotionPlanks.EnumType.CHERRY));
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+
+		for (int i = 0; i < EmotionPlanks.EnumType.values().length; i++)
+			variantList.add(EmotionPlanks.EnumType.values()[i].getName());
 	}
 
-	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list)
+	@Override
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EmotionPlanks.EnumType.values().length; i++)
 		{
-			list.add(new ItemStack(item, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -56,7 +58,8 @@ public class EmotionPlanks extends Block implements IMetaBlockName
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, EmotionPlanks.EnumType.values()[meta]);
+		return meta > EmotionPlanks.EnumType.values().length ? this.getDefaultState().withProperty(VARIANT, EmotionPlanks.EnumType.values()[0])
+				: this.getDefaultState().withProperty(VARIANT, EmotionPlanks.EnumType.values()[meta]);
 	}
 
 	@Override
@@ -112,11 +115,5 @@ public class EmotionPlanks extends Block implements IMetaBlockName
 				METADATA[enumtype.getMetadata()] = enumtype;
 			}
 		}
-	}
-
-	@Override
-	public String getSpecialName(ItemStack stack)
-	{
-		return EmotionPlanks.EnumType.values()[stack.getItemDamage()].getName();
 	}
 }

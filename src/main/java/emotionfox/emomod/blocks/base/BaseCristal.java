@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -59,7 +59,7 @@ public class BaseCristal extends Block
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-		return EmotionItems.VIRIDIS_CRISTAL;
+		return EmotionItem.VIRIDIS_CRISTAL;
     }
 
 	@Override

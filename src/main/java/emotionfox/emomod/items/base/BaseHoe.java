@@ -1,6 +1,6 @@
 package emotionfox.emomod.items.base;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,7 +26,7 @@ public class BaseHoe extends ItemHoe
 			EntityPlayer player = (EntityPlayer) entity;
 			ItemStack equipped = player.getActiveItemStack();
 
-			if (this == EmotionItems.PURPURA_HOE)
+			if (this == EmotionItem.PURPURA_HOE)
 			{
 				if (equipped == stack)
 					player.addPotionEffect(new PotionEffect(Potion.getPotionById(14), 10, 0, false, false));
@@ -37,14 +37,14 @@ public class BaseHoe extends ItemHoe
 	@Override
 	public boolean getIsRepairable(ItemStack input, ItemStack repair)
 	{
-		if (this == EmotionItems.PURPURA_HOE)
+		if (this == EmotionItem.PURPURA_HOE)
 		{
-			if (repair.getItem() == EmotionItems.PURPURA_SHARD)
+			if (repair.getItem() == EmotionItem.PURPURA_SHARD)
 				return true;
 		}
-		else if (this == EmotionItems.FOSSIL_HOE)
+		else if (this == EmotionItem.FOSSIL_HOE)
 		{
-			if (repair.getItem() == EmotionItems.FOSSIL)
+			if (repair.getItem() == EmotionItem.FOSSIL)
 				return true;
 		}
 		return false;

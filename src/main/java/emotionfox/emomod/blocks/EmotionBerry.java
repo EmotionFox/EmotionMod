@@ -1,8 +1,9 @@
 package emotionfox.emomod.blocks;
 
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
-import emotionfox.emomod.init.EmotionBlocks;
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
+import emotionfox.emomod.init.EmotionBlock;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,7 +20,7 @@ public class EmotionBerry extends EmotionBerryBush
 	@Override
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
 	{
-		world.setBlockState(pos, EmotionBlocks.BUSH_SIMPLE.getDefaultState().withProperty(BERRY, state.getValue(BERRY)));
+		world.setBlockState(pos, EmotionBlock.BUSH_SIMPLE.getDefaultState().withProperty(BERRY, state.getValue(BERRY)));
 		dropBerry(world, pos, state, false);
 		return true;
 	}
@@ -29,18 +30,18 @@ public class EmotionBerry extends EmotionBerryBush
 		Comparable variant = state.getValue(BERRY);
 
 		if (variant == EnumBerry.BLUEBERRY)
-			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_BLUEBERRY, 1 + RANDOM.nextInt(3)));
+			spawnAsEntity(world, pos, new ItemStack(EmotionItem.BERRY_BLUEBERRY, 1 + RANDOM.nextInt(3)));
 		else if (variant == EnumBerry.REDCURRANT)
-			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_REDCURRANT, 1 + RANDOM.nextInt(3)));
+			spawnAsEntity(world, pos, new ItemStack(EmotionItem.BERRY_REDCURRANT, 1 + RANDOM.nextInt(3)));
 		else if (variant == EnumBerry.BLACKCURRANT)
-			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_BLACKCURRANT, 1 + RANDOM.nextInt(3)));
+			spawnAsEntity(world, pos, new ItemStack(EmotionItem.BERRY_BLACKCURRANT, 1 + RANDOM.nextInt(3)));
 		else if (variant == EnumBerry.STRAWBERRY)
-			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_STRAWBERRY, 1 + RANDOM.nextInt(2)));
+			spawnAsEntity(world, pos, new ItemStack(EmotionItem.BERRY_STRAWBERRY, 1 + RANDOM.nextInt(2)));
 		else if (variant == EnumBerry.DREAMCURRANT)
-			spawnAsEntity(world, pos, new ItemStack(EmotionItems.BERRY_DREAMCURRANT, 1 + RANDOM.nextInt(3)));
+			spawnAsEntity(world, pos, new ItemStack(EmotionItem.BERRY_DREAMCURRANT, 1 + RANDOM.nextInt(3)));
 
 		if (destroy)
-			spawnAsEntity(world, pos, new ItemStack(Item.getItemFromBlock(EmotionBlocks.BUSH_SIMPLE), 1, this.getMetaFromState(state)));
+			spawnAsEntity(world, pos, new ItemStack(Item.getItemFromBlock(EmotionBlock.BUSH_SIMPLE), 1, this.getMetaFromState(state)));
 	}
 
 	@Override
@@ -55,7 +56,7 @@ public class EmotionBerry extends EmotionBerryBush
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player)
 	{
-		return new ItemStack(Item.getItemFromBlock(EmotionBlocks.BUSH_SIMPLE), 1, getMetaFromState(world.getBlockState(pos)));
+		return new ItemStack(Item.getItemFromBlock(EmotionBlock.BUSH_SIMPLE), 1, getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override

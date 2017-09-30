@@ -1,6 +1,6 @@
 package emotionfox.emomod.event;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.entity.player.EntityPlayer;
@@ -30,7 +30,7 @@ public class EmotionLifeEvent
 
 			for (int i = 0; i < player.inventory.getSizeInventory(); i++)
 			{
-				if (player.inventory.getStackInSlot(i) != null && player.inventory.getStackInSlot(i).getItem() == EmotionItems.PURPURA_RING)
+				if (player.inventory.getStackInSlot(i) != null && player.inventory.getStackInSlot(i).getItem() == EmotionItem.PURPURA_RING)
 				{
 					BlockPos pos = player.getPosition();
 					player.getEntityData().setBoolean("ring", true);

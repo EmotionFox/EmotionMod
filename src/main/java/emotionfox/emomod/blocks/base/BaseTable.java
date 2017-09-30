@@ -2,6 +2,7 @@ package emotionfox.emomod.blocks.base;
 
 import emotionfox.emomod.blocks.StoneTable;
 import emotionfox.emomod.blocks.WoodTable;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;

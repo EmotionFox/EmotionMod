@@ -3,10 +3,9 @@ package emotionfox.emomod.blocks;
 import java.util.List;
 
 import emotionfox.emomod.blocks.enumeration.EnumStoneFurniture;
-import emotionfox.emomod.blocks.item.IMetaBlockName;
+import emotionfox.emomod.blocks.meta.MetaBlock;
 import emotionfox.emomod.entity.EntitySittable;
 import emotionfox.emomod.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -15,7 +14,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -25,7 +23,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class EmotionStoneChair extends Block implements IMetaBlockName
+public class EmotionStoneChair extends MetaBlock
 {
 	public static final PropertyEnum<EnumStoneFurniture> STONE = PropertyEnum.<EnumStoneFurniture>create("stone", EnumStoneFurniture.class);
 
@@ -40,6 +38,9 @@ public class EmotionStoneChair extends Block implements IMetaBlockName
 		this.setSoundType(SoundType.STONE);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(STONE, EnumStoneFurniture.COBBLESTONE));
 		this.setCreativeTab(CreativeTabs.DECORATIONS);
+
+		for (int i = 0; i < EnumStoneFurniture.values().length; i++)
+			this.variantList.add(EnumStoneFurniture.values()[i].getName());
 	}
 
 	@Override
@@ -81,11 +82,11 @@ public class EmotionStoneChair extends Block implements IMetaBlockName
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EnumStoneFurniture.values().length; i++)
 		{
-			list.add(new ItemStack(item, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -106,7 +107,8 @@ public class EmotionStoneChair extends Block implements IMetaBlockName
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(STONE, EnumStoneFurniture.values()[meta]);
+		return meta > EnumStoneFurniture.values().length ? this.getDefaultState().withProperty(STONE, EnumStoneFurniture.values()[0])
+				: this.getDefaultState().withProperty(STONE, EnumStoneFurniture.values()[meta]);
 	}
 
 	@Override
@@ -125,11 +127,5 @@ public class EmotionStoneChair extends Block implements IMetaBlockName
 	public boolean isFullCube(IBlockState state)
 	{
 		return false;
-	}
-
-	@Override
-	public String getSpecialName(ItemStack stack)
-	{
-		return EnumStoneFurniture.values()[stack.getItemDamage()].getName();
 	}
 }

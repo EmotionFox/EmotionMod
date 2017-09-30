@@ -1,9 +1,12 @@
 package emotionfox.emomod.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import emotionfox.emomod.blocks.base.BaseBush;
 import emotionfox.emomod.blocks.enumeration.EnumBerry;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
@@ -17,8 +20,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class EmotionBerryBush extends BaseBush
+public class EmotionBerryBush extends BaseBush implements MetaBlockInterface
 {
+	private final ArrayList<String> variantList = new ArrayList<String>();
+
 	public static final PropertyEnum<EnumBerry> BERRY = PropertyEnum.<EnumBerry>create("berry", EnumBerry.class);
 
 	public EmotionBerryBush()
@@ -26,6 +31,9 @@ public class EmotionBerryBush extends BaseBush
 		this.setTickRandomly(true);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(BERRY, EnumBerry.BLUEBERRY));
 		this.setSoundType(SoundType.PLANT);
+
+		for (int i = 0; i < EnumBerry.values().length; i++)
+			this.variantList.add(EnumBerry.values()[i].getName());
 	}
 
 	@Override
@@ -51,7 +59,7 @@ public class EmotionBerryBush extends BaseBush
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(BERRY, EnumBerry.values()[meta]);
+		return meta > EnumBerry.values().length ? this.getDefaultState().withProperty(BERRY, EnumBerry.values()[0]) : this.getDefaultState().withProperty(BERRY, EnumBerry.values()[meta]);
 	}
 
 	@Override
@@ -71,5 +79,24 @@ public class EmotionBerryBush extends BaseBush
 	{
 		entityIn.motionX *= 0.4D;
 		entityIn.motionZ *= 0.4D;
+	}
+
+	@Override
+	public String getVariant(int meta)
+	{
+		return this.variantList.get(meta);
+	}
+
+	@Override
+	public String getVariantName(int meta)
+	{
+		String name = Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5);
+		return meta > getMaxMeta() ? name + "_" + this.variantList.get(0) : name + "_" + this.variantList.get(meta);
+	}
+
+	@Override
+	public int getMaxMeta()
+	{
+		return this.variantList.size() - 1;
 	}
 }

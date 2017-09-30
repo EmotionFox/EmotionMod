@@ -6,7 +6,7 @@ import emotionfox.emomod.blocks.EmotionLeaves;
 import emotionfox.emomod.blocks.EmotionLog;
 import emotionfox.emomod.blocks.EmotionPlanks;
 import emotionfox.emomod.blocks.EmotionSapling;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
@@ -15,14 +15,14 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class EmotionGenAtlas extends WorldGenerator
 {
-	private EmotionSapling sapling = (EmotionSapling) EmotionBlocks.SAPLING;
+	private EmotionSapling sapling = (EmotionSapling) EmotionBlock.SAPLING;
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
 		int height = 8;
-		IBlockState log = EmotionBlocks.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, EmotionPlanks.EnumType.ATLAS);
-		IBlockState leave = EmotionBlocks.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, EmotionPlanks.EnumType.ATLAS);
+		IBlockState log = EmotionBlock.LOG.getDefaultState().withProperty(EmotionLog.VARIANT, EmotionPlanks.EnumType.ATLAS);
+		IBlockState leave = EmotionBlock.LEAVES.getDefaultState().withProperty(EmotionLeaves.VARIANT, EmotionPlanks.EnumType.ATLAS);
 		IBlockState xLog = log.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.X);
 		IBlockState zLog = log.withProperty(BlockLog.LOG_AXIS, BlockLog.EnumAxis.Z);
 

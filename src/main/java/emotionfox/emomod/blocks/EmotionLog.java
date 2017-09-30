@@ -1,13 +1,15 @@
 package emotionfox.emomod.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import javax.annotation.Nullable;
 
 import com.google.common.base.Predicate;
 
-import emotionfox.emomod.blocks.item.IMetaBlockName;
-import emotionfox.emomod.init.EmotionBlocks;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
+import emotionfox.emomod.init.EmotionBlock;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -20,8 +22,10 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EmotionLog extends BlockLog implements IMetaBlockName
+public class EmotionLog extends BlockLog implements MetaBlockInterface
 {
+	private static final ArrayList<String> variantList = new ArrayList<String>();
+
 	public static final PropertyEnum<EmotionPlanks.EnumType> VARIANT = PropertyEnum.<EmotionPlanks.EnumType>create("variant", EmotionPlanks.EnumType.class, new Predicate<EmotionPlanks.EnumType>()
 	{
 		public boolean apply(@Nullable EmotionPlanks.EnumType type)
@@ -33,22 +37,25 @@ public class EmotionLog extends BlockLog implements IMetaBlockName
 	public EmotionLog()
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EmotionPlanks.EnumType.CHERRY).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
+
+		for (int i = 0; i < 4; i++)
+			this.variantList.add(EmotionPlanks.EnumType.values()[i].getName());
 	}
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return Item.getItemFromBlock(EmotionBlocks.LOG);
+		return Item.getItemFromBlock(EmotionBlock.LOG);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
-		list.add(new ItemStack(itemIn, 1, EmotionPlanks.EnumType.CHERRY.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, EmotionPlanks.EnumType.PEAR.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, EmotionPlanks.EnumType.ORANGE.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, EmotionPlanks.EnumType.ATLAS.getMetadata()));
+		items.add(new ItemStack(this, 1, EmotionPlanks.EnumType.CHERRY.getMetadata()));
+		items.add(new ItemStack(this, 1, EmotionPlanks.EnumType.PEAR.getMetadata()));
+		items.add(new ItemStack(this, 1, EmotionPlanks.EnumType.ORANGE.getMetadata()));
+		items.add(new ItemStack(this, 1, EmotionPlanks.EnumType.ATLAS.getMetadata()));
 	}
 
 	@Override
@@ -116,8 +123,21 @@ public class EmotionLog extends BlockLog implements IMetaBlockName
 	}
 
 	@Override
-	public String getSpecialName(ItemStack stack)
+	public String getVariant(int meta)
 	{
-		return EmotionPlanks.EnumType.values()[stack.getItemDamage()].getName();
+		return this.variantList.get(meta);
+	}
+
+	@Override
+	public String getVariantName(int meta)
+	{
+		String name = Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5);
+		return meta > getMaxMeta() ? name + "_" + this.variantList.get(0) : name + "_" + this.variantList.get(meta);
+	}
+
+	@Override
+	public int getMaxMeta()
+	{
+		return this.variantList.size() - 1;
 	}
 }

@@ -1,9 +1,11 @@
 package emotionfox.emomod.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import emotionfox.emomod.blocks.base.BaseBush;
-import emotionfox.emomod.blocks.item.IMetaBlockName;
+import emotionfox.emomod.blocks.meta.MetaBlockInterface;
+import emotionfox.emomod.util.Reference;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
@@ -27,8 +29,10 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class EmotionMushroom extends BaseBush implements IMetaBlockName
+public class EmotionMushroom extends BaseBush implements MetaBlockInterface
 {
+	private static final ArrayList<String> variantList = new ArrayList<String>();
+
 	protected static final AxisAlignedBB MUSHROOM_AABB = new AxisAlignedBB(0.30000001192092896D, 0.0D, 0.30000001192092896D, 0.699999988079071D, 0.4000000059604645D, 0.699999988079071D);
 	public static final PropertyEnum<EmotionMushroom.EnumType> VARIANT = PropertyEnum.<EmotionMushroom.EnumType>create("variant", EmotionMushroom.EnumType.class);
 
@@ -142,11 +146,11 @@ public class EmotionMushroom extends BaseBush implements IMetaBlockName
 	}
 
 	@Override
-	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list)
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
 	{
 		for (int i = 0; i < EnumType.values().length; i++)
 		{
-			list.add(new ItemStack(item, 1, i));
+			items.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -167,7 +171,7 @@ public class EmotionMushroom extends BaseBush implements IMetaBlockName
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, EnumType.values()[meta]);
+		return meta > EnumType.values().length ? this.getDefaultState().withProperty(VARIANT, EnumType.values()[0]) : this.getDefaultState().withProperty(VARIANT, EnumType.values()[meta]);
 	}
 
 	@Override
@@ -187,6 +191,7 @@ public class EmotionMushroom extends BaseBush implements IMetaBlockName
 		{
 			this.meta = metadata;
 			this.name = name;
+			variantList.add(name);
 		}
 
 		@Override
@@ -214,8 +219,21 @@ public class EmotionMushroom extends BaseBush implements IMetaBlockName
 	}
 
 	@Override
-	public String getSpecialName(ItemStack stack)
+	public String getVariant(int meta)
 	{
-		return EnumType.values()[stack.getItemDamage()].getName();
+		return this.variantList.get(meta);
+	}
+
+	@Override
+	public String getVariantName(int meta)
+	{
+		String name = Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5);
+		return meta > getMaxMeta() ? name + "_" + this.variantList.get(0) : name + "_" + this.variantList.get(meta);
+	}
+
+	@Override
+	public int getMaxMeta()
+	{
+		return this.variantList.size() - 1;
 	}
 }

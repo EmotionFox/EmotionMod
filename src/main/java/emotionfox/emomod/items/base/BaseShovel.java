@@ -1,6 +1,6 @@
 package emotionfox.emomod.items.base;
 
-import emotionfox.emomod.init.EmotionItems;
+import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSpade;
@@ -24,7 +24,7 @@ public class BaseShovel extends ItemSpade
 		EntityPlayer player = (EntityPlayer) entity;
 		ItemStack equipped = player.getActiveItemStack();
 
-		if (this == EmotionItems.PURPURA_SHOVEL)
+		if (this == EmotionItem.PURPURA_SHOVEL)
 		{
 			if (equipped == stack)
 				player.addPotionEffect(new PotionEffect(Potion.getPotionById(11), 10, 0, false, false));
@@ -34,14 +34,14 @@ public class BaseShovel extends ItemSpade
 	@Override
 	public boolean getIsRepairable(ItemStack input, ItemStack repair)
 	{
-		if (this == EmotionItems.PURPURA_SHOVEL)
+		if (this == EmotionItem.PURPURA_SHOVEL)
 		{
-			if (repair.getItem() == EmotionItems.PURPURA_SHARD)
+			if (repair.getItem() == EmotionItem.PURPURA_SHARD)
 				return true;
 		}
-		else if (this == EmotionItems.FOSSIL_SHOVEL)
+		else if (this == EmotionItem.FOSSIL_SHOVEL)
 		{
-			if (repair.getItem() == EmotionItems.FOSSIL)
+			if (repair.getItem() == EmotionItem.FOSSIL)
 				return true;
 		}
 		return false;
