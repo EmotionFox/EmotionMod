@@ -1,17 +1,23 @@
 package emotionfox.emomod.handler;
 
-import emotionfox.emomod.blocks.meta.MetaBlockInterface;
-import emotionfox.emomod.blocks.meta.MetaItemBlock;
+import emotionfox.emomod.block.EmotionLeaves;
+import emotionfox.emomod.block.EmotionNewLeaves;
+import emotionfox.emomod.block.base.BaseDoor;
+import emotionfox.emomod.block.base.BaseFenceGate;
+import emotionfox.emomod.block.meta.MetaBlockInterface;
+import emotionfox.emomod.block.meta.MetaItemBlock;
 import emotionfox.emomod.init.EmotionBlock;
 import emotionfox.emomod.init.EmotionItem;
-import emotionfox.emomod.items.ItemSlice;
-import emotionfox.emomod.items.meta.MetaItem;
-import emotionfox.emomod.items.meta.MetaItemInterface;
+import emotionfox.emomod.item.ItemSlice;
+import emotionfox.emomod.item.meta.MetaItem;
+import emotionfox.emomod.item.meta.MetaItemInterface;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -68,6 +74,47 @@ public final class RegistrationHandler
 					ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(metaBlock.getVariantName(i), "inventory"));
 			}
 		}
+		
+		// Ignore Properties
+		ModelLoader.setCustomStateMapper(EmotionBlock.LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
+		{ EmotionLeaves.CHECK_DECAY, EmotionLeaves.DECAYABLE }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.NEW_LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
+		{ EmotionNewLeaves.CHECK_DECAY, EmotionNewLeaves.DECAYABLE }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.CHERRY_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.CHERRY_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.PEAR_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.PEAR_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.ORANGE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.ORANGE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.ATLAS_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.ATLAS_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.PINE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.PINE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.COCO_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.COCO_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
+
+		ModelLoader.setCustomStateMapper(EmotionBlock.DREAM_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseFenceGate.POWERED }).build());
+		ModelLoader.setCustomStateMapper(EmotionBlock.DREAM_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
+		{ BaseDoor.POWERED }).build());
 	}
 
 	// Called by Proxy.

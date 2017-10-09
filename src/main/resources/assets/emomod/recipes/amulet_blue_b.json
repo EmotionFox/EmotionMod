@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "amulet",
+  "ingredients": [
+    {
+
+      "item": "emomod:amulet_white"
+    },
+    {
+
+      "item": "minecraft:dye",
+      "data": 4
+    }
+  ],
+  "result": {
+    "item": "emomod:amulet_blue"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

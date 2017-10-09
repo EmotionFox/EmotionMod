@@ -6,9 +6,9 @@ import emotionfox.emomod.biome.gen.EmotionGenBigTree;
 import emotionfox.emomod.biome.gen.EmotionGenBush;
 import emotionfox.emomod.biome.gen.EmotionGenFlower;
 import emotionfox.emomod.biome.gen.EmotionGenTree;
-import emotionfox.emomod.blocks.EmotionFlower;
-import emotionfox.emomod.blocks.EmotionPlanks;
-import emotionfox.emomod.blocks.enumeration.EnumBerry;
+import emotionfox.emomod.block.EmotionFlower;
+import emotionfox.emomod.block.EmotionPlanks;
+import emotionfox.emomod.block.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityButterfly;
 import emotionfox.emomod.entity.EntitySmallSpider;
@@ -65,53 +65,62 @@ public class BiomeOrchard extends Biome
 		BlockPos height = worldIn.getHeight(pos.add(x, 0, z));
 
 		// Generate a grid of tree
-		for (int xPos = 0; xPos <= 16; xPos++)
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE))
 		{
-			for (int zPos = 0; zPos <= 16; zPos++)
+			for (int xPos = 0; xPos <= 16; xPos++)
 			{
-				if (xPos % 8 == 0 && zPos % 8 == 0 && genOrchard)
+				for (int zPos = 0; zPos <= 16; zPos++)
 				{
-					height = worldIn.getHeight(pos.add(xPos, 0, zPos));
-
-					if (rand.nextInt(10) == 0)
+					if (xPos % 8 == 0 && zPos % 8 == 0 && genOrchard)
 					{
-						int random = rand.nextInt(10);
+						height = worldIn.getHeight(pos.add(xPos, 0, zPos));
 
-						if (random > 5)
-							(new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
-						else if (random > 0)
-							(new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
-						else
-							(new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
-					}
-					else
-					{
-						int random = rand.nextInt(10);
+						if (rand.nextInt(10) == 0)
+						{
+							int random = rand.nextInt(10);
 
-						if (random > 5)
-							(new EmotionGenTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
-						else if (random > 0)
-							(new EmotionGenTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
+							if (random > 5)
+								(new EmotionGenBigTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
+							else if (random > 0)
+								(new EmotionGenBigTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
+							else
+								(new EmotionGenBigTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
+						}
 						else
-							(new EmotionGenTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
+						{
+							int random = rand.nextInt(10);
+
+							if (random > 5)
+								(new EmotionGenTree(EmotionPlanks.EnumType.PEAR)).generate(worldIn, rand, height);
+							else if (random > 0)
+								(new EmotionGenTree(EmotionPlanks.EnumType.ORANGE)).generate(worldIn, rand, height);
+							else
+								(new EmotionGenTree(EmotionPlanks.EnumType.CHERRY)).generate(worldIn, rand, height);
+						}
 					}
 				}
 			}
 		}
 
 		// Generate Flower
-		(new EmotionGenFlower(EmotionFlower.EnumType.DELY)).generate(worldIn, rand, height);
-		(new EmotionGenFlower(EmotionFlower.EnumType.GNON)).generate(worldIn, rand, height);
-		(new EmotionGenFlower(EmotionFlower.EnumType.KITTY)).generate(worldIn, rand, height);
-		(new EmotionGenFlower(EmotionFlower.EnumType.NOX)).generate(worldIn, rand, height);
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.FLOWERS))
+		{
+			(new EmotionGenFlower(EmotionFlower.EnumType.DELY)).generate(worldIn, rand, height);
+			(new EmotionGenFlower(EmotionFlower.EnumType.GNON)).generate(worldIn, rand, height);
+			(new EmotionGenFlower(EmotionFlower.EnumType.KITTY)).generate(worldIn, rand, height);
+			(new EmotionGenFlower(EmotionFlower.EnumType.NOX)).generate(worldIn, rand, height);
+		}
 
 		// (new EmotionGenTest()).generate(worldIn, rand, height);
 
 		// Generate Bush
-		if (rand.nextInt(5) == 0)
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.CUSTOM))
 		{
-			(new EmotionGenBush(EnumBerry.BLACKCURRANT)).generate(worldIn, rand, height);
-			(new EmotionGenBush(EnumBerry.STRAWBERRY)).generate(worldIn, rand, height);
+			if (rand.nextInt(5) == 0)
+			{
+				(new EmotionGenBush(EnumBerry.BLACKCURRANT)).generate(worldIn, rand, height);
+				(new EmotionGenBush(EnumBerry.STRAWBERRY)).generate(worldIn, rand, height);
+			}
 		}
 	}
 

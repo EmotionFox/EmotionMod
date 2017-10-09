@@ -1,6 +1,6 @@
 package emotionfox.emomod.main;
 
-import emotionfox.emomod.items.ItemPurpuraBag;
+import emotionfox.emomod.item.ItemPurpuraBag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;

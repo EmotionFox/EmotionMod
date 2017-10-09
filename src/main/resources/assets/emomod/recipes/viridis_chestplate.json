@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "@@@",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "emomod:viridis_cristal"
+    }
+  },
+  "result": {
+    "item": "emomod:viridis_chestplate"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

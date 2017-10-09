@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wood_table",
+  "pattern": [
+    "@@@",
+    " @ ",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "@": {
+      "item": "emomod:planks",
+      "data": 4
+    }
+  },
+  "result": {
+    "item": "emomod:wood_table_pine",
+    "data": 0,
+    "count": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

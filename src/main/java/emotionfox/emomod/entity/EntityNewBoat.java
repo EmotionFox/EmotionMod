@@ -1,6 +1,6 @@
 package emotionfox.emomod.entity;
 
-import emotionfox.emomod.blocks.EmotionPlanks;
+import emotionfox.emomod.block.EmotionPlanks;
 import emotionfox.emomod.init.EmotionItem;
 import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.item.Item;

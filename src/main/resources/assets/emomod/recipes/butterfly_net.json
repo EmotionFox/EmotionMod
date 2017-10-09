@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#@#",
+    " @ "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:butterfly_net"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

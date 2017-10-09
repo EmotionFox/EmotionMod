@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "salad",
+  "ingredients": [
+    {
+
+      "item": "minecraft:pumpkin"
+    },
+    {
+
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "emomod:salad_pumpkin"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

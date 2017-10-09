@@ -1,6 +1,6 @@
 package emotionfox.emomod.main;
 
-import emotionfox.emomod.items.ItemPurpuraBag;
+import emotionfox.emomod.item.ItemPurpuraBag;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;

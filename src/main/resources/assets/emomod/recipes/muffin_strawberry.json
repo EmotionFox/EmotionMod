@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "muffin",
+  "pattern": [
+    "#@#",
+    "%$%",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:berry_strawberry"
+    },
+    "@": {
+      "item": "minecraft:milk_bucket"
+    },
+    "%": {
+      "item": "minecraft:sugar"
+    },
+    "$": {
+      "item": "minecraft:egg"
+    },
+    "X": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "emomod:muffin_strawberry",
+    "count": 2
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+
+      "item": "emomod:new_log",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "emomod:planks",
+    "data": 4,
+    "count": 4
+  }
+}
+
+// Json edited with "Recipes Creator v0.4".

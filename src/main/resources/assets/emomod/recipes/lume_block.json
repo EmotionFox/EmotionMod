@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:lume_stone"
+    }
+  },
+  "result": {
+    "item": "emomod:lume_block"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

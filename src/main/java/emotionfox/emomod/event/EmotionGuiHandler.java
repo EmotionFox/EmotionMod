@@ -1,6 +1,6 @@
 package emotionfox.emomod.event;
 
-import emotionfox.emomod.items.ItemPurpuraBag;
+import emotionfox.emomod.item.ItemPurpuraBag;
 import emotionfox.emomod.main.ContainerBackPack;
 import emotionfox.emomod.main.GuiBackPack;
 import emotionfox.emomod.main.InventoryBackPack;

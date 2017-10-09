@@ -1,0 +1,20 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shaped",
+  "group": "stone_chair",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stonebrick",
+      "data": 3
+    }
+  },
+  "result": {
+    "item": "emomod:stone_chair",
+    "data": 5,
+    "count": 2
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "slice",
+  "ingredients": [
+    {
+
+      "item": "emomod:pot",
+      "data": 3
+    },
+    {
+
+      "item": "emomod:slice",
+      "data": 10
+    },
+    {
+
+      "item": "emomod:slice",
+      "data": 10
+    },
+    {
+
+      "item": "emomod:slice",
+      "data": 10
+    },
+    {
+
+      "item": "emomod:slice",
+      "data": 10
+    }
+  ],
+  "result": {
+    "item": "emomod:slice",
+    "data": 1,
+    "count": 4
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

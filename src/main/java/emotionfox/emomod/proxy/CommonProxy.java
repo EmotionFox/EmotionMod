@@ -16,9 +16,6 @@ public class CommonProxy
 	public void registerEntityRendering()
 	{}
 
-	public void customStateMapper()
-	{}
-
 	public void registerRenders()
 	{}
 }

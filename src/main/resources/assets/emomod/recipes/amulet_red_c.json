@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "amulet",
+  "ingredients": [
+    {
+
+      "item": "emomod:amulet_red_broken"
+    },
+    {
+
+      "item": "emomod:spore_magic"
+    },
+    {
+
+      "item": "emomod:spore_magic"
+    }
+  ],
+  "result": {
+    "item": "emomod:amulet_red"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

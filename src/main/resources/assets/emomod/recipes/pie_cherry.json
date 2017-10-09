@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pie",
+  "ingredients": [
+    {
+
+      "item": "minecraft:egg"
+    },
+    {
+
+      "item": "minecraft:sugar"
+    },
+    {
+
+      "item": "emomod:fruit_cherry"
+    }
+  ],
+  "result": {
+    "item": "emomod:pie_cherry"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

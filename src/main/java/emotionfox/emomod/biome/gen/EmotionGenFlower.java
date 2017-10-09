@@ -2,7 +2,7 @@ package emotionfox.emomod.biome.gen;
 
 import java.util.Random;
 
-import emotionfox.emomod.blocks.EmotionFlower;
+import emotionfox.emomod.block.EmotionFlower;
 import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;

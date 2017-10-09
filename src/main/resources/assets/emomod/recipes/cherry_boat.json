@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:planks",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "emomod:cherry_boat"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

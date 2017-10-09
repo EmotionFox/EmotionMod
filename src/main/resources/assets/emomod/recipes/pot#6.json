@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pot",
+  "ingredients": [
+    {
+
+      "item": "emomod:pot",
+      "data": 10
+    },
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "emomod:pot",
+    "data": 6
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

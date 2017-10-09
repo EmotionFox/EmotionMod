@@ -1,0 +1,14 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sandstone_stairs",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "minecraft:sandstone",
+    "data": 0
+  }
+}

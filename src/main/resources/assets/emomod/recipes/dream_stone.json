@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "minecraft:diamond"
+    },
+    {
+
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    {
+
+      "item": "minecraft:redstone"
+    },
+    {
+
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result": {
+    "item": "emomod:dream_stone"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

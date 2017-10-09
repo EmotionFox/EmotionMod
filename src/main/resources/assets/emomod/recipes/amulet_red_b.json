@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "amulet",
+  "ingredients": [
+    {
+
+      "item": "emomod:amulet_white"
+    },
+    {
+
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "emomod:amulet_red"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

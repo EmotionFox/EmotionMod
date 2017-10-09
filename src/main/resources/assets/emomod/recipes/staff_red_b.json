@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "staff",
+  "ingredients": [
+    {
+
+      "item": "emomod:staff_white"
+    },
+    {
+
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "item": "emomod:staff_red"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

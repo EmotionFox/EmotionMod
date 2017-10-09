@@ -18,14 +18,6 @@ public class EmotionSoundHandler
 	public static final SoundEvent ENTITY_WILD_BOAR_DEATH = createSoundEvent("entity.wild_boar.death");
 	public static final SoundEvent ITEM_BUTTERFLY_NET_USE = createSoundEvent("item.butterfly_net.use");
 
-	public static void init()
-	{
-		ENTITY_WILD_BOAR_AMBIENT.setRegistryName(new ResourceLocation(Reference.MOD_ID, "entity.wild_boar.ambient"));
-		ENTITY_WILD_BOAR_HURT.setRegistryName(new ResourceLocation(Reference.MOD_ID, "entity.wild_boar.hurt"));
-		ENTITY_WILD_BOAR_DEATH.setRegistryName(new ResourceLocation(Reference.MOD_ID, "entity.wild_boar.death"));
-		ITEM_BUTTERFLY_NET_USE.setRegistryName(new ResourceLocation(Reference.MOD_ID, "item.butterfly_net.use"));
-	}
-
 	private static SoundEvent createSoundEvent(final String soundName)
 	{
 		final ResourceLocation soundID = new ResourceLocation(Reference.MOD_ID, soundName);

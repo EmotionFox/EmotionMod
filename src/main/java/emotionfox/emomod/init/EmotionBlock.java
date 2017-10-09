@@ -2,44 +2,45 @@ package emotionfox.emomod.init;
 
 import java.util.HashSet;
 
-import emotionfox.emomod.blocks.EmotionBerry;
-import emotionfox.emomod.blocks.EmotionBerrySimple;
-import emotionfox.emomod.blocks.EmotionBrick;
-import emotionfox.emomod.blocks.EmotionCake;
-import emotionfox.emomod.blocks.EmotionFlower;
-import emotionfox.emomod.blocks.EmotionLeaves;
-import emotionfox.emomod.blocks.EmotionLog;
-import emotionfox.emomod.blocks.EmotionMushroom;
-import emotionfox.emomod.blocks.EmotionNewLeaves;
-import emotionfox.emomod.blocks.EmotionNewLog;
-import emotionfox.emomod.blocks.EmotionPlanks;
-import emotionfox.emomod.blocks.EmotionPot;
-import emotionfox.emomod.blocks.EmotionSapling;
-import emotionfox.emomod.blocks.EmotionStoneChair;
-import emotionfox.emomod.blocks.EmotionTest;
-import emotionfox.emomod.blocks.EmotionWoodChair;
-import emotionfox.emomod.blocks.FossilOre;
-import emotionfox.emomod.blocks.Glitch;
-import emotionfox.emomod.blocks.RandomMeter;
-import emotionfox.emomod.blocks.StoneTable;
-import emotionfox.emomod.blocks.WoodNightstand;
-import emotionfox.emomod.blocks.WoodTable;
-import emotionfox.emomod.blocks.base.BaseClayDoubleSlab;
-import emotionfox.emomod.blocks.base.BaseClayHalfSlab;
-import emotionfox.emomod.blocks.base.BaseCristal;
-import emotionfox.emomod.blocks.base.BaseDoor;
-import emotionfox.emomod.blocks.base.BaseFence;
-import emotionfox.emomod.blocks.base.BaseFenceGate;
-import emotionfox.emomod.blocks.base.BaseOre;
-import emotionfox.emomod.blocks.base.BaseOreBlock;
-import emotionfox.emomod.blocks.base.BasePlant;
-import emotionfox.emomod.blocks.base.BaseRock;
-import emotionfox.emomod.blocks.base.BaseStairs;
-import emotionfox.emomod.blocks.base.BaseTrapDoor;
-import emotionfox.emomod.blocks.base.BaseViscous;
-import emotionfox.emomod.blocks.base.BaseWoodDoubleSlab;
-import emotionfox.emomod.blocks.base.BaseWoodHalfSlab;
-import emotionfox.emomod.blocks.meta.MetaItemBlock;
+import emotionfox.emomod.block.EmotionBerry;
+import emotionfox.emomod.block.EmotionBerrySimple;
+import emotionfox.emomod.block.EmotionBrick;
+import emotionfox.emomod.block.EmotionCake;
+import emotionfox.emomod.block.EmotionFlower;
+import emotionfox.emomod.block.EmotionLeaves;
+import emotionfox.emomod.block.EmotionLog;
+import emotionfox.emomod.block.EmotionMushroom;
+import emotionfox.emomod.block.EmotionNewLeaves;
+import emotionfox.emomod.block.EmotionNewLog;
+import emotionfox.emomod.block.EmotionPlanks;
+import emotionfox.emomod.block.EmotionPot;
+import emotionfox.emomod.block.EmotionSapling;
+import emotionfox.emomod.block.EmotionStoneChair;
+import emotionfox.emomod.block.EmotionTest;
+import emotionfox.emomod.block.EmotionWoodChair;
+import emotionfox.emomod.block.FossilOre;
+import emotionfox.emomod.block.Glitch;
+import emotionfox.emomod.block.RandomMeter;
+import emotionfox.emomod.block.StoneTable;
+import emotionfox.emomod.block.WoodNightstand;
+import emotionfox.emomod.block.WoodTable;
+import emotionfox.emomod.block.base.BaseClayDoubleSlab;
+import emotionfox.emomod.block.base.BaseClayHalfSlab;
+import emotionfox.emomod.block.base.BaseCristal;
+import emotionfox.emomod.block.base.BaseDoor;
+import emotionfox.emomod.block.base.BaseFence;
+import emotionfox.emomod.block.base.BaseFenceGate;
+import emotionfox.emomod.block.base.BaseOre;
+import emotionfox.emomod.block.base.BaseOreBlock;
+import emotionfox.emomod.block.base.BasePlant;
+import emotionfox.emomod.block.base.BaseRock;
+import emotionfox.emomod.block.base.BaseStairs;
+import emotionfox.emomod.block.base.BaseTrapDoor;
+import emotionfox.emomod.block.base.BaseViscous;
+import emotionfox.emomod.block.base.BaseWoodDoubleSlab;
+import emotionfox.emomod.block.base.BaseWoodHalfSlab;
+import emotionfox.emomod.block.meta.CustomItemBlock;
+import emotionfox.emomod.block.meta.MetaItemBlock;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockColored;
@@ -56,10 +57,8 @@ import net.minecraft.item.ItemBlockSpecial;
 import net.minecraft.item.ItemDoor;
 import net.minecraft.item.ItemSlab;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
-/**
+/**s
  * @author EmotionFox
  */
 
@@ -154,10 +153,10 @@ public class EmotionBlock
 
 	public static final Block STONE_TABLE_COBBLESTONE = new StoneTable();
 	public static final Block STONE_TABLE_MOSSY_COBBLESTONE = new StoneTable();
-	public static final Block STONE_TABLE_STONE_BRICK = new StoneTable();
-	public static final Block STONE_TABLE_MOSSY_STONE_BRICK = new StoneTable();
-	public static final Block STONE_TABLE_CRACKED_STONE_BRICK = new StoneTable();
-	public static final Block STONE_TABLE_CHISELLED_STONE_BRICK = new StoneTable();
+	public static final Block STONE_TABLE_STONEBRICK = new StoneTable();
+	public static final Block STONE_TABLE_MOSSY_STONEBRICK = new StoneTable();
+	public static final Block STONE_TABLE_CRACKED_STONEBRICK = new StoneTable();
+	public static final Block STONE_TABLE_CHISELLED_STONEBRICK = new StoneTable();
 	public static final Block STONE_TABLE_BRICK = new StoneTable();
 
 	public static final Block STONE_CHAIR = new EmotionStoneChair();
@@ -187,7 +186,7 @@ public class EmotionBlock
 	// Stained Hardened Clay Stairs
 	public static final Block WHITE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.WHITE));
 	public static final Block ORANGE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.ORANGE));
-	public static final Block MANGENTA_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.MAGENTA));
+	public static final Block MAGENTA_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.MAGENTA));
 	public static final Block LIGHT_BLUE_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIGHT_BLUE));
 	public static final Block YELLOW_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.YELLOW));
 	public static final Block LIME_CLAY_STAIRS = new BaseStairs(Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.LIME));
@@ -221,21 +220,21 @@ public class EmotionBlock
 	public static final Block DREAM_FENCE_GATE = new BaseFenceGate(MapColor.GREEN);
 
 	// Emotion Door & Trapdoor
-//	public static final Block CHERRY_DOOR = new BaseDoor(MapColor.RED);
+	public static final Block CHERRY_DOOR = new BaseDoor(MapColor.RED);
 	public static final Block CHERRY_TRAPDOOR = new BaseTrapDoor(MapColor.RED);
-//	public static final Block PEAR_DOOR = new BaseDoor(MapColor.WOOD);
+	public static final Block PEAR_DOOR = new BaseDoor(MapColor.WOOD);
 	public static final Block PEAR_TRAPDOOR = new BaseTrapDoor(MapColor.WOOD);
-//	public static final Block ORANGE_DOOR = new BaseDoor(MapColor.ADOBE);
+	public static final Block ORANGE_DOOR = new BaseDoor(MapColor.ADOBE);
 	public static final Block ORANGE_TRAPDOOR = new BaseTrapDoor(MapColor.ADOBE);
-//	public static final Block ATLAS_DOOR = new BaseDoor(MapColor.BLUE);
+	public static final Block ATLAS_DOOR = new BaseDoor(MapColor.BLUE);
 	public static final Block ATLAS_TRAPDOOR = new BaseTrapDoor(MapColor.BLUE);
 
 	// New Emotion Door & Trapdoor
-//	public static final Block PINE_DOOR = new BaseDoor(MapColor.BLACK);
+	public static final Block PINE_DOOR = new BaseDoor(MapColor.BLACK);
 	public static final Block PINE_TRAPDOOR = new BaseTrapDoor(MapColor.BLACK);
-//	public static final Block COCO_DOOR = new BaseDoor(MapColor.YELLOW);
+	public static final Block COCO_DOOR = new BaseDoor(MapColor.YELLOW);
 	public static final Block COCO_TRAPDOOR = new BaseTrapDoor(MapColor.YELLOW);
-//	public static final Block DREAM_DOOR = new BaseDoor(MapColor.GREEN);
+	public static final Block DREAM_DOOR = new BaseDoor(MapColor.GREEN);
 	public static final Block DREAM_TRAPDOOR = new BaseTrapDoor(MapColor.GREEN);
 
 	// Base Trapdoor
@@ -268,8 +267,8 @@ public class EmotionBlock
 	public static final BaseClayDoubleSlab WHITE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.SNOW, EmotionBlock.WHITE_CLAY_SLAB);
 	public static final BaseClayHalfSlab ORANGE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.ADOBE);
 	public static final BaseClayDoubleSlab ORANGE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.ADOBE, EmotionBlock.ORANGE_CLAY_SLAB);
-	public static final BaseClayHalfSlab MANGENTA_CLAY_SLAB = new BaseClayHalfSlab(MapColor.MAGENTA);
-	public static final BaseClayDoubleSlab MANGENTA_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.MAGENTA, EmotionBlock.MANGENTA_CLAY_SLAB);
+	public static final BaseClayHalfSlab MAGENTA_CLAY_SLAB = new BaseClayHalfSlab(MapColor.MAGENTA);
+	public static final BaseClayDoubleSlab MAGENTA_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.MAGENTA, EmotionBlock.MAGENTA_CLAY_SLAB);
 	public static final BaseClayHalfSlab LIGHT_BLUE_CLAY_SLAB = new BaseClayHalfSlab(MapColor.LIGHT_BLUE);
 	public static final BaseClayDoubleSlab LIGHT_BLUE_CLAY_DOUBLE_SLAB = new BaseClayDoubleSlab(MapColor.LIGHT_BLUE, EmotionBlock.LIGHT_BLUE_CLAY_SLAB);
 	public static final BaseClayHalfSlab YELLOW_CLAY_SLAB = new BaseClayHalfSlab(MapColor.YELLOW);
@@ -311,14 +310,14 @@ public class EmotionBlock
 	public static final Item CAKE_TOFFEE_ITEM = new ItemBlockSpecial(CAKE_TOFFEE).setMaxStackSize(1).setCreativeTab(CreativeTabs.FOOD);
 	public static final Item CAKE_STRAWBERRY_ITEM = new ItemBlockSpecial(CAKE_STRAWBERRY).setMaxStackSize(1).setCreativeTab(CreativeTabs.FOOD);
 	
-//	public static final Item CHERRY_DOOR_ITEM = new ItemDoor(CHERRY_DOOR);
-//	public static final Item PEAR_DOOR_ITEM = new ItemDoor(PEAR_DOOR);
-//	public static final Item ORANGE_DOOR_ITEM = new ItemDoor(ORANGE_DOOR);
-//	public static final Item ATLAS_DOOR_ITEM = new ItemDoor(ATLAS_DOOR);
-//	
-//	public static final Item PINE_DOOR_ITEM = new ItemDoor(PINE_DOOR);
-//	public static final Item COCO_DOOR_ITEM = new ItemDoor(COCO_DOOR);
-//	public static final Item DREAM_DOOR_ITEM = new ItemDoor(DREAM_DOOR);
+	public static final Item CHERRY_DOOR_ITEM = new ItemDoor(CHERRY_DOOR);
+	public static final Item PEAR_DOOR_ITEM = new ItemDoor(PEAR_DOOR);
+	public static final Item ORANGE_DOOR_ITEM = new ItemDoor(ORANGE_DOOR);
+	public static final Item ATLAS_DOOR_ITEM = new ItemDoor(ATLAS_DOOR);
+	
+	public static final Item PINE_DOOR_ITEM = new ItemDoor(PINE_DOOR);
+	public static final Item COCO_DOOR_ITEM = new ItemDoor(COCO_DOOR);
+	public static final Item DREAM_DOOR_ITEM = new ItemDoor(DREAM_DOOR);
 	
 	public static void mainRegister()
 	{
@@ -337,24 +336,24 @@ public class EmotionBlock
 
 		addBlock(GLITCH, "glitch");
 
-		addBlock(PEAR_PLANT, "plant_pear");
-		addBlock(CHERRY_PLANT, "plant_cherry");
-		addBlock(ORANGE_PLANT, "plant_orange");
-		addBlock(TOMATO_PLANT, "plant_tomato");
-		addBlock(APPLE_PLANT, "plant_apple");
+		addBlockOnly(PEAR_PLANT, "plant_pear");
+		addBlockOnly(CHERRY_PLANT, "plant_cherry");
+		addBlockOnly(ORANGE_PLANT, "plant_orange");
+		addBlockOnly(TOMATO_PLANT, "plant_tomato");
+		addBlockOnly(APPLE_PLANT, "plant_apple");
 
-		addBlock(BLUE_PLANT, "plant_blue");
-		addBlock(RED_PLANT, "plant_red");
-		addBlock(BROWN_PLANT, "plant_brown");
+		addBlockOnly(BLUE_PLANT, "plant_blue");
+		addBlockOnly(RED_PLANT, "plant_red");
+		addBlockOnly(BROWN_PLANT, "plant_brown");
 
 		addBlock(POT, new MetaItemBlock(POT), "pot");
 
-//		addBlock(CAKE_CHOCO, "cake_choco");
-//		addBlock(CAKE_FRUIT, "cake_fruit");
-//		addBlock(CAKE_TOFFEE, "cake_toffee");
-//		addBlock(CAKE_STRAWBERRY, "cake_strawberry");
+		addBlockOnly(CAKE_CHOCO, "cake_choco");
+		addBlockOnly(CAKE_FRUIT, "cake_fruit");
+		addBlockOnly(CAKE_TOFFEE, "cake_toffee");
+		addBlockOnly(CAKE_STRAWBERRY, "cake_strawberry");
 
-		addBlock(BUSH, "bush");
+		addBlockOnly(BUSH, "bush");
 		addBlock(BUSH_SIMPLE, new MetaItemBlock(BUSH_SIMPLE), "bush_simple");
 
 		addBlock(BRICK, new MetaItemBlock(BRICK), "brick");
@@ -400,10 +399,10 @@ public class EmotionBlock
 
 		addBlock(STONE_TABLE_COBBLESTONE, "stone_table_cobblestone");
 		addBlock(STONE_TABLE_MOSSY_COBBLESTONE, "stone_table_mossy_cobblestone");
-		addBlock(STONE_TABLE_STONE_BRICK, "stone_table_stonebrick");
-		addBlock(STONE_TABLE_MOSSY_STONE_BRICK, "stone_table_mossy_stonebrick");
-		addBlock(STONE_TABLE_CRACKED_STONE_BRICK, "stone_table_cracked_stonebrick");
-		addBlock(STONE_TABLE_CHISELLED_STONE_BRICK, "stone_table_chiselled_stonebrick");
+		addBlock(STONE_TABLE_STONEBRICK, "stone_table_stonebrick");
+		addBlock(STONE_TABLE_MOSSY_STONEBRICK, "stone_table_mossy_stonebrick");
+		addBlock(STONE_TABLE_CRACKED_STONEBRICK, "stone_table_cracked_stonebrick");
+		addBlock(STONE_TABLE_CHISELLED_STONEBRICK, "stone_table_chiselled_stonebrick");
 		addBlock(STONE_TABLE_BRICK, "stone_table_brick");
 
 		addBlock(STONE_CHAIR, new MetaItemBlock(STONE_CHAIR), "stone_chair");
@@ -425,7 +424,7 @@ public class EmotionBlock
 
 		addBlock(WHITE_CLAY_STAIRS, "white_clay_stairs");
 		addBlock(ORANGE_CLAY_STAIRS, "orange_clay_stairs");
-		addBlock(MANGENTA_CLAY_STAIRS, "magenta_clay_stairs");
+		addBlock(MAGENTA_CLAY_STAIRS, "magenta_clay_stairs");
 		addBlock(LIGHT_BLUE_CLAY_STAIRS, "light_blue_clay_stairs");
 		addBlock(YELLOW_CLAY_STAIRS, "yellow_clay_stairs");
 		addBlock(LIME_CLAY_STAIRS, "lime_clay_stairs");
@@ -456,20 +455,20 @@ public class EmotionBlock
 		addBlock(DREAM_FENCE, "dream_fence");
 		addBlock(DREAM_FENCE_GATE, "dream_fence_gate");
 
-//		addBlock(CHERRY_DOOR, "cherry_door");
+		addBlockOnly(CHERRY_DOOR, "cherry_door");
 		addBlock(CHERRY_TRAPDOOR, "cherry_trapdoor");
-//		addBlock(PEAR_DOOR, "pear_door");
+		addBlockOnly(PEAR_DOOR, "pear_door");
 		addBlock(PEAR_TRAPDOOR, "pear_trapdoor");
-//		addBlock(ORANGE_DOOR, "orange_door");
+		addBlockOnly(ORANGE_DOOR, "orange_door");
 		addBlock(ORANGE_TRAPDOOR, "orange_trapdoor");
-//		addBlock(ATLAS_DOOR, "atlas_door");
+		addBlockOnly(ATLAS_DOOR, "atlas_door");
 		addBlock(ATLAS_TRAPDOOR, "atlas_trapdoor");
 
-//		addBlock(PINE_DOOR, "pine_door");
+		addBlockOnly(PINE_DOOR, "pine_door");
 		addBlock(PINE_TRAPDOOR, "pine_trapdoor");
-//		addBlock(COCO_DOOR, "coco_door");
+		addBlockOnly(COCO_DOOR, "coco_door");
 		addBlock(COCO_TRAPDOOR, "coco_trapdoor");
-//		addBlock(DREAM_DOOR, "dream_door");
+		addBlockOnly(DREAM_DOOR, "dream_door");
 		addBlock(DREAM_TRAPDOOR, "dream_trapdoor");
 
 		addBlock(SPRUCE_TRAPDOOR, "spruce_trapdoor");
@@ -479,53 +478,53 @@ public class EmotionBlock
 		addBlock(DARK_OAK_TRAPDOOR, "dark_oak_trapdoor");
 
 		addBlock(CHERRY_SLAB, new ItemSlab(CHERRY_SLAB, CHERRY_SLAB, CHERRY_DOUBLE_SLAB), "cherry_slab");
-		addBlock(CHERRY_DOUBLE_SLAB, "cherry_double_slab");
+		addBlockOnly(CHERRY_DOUBLE_SLAB, "cherry_double_slab");
 		addBlock(PEAR_SLAB, new ItemSlab(PEAR_SLAB, PEAR_SLAB, PEAR_DOUBLE_SLAB), "pear_slab");
-		addBlock(PEAR_DOUBLE_SLAB, "pear_double_slab");
+		addBlockOnly(PEAR_DOUBLE_SLAB, "pear_double_slab");
 		addBlock(ORANGE_SLAB, new ItemSlab(ORANGE_SLAB, ORANGE_SLAB, ORANGE_DOUBLE_SLAB), "orange_slab");
-		addBlock(ORANGE_DOUBLE_SLAB, "orange_double_slab");
+		addBlockOnly(ORANGE_DOUBLE_SLAB, "orange_double_slab");
 		addBlock(ATLAS_SLAB, new ItemSlab(ATLAS_SLAB, ATLAS_SLAB, ATLAS_DOUBLE_SLAB), "atlas_slab");
-		addBlock(ATLAS_DOUBLE_SLAB, "atlas_double_slab");
+		addBlockOnly(ATLAS_DOUBLE_SLAB, "atlas_double_slab");
 
 		addBlock(PINE_SLAB, new ItemSlab(PINE_SLAB, PINE_SLAB, PINE_DOUBLE_SLAB), "pine_slab");
-		addBlock(PINE_DOUBLE_SLAB, "pine_double_slab");
+		addBlockOnly(PINE_DOUBLE_SLAB, "pine_double_slab");
 		addBlock(COCO_SLAB, new ItemSlab(COCO_SLAB, COCO_SLAB, COCO_DOUBLE_SLAB), "coco_slab");
-		addBlock(COCO_DOUBLE_SLAB, "coco_double_slab");
+		addBlockOnly(COCO_DOUBLE_SLAB, "coco_double_slab");
 		addBlock(DREAM_SLAB, new ItemSlab(DREAM_SLAB, DREAM_SLAB, DREAM_DOUBLE_SLAB), "dream_slab");
-		addBlock(DREAM_DOUBLE_SLAB, "dream_double_slab");
+		addBlockOnly(DREAM_DOUBLE_SLAB, "dream_double_slab");
 
 		addBlock(WHITE_CLAY_SLAB, new ItemSlab(WHITE_CLAY_SLAB, WHITE_CLAY_SLAB, WHITE_CLAY_DOUBLE_SLAB), "white_clay_slab");
-		addBlock(WHITE_CLAY_DOUBLE_SLAB, "white_clay_double_slab");
+		addBlockOnly(WHITE_CLAY_DOUBLE_SLAB, "white_clay_double_slab");
 		addBlock(ORANGE_CLAY_SLAB, new ItemSlab(ORANGE_CLAY_SLAB, ORANGE_CLAY_SLAB, ORANGE_CLAY_DOUBLE_SLAB), "orange_clay_slab");
-		addBlock(ORANGE_CLAY_DOUBLE_SLAB, "orange_clay_double_slab");
-		addBlock(MANGENTA_CLAY_SLAB, new ItemSlab(MANGENTA_CLAY_SLAB, MANGENTA_CLAY_SLAB, MANGENTA_CLAY_DOUBLE_SLAB), "magenta_clay_slab");
-		addBlock(MANGENTA_CLAY_DOUBLE_SLAB, "magenta_clay_double_slab");
+		addBlockOnly(ORANGE_CLAY_DOUBLE_SLAB, "orange_clay_double_slab");
+		addBlock(MAGENTA_CLAY_SLAB, new ItemSlab(MAGENTA_CLAY_SLAB, MAGENTA_CLAY_SLAB, MAGENTA_CLAY_DOUBLE_SLAB), "magenta_clay_slab");
+		addBlockOnly(MAGENTA_CLAY_DOUBLE_SLAB, "magenta_clay_double_slab");
 		addBlock(LIGHT_BLUE_CLAY_SLAB, new ItemSlab(LIGHT_BLUE_CLAY_SLAB, LIGHT_BLUE_CLAY_SLAB, LIGHT_BLUE_CLAY_DOUBLE_SLAB), "light_blue_clay_slab");
-		addBlock(LIGHT_BLUE_CLAY_DOUBLE_SLAB, "light_blue_clay_double_slab");
+		addBlockOnly(LIGHT_BLUE_CLAY_DOUBLE_SLAB, "light_blue_clay_double_slab");
 		addBlock(YELLOW_CLAY_SLAB, new ItemSlab(YELLOW_CLAY_SLAB, YELLOW_CLAY_SLAB, YELLOW_CLAY_DOUBLE_SLAB), "yellow_clay_slab");
-		addBlock(YELLOW_CLAY_DOUBLE_SLAB, "yellow_clay_double_slab");
+		addBlockOnly(YELLOW_CLAY_DOUBLE_SLAB, "yellow_clay_double_slab");
 		addBlock(LIME_CLAY_SLAB, new ItemSlab(LIME_CLAY_SLAB, LIME_CLAY_SLAB, LIME_CLAY_DOUBLE_SLAB), "lime_clay_slab");
-		addBlock(LIME_CLAY_DOUBLE_SLAB, "lime_clay_double_slab");
+		addBlockOnly(LIME_CLAY_DOUBLE_SLAB, "lime_clay_double_slab");
 		addBlock(PINK_CLAY_SLAB, new ItemSlab(PINK_CLAY_SLAB, PINK_CLAY_SLAB, PINK_CLAY_DOUBLE_SLAB), "pink_clay_slab");
-		addBlock(PINK_CLAY_DOUBLE_SLAB, "pink_clay_double_slab");
+		addBlockOnly(PINK_CLAY_DOUBLE_SLAB, "pink_clay_double_slab");
 		addBlock(GRAY_CLAY_SLAB, new ItemSlab(GRAY_CLAY_SLAB, GRAY_CLAY_SLAB, GRAY_CLAY_SLAB), "gray_clay_slab");
-		addBlock(GRAY_CLAY_DOUBLE_SLAB, "gray_clay_double_slab");
+		addBlockOnly(GRAY_CLAY_DOUBLE_SLAB, "gray_clay_double_slab");
 		addBlock(SILVER_CLAY_SLAB, new ItemSlab(SILVER_CLAY_SLAB, SILVER_CLAY_SLAB, SILVER_CLAY_DOUBLE_SLAB), "silver_clay_slab");
-		addBlock(SILVER_CLAY_DOUBLE_SLAB, "silver_clay_double_slab");
+		addBlockOnly(SILVER_CLAY_DOUBLE_SLAB, "silver_clay_double_slab");
 		addBlock(CYAN_CLAY_SLAB, new ItemSlab(CYAN_CLAY_SLAB, CYAN_CLAY_SLAB, CYAN_CLAY_DOUBLE_SLAB), "cyan_clay_slab");
-		addBlock(CYAN_CLAY_DOUBLE_SLAB, "cyan_clay_double_slab");
+		addBlockOnly(CYAN_CLAY_DOUBLE_SLAB, "cyan_clay_double_slab");
 		addBlock(PURPLE_CLAY_SLAB, new ItemSlab(PURPLE_CLAY_SLAB, PURPLE_CLAY_SLAB, PURPLE_CLAY_DOUBLE_SLAB), "purple_clay_slab");
-		addBlock(PURPLE_CLAY_DOUBLE_SLAB, "purple_clay_double_slab");
+		addBlockOnly(PURPLE_CLAY_DOUBLE_SLAB, "purple_clay_double_slab");
 		addBlock(BLUE_CLAY_SLAB, new ItemSlab(BLUE_CLAY_SLAB, BLUE_CLAY_SLAB, BLUE_CLAY_DOUBLE_SLAB), "blue_clay_slab");
-		addBlock(BLUE_CLAY_DOUBLE_SLAB, "blue_clay_double_slab");
+		addBlockOnly(BLUE_CLAY_DOUBLE_SLAB, "blue_clay_double_slab");
 		addBlock(BROWN_CLAY_SLAB, new ItemSlab(BROWN_CLAY_SLAB, BROWN_CLAY_SLAB, BROWN_CLAY_DOUBLE_SLAB), "brown_clay_slab");
-		addBlock(BROWN_CLAY_DOUBLE_SLAB, "brown_clay_double_slab");
+		addBlockOnly(BROWN_CLAY_DOUBLE_SLAB, "brown_clay_double_slab");
 		addBlock(GREEN_CLAY_SLAB, new ItemSlab(GREEN_CLAY_SLAB, GREEN_CLAY_SLAB, GREEN_CLAY_DOUBLE_SLAB), "green_clay_slab");
-		addBlock(GREEN_CLAY_DOUBLE_SLAB, "green_clay_double_slab");
+		addBlockOnly(GREEN_CLAY_DOUBLE_SLAB, "green_clay_double_slab");
 		addBlock(RED_CLAY_SLAB, new ItemSlab(RED_CLAY_SLAB, RED_CLAY_SLAB, RED_CLAY_DOUBLE_SLAB), "red_clay_slab");
-		addBlock(RED_CLAY_DOUBLE_SLAB, "red_clay_double_slab");
+		addBlockOnly(RED_CLAY_DOUBLE_SLAB, "red_clay_double_slab");
 		addBlock(BLACK_CLAY_SLAB, new ItemSlab(BLACK_CLAY_SLAB, BLACK_CLAY_SLAB, BLACK_CLAY_DOUBLE_SLAB), "black_clay_slab");
-		addBlock(BLACK_CLAY_DOUBLE_SLAB, "black_clay_double_slab");
+		addBlockOnly(BLACK_CLAY_DOUBLE_SLAB, "black_clay_double_slab");
 
 		addBlock(SHIFTING_SAND, "shifting_sand");
 		addBlock(MUD, "mud");
@@ -539,16 +538,29 @@ public class EmotionBlock
 		addItem(CAKE_TOFFEE_ITEM, "cake_toffee");
 		addItem(CAKE_STRAWBERRY_ITEM, "cake_strawberry");
 		
-//		addItem(CHERRY_DOOR_ITEM, "cherry_door");
-//		addItem(PEAR_DOOR_ITEM, "pear_door");
-//		addItem(ORANGE_DOOR_ITEM, "orange_door");
-//		addItem(ATLAS_DOOR_ITEM, "atlas_door");
-//		
-//		addItem(PINE_DOOR_ITEM, "pine_door");
-//		addItem(COCO_DOOR_ITEM, "coco_door");
-//		addItem(DREAM_DOOR_ITEM, "dream_door");
+		addItem(CHERRY_DOOR_ITEM, "cherry_door");
+		addItem(PEAR_DOOR_ITEM, "pear_door");
+		addItem(ORANGE_DOOR_ITEM, "orange_door");
+		addItem(ATLAS_DOOR_ITEM, "atlas_door");
+		
+		addItem(PINE_DOOR_ITEM, "pine_door");
+		addItem(COCO_DOOR_ITEM, "coco_door");
+		addItem(DREAM_DOOR_ITEM, "dream_door");
 	}
 
+	/**
+	 * Adding block without item.
+	 * 
+	 * @param block
+	 * @param name
+	 */
+	private static final void addBlockOnly(Block block, String name)
+	{
+		block.setUnlocalizedName(name);
+		block.setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
+		BLOCKS.add(block);
+	}
+	
 	/**
 	 * Adding block without proper item.
 	 * 
@@ -557,7 +569,7 @@ public class EmotionBlock
 	 */
 	private static final void addBlock(Block block, String name)
 	{
-		ItemBlock itemBlock = new ItemBlock(block);
+		CustomItemBlock itemBlock = new CustomItemBlock(block);
 
 		itemBlock.setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
 		BLOCKS_ITEMS.add(itemBlock);

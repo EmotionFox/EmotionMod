@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "@#@",
+    "@#@"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:planks",
+      "data": 3
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:atlas_fence_gate"
+  }
+}
+
+// Json edited with "Recipes Creator v0.2".

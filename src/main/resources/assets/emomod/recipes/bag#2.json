@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bag",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:fruit_orange"
+    }
+  },
+  "result": {
+    "item": "emomod:bag",
+    "data": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:planks",
+      "data": 2
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emomod:orange_fence",
+    "count": 3
+  }
+}
+
+// Json edited with "Recipes Creator v0.2".

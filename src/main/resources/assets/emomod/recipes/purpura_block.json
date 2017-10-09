@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:purpura_shard"
+    }
+  },
+  "result": {
+    "item": "emomod:purpura_block"
+  }
+}
+
+// Json edited with "Recipes Creator v0.1".

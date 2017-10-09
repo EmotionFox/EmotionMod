@@ -6,9 +6,9 @@ import emotionfox.emomod.biome.gen.EmotionGenAtlas;
 import emotionfox.emomod.biome.gen.EmotionGenBush;
 import emotionfox.emomod.biome.gen.EmotionGenFlower;
 import emotionfox.emomod.biome.gen.EmotionGenMushroom;
-import emotionfox.emomod.blocks.EmotionFlower;
-import emotionfox.emomod.blocks.EmotionMushroom;
-import emotionfox.emomod.blocks.enumeration.EnumBerry;
+import emotionfox.emomod.block.EmotionFlower;
+import emotionfox.emomod.block.EmotionMushroom;
+import emotionfox.emomod.block.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityMouse;
 import emotionfox.emomod.init.EmotionBlock;
@@ -49,20 +49,28 @@ public class BiomeMagic extends Biome
 		BlockPos blockpos1 = worldIn.getHeight(pos.add(x, 0, z));
 
 		// Generate Flower
-		(new EmotionGenFlower(EmotionFlower.EnumType.CENTUS)).generate(worldIn, rand, blockpos1);
-		(new EmotionGenFlower(EmotionFlower.EnumType.NOX)).generate(worldIn, rand, blockpos1);
-		(new EmotionGenFlower(EmotionFlower.EnumType.THORNY)).generate(worldIn, rand, blockpos1);
-
-		// Generate Mushroom
-		(new EmotionGenMushroom(EmotionMushroom.EnumType.BLUE)).generate(worldIn, rand, blockpos1);
-
-		// Generate Bush
-		if (rand.nextInt(3) == 0)
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.FLOWERS))
 		{
-			(new EmotionGenBush(EnumBerry.BLUEBERRY)).generate(worldIn, rand, blockpos1);
+			(new EmotionGenFlower(EmotionFlower.EnumType.CENTUS)).generate(worldIn, rand, blockpos1);
+			(new EmotionGenFlower(EmotionFlower.EnumType.NOX)).generate(worldIn, rand, blockpos1);
+			(new EmotionGenFlower(EmotionFlower.EnumType.THORNY)).generate(worldIn, rand, blockpos1);
 		}
 
-		(new EmotionGenAtlas()).generate(worldIn, rand, blockpos1);
+		// Generate Mushroom
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SHROOM))
+			(new EmotionGenMushroom(EmotionMushroom.EnumType.BLUE)).generate(worldIn, rand, blockpos1);
+
+		// Generate Bush
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.CUSTOM))
+		{
+			if (rand.nextInt(3) == 0)
+			{
+				(new EmotionGenBush(EnumBerry.BLUEBERRY)).generate(worldIn, rand, blockpos1);
+			}
+		}
+
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE))
+			(new EmotionGenAtlas()).generate(worldIn, rand, blockpos1);
 	}
 
 	@Override

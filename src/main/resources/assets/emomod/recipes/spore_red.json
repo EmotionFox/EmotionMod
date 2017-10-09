@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "spore",
+  "ingredients": [
+    {
+      "item": "minecraft:red_mushroom"
+    }
+  ],
+  "result": {
+    "item": "emomod:spore_red",
+    "count": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

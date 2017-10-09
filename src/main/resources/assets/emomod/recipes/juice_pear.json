@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "juice",
+  "ingredients": [
+    {
+
+      "item": "emomod:bowl_glass"
+    },
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "emomod:juice_pear"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

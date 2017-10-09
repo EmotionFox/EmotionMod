@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "flower",
+  "ingredients": [
+    {
+
+      "item": "emomod:flower",
+      "data": 4
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

@@ -1,0 +1,23 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "@",
+    "%"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:toffee_cube"
+    },
+    "@": {
+      "item": "minecraft:apple"
+    },
+    "%": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "toffee_apple"
+  }
+}

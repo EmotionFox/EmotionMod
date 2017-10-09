@@ -1,0 +1,20 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:planks",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "emomod:orange_stairs",
+    "count": 4
+  }
+}

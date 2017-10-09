@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "emomod:planks",
+        "data": 0
+      },
+      {
+        "item": "emomod:planks",
+        "data": 1
+      },
+      {
+        "item": "emomod:planks",
+        "data": 2
+      },
+      {
+        "item": "emomod:planks",
+        "data": 3
+      },
+      {
+        "item": "emomod:planks",
+        "data": 4
+      },
+      {
+        "item": "emomod:planks",
+        "data": 5
+      },
+      {
+        "item": "emomod:planks",
+        "data": 6
+      }
+    ],
+    "@": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "minecraft:jukebox"
+  }
+}
+
+// Json edited with "Recipes Creator v0.4".

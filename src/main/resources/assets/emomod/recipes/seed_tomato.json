@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "seed",
+  "ingredients": [
+    {
+
+      "item": "emomod:fruit_tomato"
+    }
+  ],
+  "result": {
+    "item": "emomod:seed_tomato",
+    "count": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

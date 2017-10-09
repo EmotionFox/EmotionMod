@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "emomod:limestone"
+    },
+    {
+
+      "item": "emomod:limestone"
+    },
+    {
+
+      "item": "emomod:limestone"
+    },
+    {
+
+      "item": "emomod:limestone"
+    }
+  ],
+  "result": {
+    "item": "emomod:brick",
+    "data": 3,
+    "count": 4
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

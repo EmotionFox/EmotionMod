@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WYU",
+    "VZX",
+    "TTT"
+  ],
+  "key": {
+    "W": {
+      "item": "emomod:fruit_pear"
+    },
+    "Y": {
+      "item": "minecraft:sugar"
+    },
+    "U": {
+      "item": "emomod:fruit_orange"
+    },
+    "V": {
+      "item": "emomod:fruit_cherry"
+    },
+    "Z": {
+      "item": "minecraft:egg"
+    },
+    "X": {
+      "item": "minecraft:apple"
+    },
+    "T": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "emomod:cake_fruit"
+  }
+}

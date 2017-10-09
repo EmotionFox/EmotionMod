@@ -2,10 +2,10 @@ package emotionfox.emomod.biome.gen;
 
 import java.util.Random;
 
-import emotionfox.emomod.blocks.EmotionNewLeaves;
-import emotionfox.emomod.blocks.EmotionNewLog;
-import emotionfox.emomod.blocks.EmotionPlanks;
-import emotionfox.emomod.blocks.EmotionSapling;
+import emotionfox.emomod.block.EmotionNewLeaves;
+import emotionfox.emomod.block.EmotionNewLog;
+import emotionfox.emomod.block.EmotionPlanks;
+import emotionfox.emomod.block.EmotionSapling;
 import emotionfox.emomod.init.EmotionBlock;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.state.IBlockState;

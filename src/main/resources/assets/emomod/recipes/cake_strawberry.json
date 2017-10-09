@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "$#$",
+    "@%@",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:milk_bucket"
+    },
+    "@": {
+      "item": "minecraft:sugar"
+    },
+    "%": {
+      "item": "minecraft:egg"
+    },
+    "$": {
+      "item": "emomod:berry_strawberry"
+    },
+    "X": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "emomod:cake_strawberry"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

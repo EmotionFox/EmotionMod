@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "minecraft:dye",
+      "data": 2
+    },
+    {
+
+      "item": "minecraft:brick_block"
+    }
+  ],
+  "result": {
+    "item": "emomod:brick",
+    "data": 1
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

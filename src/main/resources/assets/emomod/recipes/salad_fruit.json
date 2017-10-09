@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "salad",
+  "ingredients": [
+    {
+
+      "item": "emomod:fruit_pear"
+    },
+    {
+
+      "item": "emomod:fruit_cherry"
+    },
+    {
+
+      "item": "emomod:fruit_orange"
+    },
+    {
+
+      "item": "minecraft:apple"
+    },
+    {
+
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "emomod:salad_fruit"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

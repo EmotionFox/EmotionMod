@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "staff",
+  "ingredients": [
+    {
+
+      "item": "emomod:staff_white"
+    },
+    {
+
+      "item": "emomod:dream_stone"
+    }
+  ],
+  "result": {
+    "item": "emomod:staff_dream"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

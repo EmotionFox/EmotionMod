@@ -1,0 +1,13 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ladder"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "stained_hardened_clay",
+  "ingredients": [
+    {
+
+      "item": "emomod:black_clay_stairs",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "minecraft:stained_hardened_clay",
+    "data": 15
+  }
+}
+
+// Json edited with "Recipes Creator v0.1".

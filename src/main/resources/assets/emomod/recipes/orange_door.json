@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "emomod:planks",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "emomod:orange_door",
+    "count": 3
+  }
+}
+
+// Json edited with "Recipes Creator v0.4".

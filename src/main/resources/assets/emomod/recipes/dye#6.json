@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "emomod:flower",
+      "data": 1
+    }
+  ],
+  "result": {
+    "item": "minecraft:dye",
+    "data": 6
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

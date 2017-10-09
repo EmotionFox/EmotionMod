@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "pot",
+  "pattern": [
+    "@#@",
+    "@ @",
+    "@@@"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:planks",
+      "data": 0
+    },
+    "@": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "emomod:pot",
+    "data": 10
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

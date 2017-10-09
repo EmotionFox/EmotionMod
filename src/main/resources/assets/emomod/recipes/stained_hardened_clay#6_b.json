@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "stained_hardened_clay",
+  "ingredients": [
+    {
+
+      "item": "emomod:pink_clay_slab",
+      "data": 0
+    },
+    {
+
+      "item": "emomod:pink_clay_slab",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "minecraft:stained_hardened_clay",
+    "data": 6
+  }
+}
+
+// Json edited with "Recipes Creator v0.4".

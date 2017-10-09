@@ -5,7 +5,7 @@ import java.util.Random;
 import emotionfox.emomod.biome.gen.EmotionGenBush;
 import emotionfox.emomod.biome.gen.EmotionGenLittleTree;
 import emotionfox.emomod.biome.gen.EmotionGenPine;
-import emotionfox.emomod.blocks.enumeration.EnumBerry;
+import emotionfox.emomod.block.enumeration.EnumBerry;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntitySmallSpider;
 import emotionfox.emomod.init.EmotionBlock;
@@ -48,25 +48,31 @@ public class BiomeRock extends Biome
 		BlockPos blockpos1 = worldIn.getHeight(pos.add(x, 0, z));
 
 		// Generate Bush
-		if (rand.nextInt(5) == 0)
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.CUSTOM))
 		{
-			(new EmotionGenBush(EnumBerry.REDCURRANT)).generate(worldIn, rand, blockpos1);
+			if (rand.nextInt(5) == 0)
+			{
+				(new EmotionGenBush(EnumBerry.REDCURRANT)).generate(worldIn, rand, blockpos1);
+			}
 		}
 
-		for (int i = 0; i < 4; i++)
+		if (net.minecraftforge.event.terraingen.TerrainGen.decorate(worldIn, rand, pos, net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.TREE))
 		{
-			x = rand.nextInt(16) + 8;
-			z = rand.nextInt(16) + 8;
+			for (int i = 0; i < 4; i++)
+			{
+				x = rand.nextInt(16) + 8;
+				z = rand.nextInt(16) + 8;
 
-			(new EmotionGenLittleTree()).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
-		}
+				(new EmotionGenLittleTree()).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
+			}
 
-		for (int i = 0; i < 8; i++)
-		{
-			x = rand.nextInt(16) + 8;
-			z = rand.nextInt(16) + 8;
+			for (int i = 0; i < 8; i++)
+			{
+				x = rand.nextInt(16) + 8;
+				z = rand.nextInt(16) + 8;
 
-			(new EmotionGenPine()).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
+				(new EmotionGenPine()).generate(worldIn, rand, worldIn.getTopSolidOrLiquidBlock(pos.add(x, 0, z)));
+			}
 		}
 	}
 

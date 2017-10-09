@@ -1,0 +1,21 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "minecraft:stone_slab",
+      "data": 1
+    },
+    {
+
+      "item": "minecraft:stone_slab",
+      "data": 1
+    }
+  ],
+  "result": {
+    "item": "minecraft:sandstone",
+    "data": 0,
+    "count": 2
+  }
+}

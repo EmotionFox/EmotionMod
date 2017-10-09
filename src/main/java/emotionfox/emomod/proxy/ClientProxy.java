@@ -3,9 +3,9 @@ package emotionfox.emomod.proxy;
 import java.util.HashMap;
 import java.util.Map;
 
-import emotionfox.emomod.blocks.EmotionLeaves;
-import emotionfox.emomod.blocks.EmotionNewLeaves;
-import emotionfox.emomod.blocks.base.BaseFenceGate;
+import emotionfox.emomod.block.EmotionLeaves;
+import emotionfox.emomod.block.EmotionNewLeaves;
+import emotionfox.emomod.block.base.BaseFenceGate;
 import emotionfox.emomod.entity.EntityBeetle;
 import emotionfox.emomod.entity.EntityButterfly;
 import emotionfox.emomod.entity.EntityChubby;
@@ -29,7 +29,7 @@ import emotionfox.emomod.entity.render.RenderWildBoar;
 import emotionfox.emomod.handler.RegistrationHandler;
 import emotionfox.emomod.init.EmotionBlock;
 import emotionfox.emomod.init.EmotionItem;
-import emotionfox.emomod.items.model.ModelViridisArmor;
+import emotionfox.emomod.item.model.ModelViridisArmor;
 import emotionfox.emomod.util.Reference;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
@@ -72,51 +72,6 @@ public class ClientProxy extends CommonProxy
         armorModels.put(EmotionItem.VIRIDIS_CHESTPLATE, viridisArmor);
         armorModels.put(EmotionItem.VIRIDIS_BOOTS, viridisArmor);
         armorModels.put(EmotionItem.VIRIDIS_LEGGINGS, viridisArmor);
-	}
-
-	@Override
-	public void customStateMapper()
-	{
-		// Ignore Properties
-		ModelLoader.setCustomStateMapper(EmotionBlock.LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
-		{ EmotionLeaves.CHECK_DECAY, EmotionLeaves.DECAYABLE }).build());
-		ModelLoader.setCustomStateMapper(EmotionBlock.NEW_LEAVES, (new StateMap.Builder()).ignore(new IProperty[]
-		{ EmotionNewLeaves.CHECK_DECAY, EmotionNewLeaves.DECAYABLE }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.CHERRY_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.CHERRY_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.PEAR_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.PEAR_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.ORANGE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.ORANGE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.ATLAS_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.ATLAS_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.PINE_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.PINE_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.COCO_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.COCO_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
-
-		ModelLoader.setCustomStateMapper(EmotionBlock.DREAM_FENCE_GATE, (new StateMap.Builder()).ignore(new IProperty[]
-		{ BaseFenceGate.POWERED }).build());
-//		ModelLoader.setCustomStateMapper(EmotionBlock.DREAM_DOOR, (new StateMap.Builder()).ignore(new IProperty[]
-//		{ BaseDoor.POWERED }).build());
 	}
 	
 	@Override

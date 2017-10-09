@@ -1,0 +1,15 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emomod:log",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "emomod:planks",
+    "data": 0,
+    "count": 4
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "emomod:bowl_glass",
+    "count": 4
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

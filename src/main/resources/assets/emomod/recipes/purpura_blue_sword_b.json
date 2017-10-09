@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "emomod:purpura_sword"
+    },
+    {
+
+      "item": "minecraft:diamond"
+    },
+    {
+
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "emomod:purpura_blue_sword"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

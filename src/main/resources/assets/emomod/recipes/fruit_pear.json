@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "fruit",
+  "ingredients": [
+    {
+
+      "item": "emomod:bag",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "emomod:fruit_pear",
+    "count": 4
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

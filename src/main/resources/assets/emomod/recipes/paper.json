@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "emomod:bandage"
+    }
+  ],
+  "result": {
+    "item": "minecraft:paper"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

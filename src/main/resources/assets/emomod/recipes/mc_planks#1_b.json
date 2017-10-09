@@ -1,0 +1,21 @@
+{
+  "_comment": "Edited with Recipes Creator v0.5",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "minecraft:wooden_slab",
+      "data": 1
+    },
+    {
+
+      "item": "minecraft:wooden_slab",
+      "data": 1
+    }
+  ],
+  "result": {
+    "item": "minecraft:planks",
+    "data": 1,
+    "count": 2
+  }
+}

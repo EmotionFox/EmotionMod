@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+
+      "item": "emomod:berry_strawberry"
+    },
+    {
+
+      "item": "minecraft:dye",
+      "data": 3
+    }
+  ],
+  "result": {
+    "item": "emomod:berry_strawberry_choco"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+
+      "item": "emomod:pear_stairs"
+    }
+  ],
+  "result": {
+    "item": "emomod:planks",
+    "data": 1
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

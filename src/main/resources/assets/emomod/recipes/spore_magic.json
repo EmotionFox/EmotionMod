@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "spore",
+  "ingredients": [
+    {
+      "item": "emomod:mushroom",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "emomod:spore_magic",
+    "count": 2
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

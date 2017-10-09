@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "staff",
+  "pattern": [
+    "#@%",
+    " $ ",
+    " $ "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:ender_eye"
+    },
+    "@": {
+      "item": "emomod:purpura_shard"
+    },
+    "%": {
+      "item": "emomod:dream_stone"
+    },
+    "$": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "emomod:staff_dream"
+  }
+}
+
+// Json edited with "Recipes Creator v0.3".

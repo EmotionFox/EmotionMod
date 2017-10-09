@@ -1,0 +1,86 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 10/9/17 10:05 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Emotion's Mod (emomod)
+Caused by: java.lang.IllegalStateException: Attempted to set registry name with existing registry name! New: emomod:entity.wild_boar.ambient Old: emomod:entity.wild_boar.ambient
+	at net.minecraftforge.registries.IForgeRegistryEntry$Impl.setRegistryName(IForgeRegistryEntry.java:76)
+	at net.minecraftforge.registries.IForgeRegistryEntry$Impl.setRegistryName(IForgeRegistryEntry.java:94)
+	at emotionfox.emomod.handler.EmotionSoundHandler.init(EmotionSoundHandler.java:23)
+	at emotionfox.emomod.MainRegistry.preInit(MainRegistry.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:613)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:253)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:148)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:604)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:266)
+	at net.minecraft.client.Minecraft.init(Minecraft.java:513)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_144, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 835297344 bytes (796 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.0.2489 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID        | Version      | Source                           | Signature |
+	|:----- |:--------- |:------------ |:-------------------------------- |:--------- |
+	| UCH   | minecraft | 1.12.2       | minecraft.jar                    | None      |
+	| UCH   | mcp       | 9.42         | minecraft.jar                    | None      |
+	| UCH   | FML       | 8.0.99.99    | forgeSrc-1.12.2-14.23.0.2489.jar | None      |
+	| UCH   | forge     | 14.23.0.2489 | forgeSrc-1.12.2-14.23.0.2489.jar | None      |
+	| UCE   | emomod    | 0.1          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 385.41' Renderer: 'GeForce GTX 680/PCIe/SSE2'
